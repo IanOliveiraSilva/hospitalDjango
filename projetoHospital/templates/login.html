@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/principal.css' %}">
+{% endblock css %}
+
+{% block titulo %}
+HOSPITAL LAUREANO - ÁREA DO PACIENTE
+{% endblock titulo %}
+
+
+{% block body %}
+<a class="mx-auto my-0 text-uppercase text-amarelo mx-auto mt-2 mb-5 style=" href="{% url 'home' %}">Back</a>
+<h1>Area do Paciente - Acesso</h1>
+
+<form method="post">
+    {% csrf_token %}
+
+  
+        {{form_login.username.errors}}
+        <label>Código: </label>
+        {{form_login.username}}
+
+   
+        {{form_login.password.errors}}
+        <label>Senha: </label>
+        {{form_login.password}}
+
+        <input type="submit" value="Entrar" class="btn btn-primary">
+   
+</form>
+
+{% endblock body %}
