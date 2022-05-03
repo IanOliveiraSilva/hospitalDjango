@@ -5,6 +5,7 @@
 ```bash
 $ install and activate venv
 $ command "pip install django"
+$ command "pip install psycopg2-binary"
 $ command "py manage.py runserver"
 ```
 ## Entering the site through the browser
