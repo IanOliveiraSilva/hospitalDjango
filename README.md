@@ -4,6 +4,7 @@
 ## Quickstart
 ```bash
 $ To install and activate VENV:
+  ## Make this process in "hospitalDjango-main/projetoHospital"
   $ command pip install virtualenv
   $ virtualenv venv
   $ command "cd venv/Scripts"
