@@ -6,7 +6,6 @@
 $ To install and activate VENV:
   $ command pip install virtualenv
   $ virtualenv venv
-  $ virtualenv venv
   $ command "cd venv/Scripts"
   $ command "activate"
   $ command "cd ../.."
