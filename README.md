@@ -3,9 +3,16 @@
 
 ## Quickstart
 ```bash
-$ install and activate venv
+$ To install and activate VENV:
+  $ command pip install virtualenv
+  $ virtualenv venv
+  $ virtualenv venv
+  $ command "cd venv/Scripts"
+  $ command "activate"
+  $ command "cd ../.."
+
 $ command "pip install django"
-$ command "pip install psycopg2-binary"
+$ command "pip install mysqlclient"
 $ command "py manage.py runserver"
 ```
 ## Entering the site through the browser
