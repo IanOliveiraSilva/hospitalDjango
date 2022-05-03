@@ -1,13 +1,22 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import  AuthenticationForm, UserCreationForm, PasswordChangeForm
 from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 from django.contrib.auth.decorators import login_required
+from .models import adicionarMedicos
+
+#CRUD
+
+
+def viewGuiaMedico(request, id):
+
+    medico = adicionarMedicos.objects.all()
+    guiaMedico = get_object_or_404(adicionarMedicos, pk=id)
+    return render(request, "guiaMedico.html",{"guiaMedico":guiaMedico, "id":id})
 
 
 
 
-
-
+ #PATH
 def viewHome(request):
     return render(request, "home.html", {})
 
