@@ -17,7 +17,7 @@ HOSPITAL LAUREANO - PÁGINA INICIAL
 <p><a class="nav-link text-success" href="{% url 'logout-user' %}">Sair da conta</a></p>
 {% endif %}
        
-
+<ul>
 <li><a href="{% url 'parceiros' %}">PARCEIROS</a></li>
 
 <li><a href="{% url 'noticias' %}">NOTICIAS</a></li>
@@ -40,5 +40,10 @@ HOSPITAL LAUREANO - PÁGINA INICIAL
 
 <li> <a href="{% url 'alterar-senha'%}">ALTERAR SENHA</a> </li>
 
+<li> <a href="{% url 'guia-medico'%}">GUIA MÉDICO</a> </li>
+
+<li> <a href="{% url 'administrar'%}">ADMINISTRAR</a> </li>
+
+</ul>
 
 {% endblock body %}

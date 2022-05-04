@@ -2,21 +2,52 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import  AuthenticationForm, UserCreationForm, PasswordChangeForm
 from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 from django.contrib.auth.decorators import login_required
-from .models import adicionarMedicos
+from .models import Medico
+from .forms import MedicoForm
 
-#CRUD
+#CRUD - GUIA MÉDICO
 
+# CREATE
+def viewAddMedico(request):
+    form = MedicoForm(request.POST or None)
 
-def viewGuiaMedico(request, id):
+    if form.is_valid():
+        form.save()
+        return redirect('administrar')
+    return render(request, 'form-medico.html', {'form': form})
 
-    medico = adicionarMedicos.objects.all()
-    guiaMedico = get_object_or_404(adicionarMedicos, pk=id)
-    return render(request, "guiaMedico.html",{"guiaMedico":guiaMedico, "id":id})
+# UPDATE
+def viewEditMedico(request, id):
+    medico = Medico.objects.get(id=id)
+    form = MedicoForm(request.POST or None, instance=medico)
 
+    if form.is_valid():
+        form.save()
+        return redirect('administrar')
+    return render(request, 'form-medico.html', {'form': form, 'medico': medico})
 
+# DELETE
+def viewDeleteMedico(request, id):
+    medico = Medico.objects.get(id=id)
+    if request.method == "POST":
+        medico.delete()
+        return redirect('administrar')
+    return render(request, 'confirm-delete.html', {'medico': medico})
 
+# VIEW
 
- #PATH
+# ADMIN
+def viewAdmin(request):
+    medico = Medico.objects.all()
+    return render(request, "administrar.html", {"medico": medico})
+
+# Usuário Padrão
+def viewGuiaMedico(request):
+    medico = Medico.objects.all()
+    return render(request, "guiaMedico.html", {"medico": medico})
+
+#PATH
+
 def viewHome(request):
     return render(request, "home.html", {})
 

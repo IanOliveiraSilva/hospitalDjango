@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'css/principal.css' %}" />
+{% endblock css %} {% block title %} HOSPITAL LAUREANO - ADMIN {% endblock title%} 
+{% block body %}
+
+<h1>TESTE - ADMIN</h1>
+
+<ul>
+  {% for item in medico %}
+  <a href="{% url 'edit-medico' item.id %}">
+    <li>Nome: {{ item.Nome }}. Especialização: {{ item.Especialidade }}</li>
+  </a>
+  {% endfor %}
+</ul>
+
+<a href="{% url 'form-medico' %}">Adcionar Médico</a>
+<br />
+<a href="{% url 'home' %}">Back</a>
+{% endblock body %}

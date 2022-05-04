@@ -3,11 +3,9 @@ from django.db import models
 # Create your models here.
 
 
-class adicionarMedicos(models.Model):
-    Nome = models.TextField() 
-    Especializacao = models.TextField()
-    class Meta:
-        db_table = 'adicionarMedicos'
+class Medico(models.Model):
+    Nome = models.CharField(max_length=100) 
+    Especialidade = models.CharField(max_length=50)
     def str(self):
-        return self.id
+        return self.Nome
     
