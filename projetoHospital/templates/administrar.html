@@ -5,7 +5,7 @@
 
 <h1>TESTE - ADMIN</h1>
 
-
+{% comment %} EXIBIR NOTÍCIAS {% endcomment %}
 <ul>
   {% for item in Noticia %}
   <a href="{% url 'edit-noticia' item.id %}">
@@ -17,11 +17,7 @@
 <a href="{% url 'form-noticia' %}">Adicionar Noticia</a>
 
 
-
-
-<!--
-
-
+{% comment %} EXIBIR GUIA MÉDICO {% endcomment %}
 <ul>
   {% for item in medico %}
   <a href="{% url 'edit-medico' item.id %}">
@@ -35,5 +31,5 @@
 <a href="{% url 'home' %}">Back</a>
 
 
- -->
+
 {% endblock body %}

@@ -99,7 +99,7 @@ def viewGuiaMedico(request):
 
 def viewNoticia(request):
     noticia = Noticia.objects.all()
-    return render (request, "noticias.html", {"noticia": noticia})
+    return render(request, "noticias.html", {"noticia": noticia})
 
 
 #PATH
@@ -110,11 +110,6 @@ def viewHome(request):
 
 def viewParceiros(request):
     return render(request, "parceiros.html", {})
-
-
-def viewNoticias(request):
-    return render(request, "noticias.html", {})
-
 
 def viewContato(request):
     return render(request, "contatos.html", {})

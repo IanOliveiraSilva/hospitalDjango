@@ -4,15 +4,27 @@
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/principal.css' %}">
 {% endblock css %}
+{% block titulo %}HOSPITAL LAUREANO - NOTICIAS{% endblock titulo %}
 
-
-{% block title %}
-HOSPITAL LAUREANO - NOTICIAS
-{% endblock title %}
 
 {% block body %}
 
-
 <h1>TESTE - NOTICIAS</h1>
+
+{% for item in noticia %}
+
+<ul>
+    <li>Titulo: {{ item.Titulo }}
+        Subtitulo: {{ item.Subtitulo }}  
+        Imagem: {{ item.Imagem }}  
+        Corpo: {{ item.Corpo }}  
+        Detalhes: {{ item.Detalhes }}
+    </li>
+</ul>
+
+{% endfor %}
+
+
+
 <a class="mx-auto my-0 text-uppercase text-amarelo mx-auto mt-2 mb-5 style=" href="{% url 'home' %}">Back</a>
 {% endblock body %}

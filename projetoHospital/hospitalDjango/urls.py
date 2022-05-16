@@ -1,11 +1,10 @@
 from django.urls import path
 
-from .views import viewHome, viewParceiros, viewNoticias, viewContato, viewRegister,viewLoginUser, viewLogout, viewResultadoExame, viewquemSomos, vieweventos, viewservicos, viewdoacao, viewAlterarSenha,viewAdmin, viewAddMedico, viewEditMedico, viewDeleteMedico
-from .views import viewGuiaMedico, viewAddNoticia, viewEditNoticia, viewDeleteNoticia
+from .views import *
 urlpatterns = [
     path('', viewHome, name='home'),
     path('parceiros/', viewParceiros, name='parceiros'),
-    path('noticias/', viewNoticias, name='noticias'),
+    path('noticias/', viewNoticia, name='noticias'),
     path('contatos/', viewContato, name='contatos'),
     path('registrar-paciente', viewRegister, name="register-user"),
     path('acesso-paciente', viewLoginUser, name="login-user"),
