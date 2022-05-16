@@ -11,6 +11,7 @@ $ To install and activate VENV:
   $ command "cd ../.."
 
 $ command "pip install django"
+$ command "pip install Pillow"
 $ command "pip install mysqlclient"
 $ command "py manage.py runserver"
 ```
