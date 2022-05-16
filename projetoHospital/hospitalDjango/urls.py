@@ -1,7 +1,7 @@
 from django.urls import path
 
 from .views import viewHome, viewParceiros, viewNoticias, viewContato, viewRegister,viewLoginUser, viewLogout, viewResultadoExame, viewquemSomos, vieweventos, viewservicos, viewdoacao, viewAlterarSenha,viewAdmin, viewAddMedico, viewEditMedico, viewDeleteMedico
-from .views import viewGuiaMedico
+from .views import viewGuiaMedico, viewAddNoticia, viewEditNoticia, viewDeleteNoticia
 urlpatterns = [
     path('', viewHome, name='home'),
     path('parceiros/', viewParceiros, name='parceiros'),
@@ -20,5 +20,8 @@ urlpatterns = [
     path('administrar/', viewAdmin, name="administrar"),
     path('form-medico', viewAddMedico, name="form-medico"),
     path('update/<int:id>/', viewEditMedico, name="edit-medico"),
-    path('delete/<int:id>/', viewDeleteMedico, name="delete-medico")
+    path('delete/<int:id>/', viewDeleteMedico, name="delete-medico"),
+    path('form-noticia', viewAddNoticia, name="form-noticia"),
+    path('update/<int:id>/', viewEditNoticia, name="edit-noticia"),
+    path('delete/<int:id>/', viewDeleteNoticia, name="delete-noticia"),
     ]

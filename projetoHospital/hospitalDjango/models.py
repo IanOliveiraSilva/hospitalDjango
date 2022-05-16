@@ -16,6 +16,6 @@ class Noticia(models.Model):
     Corpo = models.TextField()
     Detalhes = models.TextField(null=True, blank=True)
     def __str__(self):
-        return self.Noticia
+        return self.Titulo
 
     

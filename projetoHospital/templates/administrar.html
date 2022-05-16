@@ -5,6 +5,23 @@
 
 <h1>TESTE - ADMIN</h1>
 
+
+<ul>
+  {% for item in Noticia %}
+  <a href="{% url 'edit-noticia' item.id %}">
+    <li>Titulo: {{ item.Titulo }} Subtitulo: {{ item.Subtitulo }}  Imagem: {{ item.Imagem }}  Corpo: {{ item.Corpo }}  Detalhes: {{ item.Detalhes }}</li>
+  </a>
+  {% endfor %}
+</ul>
+
+<a href="{% url 'form-noticia' %}">Adicionar Noticia</a>
+
+
+
+
+<!--
+
+
 <ul>
   {% for item in medico %}
   <a href="{% url 'edit-medico' item.id %}">
@@ -13,7 +30,10 @@
   {% endfor %}
 </ul>
 
-<a href="{% url 'form-medico' %}">Adcionar Médico</a>
+<a href="{% url 'form-medico' %}">Adicionar Médico</a>
 <br />
 <a href="{% url 'home' %}">Back</a>
+
+
+ -->
 {% endblock body %}
