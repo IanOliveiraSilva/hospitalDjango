@@ -15,8 +15,25 @@ def viewAddMedico(request):
 
     if form.is_valid():
         form.save()
-        return redirect('administrar')
-    return render(request, 'form-medico.html', {'form': form})
+        return redirect('admin-Guia-Medico')
+    return render(request, 'forms/form-medico.html', {'form': form})
+
+# READ
+
+# Usuário Padrão
+
+def viewGuiaMedico(request):
+    medico = Medico.objects.all()
+    return render(request, "guiaMedico.html", {"medico": medico})
+
+# Admin
+
+def viewAdminGuiaMedico(request):
+    if not request.user.is_superuser:
+       return HttpResponse('The user is not admin')
+    else:
+        medico = Medico.objects.all()
+        return render(request, "admin/guiaMedico.html", {"medico": medico})
 
 # UPDATE
 def viewEditMedico(request, id):
@@ -25,20 +42,16 @@ def viewEditMedico(request, id):
 
     if form.is_valid():
         form.save()
-        return redirect('administrar')
-    return render(request, 'form-medico.html', {'form': form, 'medico': medico})
+        return redirect('admin-Guia-Medico')
+    return render(request, 'forms/form-medico.html', {'form': form, 'medico': medico})
 
 # DELETE
 def viewDeleteMedico(request, id):
     medico = Medico.objects.get(id=id)
     if request.method == "POST":
         medico.delete()
-        return redirect('administrar')
-    return render(request, 'confirm-delete.html', {'medico': medico})
-
-
-
-
+        return redirect('admin-Guia-Medico')
+    return render(request, 'forms/confirm-delete.html', {'medico': medico})
 
 
 # CRUD - NOTICIAS
@@ -50,8 +63,24 @@ def viewAddNoticia(request):
 
     if formNoticia.is_valid():
        formNoticia.save()
-       return redirect('administrar')
-    return render(request, 'form-noticia.html', {'formNoticia': formNoticia})
+       return redirect('admin-Noticias')
+    return render(request, 'forms/form-noticia.html', {'formNoticia': formNoticia})
+
+# READ
+
+# Usuário Padrão
+def viewNoticia(request):
+    noticia = Noticia.objects.all()
+    return render(request, "noticias.html", {"noticia": noticia})
+
+# Admin
+
+def viewAdminNoticia(request):
+    if not request.user.is_superuser:
+       return HttpResponse('The user is not admin')
+    else:
+        noticia = Noticia.objects.all()
+        return render(request, "admin/noticias.html", {"noticia": noticia})
 
 # UPDATE
 
@@ -61,8 +90,8 @@ def viewEditNoticia(request, id):
 
     if formNoticia.is_valid():
         formNoticia.save()
-        return redirect('administrar')
-    return render(request, 'edit-noticia.html', {'formNoticia': formNoticia, 'noticia': noticia})
+        return redirect('admin-Noticias')
+    return render(request, 'forms/form-noticia.html', {'form': formNoticia, 'noticia': noticia})
 
 # DELETE 
 
@@ -71,40 +100,20 @@ def viewDeleteNoticia(request, id):
     if request.method == 'POST':
         Noticia.delete()
         return redirect('administrar')
-    return render(request, 'confirm-delete.html', {'noticia': noticia} )
+    return render(request, 'forms/confirm-delete.html', {'noticia': noticia} )
 
-
-
-
-
-
-# PERMISSAO PARA ADMIN
+# Página Admin
 
 def viewAdmin(request):
    if not request.user.is_superuser:
        return HttpResponse('The user is not admin')
    else:
-    medico = Medico.objects.all()
-    return render(request, "administrar.html", {"medico": medico})
-
-
-
-
-# Usuário Padrão
-def viewGuiaMedico(request):
-    medico = Medico.objects.all()
-    return render(request, "guiaMedico.html", {"medico": medico})
-
-def viewNoticia(request):
-    noticia = Noticia.objects.all()
-    return render(request, "noticias.html", {"noticia": noticia})
-
+    return render(request, "admin/administrar.html")
 
 #PATH
 
 def viewHome(request):
     return render(request, "home.html", {})
-
 
 def viewParceiros(request):
     return render(request, "parceiros.html", {})
@@ -129,9 +138,6 @@ def viewResultadoExame(request):
     return render(request, "resultadoexame.html", {})
 
 
-
-
-
 #REGISTER AND LOGIN
      
 def viewRegister(request):
@@ -142,7 +148,7 @@ def viewRegister(request):
             return redirect('home')
     else:
         form_usuario = UserCreationForm()
-    return render(request, 'register.html', {'form_usuario': form_usuario})
+    return render(request, 'user/register.html', {'form_usuario': form_usuario})
 
 
 def viewLoginUser(request):
@@ -157,7 +163,7 @@ def viewLoginUser(request):
             form_login = AuthenticationForm()
     else:
         form_login = AuthenticationForm()
-    return render(request, 'login.html', {'form_login': form_login})
+    return render(request, 'user/login.html', {'form_login': form_login})
 
 
 @login_required(login_url='/acesso-paciente')
@@ -175,4 +181,4 @@ def viewAlterarSenha(request):
             return redirect('home')
     else:
         form_senha = PasswordChangeForm(request.user)
-    return render(request, 'alterarSenha.html', {'form_senha': form_senha})
+    return render(request, 'user/alterarSenha.html', {'form_senha': form_senha})

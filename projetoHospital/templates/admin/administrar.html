@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'css/principal.css' %}" />
+{% endblock css %} {% block title %} HOSPITAL LAUREANO - ADMIN {% endblock title%} 
+{% block body %}
+
+<h1>TESTE - ADMIN</h1>
+
+{% comment %} EXIBIR GUIA MÉDICO {% endcomment %}
+<li><a href="{% url 'admin-Guia-Medico' %}">Guia Médico</a></li>
+{% comment %} EXIBIR NOTÍCIAS {% endcomment %}
+<li><a href="{% url 'admin-Noticias' %}">Noticias</a></li>
+
+
+
+<a class="mx-auto my-0 text-uppercase text-amarelo mx-auto mt-2 mb-5 style=" href="{% url 'home' %}">Back</a>
+
+{% endblock body %}

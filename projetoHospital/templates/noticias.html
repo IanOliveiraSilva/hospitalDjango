@@ -13,13 +13,13 @@
 
 
 
-{% for img in noticia %}  
+{% for item in noticia %}  
 <ul>
-    <li>Titulo: {{ img.Titulo }}
-        Subtitulo: {{ img.Subtitulo }}  
-        Imagem: <img src="/image/{{ img.Imagem }}" width="250">   
-        Corpo: {{ img.Corpo }}  
-        Detalhes: {{ img.Detalhes }}
+    <li>Titulo: {{ item.Titulo }}
+        Subtitulo: {{ item.Subtitulo }}  
+        Imagem: <img src="/image/{{ item.Imagem }}" width="250">   
+        Corpo: {{ item.Corpo }}  
+        Detalhes: {{ item.Detalhes }}
     </li>
 </ul> 
        

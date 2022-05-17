@@ -23,7 +23,7 @@ HOSPITAL LAUREANO - ADMIN NOTICIA
 
 
 {% comment %} O botão delete só aparece se estiver editando {% endcomment %}
-{% if medico %}
+{% if noticia %}
 <a href="{% url 'delete-noticia' noticia.id %}">Apagar</a>
 {% endif %}
 
