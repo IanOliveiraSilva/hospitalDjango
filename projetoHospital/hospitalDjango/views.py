@@ -36,8 +36,6 @@ def viewDeleteMedico(request, id):
         return redirect('administrar')
     return render(request, 'confirm-delete.html', {'medico': medico})
 
-# VIEW
-
 
 
 
@@ -53,7 +51,7 @@ def viewAddNoticia(request):
     if formNoticia.is_valid():
        formNoticia.save()
        return redirect('administrar')
-    return render(request, 'form-noticia.html', {'form-noticia': formNoticia})
+    return render(request, 'form-noticia.html', {'formNoticia': formNoticia})
 
 # UPDATE
 

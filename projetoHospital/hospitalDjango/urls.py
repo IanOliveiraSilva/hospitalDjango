@@ -1,4 +1,7 @@
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
+from django.contrib import admin
 
 from .views import *
 urlpatterns = [
@@ -24,3 +27,7 @@ urlpatterns = [
     path('update/<int:id>/', viewEditNoticia, name="edit-noticia"),
     path('delete/<int:id>/', viewDeleteNoticia, name="delete-noticia"),
     ]
+
+if settings.DEBUG:
+        urlpatterns += static(settings.MEDIA_URL,
+                              document_root=settings.MEDIA_ROOT)

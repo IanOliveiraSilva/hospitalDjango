@@ -11,19 +11,20 @@
 
 <h1>TESTE - NOTICIAS</h1>
 
-{% for item in noticia %}
 
+
+{% for img in noticia %}  
 <ul>
-    <li>Titulo: {{ item.Titulo }}
-        Subtitulo: {{ item.Subtitulo }}  
-        Imagem: {{ item.Imagem }}  
-        Corpo: {{ item.Corpo }}  
-        Detalhes: {{ item.Detalhes }}
+    <li>Titulo: {{ img.Titulo }}
+        Subtitulo: {{ img.Subtitulo }}  
+        Imagem: <img src="/image/{{ img.Imagem }}" width="250">   
+        Corpo: {{ img.Corpo }}  
+        Detalhes: {{ img.Detalhes }}
     </li>
-</ul>
-
-{% endfor %}
-
+</ul> 
+       
+    
+{% endfor %} 
 
 
 <a class="mx-auto my-0 text-uppercase text-amarelo mx-auto mt-2 mb-5 style=" href="{% url 'home' %}">Back</a>
