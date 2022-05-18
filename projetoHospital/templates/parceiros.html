@@ -8,5 +8,17 @@ HOSPITAL LAUREANO - PARCEIROS
 {% block body %}
 
 <h1>TESTE - PARCEIROS</h1>
+
+
+
+{% for item in parceiro %}  
+<ul>
+    <li>
+        <img src="/image/{{ item.FotoParceiro }}" width="250"> 
+    </li>
+</ul> 
+
+{% endfor %}
+
 <a class="mx-auto my-0 text-uppercase text-amarelo mx-auto mt-2 mb-5 style=" href="{% url 'home' %}">Back</a>
 {% endblock body %}

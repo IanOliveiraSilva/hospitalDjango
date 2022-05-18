@@ -22,19 +22,6 @@ urlpatterns = [
     path('acesso-paciente', viewLoginUser, name="login-user"),
     path('alterar-senha', viewAlterarSenha, name="alterar-senha"),
     path('sair-da-conta', viewLogout, name="logout-user"),
-    
-    # Admin
-    path('administrar/', viewAdmin, name="administrar"),
-    path('administrar/GuiaMedico', viewAdminGuiaMedico, name="admin-Guia-Medico"),
-    path('administrar/Noticias', viewAdminNoticia, name="admin-Noticias"),
-
-    # Forms
-    path('form-medico', viewAddMedico, name="form-medico"),
-    path('update/<int:id>/', viewEditMedico, name="edit-medico"),
-    path('delete/<int:id>/', viewDeleteMedico, name="delete-medico"),
-    path('form-noticia', viewAddNoticia, name="form-noticia"),
-    path('update/<int:id>/', viewEditNoticia, name="edit-noticia"),
-    path('delete/<int:id>/', viewDeleteNoticia, name="delete-noticia"),
     ]
 
 if settings.DEBUG:

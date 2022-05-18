@@ -15,11 +15,14 @@
 
 {% for item in noticia %}  
 <ul>
-    <li>Titulo: {{ item.Titulo }}
-        Subtitulo: {{ item.Subtitulo }}  
-        Imagem: <img src="/image/{{ item.Imagem }}" width="250">   
-        Corpo: {{ item.Corpo }}  
-        Detalhes: {{ item.Detalhes }}
+    <li>
+        <img src="/image/{{ item.Imagem }}" width="250"> 
+        <br>      
+        Titulo: {{ item.Titulo }}
+        <br>
+                {{ item.Subtitulo }} 
+        <br>
+        {{ item.Corpo }} 
     </li>
 </ul> 
        

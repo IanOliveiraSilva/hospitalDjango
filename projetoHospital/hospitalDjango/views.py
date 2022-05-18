@@ -3,112 +3,36 @@ from django.contrib.auth.forms import  AuthenticationForm, UserCreationForm, Pas
 from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.http import HttpResponse
-from .models import Medico, Noticia
-from .forms import MedicoForm, NoticiaForm
+from .models import Medico, Noticia, Parceiros
+from .forms import MedicoForm, NoticiaForm, ParceirosForm
 
-#CRUD - GUIA MÉDICO
-
-# CREATE
-
-def viewAddMedico(request):
-    form = MedicoForm(request.POST or None)
-
-    if form.is_valid():
-        form.save()
-        return redirect('admin-Guia-Medico')
-    return render(request, 'forms/form-medico.html', {'form': form})
-
-# READ
-
-# Usuário Padrão
+# READ - GUIA MÉDICO
 
 def viewGuiaMedico(request):
     medico = Medico.objects.all()
     return render(request, "guiaMedico.html", {"medico": medico})
 
-# Admin
-
-def viewAdminGuiaMedico(request):
-    if not request.user.is_superuser:
-       return HttpResponse('The user is not admin')
-    else:
-        medico = Medico.objects.all()
-        return render(request, "admin/guiaMedico.html", {"medico": medico})
-
-# UPDATE
-def viewEditMedico(request, id):
-    medico = Medico.objects.get(id=id)
-    form = MedicoForm(request.POST or None, instance=medico)
-
-    if form.is_valid():
-        form.save()
-        return redirect('admin-Guia-Medico')
-    return render(request, 'forms/form-medico.html', {'form': form, 'medico': medico})
-
-# DELETE
-def viewDeleteMedico(request, id):
-    medico = Medico.objects.get(id=id)
-    if request.method == "POST":
-        medico.delete()
-        return redirect('admin-Guia-Medico')
-    return render(request, 'forms/confirm-delete.html', {'medico': medico})
 
 
-# CRUD - NOTICIAS
 
-# CREATE
+# READ - NOTICIAS
 
-def viewAddNoticia(request):
-    formNoticia = NoticiaForm(request.POST or None)
-
-    if formNoticia.is_valid():
-       formNoticia.save()
-       return redirect('admin-Noticias')
-    return render(request, 'forms/form-noticia.html', {'formNoticia': formNoticia})
-
-# READ
-
-# Usuário Padrão
 def viewNoticia(request):
     noticia = Noticia.objects.all()
     return render(request, "noticias.html", {"noticia": noticia})
 
-# Admin
 
-def viewAdminNoticia(request):
-    if not request.user.is_superuser:
-       return HttpResponse('The user is not admin')
-    else:
-        noticia = Noticia.objects.all()
-        return render(request, "admin/noticias.html", {"noticia": noticia})
 
-# UPDATE
 
-def viewEditNoticia(request, id):
-    noticia = Noticia.objects.get(id=id)
-    formNoticia = NoticiaForm(request.POST or None, instance=noticia)
+# READ - PARCEIROS
 
-    if formNoticia.is_valid():
-        formNoticia.save()
-        return redirect('admin-Noticias')
-    return render(request, 'forms/form-noticia.html', {'form': formNoticia, 'noticia': noticia})
+def viewParceiros(request):
+    parceiro = Parceiros.objects.all()
+    return render(request, "parceiros.html", {"parceiro": parceiro})
 
-# DELETE 
 
-def viewDeleteNoticia(request, id):
-    noticia = Noticia.objects.get(id=id)
-    if request.method == 'POST':
-        Noticia.delete()
-        return redirect('administrar')
-    return render(request, 'forms/confirm-delete.html', {'noticia': noticia} )
 
-# Página Admin
 
-def viewAdmin(request):
-   if not request.user.is_superuser:
-       return HttpResponse('The user is not admin')
-   else:
-    return render(request, "admin/administrar.html")
 
 #PATH
 
@@ -136,6 +60,12 @@ def viewdoacao(request):
 @login_required(login_url='/acesso-paciente')
 def viewResultadoExame(request):
     return render(request, "resultadoexame.html", {})
+
+
+
+
+
+
 
 
 #REGISTER AND LOGIN
