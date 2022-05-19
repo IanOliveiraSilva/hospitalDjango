@@ -21,3 +21,8 @@ class Noticia(models.Model):
 
 class Parceiros(models.Model):
     FotoParceiro = models.ImageField(null=True, blank=True)
+
+class Convenio(models.Model):
+    NomeConvenio = models.CharField(max_length=100)
+    def __str__(self):
+        return self.NomeConvenio

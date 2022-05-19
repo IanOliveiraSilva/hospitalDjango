@@ -3,8 +3,7 @@ from django.contrib.auth.forms import  AuthenticationForm, UserCreationForm, Pas
 from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.http import HttpResponse
-from .models import Medico, Noticia, Parceiros
-from .forms import MedicoForm, NoticiaForm, ParceirosForm
+from .models import *
 
 # READ - GUIA MÉDICO
 
@@ -30,7 +29,11 @@ def viewParceiros(request):
     parceiro = Parceiros.objects.all()
     return render(request, "parceiros.html", {"parceiro": parceiro})
 
+# READ - CONVENIOS
 
+def viewConvenio(request):
+    convenio = Convenio.objects.all()
+    return render(request, "convenio.html", {"convenio": convenio})
 
 
 
@@ -38,9 +41,6 @@ def viewParceiros(request):
 
 def viewHome(request):
     return render(request, "home.html", {})
-
-def viewParceiros(request):
-    return render(request, "parceiros.html", {})
 
 def viewContato(request):
     return render(request, "contatos.html", {})

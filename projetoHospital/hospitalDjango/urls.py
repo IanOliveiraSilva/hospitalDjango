@@ -16,6 +16,7 @@ urlpatterns = [
     path('doacao', viewdoacao, name="doacao"),
     path('guia-medico/', viewGuiaMedico, name="guia-medico"),
     path('noticias/', viewNoticia, name='noticias'),
+    path('convenio/', viewConvenio, name='convenio'),
     
     # Login
     path('registrar-paciente', viewRegister, name="register-user"),
