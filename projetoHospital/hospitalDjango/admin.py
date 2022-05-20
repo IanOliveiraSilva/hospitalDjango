@@ -1,10 +1,52 @@
 from django.contrib import admin
 from .models import *
+from django.contrib.auth.models import Group
+from django.utils.html import format_html
 
-admin.site.register(Medico)
-admin.site.register(Noticia)
-admin.site.register(Parceiros)
-admin.site.register(Convenio)
-admin.site.register(Diretoria)
+admin.site.unregister(Group)
 
-# Register your models here.
+# Changing the header
+admin.site.site_header = 'Administração Laureano'
+
+# Register the fields
+@admin.register(Medico)
+class MedicoAdmin(admin.ModelAdmin):
+    list_display = ('Nome', 'Especialidade')
+    ordering = ('Especialidade',)
+    search_fields = ('Nome', )
+    list_filter = ('Especialidade', )
+
+@admin.register(Diretoria)
+class DiretoriaAdmin(admin.ModelAdmin):
+    def FotoDiretoria_preview(self, obj):
+         return format_html(
+            f"<img src='{obj.FotoDiretoria.url}' width='{obj.FotoDiretoria.width}' height='{obj.FotoDiretoria.height}' style=''/>")
+    readonly_fields = ['FotoDiretoria_preview']
+    list_display = ('NomeDiretoria', 'CargoDiretoria')
+    search_fields = ('NomeDiretoria', 'CargoDiretoria')
+
+@admin.register(Convenio)
+class ConvenvioAdmin(admin.ModelAdmin):
+    def FotoCovenio_preview(self, obj):
+         return format_html(
+            f"<img src='{obj.FotoCovenio.url}' width='{obj.FotoCovenio.width}' height='{obj.FotoCovenio.height}' style=''/>")
+    readonly_fields = ['FotoCovenio_preview']
+    search_fields = ('NomeConvenio',)
+
+
+@admin.register(Parceiros)
+class ParceirosAdmin(admin.ModelAdmin):
+    def FotoParceiro_preview(self, obj):
+         return format_html(
+            f"<img src='{obj.FotoParceiro.url}' width='{obj.FotoParceiro.width}' height='{obj.FotoParceiro.height}' style=''/>")
+    readonly_fields = ['FotoParceiro_preview']
+    search_fields = ('NomeParceiro',)
+
+@admin.register(Noticia)
+class NoticiaAdmin(admin.ModelAdmin):
+    def Imagem_preview(self, obj):
+         return format_html(
+            f"<img src='{obj.Imagem.url}' width='{obj.Imagem.width}' height='{obj.Imagem.height}' style=''/>")
+    readonly_fields = ['Imagem_preview']
+    list_display = ('Titulo', 'Subtitulo')
+    search_fields = ('Titulo',)
