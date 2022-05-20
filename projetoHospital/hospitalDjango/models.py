@@ -24,5 +24,7 @@ class Parceiros(models.Model):
 
 class Convenio(models.Model):
     NomeConvenio = models.CharField(max_length=100)
+    FotoCovenio = models.ImageField(null=True, blank=True)
     def __str__(self):
         return self.NomeConvenio
+        

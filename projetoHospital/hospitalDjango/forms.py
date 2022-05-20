@@ -1,6 +1,6 @@
 from dataclasses import fields
 from django import forms
-from .models import Medico, Noticia, Parceiros
+from .models import *
 
 class MedicoForm(forms.ModelForm):
     class Meta:
@@ -16,3 +16,8 @@ class ParceirosForm(forms.ModelForm):
     class Meta:
         model = Parceiros
         fields = ['FotoParceiro']
+
+class Covenio(forms.ModelForm):
+    class Meta:
+        model = Convenio
+        fields = ['NomeConvenio', 'FotoCovenio']
