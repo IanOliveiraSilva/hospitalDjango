@@ -30,3 +30,11 @@ class Convenio(models.Model):
     FotoCovenio = models.ImageField(null=True, blank=True)
     def __str__(self):
         return self.NomeConvenio
+
+class Diretoria(models.Model):
+    NomeDiretoria = models.CharField(max_length=100)
+    CargoDiretoria = models.CharField(max_length=50)
+    FotoDiretoria = models.ImageField(null=True, blank=True)
+    def __str__(self):
+        return self.NomeDiretoria
+        

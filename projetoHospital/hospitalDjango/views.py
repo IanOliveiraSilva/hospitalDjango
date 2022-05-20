@@ -35,7 +35,11 @@ def viewConvenio(request):
     convenio = Convenio.objects.all()
     return render(request, "convenio.html", {"convenio": convenio})
 
+# READ - DIRETORIA
 
+def viewDiretoria(request):
+    diretoria = Diretoria.objects.all()
+    return render(request, "diretoria.html", {"diretoria": diretoria})
 
 #PATH
 
@@ -60,10 +64,6 @@ def viewdoacao(request):
 @login_required(login_url='/acesso-paciente')
 def viewResultadoExame(request):
     return render(request, "resultadoexame.html", {})
-
-
-
-
 
 
 
