@@ -15,7 +15,7 @@ class NoticiaForm(forms.ModelForm):
 class ParceirosForm(forms.ModelForm):
     class Meta:
         model = Parceiros
-        fields = ['FotoParceiro']
+        fields = ['NomeParceiro','FotoParceiro']
 
 class Covenio(forms.ModelForm):
     class Meta:
