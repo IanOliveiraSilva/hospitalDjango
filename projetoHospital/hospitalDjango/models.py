@@ -37,3 +37,15 @@ class Diretoria(models.Model):
     FotoDiretoria = models.ImageField(null=True, blank=True)
     def __str__(self):
         return self.NomeDiretoria
+
+class Premio(models.Model):
+    NomePremio = models.CharField(max_length=100)
+    FotoPremio = models.ImageField(null=True, blank=True)
+    def __str__(self):
+        return self.NomePremio
+
+class Banner(models.Model):
+    NomeBanner = models.CharField(max_length=100)
+    FotoBanner = models.ImageField(null=True, blank=True)
+    def __str__(self):
+        return self.NomeBanner

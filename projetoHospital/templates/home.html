@@ -17,6 +17,17 @@ HOSPITAL LAUREANO - PÁGINA INICIAL
 <p><a class="nav-link text-success" href="{% url 'logout-user' %}">Sair da conta</a></p>
 {% endif %}
        
+
+
+{% for item in banner %}  
+<ul>
+    <li>
+        <img src="/image/{{ item.FotoBanner }}" width="500"> 
+    </li>
+</ul>
+
+{% endfor %}
+
 <ul>
 <li><a href="{% url 'parceiros' %}">PARCEIROS</a></li>
 
@@ -46,6 +57,7 @@ HOSPITAL LAUREANO - PÁGINA INICIAL
 
 <li><a href="{% url 'diretoria' %}">DIRETORIA</a></li>
 
+<li><a href="{% url 'premio' %}">PREMIOS E CERTIFICAÇÕES</a></li>
 
 </ul>
 

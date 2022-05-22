@@ -18,6 +18,8 @@ urlpatterns = [
     path('noticias/', viewNoticia, name='noticias'),
     path('convenio/', viewConvenio, name='convenio'),
     path('diretoria', viewDiretoria, name='diretoria'),
+    path('premio', viewPremio, name='premio'),
+   
     
     # Login
     path('registrar-paciente', viewRegister, name="register-user"),

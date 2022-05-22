@@ -50,3 +50,21 @@ class NoticiaAdmin(admin.ModelAdmin):
     readonly_fields = ['Imagem_preview']
     list_display = ('Titulo', 'Subtitulo')
     search_fields = ('Titulo',)
+
+@admin.register(Premio)
+class PremioAdmin(admin.ModelAdmin):
+    def Imagem_preview(self, obj):
+         return format_html(
+            f"<img src='{obj.FotoPremio.url}' width='{obj.FotoPremio.width}' height='{obj.FotoPremio.height}' style=''/>")
+    readonly_fields = ['Imagem_preview']
+    list_display = ('NomePremio', 'FotoPremio')
+    search_fields = ('NomePremio',)
+
+@admin.register(Banner)
+class BannerAdmin(admin.ModelAdmin):
+    def Imagem_preview(self, obj):
+         return format_html(
+            f"<img src='{obj.FotoBanner.url}' width='{obj.FotoBanner.width}' height='{obj.FotoBanner.height}' style=''/>")
+    readonly_fields = ['Imagem_preview']
+    list_display = ('NomeBanner', 'FotoBanner')
+    search_fields = ('NomeBanner',)

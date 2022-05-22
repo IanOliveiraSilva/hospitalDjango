@@ -11,16 +11,11 @@ def viewGuiaMedico(request):
     medico = Medico.objects.all()
     return render(request, "guiaMedico.html", {"medico": medico})
 
-
-
-
 # READ - NOTICIAS
 
 def viewNoticia(request):
     noticia = Noticia.objects.all()
     return render(request, "noticias.html", {"noticia": noticia})
-
-
 
 
 # READ - PARCEIROS
@@ -41,10 +36,19 @@ def viewDiretoria(request):
     diretoria = Diretoria.objects.all()
     return render(request, "diretoria.html", {"diretoria": diretoria})
 
+
+# READ - PREMIOS E CERTIFICAÇÕES
+
+def viewPremio(request):
+    premio = Premio.objects.all()
+    return render(request, "premio.html", {"premio": premio})
+
+
 #PATH
 
 def viewHome(request):
-    return render(request, "home.html", {})
+    banner = Banner.objects.all()
+    return render(request, "home.html", {"banner": banner})
 
 def viewContato(request):
     return render(request, "contatos.html", {})
