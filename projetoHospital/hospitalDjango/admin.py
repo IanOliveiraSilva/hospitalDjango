@@ -68,3 +68,9 @@ class BannerAdmin(admin.ModelAdmin):
     readonly_fields = ['Imagem_preview']
     list_display = ('NomeBanner', 'FotoBanner')
     search_fields = ('NomeBanner',)
+
+@admin.register(Transparencia)
+class TransparenciaAdmin(admin.ModelAdmin):
+    list_display = ('NomeTransparencia', 'PdfTransparencia', 'DataTransparencia')
+    search_fields = ('NomeTransparencia',)
+    

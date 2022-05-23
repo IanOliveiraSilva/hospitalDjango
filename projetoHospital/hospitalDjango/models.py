@@ -49,3 +49,10 @@ class Banner(models.Model):
     FotoBanner = models.ImageField(null=True, blank=True)
     def __str__(self):
         return self.NomeBanner
+
+class Transparencia(models.Model):
+    NomeTransparencia = models.CharField(max_length=100)
+    PdfTransparencia = models.FileField(null=True, blank=True)
+    DataTransparencia = models.DateField(null=True, blank=True)
+    def __str__(self):
+        return self.NomeTransparencia

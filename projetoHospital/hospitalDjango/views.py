@@ -43,6 +43,12 @@ def viewPremio(request):
     premio = Premio.objects.all()
     return render(request, "premio.html", {"premio": premio})
 
+# READ - TRANSPARÊNCIA
+
+def viewTransparencia(request):
+    transparencia = Transparencia.objects.all()
+    return render(request, "transparencia.html", {"transparencia": transparencia})
+
 
 #PATH
 
