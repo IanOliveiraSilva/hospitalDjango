@@ -13,7 +13,7 @@ class Medico(models.Model):
 class Noticia(models.Model):
     Titulo = models.CharField(max_length=100)
     Subtitulo = models.CharField(max_length=100)
-    Imagem = models.ImageField(null=True, blank=True)
+    Imagem = models.ImageField(upload_to='Noticia',null=True, blank=True)
     Corpo = models.TextField()
     Detalhes = models.TextField(null=True, blank=True)
     def __str__(self):
@@ -21,38 +21,38 @@ class Noticia(models.Model):
 
 class Parceiros(models.Model):
     NomeParceiro = models.CharField(max_length=50)
-    FotoParceiro = models.ImageField(null=True)
+    FotoParceiro = models.ImageField(upload_to='parceiro', null=True)
     def __str__(self):
         return self.NomeParceiro
 
 class Convenio(models.Model):
     NomeConvenio = models.CharField(max_length=100)
-    FotoCovenio = models.ImageField(null=True, blank=True)
+    FotoCovenio = models.ImageField(upload_to='Convenio', null=True, blank=True)
     def __str__(self):
         return self.NomeConvenio
 
 class Diretoria(models.Model):
     NomeDiretoria = models.CharField(max_length=100)
     CargoDiretoria = models.CharField(max_length=50)
-    FotoDiretoria = models.ImageField(null=True, blank=True)
+    FotoDiretoria = models.ImageField(upload_to='Diretoria', null=True, blank=True)
     def __str__(self):
         return self.NomeDiretoria
 
 class Premio(models.Model):
     NomePremio = models.CharField(max_length=100)
-    FotoPremio = models.ImageField(null=True, blank=True)
+    FotoPremio = models.ImageField(upload_to='Premio', null=True, blank=True)
     def __str__(self):
         return self.NomePremio
 
 class Banner(models.Model):
     NomeBanner = models.CharField(max_length=100)
-    FotoBanner = models.ImageField(null=True, blank=True)
+    FotoBanner = models.ImageField(upload_to='Banner', null=True, blank=True)
     def __str__(self):
         return self.NomeBanner
 
 class Transparencia(models.Model):
     NomeTransparencia = models.CharField(max_length=100)
-    PdfTransparencia = models.FileField(null=True, blank=True)
+    PdfTransparencia = models.FileField(upload_to='pdf/', null=True, blank=True)
     DataTransparencia = models.DateField(null=True, blank=True)
     def __str__(self):
         return self.NomeTransparencia
