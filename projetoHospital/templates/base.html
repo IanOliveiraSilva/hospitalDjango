@@ -1,21 +1,102 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alatsi&family=Anton&family=Atkinson+Hyperlegible:wght@400;700&family=Montserrat&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Alatsi&family=Anton&family=Atkinson+Hyperlegible:wght@400;700&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
     {% block css %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 
     {% endblock css %}
 
-    <title>{% block titulo %}     {% endblock titulo %}</title>
-</head>
-<body>
-    {% block body %}
-
-    {% endblock body %}
-</body>
+    <title>{% block titulo %} {% endblock titulo %}</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__wrapper">
+          <div class="header__menu">
+            <div class="header__menu--line"></div>
+            <div class="header__menu--line"></div>
+            <div class="header__menu--line"></div>
+            <div class="header__menu--title">Menu</div>
+          </div>
+          <div class="header__title">
+            <img
+              class="header__title--logo"
+              src="{% static '/images/logo.png' %}"
+              alt="Logo do Hospital Napoleão Laureano"
+            />
+            <h1 class="header__title--title">Hospital Napoleão Laureano</h1>
+          </div>
+          <div></div>
+        </div>
+      </header>
+      <div class="main-content">{% block body %} {% endblock body %}</div>
+      <footer class="footer">
+        <div class="footer__wrapper">
+          <img
+            src="{% static '/images/logo_hospital_rodape.png' %}"
+            alt="Logo Hospital Napoleão Laureano"
+            class="footer__logo"
+          />
+          <span class="footer__adress"
+            >Telefone: (83) 3015-6200 Av. Capitão José Pessoa, 1140 - Jaguaribe
+            CEP: 58015-170 - João Pessoa - PB
+          </span>
+          <div class="footer__medias medias">
+            <span class="medias--social">Redes sociais</span>
+            <div class="medias--icons">
+              <a
+                href="https://www.facebook.com/HospitalNapoleaoLaureano"
+                class="medias--icons__link"
+                target="_blank"
+                ><img
+                  src="{% static '/images/facebook_icon.png' %}"
+                  alt="Ícone do Facebook"
+                  class="medias--icons__link-icon"
+              /></a>
+              <a
+                href="https://twitter.com/h_laureano"
+                class="medias--icons__link"
+                target="_blank"
+                ><img
+                  src="{% static '/images/twitter_icon.png' %}"
+                  alt="Ícone do Twitter"
+                  class="medias--icons__link-icon"
+              /></a>
+              <a
+                href="https://www.instagram.com/hnlaureano/"
+                class="medias--icons__link"
+                target="_blank"
+                ><img
+                  src="{% static '/images/instagram_icon.png' %}"
+                  alt="Ícone do Instagram"
+                  class="medias--icons__link-icon"
+              /></a>
+              <a
+                href="https://www.youtube.com/user/HNapoleaoLaureano/feed?view_as=public"
+                class="medias--icons__link"
+                target="_blank"
+                ><img
+                  src="{% static '/images/youtube_icon.png' %}"
+                  alt="Ícone do YouTube"
+                  class="medias--icons__link-icon"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script
+    type="text/javascript"
+    src='{% static "/scripts/header.js" %}'
+  ></script>
 </html>
