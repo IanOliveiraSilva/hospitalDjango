@@ -19,25 +19,88 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="header__wrapper">
-          <div class="header__menu">
-            <div class="header__menu--line"></div>
-            <div class="header__menu--line"></div>
-            <div class="header__menu--line"></div>
-            <div class="header__menu--title">Menu</div>
+        <header class="header">
+          <div class="header__wrapper">
+            <div class="header__menu">
+              <div class="header__menu--line"></div>
+              <div class="header__menu--line"></div>
+              <div class="header__menu--line"></div>
+              <div class="header__menu--title">Menu</div>
+            </div>
+            <div class="header__title">
+              <img
+                class="header__title--logo"
+                src="{% static '/images/logo.png' %}"
+                alt="Logo do Hospital Napoleão Laureano"
+              />
+              <h1 class="header__title--title">Hospital Napoleão Laureano</h1>
+            </div>
+            <div></div>
           </div>
-          <div class="header__title">
+        </header>
+        {% comment %} <div class="menu--departments">
+          <a class="menu--departments-department" href="#">
             <img
-              class="header__title--logo"
-              src="{% static '/images/logo.png' %}"
-              alt="Logo do Hospital Napoleão Laureano"
+              id="home"
+              class="menu--departments-department-icon"
+              src="{% static '/images/home_icon.png' %}"
             />
-            <h1 class="header__title--title">Hospital Napoleão Laureano</h1>
-          </div>
-          <div></div>
-        </div>
-      </header>
-      <div class="main-content">{% block body %} {% endblock body %}</div>
+            Home</a
+          >
+          <a class="menu--departments-department" href="#">
+            <img
+              class="menu--departments-department-icon"
+              src="{% static '/images/paciente_icon.png' %}"
+            />
+            Área do Paciente</a
+          >
+          <a class="menu--departments-department" href="#">
+            <img
+              class="menu--departments-department-icon"
+              src="{% static '/images/somos_icon.png' %}"
+            />
+            Quem Somos</a
+          >
+          <a class="menu--departments-department" href="#">
+            <img
+              class="menu--departments-department-icon"
+              src="{% static '/images/servicos_icon.png' %}"
+            />
+            Serviços</a
+          >
+          <a class="menu--departments-department" href="#">
+            <img
+              class="menu--departments-department-icon"
+              src="{% static '/images/parceiros_icon.png' %}"
+            />
+            Parceiros</a
+          >
+          <a class="menu--departments-department" href="#">
+            <img
+              class="menu--departments-department-icon"
+              src="{% static '/images/eventos_icon.png' %}"
+            />
+            Eventos</a
+          >
+          <a class="menu--departments-department" href="#">
+            <img
+              class="menu--departments-department-icon"
+              src="{% static '/images/noticias_icon.png' %}"
+            />
+            Notícias</a
+          >
+          <a class="menu--departments-department" href="#">
+            <img
+              class="menu--departments-department-icon"
+              src="{% static '/images/fale_icon.png' %}"
+            />
+            Fale Conosco</a
+          >
+        </div> {% endcomment %}
+        {% block body %} 
+        
+        {% endblock body %}
+      </div>
       <footer class="footer">
         <div class="footer__wrapper">
           <img
