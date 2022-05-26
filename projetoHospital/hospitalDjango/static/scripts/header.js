@@ -1,9 +1,12 @@
 const $logo = document.querySelector(".header__title--logo");
 const $hospitalName = document.querySelector(".header__title--title");
 const $menu = document.querySelector(".header__menu");
-const $lines = document.querySelectorAll(".header__menu--line");
+const $lines = document.querySelector(".header__menu--menu");
+const $linesImage = document.querySelector(".header__menu--menu-image");
+const $closeImage = document.querySelector(".header__menu--close-image");
+const $close = document.querySelector(".header__menu--close");
 const $menuAlt = document.querySelector(".header__menu--title");
-const $departments = document.querySelector(".menu--departments");
+const $menuOptions = document.querySelector(".menu-options");
 
 window.onscroll = function () {
   scrollFunction();
@@ -18,40 +21,43 @@ function scrollFunction() {
 
     $hospitalName.style.fontSize = `${fontSizeTitle}rem`;
 
+    $closeImage.style.width = "30px";
     $menuAlt.style.fontSize = `${fontSizeAlt}rem`;
+    $menuAlt.style.margin = "40px 0 0 0";
 
     $menu.style.width = "40px";
-    $menu.style.margin = "0";
-    $departments.style.padding = "4% 0 0 0";
+    $menuOptions.style.padding = "4% 0 0 0";
 
-    for (let $i = 0; $i < $lines.length; $i++) {
-      $lines[$i].style.height = "2px";
-    }
+    $linesImage.style.width = "40px";
   } else {
     const fontSizeTitle = 56 / 16;
     const fontSizeAlt = 20 / 16;
 
-    $logo.style.width = "70px";
+    $logo.style.width = "80px";
 
     $hospitalName.style.fontSize = `${fontSizeTitle}rem`;
 
+    $closeImage.style.width = "40px";
     $menuAlt.style.fontSize = `${fontSizeAlt}rem`;
+    $menuAlt.style.margin = "50px 0 0 0";
 
     $menu.style.width = "50px";
-    $menu.style.margin = "2vh 0 0 0";
-    $departments.style.padding = "6% 0 0 0";
+    $menuOptions.style.padding = "6% 0 0 0";
 
-    for (let $i = 0; $i < $lines.length; $i++) {
-      $lines[$i].style.height = "4px";
-    }
+    $linesImage.style.width = "50px";
   }
 }
 
 $menu.addEventListener("click", function () {
-  console.log("a");
-  if ($departments.style.display === "none") {
-    $departments.style.display = "block";
+  if ($menuOptions.style.display === "none") {
+    $lines.style.display = "none";
+    $close.style.display = "block";
+    $menuAlt.innerHTML = "Fechar";
+    $menuOptions.style.display = "block";
   } else {
-    $departments.style.display = "none";
+    $lines.style.display = "block";
+    $close.style.display = "none";
+    $menuAlt.innerHTML = "Menu";
+    $menuOptions.style.display = "none";
   }
 });

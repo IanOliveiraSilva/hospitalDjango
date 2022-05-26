@@ -19,88 +19,209 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <header class="header">
-          <div class="header__wrapper">
-            <div class="header__menu">
-              <div class="header__menu--line"></div>
-              <div class="header__menu--line"></div>
-              <div class="header__menu--line"></div>
-              <div class="header__menu--title">Menu</div>
-            </div>
-            <div class="header__title">
+        <div class="header__wrapper">
+          <div class="header__menu">
+            <div class="header__menu--menu">
               <img
-                class="header__title--logo"
-                src="{% static '/images/logo.png' %}"
-                alt="Logo do Hospital Napoleão Laureano"
+                class="header__menu--menu-image"
+                src="{% static '/images/menu_icon.png' %}"
               />
-              <h1 class="header__title--title">Hospital Napoleão Laureano</h1>
             </div>
-            <div></div>
+            <div class="header__menu--close">
+              <img
+                class="header__menu--close-image"
+                src="{% static '/images/fechar_icon.png' %}"
+              />
+            </div>
+            <div class="header__menu--title">Menu</div>
           </div>
-        </header>
-        {% comment %} <div class="menu--departments">
-          <a class="menu--departments-department" href="#">
+          <div class="header__title">
             <img
-              id="home"
-              class="menu--departments-department-icon"
+              class="header__title--logo"
+              src="{% static '/images/logo_icon.png' %}"
+              alt="Logo do Hospital Napoleão Laureano"
+            />
+            <h1 class="header__title--title">Hospital Napoleão Laureano</h1>
+          </div>
+          <div></div>
+        </div>
+      </header>
+
+      <div class="menu">
+        <ul class="menu-options">
+          <li class="menu-options--department">
+            <img
+              class="menu-options--department--icon"
               src="{% static '/images/home_icon.png' %}"
-            />
-            Home</a
-          >
-          <a class="menu--departments-department" href="#">
+            /><a class="menu-options--department--link" href="#">Home</a>
+          </li>
+          <li class="menu-options--department">
             <img
-              class="menu--departments-department-icon"
+              class="menu-options--department--icon"
               src="{% static '/images/paciente_icon.png' %}"
-            />
-            Área do Paciente</a
-          >
-          <a class="menu--departments-department" href="#">
+            /><a class="menu-options--department--link" href="#"
+              >Área do Paciente</a
+            >
+          </li>
+          <li class="menu-options--department option--category">
             <img
-              class="menu--departments-department-icon"
+              class="menu-options--department--icon"
               src="{% static '/images/somos_icon.png' %}"
-            />
-            Quem Somos</a
-          >
-          <a class="menu--departments-department" href="#">
+            /><a class="menu-options--department--link" href="#">Quem Somos</a>
             <img
-              class="menu--departments-department-icon"
+              class="menu-options--department--icon-next"
+              src="{% static '/images/proximo_icon.png' %}"
+            />
+            <div class="categories">
+              <ul class="categories-options">
+                <li class="categories-options--category option--subcategory">
+                  <a class="categories-options--category-link" href=""
+                    >Hospital Laureano</a
+                  ><img
+                    class="menu-options--department--icon-next"
+                    src="{% static '/images/proximo_icon.png' %}"
+                  />
+                  <div class="subcategories">
+                    <ul class="subcategories-options">
+                      <li class="subcategories-options--subcategory">
+                        <a
+                          class="subcategories-options--subcategory-link"
+                          href=""
+                          >História</a
+                        >
+                      </li>
+                      <li class="subcategories-options--subcategory">
+                        <a
+                          class="subcategories-options--subcategory-link"
+                          href=""
+                          >Diretoria</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="categories-options--category option--subcategory">
+                  <a class="categories-options--category-link" href=""
+                    >Fundação Laureano</a
+                  ><img
+                    class="menu-options--department--icon-next"
+                    src="{% static '/images/proximo_icon.png' %}"
+                  />
+                  <div class="subcategories">
+                    <ul class="subcategories-options">
+                      <li class="subcategories-options--subcategory">
+                        <a
+                          class="subcategories-options--subcategory-link"
+                          href=""
+                          >História</a
+                        >
+                      </li>
+                      <li class="subcategories-options--subcategory">
+                        <a
+                          class="subcategories-options--subcategory-link"
+                          href=""
+                          >Diretoria e Conselho</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="categories-options--category">
+                  <a class="categories-options--category-link" href=""
+                    >Nossa Missão</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu-options--department option--category">
+            <img
+              class="menu-options--department--icon"
               src="{% static '/images/servicos_icon.png' %}"
-            />
-            Serviços</a
-          >
-          <a class="menu--departments-department" href="#">
+            /><a class="menu-options--department--link" href="#">Servicos</a>
             <img
-              class="menu--departments-department-icon"
+              class="menu-options--department--icon-next"
+              src="{% static '/images/proximo_icon.png' %}"
+            />
+            <div class="categories">
+              <ul class="categories-options">
+                <li class="categories-options--category">
+                  <a class="categories-options--category-link" href=""
+                    >Exames</a
+                  >
+                </li>
+                <li class="categories-options--category option--subcategory">
+                  <a class="categories-options--category-link" href=""
+                    >Consultas</a
+                  >
+                </li>
+                <li class="categories-options--category option--subcategory">
+                  <a class="categories-options--category-link" href=""
+                    >Telemedicina</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu-options--department">
+            <img
+              class="menu-options--department--icon"
               src="{% static '/images/parceiros_icon.png' %}"
-            />
-            Parceiros</a
-          >
-          <a class="menu--departments-department" href="#">
+            /><a class="menu-options--department--link" href="#">Parceiros</a>
+          </li>
+          <li class="menu-options--department">
             <img
-              class="menu--departments-department-icon"
+              class="menu-options--department--icon"
               src="{% static '/images/eventos_icon.png' %}"
-            />
-            Eventos</a
-          >
-          <a class="menu--departments-department" href="#">
+            /><a class="menu-options--department--link" href="#">Eventos</a>
+          </li>
+          <li class="menu-options--department">
             <img
-              class="menu--departments-department-icon"
+              class="menu-options--department--icon"
               src="{% static '/images/noticias_icon.png' %}"
-            />
-            Notícias</a
-          >
-          <a class="menu--departments-department" href="#">
+            /><a class="menu-options--department--link" href="#">Notícias</a>
+          </li>
+          <li class="menu-options--department option--category">
             <img
-              class="menu--departments-department-icon"
+              class="menu-options--department--icon"
               src="{% static '/images/fale_icon.png' %}"
+            /><a class="menu-options--department--link" href="#"
+              >Fale Conosco</a
+            >
+            <img
+              class="menu-options--department--icon-next"
+              src="{% static '/images/proximo_icon.png' %}"
             />
-            Fale Conosco</a
-          >
-        </div> {% endcomment %}
-        {% block body %} 
-        
-        {% endblock body %}
+            <div class="categories last">
+              <ul class="categories-options">
+                <li class="categories-options--category option--subcategory">
+                  <a class="categories-options--category-link" href=""
+                    >Trabalhe Conosco</a
+                  >
+                </li>
+                <li class="categories-options--category option--subcategory">
+                  <a class="categories-options--category-link" href=""
+                    >Ouvidoria</a
+                  >
+                </li>
+                <li class="categories-options--category">
+                  <a class="categories-options--category-link" href=""
+                    >Pesquisa de Satisfação</a
+                  >
+                </li>
+                <li class="categories-options--category">
+                  <a class="categories-options--category-link" href=""
+                    >Seja um Residente Laureano</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </div>
+
+      <div class="main-content">{% block body %} {% endblock body %}</div>
+
       <footer class="footer">
         <div class="footer__wrapper">
           <img

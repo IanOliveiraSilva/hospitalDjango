@@ -24,29 +24,43 @@
   }
 
   &__menu {
-    @include flex(column);
-    gap: 6px;
-    width: 50px;
+    z-index: 1;
+    @include flex();
     color: $darkGreen;
     text-transform: uppercase;
-    margin-top: 2vh;
     font-size: calculator-rem(20);
     cursor: pointer;
     transition: 0.4s;
 
-    &--line {
-      width: 100%;
-      height: 4px;
-      background-color: $darkGreen;
-      border-radius: 100px;
+    &--menu {
+      position: fixed;
+      display: block;
+
+      &-image {
+        width: 50px;
+        transition: 0.4s;
+      }
+    }
+
+    &--close {
+      position: fixed;
+      display: none;
+      
+      &-image {
+        width: 40px;
+        transition: 0.4s;
+      }
     }
 
     &--title {
+      margin-top: 50px;
       transition: 0.4s;
+
     }
   }
 
   &__title {
+    z-index: 2;
     @include flex();
     color: $darkGreen;
     font-size: calculator-rem(56);
@@ -62,106 +76,200 @@
     }
   }
 }
+
+.line {
+  display: block;
+}
+
 .menu {
-  &--departments {
-    @include flex(column, center, start);
-    // display: none;
-    margin-left: 9%;
-    padding-top: 7%;
-    width: auto;
-    overflow: hidden;
-    top: 0;
-    z-index: 1;
-    position: fixed;
+  &-options {
+    display: none;
     background-color: $white;
-    box-shadow: inset 0 4px 4px $shadow;
+    width: 250px;
+    margin-left: 9.5%;
+    padding-top: 6%;
+    top: 0;
+    box-shadow: inset 0 -4px 4px $shadow;
+    position: fixed;
     transition: 0.4s;
 
-    &-department {
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      font-family: "Atkinson Hyperlegible";
-      color: $lightGreen;
-      height: 57px;
-      width: 100%;
-      text-decoration: none;
-      font-size: calculator-rem(20);
-      padding: 0 30px;
+    &--department {
+      height: 25px;
+      padding: 17px 0 17px 17px;
+      display: block;
+      @include flex(row, start, center);
 
       &:hover {
         background-color: $darkGreen;
         color: $white;
-      }
-      &-icon {
-        width: 21px;
-        padding-right: 10px;
-      }
-    }
-  }
-  .active {
-    background-color: #04aa6d;
-    color: white;
-  }
 
-  .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: $lightGreen;
-    color: $white;
-    margin-bottom: -17vh;
-
-    &__wrapper {
-      @include flex(row, space-between);
-      height: auto;
-      padding: 1% 10%;
-    }
-
-    &__logo {
-      width: 200px;
-      height: auto;
-    }
-
-    &__adress {
-      text-align: center;
-      white-space: pre-line;
-      font-size: calculator-rem(18);
-    }
-
-    &__medias {
-      @include flex(column);
-      width: 250px;
-
-      .medias {
-        &--social {
-          font-size: calculator-rem(18);
+        &:last-child {
+          box-shadow: inset 0 -4px 4px $shadow;
         }
+      }
 
-        &--icons {
-          @include flex();
-          gap: 20px;
+      &--icon {
+        width: 10%;
+        padding-right: 10px;
+
+        &-next {
+          width: 10px;
+          margin-left: 10px;
+        }
+      }
+
+      &--link {
+        font-size: calculator-rem(20);
+        color: $lightGreen;
+        text-decoration: none;
+        font-family: "Atkinson Hyperlegible";
+      }
+    }
+  }
+}
+
+.categories {
+  display: none;
+  margin-top: -60px;
+
+  &-options {
+    background-color: $white;
+    width: 250px;
+    left: 100%;
+    box-shadow: inset 0 -4px 4px $shadow;
+    position: absolute;
+
+    &--category {
+      height: 25px;
+      padding: 17px 0 17px 17px;
+
+      &:hover {
+        background-color: $darkGreen;
+        color: $white;
+
+        &:last-child {
+          box-shadow: inset 0 -4px 4px $shadow;
+        }
+      }
+
+      &-link {
+        font-size: calculator-rem(20);
+        color: $lightGreen;
+        text-decoration: none;
+        font-family: "Atkinson Hyperlegible";
+      }
+    }
+  }
+}
+
+.last {
+  margin-top: -414px;
+}
+
+.subcategories {
+  display: none;
+  margin-top: -37px;
+
+  &-options {
+    background-color: $white;
+    width: 250px;
+    left: 100%;
+    box-shadow: inset 0 -4px 4px $shadow;
+    position: absolute;
+
+    &--subcategory {
+      height: 25px;
+      padding: 17px 0 17px 17px;
+
+      &:hover {
+        background-color: $darkGreen;
+        color: $white;
+
+        &:last-child {
+          box-shadow: inset 0 -4px 4px $shadow;
+        }
+      }
+
+      &-link {
+        font-size: calculator-rem(20);
+        color: $lightGreen;
+        text-decoration: none;
+        font-family: "Atkinson Hyperlegible";
+      }
+    }
+  }
+}
+
+.option {
+  &--category {
+    &:hover > div {
+      display: block;
+    }
+  }
+
+  &--subcategory {
+    &:hover > div {
+      display: block;
+    }
+  }
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: $lightGreen;
+  color: $white;
+  margin-bottom: -17vh;
+
+  &__wrapper {
+    @include flex(row, space-between);
+    height: auto;
+    padding: 1% 10%;
+  }
+
+  &__logo {
+    width: 200px;
+    height: auto;
+  }
+
+  &__adress {
+    text-align: center;
+    white-space: pre-line;
+    font-size: calculator-rem(18);
+  }
+
+  &__medias {
+    @include flex(column);
+    width: 250px;
+
+    .medias {
+      &--social {
+        font-size: calculator-rem(18);
+      }
+
+      &--icons {
+        @include flex();
+        gap: 20px;
+        width: 100%;
+        margin-top: 10px;
+
+        &__link {
           width: 100%;
-          margin-top: 10px;
+          height: 100%;
+          @include flex();
+          cursor: pointer;
 
-          &__link {
+          &-icon {
             width: 100%;
             height: 100%;
-            @include flex();
-            cursor: pointer;
-
-            &-icon {
-              width: 100%;
-              height: 100%;
-            }
           }
         }
       }
     }
   }
+}
 
-  .main-content {
-    margin-top: 15vh;
-    margin-bottom: 17vh;
-  }
+.main-content {
+  margin-top: 15vh;
+  margin-bottom: 17vh;
 }
