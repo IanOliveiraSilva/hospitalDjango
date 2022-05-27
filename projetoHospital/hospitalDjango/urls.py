@@ -8,11 +8,11 @@ urlpatterns = [
     # Páginas Principais
     path('', viewHome, name='home'),
     path('parceiros/', viewParceiros, name='parceiros'), 
-    path('contatos/', viewContato, name='contatos'),
+    # path('contatos/', viewContato, name='contatos'),
     path('resultado-exame', viewResultadoExame, name="resultado-exame"),
-    path('quem-somos', viewquemSomos, name="quem-somos"),
+    path('historiaHospital', viewHistoriaHospital, name="historiaHospital"),
     path('eventos', vieweventos, name="eventos"),
-    path('servicos', viewservicos, name="servicos"),
+    # path('servicos', viewservicos, name="servicos"),
     path('doacao', viewdoacao, name="doacao"),
     path('guia-medico/', viewGuiaMedico, name="guia-medico"),
     path('noticias/', viewNoticia, name='noticias'),
@@ -20,6 +20,11 @@ urlpatterns = [
     path('diretoria', viewDiretoria, name='diretoria'),
     path('premio', viewPremio, name='premio'),
     path('transparencia', viewTransparencia, name='transparencia'),
+    # path('Fundação', viewFundacaoLaureano, name='fundação'),
+    path('NossaMissao', viewNossaMissao, name='nossaMissao'),
+    path('HistoriaFundacao', viewHistoriaFundacao, name='HistoriaFundacao'),
+    path('DiretoriaFundacao', viewDiretoriaFundacao, name='DiretoriaFundacao'),
+    
     
     # Login
     path('registrar-paciente', viewRegister, name="register-user"),

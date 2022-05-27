@@ -14,7 +14,7 @@ HOSPITAL LAUREANO - TRANSPARÊNCIA
 {% for item in transparencia %}  
 <ul>
     <li>
-        <embed src="/image/{{ item.PdfTransparencia}}" height="100%" width="100%">
+        <h1>PDF:<a href="{{item.PdfTransparencia.url}}" download>{{item.NomeTransparencia}}</a></h1>
     </li>
 </ul> 
 

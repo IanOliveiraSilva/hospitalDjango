@@ -30,11 +30,22 @@ def viewConvenio(request):
     convenio = Convenio.objects.all()
     return render(request, "convenio.html", {"convenio": convenio})
 
-# READ - DIRETORIA
+# READ - DIRETORIA E HISTORIA HOSPITAL LAUREANO
 
 def viewDiretoria(request):
     diretoria = Diretoria.objects.all()
     return render(request, "diretoria.html", {"diretoria": diretoria})
+
+def viewHistoriaHospital(request):
+    return render(request, "historiaHospital.html", {})
+
+# READ - DIRETORIA E HISTORIA FUNDAÇÃO Laureano
+
+def viewHistoriaFundacao(request):
+    return render(request, "historiaFundacao.html", {})
+
+def viewDiretoriaFundacao(request):
+    return render(request, "diretoriaFundacao.html", {})
 
 
 # READ - PREMIOS E CERTIFICAÇÕES
@@ -50,26 +61,28 @@ def viewTransparencia(request):
     return render(request, "transparencia.html", {"transparencia": transparencia})
 
 
+
+
 #PATH
 
 def viewHome(request):
     banner = Banner.objects.all()
-    return render(request, "home.html", {"banner": banner})
+    premio = Premio.objects.all()
+    noticia = Noticia.objects.all()
+    convenio = Convenio.objects.all()
+    
+    return render(request, "home.html", {"banner": banner , "noticia": noticia, "premio": premio, "convenio": convenio})
 
-def viewContato(request):
-    return render(request, "contatos.html", {})
-
-def viewquemSomos(request):
-    return render(request, "quemSomos.html", {})
-
-def viewservicos(request):
-    return render(request, "servicos.html", {})
 
 def vieweventos(request):
     return render(request, "eventos.html", {})
 
 def viewdoacao(request):
     return render(request, "doacao.html", {})
+
+def viewNossaMissao(request):
+    return render(request, "nossaMissao.html")
+
 
 @login_required(login_url='/acesso-paciente')
 def viewResultadoExame(request):

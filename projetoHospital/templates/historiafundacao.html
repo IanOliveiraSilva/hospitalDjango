@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    {% endblock css %}
+
+    <title>{% block titulo %}HOSPITAL LAUREANO - HISTORIA FUNDAÇÃO{% endblock titulo %}</title>
+{% block body %}
+
+<h1>HOSPITAL LAUREANO - HISTORIA FUNDAÇÃO</h1>
+<a class="mx-auto my-0 text-uppercase text-amarelo mx-auto mt-2 mb-5 style=" href="{% url 'home' %}">Back</a>
+{% endblock body %}

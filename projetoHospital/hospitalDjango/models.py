@@ -11,11 +11,12 @@ class Medico(models.Model):
         return self.Nome
 
 class Noticia(models.Model):
-    Titulo = models.CharField(max_length=100)
+    Titulo = models.CharField(max_length=100, )
     Subtitulo = models.CharField(max_length=100)
     Imagem = models.ImageField(upload_to='Noticia',null=True, blank=True)
-    Corpo = models.TextField()
+    Corpo = models.TextField(null=True, blank=True)
     Detalhes = models.TextField(null=True, blank=True)
+    Data = models.DateField(null=True, blank=True)
     def __str__(self):
         return self.Titulo
 

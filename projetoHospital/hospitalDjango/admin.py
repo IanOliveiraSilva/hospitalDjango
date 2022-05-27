@@ -48,7 +48,7 @@ class NoticiaAdmin(admin.ModelAdmin):
          return format_html(
             f"<img src='{obj.Imagem.url}' width='{obj.Imagem.width}' height='{obj.Imagem.height}' style=''/>")
     readonly_fields = ['Imagem_preview']
-    list_display = ('Titulo', 'Subtitulo')
+    list_display = ('Titulo', 'Subtitulo', 'Data')
     search_fields = ('Titulo',)
 
 @admin.register(Premio)

@@ -10,7 +10,7 @@ class MedicoForm(forms.ModelForm):
 class NoticiaForm(forms.ModelForm):
     class Meta:
         model = Noticia
-        fields = ['Titulo', 'Subtitulo', 'Imagem', 'Corpo', 'Detalhes']
+        fields = ['Titulo', 'Subtitulo', 'Imagem', 'Corpo', 'Detalhes', 'Data']
 
 class ParceirosForm(forms.ModelForm):
     class Meta:

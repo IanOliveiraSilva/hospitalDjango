@@ -1,62 +1,67 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+{% endblock css %} {% block body %}
+<div class="main-content">
+  <section class="main-content__banner-container">
+    {% for item in banner %}
+    <img
+      src="/image/{{ item.FotoBanner }}"
+      class="main-content__banner-container--banner"
+    />
+    {% endfor %}
+    <div class="main-content__banner-container--side-menu">
+      <button class="side-menu_arrow dark-green big">Faça sua doação</button>
+      <button class="side-menu_arrow light-green">Guia médico</button>
+      <button class="side-menu_arrow dark-green small">Eventos</button>
+      <button class="side-menu_arrow light-green">Convênios</button>
+      <button class="side-menu_arrow dark-green big">Trasnparência</button>
+    </div>
+  </section>
 
+  <button class="donation-button" onclick="{% url 'doacao' %}">Quero doar</button>
 
-{% block titulo %}
-HOSPITAL LAUREANO - PÁGINA INICIAL
-{% endblock titulo %}
+  <section class="main-content__news-container">
+    <div class="dividing-line dividing-line--section"></div>
+    <h3 class="title-section">Notícias</h3>
+    {% for item in noticia|slice:":3" %}
+    <div class="news--wrapper">
+      <img src="/image/{{ item.Imagem }}" class="news--image" />
+      <div class="news--content">
+        <a href="" class="news--content--title"> {{ item.Titulo }} </a>
+        <span class="news--content--date">{{ item.Data }}</span>
+        <p class="news--content--preview">{{ item.Corpo}}</p>
+        <button class="news--content--button">Leia mais</button>
+      </div>
+    </div>
+    {% endfor %}
+  </section>
 
-{% block body %}
-<h1>TESTE - PÁGINA INICIAL</h1>
-<a class=" text-success">{% if user.is_authenticated %} Olá {{ user.username }}! {% endif %} <a/>
-{% if user.is_authenticated %}
-<p><a class="nav-link text-success" href="{% url 'logout-user' %}">Sair da conta</a></p>
-{% endif %}
-       
+  <section class="main-content__cooperative-container">
+    <div class="dividing-line dividing-line--section"></div>
+    <h3 class="title-section">Convênios</h3>
+    <div class="cooperative--wrapper">
+      {% for item in convenio %}
+      <div class="image-container">
+        <img src="/image/{{ item.FotoCovenio }}" class="cooperative--image" />
+      </div>
+      {% endfor %}
+    </div>
+  </section>
 
-
-{% for item in banner %}  
-<ul>
-    <li>
-        <img src="/image/{{ item.FotoBanner }}" width="500"> 
-    </li>
-</ul>
-
-{% endfor %}
-
-<ul>
-<li><a href="{% url 'parceiros' %}">PARCEIROS</a></li>
-
-<li><a href="{% url 'noticias' %}">NOTICIAS</a></li>
-
-<li> <a href="{% url 'contatos' %}">CONTATOS</a></li>
-
-<li> <a href="{% url 'quem-somos'%}">QUEM SOMOS</a> </li>
-
-<li> <a href="{% url 'servicos'%}">SERVIÇOS</a> </li>
-
-<li> <a href="{% url 'doacao'%}">FAÇA AQUI SUA DOAÇÃO</a> </li>
-
-<li> <a href="{% url 'eventos'%}">EVENTOS</a> </li>
-
-<li> <a href="{% url 'register-user'%}">ÁREA DO PACIENTE - REGISTRO</a></li>
-
-<li> <a href="{% url 'login-user'%}">ÁREA DO PACIENTE - ACESSO</a> </li>
-
-<li> <a href="{% url 'resultado-exame'%}">RESULTADOS EXAME</a> </li>
-
-<li> <a href="{% url 'alterar-senha'%}">ALTERAR SENHA</a> </li>
-
-<li> <a href="{% url 'guia-medico'%}">GUIA MÉDICO</a> </li>
-
-<li> <a href="{% url 'convenio'%}">CONVENIOS</a> </li>
-
-<li><a href="{% url 'diretoria' %}">DIRETORIA</a></li>
-
-<li><a href="{% url 'premio' %}">PREMIOS E CERTIFICAÇÕES</a></li>
-
-<li><a href="{% url 'transparencia' %}">TRANSPARÊNCIA</a></li>
-
-</ul>
-
+  <section class="main-content__certificate-container">
+    <div class="dividing-line dividing-line--section"></div>
+    <h3 class="title-section">Prêmios e Certificações</h3>
+    <div class="certificate--wrapper">
+      {% for item in premio %}
+      <div class="image-container">
+        <img
+          src="/image/{{ item.FotoPremio }}"
+          alt="{{ item.NomePremio }}"
+          class="certificate--image"
+        />
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
 {% endblock body %}
