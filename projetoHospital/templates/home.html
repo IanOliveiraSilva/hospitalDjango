@@ -3,9 +3,18 @@
 {% endblock css %} {% block body %}
 <div class="main-content">
   <section class="banner-container">
-    {% for item in banner %}
-    <img src="/image/{{ item.FotoBanner }}" class="banner-container--banner" />
+    {% for item in banner|slice:3 %}
+    <img src="/image/{{ item.FotoBanner }}" class="banner fade" />
     {% endfor %}
+    <div class="move-buttons">
+      <a class="back" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div class="dots-buttons">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
     <div class="banner-container--side-menu">
       <button class="side-menu_arrow dark-green big">Faça sua doação</button>
       <button class="side-menu_arrow light-green">Guia médico</button>

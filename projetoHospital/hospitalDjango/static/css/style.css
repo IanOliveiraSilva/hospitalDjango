@@ -3,7 +3,6 @@
   --lightGreen: #15ad6c;
   --background: #fafafa;
   --white: #ffffff;
-  --grey: #e5e5e5;
   --grey: #666666;
   --lightGrey: #e5e5e5;
   --darkGrey: #66666699;
@@ -156,6 +155,7 @@ table {
   border-spacing: 0;
 }
 
+/* ================================================================================ */
 body {
   overflow-x: hidden;
   overflow-y: auto;
@@ -396,10 +396,94 @@ body {
   margin-bottom: 20px;
 }
 
-.banner-container--banner {
+.banner {
   position: absolute;
   height: 100%;
   max-width: 80%;
+  object-fit: cover;
+}
+
+.move-buttons {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--lightGrey);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.back,
+.forward {
+  z-index: 3;
+  cursor: pointer;
+  position: relative;
+  font-size: 15px;
+  padding: 17px;
+  color: var(--grey);
+  font-weight: bold;
+  transition: 0.4s ease;
+  user-select: none;
+}
+
+.back:hover {
+  box-shadow: 8px 1px 5px -4px var(--shadow);
+  -webkit-box-shadow: 8px 1px 5px -4px var(--shadow);
+  -moz-box-shadow: 8px 1px 5px -4px var(--shadow);
+}
+
+.forward:hover {
+  box-shadow: -7px 1px 5px -4px var(--shadow);
+  -webkit-box-shadow: -7px 1px 5px -4px var(--shadow);
+  -moz-box-shadow: -7px 1px 5px -4px var(--shadow);
+}
+
+.dots-buttons {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  left: 40%;
+  bottom: 0;
+  margin-bottom: 20px;
+}
+
+.dot {
+  height: 16px;
+  width: 16px;
+  background-color: var(--grey);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+}
+
+.enable,
+.dot:hover {
+  background-color: var(--lightGrey);
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 2;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 2;
+  }
 }
 
 .banner-container--side-menu {
@@ -506,10 +590,6 @@ body {
   margin-bottom: 15px;
   border-radius: 10px;
   width: 85%;
-}
-
-.dividing-line:last-child{
-    display: none;
 }
 
 .title-section {
