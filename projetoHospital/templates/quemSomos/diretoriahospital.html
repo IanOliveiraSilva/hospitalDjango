@@ -7,22 +7,75 @@ HOSPITAL LAUREANO - DIRETORIA
 
 {% block body %}
 
-<h1>DIRETORIA</h1>
 
-{% for item in diretoria %}  
-<ul>
-    <li>
-        <img src="/image/{{ item.FotoDiretoria }}" width="50">
-        <br>
-        {{item.NomeDiretoria}}
-        <br>
-        {{item.CargoDiretoria}}
-    </li>
-</ul> 
+    <section class="quemsomos qs-body" id="quem_somos" >
+         <div class="navegacao">
+             <ul class="navegacao">
+                 <il>
+                     <a class="navegacao-inicio">
+                         Início
+                         <i class="uil uil-angle-double-right"></i>
+                     </a>
+                 </il>
+                 <il>
+                     <a class="navegacao-inicio">
+                         Quem Somos
+                         <i class="uil uil-angle-double-right"></i>
+                     </a>
+                 </il>
+                 <il>
+                     <a class="navegacao-inicio">
+                         Hospital Laureano
+                         <i class="uil uil-angle-double-right"></i>
+                     </a>
+                 </il>
+                 <il>
+                     <a class="navegacao-inicio">
+                         Diretoria
+                         <i class="uil uil-angle-double-right"></i>
+                     </a>
+                 </il>
+             </ul>
+         </div>
+         
+         <div class="top-cor qs-titulo">
+             <h1 class="qs-titulo qs-h1">Hospital Laureano</h1>
+         </div>
+ 
+         <div class="corpo-principal">
+             <h2 class="titulo_historia qs-h2">Diretoria</h2>
+         </div>
+                 {% for item in diretoria %}
+            <div class="container-card">
+                 <div class="fundo-arredondado-diretor">
+                     <img src="/image/{{ item.FotoDiretoria }}" alt="imagem do diretor" class="pic-diretor">
+                 </div>
+                <div class="card-arredondado">
+                     <p class="nome-diretor"> {{item.NomeDiretoria}}</p>
+                     <p class="ocupacao"> {{item.CargoDiretoria}} </p>
+                 </div>
+                <div class="aspas">
+                    <img src="../../hospitalDjango/static/images/quote-detail.png" alt="aspas" class="img-aspas">
+                </div>
+             </div>
+             {% endfor %}
 
-{% endfor %}
-
-
-
+         <div class="container-link">
+                <ul>
+                   <il>
+                     <a class="qs-link" href="">
+                         Fundação Laureano
+                     </a>
+                   </il>
+         
+                   <il>
+                     <a class="qs-link" href="">
+                         Nossa Missão
+                     </a>
+                    </il>
+                </ul>
+         </div>
+         
+ 
 <a class="mx-auto my-0 text-uppercase text-amarelo mx-auto mt-2 mb-5 style=" href="{% url 'home' %}">Back</a>
 {% endblock body %}
