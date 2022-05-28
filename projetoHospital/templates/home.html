@@ -2,14 +2,11 @@
 <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 {% endblock css %} {% block body %}
 <div class="main-content">
-  <section class="main-content__banner-container">
+  <section class="banner-container">
     {% for item in banner %}
-    <img
-      src="/image/{{ item.FotoBanner }}"
-      class="main-content__banner-container--banner"
-    />
+    <img src="/image/{{ item.FotoBanner }}" class="banner-container--banner" />
     {% endfor %}
-    <div class="main-content__banner-container--side-menu">
+    <div class="banner-container--side-menu">
       <button class="side-menu_arrow dark-green big">Faça sua doação</button>
       <button class="side-menu_arrow light-green">Guia médico</button>
       <button class="side-menu_arrow dark-green small">Eventos</button>
@@ -18,10 +15,12 @@
     </div>
   </section>
 
-  <button class="donation-button" onclick="{% url 'doacao' %}">Quero doar</button>
+  <button class="donation-button" onclick="{% url 'doacao' %}">
+    Quero doar
+  </button>
 
-  <section class="main-content__news-container">
-    <div class="dividing-line dividing-line--section"></div>
+  <div class="dividing-line dividing-line--section"></div>
+  <section class="news-container">
     <h3 class="title-section">Notícias</h3>
     {% for item in noticia|slice:":3" %}
     <div class="news--wrapper">
@@ -33,11 +32,12 @@
         <button class="news--content--button">Leia mais</button>
       </div>
     </div>
+    <div class="dividing-line dividing-line--news"></div>
     {% endfor %}
   </section>
 
-  <section class="main-content__cooperative-container">
-    <div class="dividing-line dividing-line--section"></div>
+  <div class="dividing-line dividing-line--section"></div>
+  <section class="cooperative-container">
     <h3 class="title-section">Convênios</h3>
     <div class="cooperative--wrapper">
       {% for item in convenio %}
@@ -48,8 +48,8 @@
     </div>
   </section>
 
-  <section class="main-content__certificate-container">
-    <div class="dividing-line dividing-line--section"></div>
+  <div class="dividing-line dividing-line--section"></div>
+  <section class="certificate-container">
     <h3 class="title-section">Prêmios e Certificações</h3>
     <div class="certificate--wrapper">
       {% for item in premio %}
