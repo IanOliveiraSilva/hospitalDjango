@@ -7,24 +7,32 @@ from .views import *
 urlpatterns = [
     # Páginas Principais
     path('', viewHome, name='home'),
-    path('parceiros/', viewParceiros, name='parceiros'), 
-    # path('contatos/', viewContato, name='contatos'),
-    path('resultado-exame', viewResultadoExame, name="resultado-exame"),
-    path('historiaHospital', viewHistoriaHospital, name="historiaHospital"),
+    path('parceiros/', viewParceiros, name='parceiros'),
     path('eventos', vieweventos, name="eventos"),
-    # path('servicos', viewservicos, name="servicos"),
     path('doacao', viewdoacao, name="doacao"),
     path('guia-medico/', viewGuiaMedico, name="guia-medico"),
     path('noticias/', viewNoticia, name='noticias'),
     path('convenio/', viewConvenio, name='convenio'),
-    path('diretoria', viewDiretoria, name='diretoria'),
-    path('premio', viewPremio, name='premio'),
     path('transparencia', viewTransparencia, name='transparencia'),
-    # path('Fundação', viewFundacaoLaureano, name='fundação'),
-    path('NossaMissao', viewNossaMissao, name='nossaMissao'),
-    path('HistoriaFundacao', viewHistoriaFundacao, name='HistoriaFundacao'),
-    path('DiretoriaFundacao', viewDiretoriaFundacao, name='DiretoriaFundacao'),
     
+    # Serviços
+    path('servicos/consultas', viewConsultas, name="consultas"),
+    path('servicos/exames', viewExames, name="exames"),
+    path('servicos/resultado-exame', viewResultadoExame, name="resultado-exame"),
+    path('servicos/telemedicina', viewTelemedicina, name="telemedicina"),
+    
+    # Quem Somos
+    path('quem-somos/historia-hospital', viewHistoriaHospital, name="historiaHospital"),
+    path('quem-somos/diretoria-hospital', viewDiretoriaHospital, name='diretoriahospital'),
+    path('quem-somos/nossa-missao', viewNossaMissao, name='nossaMissao'),    
+    path('quem-somos/historia-fundacao', viewHistoriaFundacao, name='HistoriaFundacao'),    
+    path('quem-somos/diretoria-fundacao', viewDiretoriaFundacao, name='DiretoriaFundacao'),
+
+    # Fale Conosco
+    path('fale-conosco/ouvidoria', viewOuvidoria, name='fale-conosco'),
+    path('fale-conosco/pesquisa-de-satisfacao', viewPesquisadeSatisfacao, name='fale-conosco'),
+    path('fale-conosco/seja-um-residente', viewSejaumResidente, name='fale-conosco'),
+    path('fale-conosco/trabalhe-conosco', viewTrabalheConosco, name='fale-conosco'),
     
     # Login
     path('registrar-paciente', viewRegister, name="register-user"),

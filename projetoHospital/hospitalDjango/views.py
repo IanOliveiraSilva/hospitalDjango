@@ -32,27 +32,24 @@ def viewConvenio(request):
 
 # READ - DIRETORIA E HISTORIA HOSPITAL LAUREANO
 
-def viewDiretoria(request):
+def viewDiretoriaHospital(request):
     diretoria = Diretoria.objects.all()
-    return render(request, "diretoria.html", {"diretoria": diretoria})
+    return render(request, "quemSomos/diretoriahospital.html", {"diretoria": diretoria})
 
 def viewHistoriaHospital(request):
-    return render(request, "historiaHospital.html", {})
+    return render(request, "quemSomos/historiaHospital.html", {})
 
 # READ - DIRETORIA E HISTORIA FUNDAÇÃO Laureano
 
 def viewHistoriaFundacao(request):
-    return render(request, "historiaFundacao.html", {})
+    return render(request, "quemSomos/historiaFundacao.html", {})
 
 def viewDiretoriaFundacao(request):
-    return render(request, "diretoriaFundacao.html", {})
+    return render(request, "quemSomos/diretoriaFundacao.html", {})
 
 
 # READ - PREMIOS E CERTIFICAÇÕES
 
-def viewPremio(request):
-    premio = Premio.objects.all()
-    return render(request, "premio.html", {"premio": premio})
 
 # READ - TRANSPARÊNCIA
 
@@ -81,14 +78,37 @@ def viewdoacao(request):
     return render(request, "doacao.html", {})
 
 def viewNossaMissao(request):
-    return render(request, "nossaMissao.html")
+    return render(request, "quemSomos/nossaMissao.html")
 
+
+# Path FaleConosco
+def viewTrabalheConosco(request):
+    return render(request, 'faleConosco/trabalheconosco.html')
+
+def viewOuvidoria(request):
+    return render(request, "faleConosco/ouvidoria.html")
+
+def viewPesquisadeSatisfacao(request):
+    return render(request, 'faleConosco/pesquisadesatisfacao.html')
+
+def viewSejaumResidente(request):
+    return render(request, 'faleConosco/sejaumresidente.html')
+
+
+# Path Serviços
+
+def viewExames(request):
+    return render(request, 'servicos/exames.html')
+
+def viewConsultas(request):
+    return render(request, 'servicos/consultas.html')
+
+def viewTelemedicina(request):
+    return render(request, 'servicos/telemedicina.html')
 
 @login_required(login_url='/acesso-paciente')
 def viewResultadoExame(request):
     return render(request, "resultadoexame.html", {})
-
-
 
 
 #REGISTER AND LOGIN
