@@ -788,3 +788,145 @@ body {
 .medias--icons__link-icon {
   width: 50px;
 }
+
+
+/*============================= QuemSomos======= Candice ===========================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+
+:root{
+  /* HSL color mode */
+--darkGreen: hsl(147, 84%, 30%);
+--lightGreen: hsl(154, 78%, 38%);
+--white: hsl(0, 0%, 100%);
+--grey: hsl(0, 0%, 40%);
+--shadow: rgba(0, 0, 0, 0.25);
+
+/*========== Font and typography ==========*/
+--body-font: 'Open Sans', sans-serif;
+--navegacao-font: 'Atkinson Hyperlegible', sans-serif;
+
+/* .5rem = 8px, 1rem = 16px, 1.5rem = 24px 3.5rem = 56px */
+
+--h1-font-size: 3.5rem;
+--h2-font-size: 1.25rem;
+--normal-font-size: 1.125rem;
+--small-font-size: 1rem;
+--smaller-font-size: .8rem;
+
+/*========== Font weight ==========*/
+--font-regular: 400;
+--font-medium: 500;
+--font-semi-bold: 600;
+}
+
+
+.qs-body {
+  font-family: var(--body-font);
+  width:1366px;
+  background-color: #FAFAFA;
+}
+
+.navegacao {
+  padding-left: 20px;
+  font-family: var(--navegacao-font);
+}
+
+.qs-titulo {
+  display: flex;
+  margin: 0;
+  background: var(--darkGreen);
+  height: 140px;
+  text-align:left;
+  align-items: center;
+  color: #fff;
+  font-weight: var(--font-regular);
+}
+
+.titulo-historia {
+  padding: 1.875rem;
+}
+
+.navegacao-inicio, .qs-link {
+  color:var(--grey);
+  font-size: var(--small-font-size);
+  text-decoration: none;
+}
+
+.qs-h1, .qs-h2 {
+  font-weight: var(--font-semi-bold);
+  padding: 30px;
+}
+
+.img-medico-laureano {
+  height: 300px;
+}
+
+.flex-container{
+  float: right;
+  margin: 2.5rem;
+  
+}
+
+.qs-texto{
+  padding: 1.875rem;
+  font-size: var(--normal-font-size);
+  display: block;
+  font-weight: 400;
+}
+
+.container-link {
+  background: var(--darkGreen);
+  height: 80px;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.qs-link {
+  color: #fff;
+  justify-content: space-around;
+  margin: 50px;
+}
+
+/* Tratamento de img diretor*/
+
+.pic-diretor {
+  max-width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;
+  left: -20px;
+}
+
+.container-card {
+  position: relative;
+  width: 70%;
+  margin: 60px auto;
+
+}
+
+.card-arredondado {
+  background-color: #F5F5F5;
+  border-radius: 35px;
+  padding: 30px 0px;
+}
+
+.nome-diretor {
+  font-weight: var(--font-semi-bold);
+  text-align: center;
+}
+
+.ocupacao {
+  font-weight: var();/*italico*/
+  text-align: center;
+}
+
+.img-aspas {
+  max-width: 40px;
+  position: absolute;
+  top: -10px;
+  right: 0;
+}

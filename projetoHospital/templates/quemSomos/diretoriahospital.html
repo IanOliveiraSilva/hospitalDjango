@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 {% block titulo %}
 HOSPITAL LAUREANO - DIRETORIA
@@ -55,7 +55,7 @@ HOSPITAL LAUREANO - DIRETORIA
                      <p class="ocupacao"> {{item.CargoDiretoria}} </p>
                  </div>
                 <div class="aspas">
-                    <img src="../../hospitalDjango/static/images/quote-detail.png" alt="aspas" class="img-aspas">
+                    <img src="{% static '/images/quote-detail.png' %}" alt="aspas" class="">
                 </div>
              </div>
              {% endfor %}
@@ -75,7 +75,4 @@ HOSPITAL LAUREANO - DIRETORIA
                     </il>
                 </ul>
          </div>
-         
- 
-<a class="mx-auto my-0 text-uppercase text-amarelo mx-auto mt-2 mb-5 style=" href="{% url 'home' %}">Back</a>
 {% endblock body %}
