@@ -592,6 +592,10 @@ body {
   width: 85%;
 }
 
+.dividing-line--news:last-child {
+  display: none;
+}
+
 .title-section {
   display: flex;
   justify-content: center;
