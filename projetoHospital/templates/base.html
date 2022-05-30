@@ -237,7 +237,28 @@
         </ul>
       </div>
 
-      {% block body %} {% endblock body %}
+      <div class="side-small-menu doacao">
+        <img
+          class="side-small-menu--image"
+          src="{% static '/images/doe_icon.png' %}"
+        />
+        <div class="side-small-menu--hover hover--doacao">
+          <span class="side-small-menu--text">Quero Doar!</span>
+        </div>
+      </div>
+      <div class="side-small-menu chatbot">
+        <img
+          class="side-small-menu--image"
+          src="{% static '/images/chatbot_icon.png' %}"
+        />
+        <div class="side-small-menu--hover hover--chatbot">
+          <span class="side-small-menu--text">Precisa de Ajuda?</span>
+        </div>
+      </div>
+
+      {% block body %}
+      <div class="main-content"></div>
+      {% endblock body %}
       <footer class="footer">
         <div class="footer__wrapper">
           <img
@@ -246,7 +267,8 @@
             class="footer__logo"
           />
           <span class="footer__adress"
-            >Telefone: (83) 3015-6200 Av. Capitão José Pessoa, 1140 - Jaguaribe
+            >Telefone: (83) 3015-6200 
+            Av. Capitão José Pessoa, 1140 - Jaguaribe
             CEP: 58015-170 - João Pessoa - PB
           </span>
           <div class="footer__medias medias">
@@ -301,5 +323,9 @@
   <script
     type="text/javascript"
     src='{% static "/scripts/banner.js" %}'
+  ></script>
+  <script
+    type="text/javascript"
+    src='{% static "/scripts/circularMenu.js" %}'
   ></script>
 </html>

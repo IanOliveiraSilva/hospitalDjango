@@ -1,5 +1,7 @@
 :root {
+  --gradientGreen: #0c8c46ab;
   --darkGreen: #0c8c45;
+  --green: #009559;
   --lightGreen: #15ad6c;
   --background: #fafafa;
   --white: #ffffff;
@@ -8,6 +10,7 @@
   --darkGrey: #66666699;
   --shadow: #00000040;
   --backgroundPink: #fa037aa3;
+  --gradientPink: #fa037a0d;
   --pink: #fa037a;
   --darkPink: #f90051;
   --lightPink: #e184f3;
@@ -176,7 +179,7 @@ body {
   top: 0;
   width: 100%;
   z-index: 4;
-  background-color: var(--white);
+  /* background-color: var(--white); */
   box-shadow: 0px 4px 4px var(--shadow);
 }
 
@@ -562,7 +565,11 @@ body {
   border: none;
   border-radius: 5px;
   padding: 13px;
-  background: linear-gradient(180deg, #fa037a0d 0%, var(--darkPink) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--gradientPink) 0%,
+    var(--darkPink) 100%
+  );
   background-color: var(--backgroundPink);
   box-shadow: 0px 1px 0px var(--lightPink);
   cursor: pointer;
@@ -698,6 +705,7 @@ body {
   border: 3px solid var(--darkGreen);
   background-color: var(--white);
   color: var(--darkGreen);
+  transition: 0.4s;
 }
 
 .cooperative--wrapper {
@@ -737,6 +745,124 @@ body {
 .certificate--image {
   max-width: 140px;
   max-height: 140px;
+}
+
+.side-small-menu--image {
+  z-index: 2;
+  width: 45px;
+  height: 45px;
+}
+
+.side-small-menu {
+  position: fixed;
+  right: 15px;
+  z-index: 3;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.side-small-menu--hover {
+  position: fixed;
+  right: 20px;
+  width: 330px;
+  height: 65px;
+  border-radius: 100px;
+}
+
+.side-small-menu--text {
+  width: 300px;
+  font-family: "Atkinson Hyperlegible";
+  color: var(--white);
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.doacao {
+  bottom: 90px;
+  background: linear-gradient(
+    180deg,
+    var(--gradientPink) 0%,
+    var(--darkPink) 100%
+  );
+  background-color: var(--backgroundPink);
+  box-shadow: 0px 1px 0px var(--lightPink);
+}
+
+.doacao > .side-small-menu--image {
+  position: absolute;
+  right: 8px;
+  bottom: 10px;
+}
+
+.hover--doacao {
+  border-radius: 100px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  background: linear-gradient(
+      0deg,
+      var(--backgroundPink),
+      var(--backgroundPink)
+    ),
+    linear-gradient(180deg, var(--pink) 0%, var(--gradientPink) 100%);
+}
+
+.hover--doacao > .side-small-menu--text {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doacao:hover > .hover--doacao {
+  visibility: visible;
+  opacity: 1;
+}
+
+.chatbot {
+  bottom: 20px;
+  background: linear-gradient(
+    180deg,
+    var(--gradientGreen) 30%,
+    var(--darkGreen) 100%
+  );
+  box-shadow: 0px 1px 0px var(--darkGreen);
+}
+
+.chatbot > .side-small-menu--image {
+  position: absolute;
+  right: 9px;
+  bottom: 7px;
+}
+
+.hover--chatbot {
+  border-radius: 100px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  background: linear-gradient(
+    180deg,
+    var(--darkGreen) 30%,
+    var(--gradientGreen) 100%
+  );
+  box-shadow: 0px 1px 0px var(--darkGreen);
+}
+
+.hover--chatbot > .side-small-menu--text {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.chatbot:hover > .hover--chatbot {
+  visibility: visible;
+  opacity: 1;
 }
 
 /* =====================================FOOTER===================================== */
@@ -789,44 +915,42 @@ body {
   width: 50px;
 }
 
-
 /*============================= QuemSomos======= Candice ===========================*/
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap");
 
-:root{
+:root {
   /* HSL color mode */
---darkGreen: hsl(147, 84%, 30%);
---lightGreen: hsl(154, 78%, 38%);
---white: hsl(0, 0%, 100%);
---grey: hsl(0, 0%, 40%);
---shadow: rgba(0, 0, 0, 0.25);
+  --darkGreen: hsl(147, 84%, 30%);
+  --lightGreen: hsl(154, 78%, 38%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 40%);
+  --shadow: rgba(0, 0, 0, 0.25);
 
-/*========== Font and typography ==========*/
---body-font: 'Open Sans', sans-serif;
---navegacao-font: 'Atkinson Hyperlegible', sans-serif;
+  /*========== Font and typography ==========*/
+  --body-font: "Open Sans", sans-serif;
+  --navegacao-font: "Atkinson Hyperlegible", sans-serif;
 
-/* .5rem = 8px, 1rem = 16px, 1.5rem = 24px 3.5rem = 56px */
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px 3.5rem = 56px */
 
---h1-font-size: 3.5rem;
---h2-font-size: 1.25rem;
---normal-font-size: 1.125rem;
---small-font-size: 1rem;
---smaller-font-size: .8rem;
+  --h1-font-size: 3.5rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 1.125rem;
+  --small-font-size: 1rem;
+  --smaller-font-size: 0.8rem;
 
-/*========== Font weight ==========*/
---font-regular: 400;
---font-medium: 500;
---font-semi-bold: 600;
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
 }
-
 
 .qs-body {
   font-family: var(--body-font);
-  width:1366px;
-  background-color: #FAFAFA;
+  width: 1366px;
+  background-color: #fafafa;
 }
 
 .navegacao {
@@ -839,7 +963,7 @@ body {
   margin: 0;
   background: var(--darkGreen);
   height: 140px;
-  text-align:left;
+  text-align: left;
   align-items: center;
   color: #fff;
   font-weight: var(--font-regular);
@@ -849,13 +973,15 @@ body {
   padding: 1.875rem;
 }
 
-.navegacao-inicio, .qs-link {
-  color:var(--grey);
+.navegacao-inicio,
+.qs-link {
+  color: var(--grey);
   font-size: var(--small-font-size);
   text-decoration: none;
 }
 
-.qs-h1, .qs-h2 {
+.qs-h1,
+.qs-h2 {
   font-weight: var(--font-semi-bold);
   padding: 30px;
 }
@@ -864,13 +990,12 @@ body {
   height: 300px;
 }
 
-.flex-container{
+.flex-container {
   float: right;
   margin: 2.5rem;
-  
 }
 
-.qs-texto{
+.qs-texto {
   padding: 1.875rem;
   font-size: var(--normal-font-size);
   display: block;
@@ -905,11 +1030,10 @@ body {
   position: relative;
   width: 70%;
   margin: 60px auto;
-
 }
 
 .card-arredondado {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   border-radius: 35px;
   padding: 30px 0px;
 }
@@ -920,7 +1044,7 @@ body {
 }
 
 .ocupacao {
-  font-weight: var();/*italico*/
+  font-weight: var(); /*italico*/
   text-align: center;
 }
 
