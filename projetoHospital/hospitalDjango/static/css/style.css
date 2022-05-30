@@ -283,14 +283,6 @@ body {
   display: none;
 }
 
-.menu-options--department:hover > .menu-options--department--icon--next {
-  display: none;
-}
-
-.menu-options--department:hover > .menu-options--department--icon--next-hover {
-  display: block;
-}
-
 .menu-options--department:last-child {
   box-shadow: inset 0 -4px 4px var(--shadow);
 }
@@ -302,13 +294,6 @@ body {
 }
 
 .menu-options--department--icon--next {
-  display: block;
-  width: 10px;
-  padding-left: 10px;
-}
-
-.menu-options--department--icon--next-hover {
-  display: none;
   width: 10px;
   padding-left: 10px;
 }
@@ -352,17 +337,8 @@ body {
   cursor: pointer;
 }
 
-.categories-options--category:hover > .categories-options--category-link {
+.categories-options--category:hover >  .categories-options--category-link{
   color: var(--white);
-}
-
-.categories-options--category:hover > .menu-options--department--icon--next {
-  display: none;
-}
-
-.categories-options--category:hover
-  > .menu-options--department--icon--next-hover {
-  display: block;
 }
 
 .categories-options--category:last-child {
@@ -406,8 +382,7 @@ body {
   cursor: pointer;
 }
 
-.subcategories-options--subcategory:hover
-  > .subcategories-options--subcategory-link {
+.subcategories-options--subcategory:hover > .subcategories-options--subcategory-link {
   color: var(--white);
 }
 
@@ -1004,10 +979,10 @@ body {
 
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px 3.5rem = 56px */
 
-  --h1-font-size: 3.5rem;
-  --h2-font-size: 1.25rem;
-  --normal-font-size: 1.125rem;
-  --small-font-size: 1rem;
+  --h1-font-size: 35px;
+  --h2-font-size: 28px;
+  --normal-font-size: 20px;
+  --small-font-size: 16px;
   --smaller-font-size: 0.8rem;
 
   /*========== Font weight ==========*/
@@ -1018,7 +993,7 @@ body {
 
 .qs-body {
   font-family: var(--body-font);
-  width: 1366px;
+  width: 100%;
   background-color: #fafafa;
 }
 
@@ -1047,12 +1022,26 @@ body {
   color: var(--grey);
   font-size: var(--small-font-size);
   text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.qs-h1,
+.qs-h1 {
+  font-weight: var(--font-semi-bold);
+  margin-left: 30px;
+  font-size: var(--h1-font-size);
+}
+
 .qs-h2 {
   font-weight: var(--font-semi-bold);
   margin-left: 30px;
+  font-size: var(--h2-font-size);
+  padding-right: 0px;
+  padding-top: 20px;
+}
+
+.missao {
+  padding-bottom: 20px;
 }
 
 .img-medico-laureano {
@@ -1069,6 +1058,7 @@ body {
   font-size: var(--normal-font-size);
   display: block;
   font-weight: 400;
+  letter-spacing: normal;
 }
 
 .container-link {
