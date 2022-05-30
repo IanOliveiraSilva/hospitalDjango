@@ -983,7 +983,7 @@ body {
 .qs-h1,
 .qs-h2 {
   font-weight: var(--font-semi-bold);
-  padding: 30px;
+  margin-left: 30px;
 }
 
 .img-medico-laureano {
@@ -1008,6 +1008,7 @@ body {
   padding-left: 30px;
   display: flex;
   align-items: center;
+  margin-bottom: -30px;
 }
 
 .qs-link {
