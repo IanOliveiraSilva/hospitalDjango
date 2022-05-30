@@ -46,16 +46,23 @@ function scrollFunction() {
   }
 }
 
-$menu.addEventListener("click", function () {
-  if ($menuOptions.style.display === "none") {
-    $lines.style.display = "none";
-    $close.style.display = "block";
-    $menuAlt.innerHTML = "Fechar";
-    $menuOptions.style.display = "block";
-  } else {
+$menu.addEventListener("mouseover", function () {
+  $lines.style.display = "none";
+  $close.style.display = "block";
+  $menuAlt.innerHTML = "Fechar";
+  $menuOptions.style.display = "block";
+});
+
+$menuOptions.addEventListener("mouseover", function () {
+  $lines.style.display = "none";
+  $close.style.display = "block";
+  $menuAlt.innerHTML = "Fechar";
+  $menuOptions.style.display = "block";
+});
+
+$menuOptions.addEventListener("mouseout", function () {
     $lines.style.display = "block";
     $close.style.display = "none";
     $menuAlt.innerHTML = "Menu";
     $menuOptions.style.display = "none";
-  }
 });

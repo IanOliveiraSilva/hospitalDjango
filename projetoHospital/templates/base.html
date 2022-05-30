@@ -51,187 +51,108 @@
       <div class="menu">
         <ul class="menu-options">
           <li class="menu-options--department">
-            <img
-              class="menu-options--department--icon"
-              src="{% static '/images/home_icon.png' %}"
-            /><a class="menu-options--department--link" href="{% url 'home'%}"
-              >Home</a
-            >
+            <img class="menu-options--department--icon" src="{% static '/images/home_icon.png' %}"/>
+            <img class="menu-options--department--icon--hover" src="{% static '/images/hover_home_icon.png' %}"/>
+            <a class="menu-options--department--link" href="{% url 'home'%}">Home</a>
           </li>
           <li class="menu-options--department">
-            <img
-              class="menu-options--department--icon"
-              src="{% static '/images/paciente_icon.png' %}"
-            /><a class="menu-options--department--link" href="#"
-              >Área do Paciente</a
-            >
+            <img class="menu-options--department--icon" src="{% static '/images/paciente_icon.png' %}"/>
+            <img class="menu-options--department--icon--hover" src="{% static '/images/hover_paciente_icon.png' %}"/>
+            <a class="menu-options--department--link" href="#">Área do Paciente</a>
           </li>
           <li class="menu-options--department option--category">
-            <img
-              class="menu-options--department--icon"
-              src="{% static '/images/somos_icon.png' %}"
-            /><a class="menu-options--department--link" href="#">Quem Somos</a>
-            <img
-              class="menu-options--department--icon-next"
-              src="{% static '/images/proximo_icon.png' %}"
-            />
+            <img class="menu-options--department--icon" src="{% static '/images/somos_icon.png' %}"/>
+            <img class="menu-options--department--icon--hover" src="{% static '/images/hover_somos_icon.png' %}"/>
+            <a class="menu-options--department--link" href="#">Quem Somos</a>
+            <img class="menu-options--department--icon--next" src="{% static '/images/proximo_icon.png' %}"/>
             <div class="categories">
               <ul class="categories-options">
                 <li class="categories-options--category option--subcategory">
-                  <a class="categories-options--category-link" href=""
-                    >Hospital Laureano</a
-                  ><img
-                    class="menu-options--department--icon-next"
-                    src="{% static '/images/proximo_icon.png' %}"
-                  />
+                  <a class="categories-options--category-link" href="">Hospital Laureano</a>
+                  <img class="menu-options--department--icon--next" src="{% static '/images/proximo_icon.png' %}"/>
                   <div class="subcategories">
                     <ul class="subcategories-options">
                       <li class="subcategories-options--subcategory">
-                        <a
-                          class="subcategories-options--subcategory-link"
-                          href="{% url 'historiaHospital' %}"
-                          >História</a
-                        >
+                        <a class="subcategories-options--subcategory-link" href="{% url 'historiaHospital' %}">História</a>
                       </li>
                       <li class="subcategories-options--subcategory">
-                        <a
-                          class="subcategories-options--subcategory-link"
-                          href="{% url 'diretoriahospital' %}"
-                          >Diretoria</a
-                        >
+                        <a class="subcategories-options--subcategory-link" href="{% url 'diretoriahospital' %}">Diretoria</a>
                       </li>
                     </ul>
                   </div>
                 </li>
                 <li class="categories-options--category option--subcategory">
-                  <a class="categories-options--category-link" href=""
-                    >Fundação Laureano</a
-                  ><img
-                    class="menu-options--department--icon-next"
-                    src="{% static '/images/proximo_icon.png' %}"
-                  />
+                  <a class="categories-options--category-link" href="">Fundação Laureano</a>
+                  <img class="menu-options--department--icon--next" src="{% static '/images/proximo_icon.png' %}"/>
                   <div class="subcategories">
                     <ul class="subcategories-options">
                       <li class="subcategories-options--subcategory">
-                        <a
-                          class="subcategories-options--subcategory-link"
-                          href="{% url 'HistoriaFundacao' %}"
-                          >História</a
-                        >
+                        <a class="subcategories-options--subcategory-link" href="{% url 'HistoriaFundacao' %}">História</a>
                       </li>
                       <li class="subcategories-options--subcategory">
-                        <a
-                          class="subcategories-options--subcategory-link"
-                          href="{% url 'DiretoriaFundacao' %}"
-                          >Diretoria e Conselho</a
-                        >
+                        <a class="subcategories-options--subcategory-link" href="{% url 'DiretoriaFundacao' %}">Diretoria e Conselho</a>
                       </li>
                     </ul>
                   </div>
                 </li>
                 <li class="categories-options--category">
-                  <a
-                    class="categories-options--category-link"
-                    href="{% url 'nossaMissao' %}"
-                    >Nossa Missão</a
-                  >
+                  <a class="categories-options--category-link" href="{% url 'nossaMissao' %}">Nossa Missão</a>
                 </li>
               </ul>
             </div>
           </li>
           <li class="menu-options--department option--category">
-            <img
-              class="menu-options--department--icon"
-              src="{% static '/images/servicos_icon.png' %}"
-            /><a class="menu-options--department--link" href="#">Servicos</a>
-            <img
-              class="menu-options--department--icon-next"
-              src="{% static '/images/proximo_icon.png' %}"
-            />
+            <img class="menu-options--department--icon" src="{% static '/images/servicos_icon.png' %}"/>
+            <img class="menu-options--department--icon--hover" src="{% static '/images/hover_servicos_icon.png' %}"/>
+            <a class="menu-options--department--link" href="#">Servicos</a>
+            <img class="menu-options--department--icon--next" src="{% static '/images/proximo_icon.png' %}"/>
             <div class="categories">
               <ul class="categories-options">
                 <li class="categories-options--category">
-                  <a
-                    class="categories-options--category-link"
-                    href="{% url 'resultado-exame'%}"
-                    >Exames</a
-                  >
+                  <a class="categories-options--category-link" href="{% url 'resultado-exame'%}">Exames</a>
                 </li>
                 <li class="categories-options--category option--subcategory">
-                  <a class="categories-options--category-link" href=""
-                    >Consultas</a
-                  >
+                  <a class="categories-options--category-link" href="" >Consultas</a>
                 </li>
                 <li class="categories-options--category option--subcategory">
-                  <a class="categories-options--category-link" href=""
-                    >Telemedicina</a
-                  >
+                  <a class="categories-options--category-link" href="" >Telemedicina</a>
                 </li>
               </ul>
             </div>
           </li>
           <li class="menu-options--department">
-            <img
-              class="menu-options--department--icon"
-              src="{% static '/images/parceiros_icon.png' %}"
-            /><a
-              class="menu-options--department--link"
-              href="{% url 'parceiros' %}"
-              >Parceiros</a
-            >
+            <img class="menu-options--department--icon" src="{% static '/images/parceiros_icon.png' %}"/>
+            <img class="menu-options--department--icon--hover" src="{% static '/images/hover_parceiros_icon.png' %}"/>
+            <a class="menu-options--department--link" href="{% url 'parceiros' %}">Parceiros</a>
           </li>
           <li class="menu-options--department">
-            <img
-              class="menu-options--department--icon"
-              src="{% static '/images/eventos_icon.png' %}"
-            /><a
-              class="menu-options--department--link"
-              href="{% url 'eventos'%}"
-              >Eventos</a
-            >
+            <img class="menu-options--department--icon" src="{% static '/images/eventos_icon.png' %}"/>
+            <img class="menu-options--department--icon--hover" src="{% static '/images/hover_eventos_icon.png' %}"/>
+            <a class="menu-options--department--link" href="{% url 'eventos'%}">Eventos</a>
           </li>
           <li class="menu-options--department">
-            <img
-              class="menu-options--department--icon"
-              src="{% static '/images/noticias_icon.png' %}"
-            /><a
-              class="menu-options--department--link"
-              href="{% url 'noticias' %}"
-              >Notícias</a
-            >
+            <img class="menu-options--department--icon" src="{% static '/images/noticias_icon.png' %}"/>
+            <img class="menu-options--department--icon--hover" src="{% static '/images/hover_noticias_icon.png' %}"/>
+            <a class="menu-options--department--link" href="{% url 'noticias' %}">Notícias</a>
           </li>
           <li class="menu-options--department option--category">
-            <img
-              class="menu-options--department--icon"
-              src="{% static '/images/fale_icon.png' %}"
-            /><a class="menu-options--department--link" href="#"
-              >Fale Conosco</a
-            >
-            <img
-              class="menu-options--department--icon-next"
-              src="{% static '/images/proximo_icon.png' %}"
-            />
+            <img class="menu-options--department--icon" src="{% static '/images/fale_icon.png' %}"/>
+            <img class="menu-options--department--icon--hover" src="{% static '/images/hover_fale_icon.png' %}"/>
+            <a class="menu-options--department--link" href="#">Fale Conosco</a>
+            <img class="menu-options--department--icon--next" src="{% static '/images/proximo_icon.png' %}"/>
             <div class="categories last">
               <ul class="categories-options">
                 <li class="categories-options--category option--subcategory">
-                  <a class="categories-options--category-link" href=""
-                    >Trabalhe Conosco</a
-                  >
+                  <a class="categories-options--category-link" href="">Trabalhe Conosco</a>
                 </li>
                 <li class="categories-options--category option--subcategory">
-                  <a class="categories-options--category-link" href=""
-                    >Ouvidoria</a
-                  >
+                  <a class="categories-options--category-link" href="">Ouvidoria</a>
                 </li>
                 <li class="categories-options--category">
-                  <a class="categories-options--category-link" href=""
-                    >Pesquisa de Satisfação</a
-                  >
+                  <a class="categories-options--category-link" href="">Pesquisa de Satisfação</a>
                 </li>
                 <li class="categories-options--category">
-                  <a class="categories-options--category-link" href=""
-                    >Seja um Residente Laureano</a
-                  >
+                  <a class="categories-options--category-link" href="">Seja um Residente Laureano</a>
                 </li>
               </ul>
             </div>
