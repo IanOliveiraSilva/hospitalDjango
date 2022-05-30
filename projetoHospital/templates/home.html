@@ -49,11 +49,17 @@
   <section class="cooperative-container">
     <h3 class="title-section">Convênios</h3>
     <div class="cooperative--wrapper">
+      <a class="previous">&#10094;</a>
       {% for item in convenio %}
       <div class="image-container">
-        <img src="/image/{{ item.FotoCovenio }}" class="cooperative--image" />
+        <img
+          src="/image/{{ item.FotoCovenio }}"
+          alt="{{item.NomeConvenio}}"
+          class="cooperative--image"
+        />
       </div>
       {% endfor %}
+      <a class="next">&#10095;</a>
     </div>
   </section>
 
@@ -61,7 +67,8 @@
   <section class="certificate-container">
     <h3 class="title-section">Prêmios e Certificações</h3>
     <div class="certificate--wrapper">
-      {% for item in premio %}
+      <a class="previous">&#10094;</a>
+      {% for item in premio|slice:6 %}
       <div class="image-container">
         <img
           src="/image/{{ item.FotoPremio }}"
@@ -70,6 +77,7 @@
         />
       </div>
       {% endfor %}
+      <a class="next">&#10095;</a>
     </div>
   </section>
 </div>

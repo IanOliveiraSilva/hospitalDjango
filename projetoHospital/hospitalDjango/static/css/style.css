@@ -179,7 +179,7 @@ body {
   top: 0;
   width: 100%;
   z-index: 4;
-  /* background-color: var(--white); */
+  background-color: var(--white);
   box-shadow: 0px 4px 4px var(--shadow);
 }
 
@@ -616,7 +616,7 @@ body {
 }
 
 .title-section::before {
-  background-image: url("../assets/section-icon.png");
+  background-image: url("../images/section-icon.png");
   background-size: 30px 30px;
   display: inline-block;
   width: 30px;
@@ -723,7 +723,7 @@ body {
 }
 
 .image-container {
-  display: flex;
+  display: none;
   align-self: end;
   justify-content: center;
   align-items: center;
@@ -732,6 +732,11 @@ body {
   height: 140px;
   box-shadow: 0px 4px 4px var(--shadow);
   border-radius: 10px;
+  padding: 10px;
+}
+
+.image-container:nth-child(-n+7){
+  display: flex;
 }
 
 .certificate--wrapper {
@@ -745,6 +750,20 @@ body {
 .certificate--image {
   max-width: 140px;
   max-height: 140px;
+}
+
+.previous,
+.next {
+  text-decoration: none;
+  color: var(--darkGreen);
+  z-index: 3;
+  cursor: pointer;
+  position: relative;
+  font-size: 70px;
+  padding: 17px;
+  transition: 0.4s ease;
+  margin: 0 -20px;
+  user-select: none;
 }
 
 .side-small-menu--image {
