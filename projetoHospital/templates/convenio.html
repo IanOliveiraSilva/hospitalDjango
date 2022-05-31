@@ -1,7 +1,8 @@
 {% extends 'base.html' %} {% load static %} {% block titulo %} Hospital Napoleão
-Laureano - Convênios {% endblock titulo %} {% block body %}
+Laureano - Convênios {% endblock titulo %} 
+{% block body %}
 <div class="navegacao">
-  <ul class="navegacao">
+  <ul>
     <il>
       <a class="navegacao-inicio" href="{% url 'home' %}">
         Início
@@ -13,11 +14,11 @@ Laureano - Convênios {% endblock titulo %} {% block body %}
     </il>
   </ul>
 </div>
-<div class="pags-titulo-wrapper">
-  <h1 class="pags-title pags-h1">Convênios</h1>
-</div>
+
+<h1 class="pags-title">Convênios</h1>
+
 <section class="pags-section">
-  <h2 class="pags-h2">O Hospital trabalha com o SUS e os seguintes planos de saúde:</h2>
+  <span class="pags-span">O Hospital trabalha com o SUS e os seguintes planos de saúde:</span>
 
   <ul class="pags-images-wrapper">
     {% for item in convenio %}

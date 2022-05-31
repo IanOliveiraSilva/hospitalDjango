@@ -1,76 +1,77 @@
-{% extends 'base.html' %}
-{% load static %}
-<!DOCTYPE html>
-    {% block css %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% extends 'base.html' %} {% load static %} {% block titulo %}Hospital Napoleão
+Laureano - História do Fundação{% endblock titulo %} {% block body %}
 
-    {% endblock css %}
+<div class="navegacao">
+  <ul>
+    <il>
+      <a class="navegacao-inicio" href="{% url 'home' %}">
+        Início
+        <i class="uil uil-angle-double-right"></i>
+      </a>
+    </il>
+    <il>
+      <a class="navegacao-inicio">
+        Quem Somos
+        <i class="uil uil-angle-double-right"></i>
+      </a>
+    </il>
+    <il>
+      <a class="navegacao-inicio" href="{% url 'historiaFundacao' %}">
+        Fundação Laureano
+      </a>
+    </il>
+  </ul>
+</div>
 
-    <title>{% block titulo %}HOSPITAL LAUREANO - HISTORIA FUNDAÇÃO{% endblock titulo %}</title>
-{% block body %}
+<h1 class="pags-title">Fundação Laureano</h1>
 
+<section class="pags-section">
+    <h2 class="pags-h2">História</h2>
+    <div class="pag-wrapper">
 
-    <section class="quemsomos qs-body" id="quem_somos" >
-         <div class="navegacao">
-             <ul class="navegacao">
-                 <il>
-                     <a class="navegacao-inicio" href="{% url 'home' %}">
-                         Início
-                         <i class="uil uil-angle-double-right"></i>
-                     </a>
-                 </il>
-                 <il>
-                     <a class="navegacao-inicio">
-                         Quem Somos
-                         <i class="uil uil-angle-double-right"></i>
-                     </a>
-                 </il>
-                 <il>
-                     <a class="navegacao-inicio">
-                         Fundação Laureano
-                     </a>
-                 </il>
-             </ul>
-         </div>
-         
-         <div class="top-cor qs-titulo">
-             <h1 class="qs-titulo qs-h1">Fundação Napoleão Laureano</h1>
-         </div>
- 
-         <div class="corpo-principal">
-             <h2 class="titulo_historia qs-h2">História</h2>
-         </div>
- 
-             <div class="qs-texto-elementos">
-                 <img src="{% static '/images/dr-napoleao-laureano.jpg' %}"  alt="medico Napoleão Laureano" class=" flex-container img-medico-laureano">
-             </div>
-     
-             <div class="qs-texto">
-                 No dia 17 de março de 1951, na sede do jornal “Diário Carioca”, no Rio de Janeiro, realizou-se uma Mesa Redonda solicitada pelo próprio Dr. Napoleão Rodrigues Laureano, que se esforçava para expressar o desejo de ver construído, em João Pessoa, na Paraíba, um centro de combate ao câncer.
-                 <br><br>
-                 Naquela ocasião, estavam presentes os jornalista Danton Jobim e Pompeu de Souza, Dr. Simões Filho, Ministro da Educação e da Saúde, os médicos Mário Kroeff, Diretor do Serviço Nacional de Câncer, Alberto Coutinho, Jorge de Marsillac, Osolando Machado, Antonio Pinto Vieira, Adayr Eiras de Araújo, Sérgio de Azevedo, Turíbio Braz e Fernando Gentil, entre outras pessoas.
-                 <br><br>
-                 Os trabalhos foram transmitidos pela Rádio Mayrink Veiga e Rádio Nacional, que abriram uma campanha para angariar recursos destinados a luta contra o câncer, conforme desejo do médico paraibano.
-                 <br><br>
-                 Napoleão Laureano que retornara dos Estados Unidos desenganado pela medicina, mostrava, com o seu gesto, a grandeza do seu coração, a magnitude de sua solidariedade aos seus semelhantes, especialmente os mais humildes.
-             </div>
- 
-             <div class="container-link">
-                <ul>
-                   <il>
-                     <a class="qs-link" href="{% url 'historiaHospital' %}">
-                         Hospital Laureano
-                     </a>
-                   </il>
-         
-                   <il>
-                     <a class="qs-link" href="{% url 'nossaMissao' %}">
-                         Nossa Missão
-                     </a>
-                    </il>
-                </ul>
-             </div>        
- 
-    </section>
+  <div class="pags-side-image-wrapper">
+    <img
+        src="{% static '/images/dr-napoleao-laureano.jpg' %}"
+        alt="medico Napoleão Laureano"
+        class="pags-side-image--image"
+      />
+    </div>
+
+  <div class="pags-text">
+    No dia 17 de março de 1951, na sede do jornal “Diário Carioca”, no Rio de
+    Janeiro, realizou-se uma Mesa Redonda solicitada pelo próprio Dr. Napoleão
+    Rodrigues Laureano, que se esforçava para expressar o desejo de ver
+    construído, em João Pessoa, na Paraíba, um centro de combate ao câncer.
+    <br /><br />
+    Naquela ocasião, estavam presentes os jornalista Danton Jobim e Pompeu de
+    Souza, Dr. Simões Filho, Ministro da Educação e da Saúde, os médicos Mário
+    Kroeff, Diretor do Serviço Nacional de Câncer, Alberto Coutinho, Jorge de
+    Marsillac, Osolando Machado, Antonio Pinto Vieira, Adayr Eiras de Araújo,
+    Sérgio de Azevedo, Turíbio Braz e Fernando Gentil, entre outras pessoas.
+    <br /><br />
+    Os trabalhos foram transmitidos pela Rádio Mayrink Veiga e Rádio Nacional,
+    que abriram uma campanha para angariar recursos destinados a luta contra o
+    câncer, conforme desejo do médico paraibano.
+    <br /><br />
+    Napoleão Laureano que retornara dos Estados Unidos desenganado pela
+    medicina, mostrava, com o seu gesto, a grandeza do seu coração, a magnitude
+    de sua solidariedade aos seus semelhantes, especialmente os mais humildes.
+  </div>
+  </div>
+</section>
+
+  <div class="other-pags-links">
+    <ul>
+      <il>
+        <a class="qs-link" href="{% url 'historiaHospital' %}">
+          Hospital Laureano
+        </a>
+      </il>
+
+      <il>
+        <a class="qs-link" href="{% url 'nossaMissao' %}"> Nossa Missão </a>
+      </il>
+    </ul>
+  </div>
 
 {% endblock body %}

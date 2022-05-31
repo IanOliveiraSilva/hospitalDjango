@@ -23,10 +23,10 @@ urlpatterns = [
     
     # Quem Somos
     path('quem-somos/historia-hospital', viewHistoriaHospital, name="historiaHospital"),
-    path('quem-somos/diretoria-hospital', viewDiretoriaHospital, name='diretoriahospital'),
+    path('quem-somos/diretoria-hospital', viewDiretoriaHospital, name='diretoriaHospital'),
     path('quem-somos/nossa-missao', viewNossaMissao, name='nossaMissao'),    
-    path('quem-somos/historia-fundacao', viewHistoriaFundacao, name='HistoriaFundacao'),    
-    path('quem-somos/diretoria-fundacao', viewDiretoriaFundacao, name='DiretoriaFundacao'),
+    path('quem-somos/historia-fundacao', viewHistoriaFundacao, name='historiaFundacao'),    
+    path('quem-somos/diretoria-fundacao', viewDiretoriaFundacao, name='diretoriaFundacao'),
 
     # Fale Conosco
     path('fale-conosco/ouvidoria', viewOuvidoria, name='fale-conosco'),

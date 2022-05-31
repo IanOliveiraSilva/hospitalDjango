@@ -1,70 +1,62 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %} {% block titulo %} Hospital Napoleão
+Laureano - Nossa Missão {% endblock titulo %} {% block body %}
 
-{% block titulo %}
-HOSPITAL LAUREANO - Nossa Missão
-{% endblock titulo %} 
+<div class="navegacao">
+  <ul>
+    <il>
+      <a class="navegacao-inicio" href="{% url 'home' %}">
+        Início
+        <i class="uil uil-angle-double-right"></i>
+      </a>
+    </il>
+    <il>
+      <a class="navegacao-inicio">
+        Quem Somos
+        <i class="uil uil-angle-double-right"></i>
+      </a>
+    </il>
+    <il>
+      <a class="navegacao-inicio" href="{% url 'nossaMissao' %}">
+        Nossa Missão
+      </a>
+    </il>
+  </ul>
+</div>
 
-{% block body %}
+<h1 class="pags-title">Missão, Visão e Valores</h1>
 
-    <section class="quemsomos qs-body" id="quem_somos" >
-        <div class="navegacao">
-            <ul class="navegacao">
-                <il>
-                    <a class="navegacao-inicio" href="{% url 'home' %}">
-                        Início
-                        <i class="uil uil-angle-double-right"></i>
-                    </a>
-                </il>
-                <il>
-                    <a class="navegacao-inicio"> 
-                        Quem Somos
-                        <i class="uil uil-angle-double-right"></i>
-                    </a>
-                </il>
-                <il>
-                    <a class="navegacao-inicio" >
-                        Nossa Missão
-                    </a>
-                </il>
-            </ul>
-        </div>
-        <div class="top-cor qs-titulo">
-            <h1 class="qs-h1">Missão, Visão e Valores</h1>
-        </div>
+<section class="pags-section">
+  <h2 class="pags-h2">Missão</h2>
 
-            <div class="qs-texto">
+  <p class="pags-text">
+    Promover o cuidado aos pacientes, familiares e colaboradores em toda a sua
+    plenitude, através da excelência, inovação e na geração de conhecimento.
+  </p>
 
-                <h2 class="qs-h2 missao">Missão</h2>
-               
-                <p>Promover o cuidado aos pacientes, familiares e colaboradores em toda a sua plenitude, através da excelência, inovação e na geração de conhecimento.</p>
+  <h2 class="pags-h2">Visão</h2>
 
-                <h2 class="qs-h2 missao">Visão</h2>
+  <p class="pags-text">
+    Ser o melhor centro filantrópico de atendimento oncológico do Nordeste até
+    2025, com foco na sustentabilidade, qualidade e valor assistencial.
+  </p>
 
-                <p>Ser o melhor centro filantrópico de atendimento oncológico do Nordeste até 2025, com foco na sustentabilidade, qualidade e valor assistencial.</p>
+  <h2 class="pags-h2">Valores</h2>
 
-                <h2 class="qs-h2 missao">Valores</h2>
+  <p class="pags-text">Altruísmo, compromisso, ética, humanidade e integridade.</p>
+</section>
 
-                <p>Altruísmo, compromisso, ética, humanidade e integridade.</p>
-                
-            </div>
-            
-        </div>
-        <div class="container-link">
-            <ul>
-                <il>
-                    <a class="qs-link" href="{% url 'historiaHospital' %}">
-                        Hospital Laureano
-                    </a>
-                </il>
-
-                <il>
-                    <a class="qs-link" href="{% url 'HistoriaFundacao' %}">
-                        Fundação Laureano 
-                    </a>
-                </il>
-             </ul>
-    
-        </div>
-    </section>
+<div class="other-pags-links">
+  <ul>
+    <il>
+      <a class="other-pags-link" href="{% url 'historiaHospital' %}">
+        Hospital Laureano
+      </a>
+    </il>
+    <il>
+      <a class="qs-link" href="{% url 'historiaFundacao' %}">
+        Fundação Laureano
+      </a>
+    </il>
+  </ul>
+</div>
 {% endblock body %}
