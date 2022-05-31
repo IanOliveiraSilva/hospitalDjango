@@ -1012,6 +1012,14 @@ body {
   font-family: var(--navegacao-font);
 }
 
+.navegacao-inicio {
+  color: var(--grey);
+  font-size: var(--small-font-size);
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .pags-section {
   font-family: var(--body-font);
   width: 100%;
@@ -1108,7 +1116,7 @@ body {
   letter-spacing: normal;
 }
 
-p.pags-text{
+p.pags-text {
   display: flex;
   align-self: flex-start;
 }
@@ -1154,134 +1162,6 @@ p.pags-text{
 }
 
 .quotes-image {
-  max-width: 40px;
-  position: absolute;
-  top: -10px;
-  right: 0;
-}
-
-/*============================= QuemSomos======= Candice ===========================*/
-
-.qs-body {
-  font-family: var(--body-font);
-  width: 100%;
-  background-color: #fafafa;
-}
-
-/* .navegacao {
-  padding-left: 20px;
-  font-family: var(--navegacao-font);
-  padding-top: 2px;
-  padding-bottom: 2px;
-} */
-
-.qs-titulo {
-  display: flex;
-  margin: 0;
-  background: var(--darkGreen);
-  height: 140px;
-  text-align: left;
-  align-items: center;
-  color: #fff;
-  font-weight: var(--font-regular);
-}
-
-.titulo-historia {
-  padding: 1.875rem;
-}
-
-.navegacao-inicio,
-.qs-link {
-  color: var(--grey);
-  font-size: var(--small-font-size);
-  text-decoration: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.qs-h1 {
-  font-weight: var(--font-semi-bold);
-  margin-left: 30px;
-  font-size: var(--h1-font-size);
-}
-
-.qs-h2 {
-  font-weight: var(--font-semi-bold);
-  margin-left: 30px;
-  font-size: var(--h2-font-size);
-  padding-right: 0px;
-  padding-top: 20px;
-}
-
-.missao {
-  padding-bottom: 20px;
-}
-
-.img-medico-laureano {
-  height: 300px;
-}
-
-.flex-container {
-  float: right;
-  margin: 2.5rem;
-}
-
-.qs-texto {
-  padding: 1.875rem;
-  font-size: var(--normal-font-size);
-  display: block;
-  font-weight: 400;
-  letter-spacing: normal;
-}
-
-.container-link {
-  background: var(--darkGreen);
-  height: 80px;
-  padding-left: 30px;
-  display: flex;
-  align-items: center;
-  margin-bottom: -30px;
-}
-
-.qs-link {
-  color: #fff;
-  justify-content: space-around;
-  margin: 50px;
-}
-
-/* Tratamento de img diretor*/
-
-.pic-diretor {
-  max-width: 100px;
-  border-radius: 50%;
-  position: absolute;
-  top: -40px;
-  left: -20px;
-}
-
-.container-card {
-  position: relative;
-  width: 70%;
-  margin: 60px auto;
-}
-
-.card-arredondado {
-  background-color: #f5f5f5;
-  border-radius: 35px;
-  padding: 30px 0px;
-}
-
-.nome-diretor {
-  font-weight: var(--font-semi-bold);
-  text-align: center;
-}
-
-.ocupacao {
-  font-weight: var(); /*italico*/
-  text-align: center;
-}
-
-.img-aspas {
   max-width: 40px;
   position: absolute;
   top: -10px;
