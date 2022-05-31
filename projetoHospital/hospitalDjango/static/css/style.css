@@ -1000,6 +1000,8 @@ body {
 .navegacao {
   padding-left: 20px;
   font-family: var(--navegacao-font);
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .qs-titulo {
