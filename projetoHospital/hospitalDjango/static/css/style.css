@@ -982,6 +982,64 @@ body {
   width: 50px;
 }
 
+/*============================= Convenios==================================*/
+.pags-section {
+  font-family: var(--body-font);
+  width: 100%;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pags-h2 {
+  font-weight: var(--font-semi-bold);
+  margin: 30px;
+  font-size: var(--h2-font-size);
+}
+
+.pags-title {
+  display: flex;
+  padding-left: 30px;
+  background: var(--darkGreen);
+  height: 140px;
+  text-align: left;
+  align-items: center;
+  color: var(--white);
+  font-weight: var(--font-semi-bold);
+  font-size: var(--h1-font-size);
+}
+
+.pags-images-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 80%;
+}
+
+.pags-image-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--lightGrey);
+  width: 208px;
+  height: 208px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.pags-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 208px;
+  max-height: 208px;
+}
+
 /*============================= QuemSomos======= Candice ===========================*/
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");

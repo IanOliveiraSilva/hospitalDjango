@@ -1,27 +1,34 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %} {% block titulo %} Hospital Napoleão
+Laureano - Convênios {% endblock titulo %} {% block body %}
+<div class="navegacao">
+  <ul class="navegacao">
+    <il>
+      <a class="navegacao-inicio" href="{% url 'home' %}">
+        Início
+        <i class="uil uil-angle-double-right"></i>
+      </a>
+    </il>
+    <il>
+      <a class="navegacao-inicio"> Convênios </a>
+    </il>
+  </ul>
+</div>
+<div class="pags-titulo-wrapper">
+  <h1 class="pags-title pags-h1">Convênios</h1>
+</div>
+<section class="pags-section">
+  <h2 class="pags-h2">O Hospital trabalha com o SUS e os seguintes planos de saúde:</h2>
 
-{% block titulo %}
-HOSPITAL LAUREANO - CONVENIOS
-{% endblock titulo %} 
-
-{% block body %}
-
-<h1>CONVENIOS</h1>
-
-<p>O Hospital trabalha com o SUS e os seguintes planos de saúde: </p>
-
-{% for item in convenio %}  
-<ul>
-    <li>
-        <img src="/image/{{ item.FotoCovenio }}" width="50">
-        {{item.NomeConvenio}}
+  <ul class="pags-images-wrapper">
+    {% for item in convenio %}
+    <li class="pags-image-wrapper">
+      <img
+        src="/image/{{ item.FotoCovenio }}"
+        alt="{{item.NomeConvenio}}"
+        class="pags-image"
+      />
     </li>
-</ul> 
-
-{% endfor %}
-
-
-
-<a class="mx-auto my-0 text-uppercase text-amarelo mx-auto mt-2 mb-5 style=" href="{% url 'home' %}">Back</a>
+    {% endfor %}
+  </ul>
+</section>
 {% endblock body %}
