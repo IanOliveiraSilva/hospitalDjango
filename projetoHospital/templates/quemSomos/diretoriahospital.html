@@ -11,19 +11,19 @@ HOSPITAL LAUREANO - DIRETORIA
          <div class="navegacao">
              <ul class="navegacao">
                  <il>
-                     <a class="navegacao-inicio">
+                     <a class="navegacao-inicio" href="{% url 'home' %}">
                          Início
                          <i class="uil uil-angle-double-right"></i>
                      </a>
                  </il>
                  <il>
-                     <a class="navegacao-inicio">
+                     <a class="navegacao-inicio" >
                          Quem Somos
                          <i class="uil uil-angle-double-right"></i>
                      </a>
                  </il>
                  <il>
-                     <a class="navegacao-inicio">
+                     <a class="navegacao-inicio" href="{% url 'historiaHospital' %}">
                          Hospital Laureano
                          <i class="uil uil-angle-double-right"></i>
                      </a>
@@ -31,7 +31,6 @@ HOSPITAL LAUREANO - DIRETORIA
                  <il>
                      <a class="navegacao-inicio">
                          Diretoria
-                         <i class="uil uil-angle-double-right"></i>
                      </a>
                  </il>
              </ul>
@@ -54,7 +53,7 @@ HOSPITAL LAUREANO - DIRETORIA
                      <p class="ocupacao"> {{item.CargoDiretoria}} </p>
                  </div>
                 <div class="aspas">
-                    <img src="{% static '/images/quote-detail.png' %}" alt="aspas" class="">
+                    <img src="{% static '/images/quote-detail.png' %}" alt="aspas" class="img-aspas">
                 </div>
              </div>
              {% endfor %}
@@ -62,13 +61,13 @@ HOSPITAL LAUREANO - DIRETORIA
          <div class="container-link">
                 <ul>
                    <il>
-                     <a class="qs-link" href="">
+                     <a class="qs-link" href="{% url 'HistoriaFundacao' %}">
                          Fundação Laureano
                      </a>
                    </il>
          
                    <il>
-                     <a class="qs-link" href="">
+                     <a class="qs-link" href="{% url 'nossaMissao' %}">
                          Nossa Missão
                      </a>
                     </il>
