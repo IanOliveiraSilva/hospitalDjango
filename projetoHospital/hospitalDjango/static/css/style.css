@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap");
+
 :root {
   --gradientGreen: #0c8c46ab;
   --darkGreen: #0c8c45;
@@ -14,6 +18,23 @@
   --pink: #fa037a;
   --darkPink: #f90051;
   --lightPink: #e184f3;
+
+  /*========== Font and typography ==========*/
+  --body-font: "Open Sans", sans-serif;
+  --navegacao-font: "Atkinson Hyperlegible", sans-serif;
+
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px 3.5rem = 56px */
+
+  --h1-font-size: 35px;
+  --h2-font-size: 28px;
+  --normal-font-size: 20px;
+  --small-font-size: 16px;
+  --smaller-font-size: 0.8rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
 }
 
 /* ======================================RESET===================================== */
@@ -283,11 +304,11 @@ body {
   display: none;
 }
 
-.menu-options--department:hover >  .menu-options--department--icon--next{
+.menu-options--department:hover > .menu-options--department--icon--next {
   display: none;
 }
 
-.menu-options--department:hover >  .menu-options--department--icon--next-hover{
+.menu-options--department:hover > .menu-options--department--icon--next-hover {
   display: flex;
 }
 
@@ -351,15 +372,16 @@ body {
   cursor: pointer;
 }
 
-.categories-options--category:hover >  .categories-options--category-link{
+.categories-options--category:hover > .categories-options--category-link {
   color: var(--white);
 }
 
-.categories-options--category:hover >  .menu-options--department--icon--next{
+.categories-options--category:hover > .menu-options--department--icon--next {
   display: none;
 }
 
-.categories-options--category:hover >  .menu-options--department--icon--next-hover{
+.categories-options--category:hover
+  > .menu-options--department--icon--next-hover {
   display: flex;
 }
 
@@ -404,7 +426,8 @@ body {
   cursor: pointer;
 }
 
-.subcategories-options--subcategory:hover > .subcategories-options--subcategory-link {
+.subcategories-options--subcategory:hover
+  > .subcategories-options--subcategory-link {
   color: var(--white);
 }
 
@@ -648,6 +671,13 @@ body {
 
 .dividing-line--news:last-child {
   display: none;
+}
+
+.dividing-line--guide {
+  background-color: var(--darkGrey);
+  margin-bottom: 15px;
+  border-radius: 10px;
+  width: 85%;
 }
 
 .title-section {
@@ -982,72 +1012,14 @@ body {
   width: 50px;
 }
 
-/*============================= QuemSomos======= Quero Doar ===========================*/
-
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap");
-
-:root {
-  /* HSL color mode */
-  --darkGreen: hsl(147, 84%, 30%);
-  --lightGreen: hsl(154, 78%, 38%);
-  --white: hsl(0, 0%, 100%);
-  --grey: hsl(0, 0%, 40%);
-  --shadow: rgba(0, 0, 0, 0.25);
-
-  /*========== Font and typography ==========*/
-  --body-font: "Open Sans", sans-serif;
-  --navegacao-font: "Atkinson Hyperlegible", sans-serif;
-
-  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px 3.5rem = 56px */
-
-  --h1-font-size: 35px;
-  --h2-font-size: 28px;
-  --normal-font-size: 20px;
-  --small-font-size: 16px;
-  --smaller-font-size: 0.8rem;
-
-  /*========== Font weight ==========*/
-  --font-regular: 400;
-  --font-medium: 500;
-  --font-semi-bold: 600;
-}
-
-.qs-body, 
-.qd-body {
-  font-family: var(--body-font);
-  width: 100%;
-  background-color: #fafafa;
-}
-
+/*============================= Págs ==================================*/
 .navegacao {
-  padding-left: 20px;
+  top: 0;
+  margin: 15px;
   font-family: var(--navegacao-font);
-  padding-top: 2px;
-  padding-bottom: 2px;
-  text-decoration: none;
 }
 
-.qs-titulo, 
-.qd-titulo {
-  font-family: var(--body-font);
-  display: flex;
-  margin: 0;
-  background: var(--darkGreen);
-  height: 140px;
-  text-align: left;
-  align-items: center;
-  color: #fff;
-  font-weight: var(--font-regular);
-}
-
-.titulo-historia {
-  padding: 1.875rem;
-}
-
-.navegacao-inicio,
-.qs-link {
+.navegacao-inicio {
   color: var(--grey);
   font-size: var(--small-font-size);
   text-decoration: none;
@@ -1055,79 +1027,124 @@ body {
   padding-bottom: 10px;
 }
 
-.qs-h1, 
-.quero-doar-h1 {
+.pags-section {
+  font-family: var(--body-font);
+  width: 100%;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.pags-h2 {
+  display: flex;
+  align-self: flex-start;
+  font-weight: 700;
+  margin: 30px;
+  font-size: var(--h2-font-size);
+}
+
+.pags-span {
   font-weight: var(--font-semi-bold);
-  margin-left: 30px;
+  margin: 30px;
+  font-size: var(--h2-font-size);
+  display: flex;
+  align-self: flex-start;
+}
+
+.pags-title {
+  display: flex;
+  padding-left: 30px;
+  background: var(--darkGreen);
+  height: 140px;
+  text-align: left;
+  align-items: center;
+  color: var(--white);
+  font-weight: var(--font-semi-bold);
   font-size: var(--h1-font-size);
    
 }
 
-.qs-h2 {
-  font-weight: var(--font-semi-bold);
-  margin-left: 30px;
-  font-size: var(--h2-font-size);
-  padding-right: 0px;
-  padding-top: 20px;
-  
+.pags-images-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 80%;
 }
 
-.seja-doador {
+.pags-image-wrapper {
   display: flex;
   justify-content: center;
-  text-align: center;
-  font-size: var(--h2-font-size);
-  }
-
-.centralizado-h2 {
-  font-family: var(--body-font);
-  line-height: 1.6;
-  padding-top: 20px;
-}
-.missao {
-  padding-bottom: 20px;
+  align-items: center;
+  background-color: var(--lightGrey);
+  width: 208px;
+  height: 208px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-.img-medico-laureano {
-  height: 300px;
+.pags-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 208px;
+  max-height: 208px;
 }
 
-.flex-container {
+.pags-side-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--lightGrey);
+  margin: 0 30px 30px;
+  width: 300px;
+  height: 100%;
   float: right;
-  margin: 2.5rem;
 }
 
-.qs-texto {
-  padding: 1.875rem;
+.pags-side-image--image {
+  padding: 10px;
+  height: 400px;
+}
+
+.pags-side-image--subtext {
+  padding: 10px;
+  font-size: 15px;
+  color: var(--grey);
+}
+
+.pags-text {
+  padding: 0 1.875rem;
   font-size: var(--normal-font-size);
+  color: var(--grey);
   display: block;
   font-weight: 400;
   letter-spacing: normal;
 }
 
-.container-link {
+p.pags-text {
+  display: flex;
+  align-self: flex-start;
+}
+
+.other-pags-links {
   background: var(--darkGreen);
-  height: 80px;
+  height: 90px;
   padding-left: 30px;
   display: flex;
   align-items: center;
   margin-bottom: -30px;
 }
 
-.qs-link {
-  color: #fff;
+.other-pags-link {
+  text-decoration: none;
+  color: var(--white);
   justify-content: space-around;
   margin: 50px;
-}
-
-/* Tratamento de img diretor*/
-
-.pic-diretor {
-  max-width: 100px;
-  border-radius: 50%;
-  position: absolute;
-  top: -40px;
-  left: -20px;
 }
 
 .container-card {
@@ -1136,23 +1153,31 @@ body {
   margin: 60px auto;
 }
 
-.card-arredondado {
-  background-color: #f5f5f5;
-  border-radius: 35px;
-  padding: 30px 0px;
+.board-icon {
+  max-width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;
+  left: -20px;
 }
 
-.nome-diretor {
+.board-name {
   font-weight: var(--font-semi-bold);
   text-align: center;
 }
 
-.ocupacao {
+.board-job {
   font-weight: var(); /*italico*/
   text-align: center;
 }
 
-.img-aspas {
+.background-card {
+  background-color: var(--lightGrey);
+  border-radius: 35px;
+  padding: 30px 0px;
+}
+
+.quotes-image {
   max-width: 40px;
   position: absolute;
   top: -10px;

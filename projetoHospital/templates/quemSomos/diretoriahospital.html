@@ -1,77 +1,71 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %} {% block titulo %} Hospital Napoleão
+Laureano - Diretoria do Hospital {% endblock titulo %} {% block body %}
 
-{% block titulo %}
-HOSPITAL LAUREANO - DIRETORIA
-{% endblock titulo %} 
+<div class="navegacao">
+  <ul>
+    <il>
+      <a class="navegacao-inicio" href="{% url 'home' %}">
+        Início
+        <i class="uil uil-angle-double-right"></i>
+      </a>
+    </il>
+    <il>
+      <a class="navegacao-inicio">
+        Quem Somos
+        <i class="uil uil-angle-double-right"></i>
+      </a>
+    </il>
+    <il>
+      <a class="navegacao-inicio">
+        Hospital Laureano
+        <i class="uil uil-angle-double-right"></i>
+      </a>
+    </il>
+    <il>
+      <a class="navegacao-inicio" href="{% url 'diretoriaHospital' %}">
+        Diretoria
+      </a>
+    </il>
+  </ul>
+</div>
 
-{% block body %}
+<h1 class="pags-title">Hospital Laureano</h1>
 
-<section class="quemsomos qs-body" id="quem_somos" >
-         <div class="navegacao">
-             <ul class="navegacao">
-                 <il>
-                     <a class="navegacao-inicio" href="{% url 'home' %}">
-                         Início
-                         <i class="uil uil-angle-double-right"></i>
-                     </a>
-                 </il>
-                 <il>
-                     <a class="navegacao-inicio" >
-                         Quem Somos
-                         <i class="uil uil-angle-double-right"></i>
-                     </a>
-                 </il>
-                 <il>
-                     <a class="navegacao-inicio" href="{% url 'historiaHospital' %}">
-                         Hospital Laureano
-                         <i class="uil uil-angle-double-right"></i>
-                     </a>
-                 </il>
-                 <il>
-                     <a class="navegacao-inicio">
-                         Diretoria
-                     </a>
-                 </il>
-             </ul>
-         </div>
-         
-         <div class="top-cor qs-titulo">
-             <h1 class="qs-titulo qs-h1">Hospital Laureano</h1>
-         </div>
- 
-         <div class="corpo-principal">
-             <h2 class="titulo_historia qs-h2">Diretoria</h2>
-         </div>
-                 {% for item in diretoria %}
-            <div class="container-card">
-                 <div class="fundo-arredondado-diretor">
-                     <img src="/image/{{ item.FotoDiretoria }}" alt="imagem do diretor" class="pic-diretor">
-                 </div>
-                <div class="card-arredondado">
-                     <p class="nome-diretor"> {{item.NomeDiretoria}}</p>
-                     <p class="ocupacao"> {{item.CargoDiretoria}} </p>
-                 </div>
-                <div class="aspas">
-                    <img src="{% static '/images/quote-detail.png' %}" alt="aspas" class="img-aspas">
-                </div>
-             </div>
-             {% endfor %}
-
-         <div class="container-link">
-                <ul>
-                   <il>
-                     <a class="qs-link" href="{% url 'HistoriaFundacao' %}">
-                         Fundação Laureano
-                     </a>
-                   </il>
-         
-                   <il>
-                     <a class="qs-link" href="{% url 'nossaMissao' %}">
-                         Nossa Missão
-                     </a>
-                    </il>
-                </ul>
-         </div>
+<section class="pags-section">
+  <h2 class="pags-h2">Diretoria</h2>
+  {% for item in diretoria %}
+  <div class="container-card">
+    <img
+      src="/image/{{ item.FotoDiretoria }}"
+      alt="imagem do diretor"
+      class="board-icon"
+    />
+    <div class="background-card">
+      <p class="board-name">{{item.NomeDiretoria}}</p>
+      <p class="board-job">{{item.CargoDiretoria}}</p>
+    </div>
+    <img
+      src="{% static '/images/quote-detail.png' %}"
+      alt="aspas"
+      class="quotes-image"
+    />
+  </div>
+  {% endfor %}
 </section>
+
+<div class="other-pags-links">
+  <ul>
+    <il>
+      <a class="other-pags-link" href="{% url 'diretoriaFundacao' %}">
+        Fundação Laureano
+      </a>
+    </il>
+
+    <il>
+      <a class="other-pags-link" href="{% url 'nossaMissao' %}">
+        Nossa Missão
+      </a>
+    </il>
+  </ul>
+</div>
 {% endblock body %}
