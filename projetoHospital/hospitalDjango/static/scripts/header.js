@@ -94,7 +94,8 @@ function scrollFunction() {
     $menuAlt.style.fontSize = `${fontSizeAlt}rem`;
     $menuAlt.style.margin = "40px 0 0 0";
 
-    $menuOptions.style.margin = "-1% 0 0 9.5%";
+    $menuOptions.style.margin = "-7% 0 0 9.5%";
+    $menuOptions.style.padding = "5% 0 0 0";
 
     $linesImage.style.width = "40px";
   } else {
@@ -110,6 +111,7 @@ function scrollFunction() {
     $menuAlt.style.margin = "50px 0 0 0";
 
     $menuOptions.style.margin = "0 0 0 9.5%";
+    $menuOptions.style.padding = "0 0 0 0";
 
     $linesImage.style.width = "50px";
   }

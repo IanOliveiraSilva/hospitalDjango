@@ -55,7 +55,7 @@
             <img class="menu-options--department--icon--hover" src="{% static '/images/hover_home_icon.png' %}"/>
             <span class="menu-options--department--span">Home</span>
           </li>
-          <li class="menu-options--department" onclick="pacienteLink(#);">
+          <li class="menu-options--department" onclick="pacienteLink('#');">
             <img class="menu-options--department--icon" src="{% static '/images/paciente_icon.png' %}"/>
             <img class="menu-options--department--icon--hover" src="{% static '/images/hover_paciente_icon.png' %}"/>
             <span class="menu-options--department--span">Área do Paciente</span>
@@ -74,10 +74,10 @@
                   <img class="menu-options--department--icon--next-hover" src="{% static '/images/hover_proximo_icon.png' %}"/>
                   <div class="subcategories">
                     <ul class="subcategories-options">
-                      <li class="subcategories-options--subcategory" onclick="historiaHospitalLink({% url 'historiaHospital' %});">
+                      <li class="subcategories-options--subcategory" onclick="historiaHospitalLink('{% url 'historiaHospital' %}');">
                         <span class="subcategories-options--subcategory-link">História</span>
                       </li>
-                      <li class="subcategories-options--subcategory" onclick="diretoriaHospitalLink({% url 'diretoriahospital' %});">
+                      <li class="subcategories-options--subcategory" onclick="diretoriaHospitalLink('{% url 'diretoriahospital' %}');">
                         <span class="subcategories-options--subcategory-link">Diretoria</span>
                       </li>
                     </ul>
@@ -89,16 +89,16 @@
                   <img class="menu-options--department--icon--next-hover" src="{% static '/images/hover_proximo_icon.png' %}"/>
                   <div class="subcategories">
                     <ul class="subcategories-options">
-                      <li class="subcategories-options--subcategory" onclick="historiaFundacaoLink({% url 'HistoriaFundacao' %});">
+                      <li class="subcategories-options--subcategory" onclick="historiaFundacaoLink('{% url 'HistoriaFundacao' %}');">
                         <span class="subcategories-options--subcategory-link">História</span>
                       </li>
-                      <li class="subcategories-options--subcategory" onclick="diretoriaFundacaoLink({% url 'DiretoriaFundacao' %});">
+                      <li class="subcategories-options--subcategory" onclick="diretoriaFundacaoLink('{% url 'DiretoriaFundacao' %}');">
                         <span class="subcategories-options--subcategory-link">Diretoria e Conselho</span>
                       </li>
                     </ul>
                   </div>
                 </li>
-                <li class="categories-options--category" onclick="nossaMissaoLink({% url 'nossaMissao' %})">
+                <li class="categories-options--category" onclick="nossaMissaoLink('{% url 'nossaMissao' %}')">
                   <span class="categories-options--category-link">Nossa Missão</span>
                 </li>
               </ul>
@@ -112,29 +112,29 @@
             <img class="menu-options--department--icon--next-hover" src="{% static '/images/hover_proximo_icon.png' %}"/>
             <div class="categories">
               <ul class="categories-options">
-                <li class="categories-options--category" onclick="resultadosLink(#);">
+                <li class="categories-options--category" onclick="resultadosLink('#');">
                   <span class="categories-options--category-link">Resultado de Exames</span>
                 </li>
-                <li class="categories-options--category option--subcategory" onclick="consultasLink(#);">
+                <li class="categories-options--category option--subcategory" onclick="consultasLink('#');">
                   <span class="categories-options--category-link">Consultas</span>
                 </li>
-                <li class="categories-options--category option--subcategory" onclick="telemedicinaLink(#);">
+                <li class="categories-options--category option--subcategory" onclick="telemedicinaLink('#');">
                   <span class="categories-options--category-link">Telemedicina</span>
                 </li>
               </ul>
             </div>
           </li>
-          <li class="menu-options--department" onclick="parceirosLink({% url 'parceiros' %});">
+          <li class="menu-options--department" onclick="parceirosLink('{% url 'parceiros' %}');">
             <img class="menu-options--department--icon" src="{% static '/images/parceiros_icon.png' %}"/>
             <img class="menu-options--department--icon--hover" src="{% static '/images/hover_parceiros_icon.png' %}"/>
             <span class="menu-options--department--span">Parceiros</span>
           </li>
-          <li class="menu-options--department" onclick="eventosLink({% url 'eventos' %});">
+          <li class="menu-options--department" onclick="eventosLink('{% url 'eventos' %}');">
             <img class="menu-options--department--icon" src="{% static '/images/eventos_icon.png' %}"/>
             <img class="menu-options--department--icon--hover" src="{% static '/images/hover_eventos_icon.png' %}"/>
             <span class="menu-options--department--span">Eventos</span>
           </li>
-          <li class="menu-options--department" onclick="noticiasLink({% url 'noticias' %});">
+          <li class="menu-options--department" onclick="noticiasLink('{% url 'noticias' %}');">
             <img class="menu-options--department--icon" src="{% static '/images/noticias_icon.png' %}"/>
             <img class="menu-options--department--icon--hover" src="{% static '/images/hover_noticias_icon.png' %}"/>
             <span class="menu-options--department--span">Notícias</span>
@@ -147,16 +147,16 @@
             <img class="menu-options--department--icon--next-hover" src="{% static '/images/hover_proximo_icon.png' %}"/>
             <div class="categories last">
               <ul class="categories-options">
-                <li class="categories-options--category" onclick="trabalheLink(#);">
+                <li class="categories-options--category" onclick="trabalheLink('#');">
                   <span class="categories-options--category-link">Trabalhe Conosco</span>
                 </li>
-                <li class="categories-options--category" onclick="ouvidoriaLink(#);">
+                <li class="categories-options--category" onclick="ouvidoriaLink('#');">
                   <span class="categories-options--category-link">Ouvidoria</span>
                 </li>
-                <li class="categories-options--category" onclick="pesquisaLink(#);">
+                <li class="categories-options--category" onclick="pesquisaLink('#');">
                   <span class="categories-options--category-link">Pesquisa de Satisfação</span>
                 </li>
-                <li class="categories-options--category" onclick="residenteLink(#);">
+                <li class="categories-options--category" onclick="residenteLink('#');">
                   <span class="categories-options--category-link">Seja um Residente Laureano</span>
                 </li>
               </ul>
