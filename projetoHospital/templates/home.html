@@ -30,7 +30,7 @@
 
   <div class="dividing-line dividing-line--section"></div>
   <section class="news-container">
-    <h3 class="title-section">Notícias</h3>
+    <a class="title-section" href="{% url 'noticias' %}">Notícias</a>
     {% for item in noticia|slice:":3" %}
     <div class="news--wrapper">
       <img src="/image/{{ item.Imagem }}" class="news--image" />
@@ -47,7 +47,7 @@
 
   <div class="dividing-line dividing-line--section"></div>
   <section class="cooperative-container">
-    <h3 class="title-section">Convênios</h3>
+    <a class="title-section" href="{% url 'convenio' %}">Convênios</a>
     <div class="cooperative--wrapper">
       <a class="previous">&#10094;</a>
       {% for item in convenio %}
