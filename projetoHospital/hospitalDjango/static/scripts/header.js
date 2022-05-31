@@ -12,6 +12,75 @@ window.onscroll = function () {
   scrollFunction();
 };
 
+function homeLink(web) {
+  window.location.href = web;
+}
+
+function pacienteLink(web) {
+  window.location.href = web;
+}
+
+function historiaHospitalLink(web) {
+  window.location.href = web;
+}
+
+function diretoriaHospitalLink(web) {
+  window.location.href = web;
+}
+
+function historiaFundacaoLink(web) {
+  window.location.href = web;
+}
+
+function diretoriaFundacaoLink(web) {
+  window.location.href = web;
+}
+
+function nossaMissaoLink(web) {
+  window.location.href = web;
+}
+
+function resultadosLink(web) {
+  window.location.href = web;
+}
+
+function consultasLink(web) {
+  window.location.href = web;
+}
+
+function telemedicinaLink(web) {
+  window.location.href = web;
+}
+
+function parceirosLink(web) {
+  window.location.href = web;
+}
+
+function eventosLink(web) {
+  window.location.href = web;
+}
+
+function noticiasLink(web) {
+  window.location.href = web;
+}
+
+function trabalheLink(web) {
+  window.location.href = web;
+}
+
+function ouvidoriaLink(web) {
+  window.location.href = web;
+}
+
+function pesquisaLink(web) {
+  window.location.href = web;
+}
+
+function residenteLink(web) {
+  window.location.href = web;
+}
+
+
 function scrollFunction() {
   if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
     const fontSizeTitle = 40 / 16;
@@ -25,7 +94,8 @@ function scrollFunction() {
     $menuAlt.style.fontSize = `${fontSizeAlt}rem`;
     $menuAlt.style.margin = "40px 0 0 0";
 
-    $menuOptions.style.margin = "-1% 0 0 9.5%";
+    $menuOptions.style.margin = "-7% 0 0 9.5%";
+    $menuOptions.style.padding = "5% 0 0 0";
 
     $linesImage.style.width = "40px";
   } else {
@@ -41,6 +111,7 @@ function scrollFunction() {
     $menuAlt.style.margin = "50px 0 0 0";
 
     $menuOptions.style.margin = "0 0 0 9.5%";
+    $menuOptions.style.padding = "0 0 0 0";
 
     $linesImage.style.width = "50px";
   }
@@ -61,8 +132,8 @@ $menuOptions.addEventListener("mouseover", function () {
 });
 
 $menuOptions.addEventListener("mouseout", function () {
-    $lines.style.display = "block";
-    $close.style.display = "none";
-    $menuAlt.innerHTML = "Menu";
-    $menuOptions.style.display = "none";
+  $lines.style.display = "block";
+  $close.style.display = "none";
+  $menuAlt.innerHTML = "Menu";
+  $menuOptions.style.display = "none";
 });
