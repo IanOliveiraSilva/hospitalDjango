@@ -17,6 +17,11 @@ def viewNoticia(request):
     noticia = Noticia.objects.all()
     return render(request, "noticias.html", {"noticia": noticia})
 
+def viewDetailNoticia(request, id):
+    noticia = Noticia.objects.all()
+    detailNoticia = get_object_or_404(noticia, pk=id)
+    return render(request, "detailNoticias.html", {"detailNoticia":detailNoticia, "id":id})
+
 
 # READ - PARCEIROS
 

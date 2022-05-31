@@ -11,6 +11,8 @@
 
 
 {% for item in noticia %}  
+
+<a href="{% url 'detail-noticias' item.id %}">
 <ul>
     <li>
         <img src="/image/{{ item.Imagem }}" width="250"> 
@@ -22,7 +24,6 @@
         {{ item.Corpo }}
     </li>
 </ul> 
-
     
 {% endfor %} 
 

@@ -11,10 +11,13 @@ urlpatterns = [
     path('eventos', vieweventos, name="eventos"),
     path('doacao', viewdoacao, name="doacao"),
     path('guia-medico/', viewGuiaMedico, name="guia-medico"),
-    path('noticias/', viewNoticia, name='noticias'),
     path('convenio/', viewConvenio, name='convenio'),
     path('transparencia', viewTransparencia, name='transparencia'),
-    
+
+    # Notícias
+    path("noticias/<int:id>/", viewDetailNoticia, name = "detail-noticias"),
+    path('noticias/', viewNoticia, name='noticias'),
+
     # Serviços
     path('servicos/consultas', viewConsultas, name="consultas"),
     path('servicos/exames', viewExames, name="exames"),

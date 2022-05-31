@@ -35,11 +35,12 @@
     <div class="news--wrapper">
       <img src="/image/{{ item.Imagem }}" class="news--image" />
       <div class="news--content">
-        <a href="" class="news--content--title"> {{ item.Titulo }} </a>
+        <a href="{% url 'detail-noticias' item.id %}" class="news--content--title"> {{ item.Titulo }} </a>
         <span class="news--content--date">{{ item.Data }}</span>
-        <p class="news--content--preview">{{ item.Corpo}}</p>
-        <button class="news--content--button">Leia mais</button>
+        <p class="news--content--preview">{{ item.Corpo }}</p>
+        <button class="news--content--button" onclick="sendTo('{% url 'detail-noticias' item.id %}')">Leia mais</button>
       </div>
+      
     </div>
     <div class="dividing-line dividing-line--news"></div>
     {% endfor %}

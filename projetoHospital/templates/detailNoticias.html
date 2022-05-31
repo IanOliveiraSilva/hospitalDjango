@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% load static %} 
+{% block css %} <link rel="stylesheet" href="{% static 'css/style.css' %}" />{% endblock css %} 
+{% block body %}
+
+    
+    <img src="/image/{{ detailNoticia.Imagem }}" width="250">
+    <p>Título:{{detailNoticia.Titulo}}
+    <p>Corpo:{{detailNoticia.Corpo}}
+
+{% endblock body %}
