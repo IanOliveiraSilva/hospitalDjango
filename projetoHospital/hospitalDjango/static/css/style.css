@@ -673,6 +673,13 @@ body {
   display: none;
 }
 
+.dividing-line--guide {
+  background-color: var(--darkGrey);
+  margin-bottom: 15px;
+  border-radius: 10px;
+  width: 85%;
+}
+
 .title-section {
   text-decoration: none;
   display: flex;
@@ -1005,7 +1012,7 @@ body {
   width: 50px;
 }
 
-/*============================= Convenios==================================*/
+/*============================= Págs ==================================*/
 .navegacao {
   top: 0;
   margin: 15px;
@@ -1043,6 +1050,8 @@ body {
   font-weight: var(--font-semi-bold);
   margin: 30px;
   font-size: var(--h2-font-size);
+  display: flex;
+  align-self: flex-start;
 }
 
 .pags-title {
@@ -1135,6 +1144,12 @@ p.pags-text {
   color: var(--white);
   justify-content: space-around;
   margin: 50px;
+}
+
+.container-card {
+  position: relative;
+  width: 70%;
+  margin: 60px auto;
 }
 
 .board-icon {
