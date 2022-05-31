@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 
 {% block titulo %}
@@ -7,7 +8,35 @@ HOSPITAL LAUREANO - FAÇA SUA DOAÇÃO
 
 {% block body %}
 
-<h1>TESTE - DOE AQUI </h1>
-<img src="http://hlaureano.org.br/wp-content/uploads/2021/10/Doa%C3%A7%C3%B5es-Pe%C3%A7a-para-site.png" height="800" width="600"><br />
-<a class="mx-auto my-0 text-uppercase text-amarelo mx-auto mt-2 mb-5 style=" href="{% url 'home' %}">Back</a>
+<section class="navegacao qd-body" > 
+    <div>
+        <ul class="navegacao qd-body" id="quem_somos">
+            </il>
+                <a class="navegacao" href="{% url 'home' %}">
+                    Início
+                    <i class="uil uil-angle-double-right"></i>
+                </a>
+            </il>
+                <a class="navegacao" >
+                    Quero Doar
+                </a>
+            </il>
+        </ul>
+
+        <div class="top-cor qd-titulo">
+            <h1 class="qs-titulo quero-doar-h1">Quero Doar</h1>
+        </div>
+        <div class="seja-doador">
+            <h2 class="centralizado-h2">Seja um doador do 
+                <br> Hospital Napoleão Laureano</h2>
+        </div>
+        <div class="container-doar">
+            <img src="{% static '/images/logo-cagepa.png' %}" alt="cagepa" class="pic-doar pic-cagepa"/>
+            <img src="{% static '/images/logo-bb.png' %}" alt="bb" class="pic-doar pic-bb"/>
+            <img src="{% static '/images/logo-pix.png' %}" alt="pix" class="pic-doar pic-pix"/>
+            <img src="{% static '/images/logo-caixa.png' %}" alt="caixa" class="pic-doar pic-caixa"/>
+            <img src="{% static '/images/logo-energisa.png' %}" alt="energisa" class="pic-doar pic-energisa"/>
+        </div>
+    </div>
+</section>
 {% endblock body %}

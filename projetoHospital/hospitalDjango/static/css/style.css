@@ -982,7 +982,7 @@ body {
   width: 50px;
 }
 
-/*============================= QuemSomos======= Candice ===========================*/
+/*============================= QuemSomos======= Quero Doar ===========================*/
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap");
@@ -1014,7 +1014,8 @@ body {
   --font-semi-bold: 600;
 }
 
-.qs-body {
+.qs-body, 
+.qd-body {
   font-family: var(--body-font);
   width: 100%;
   background-color: #fafafa;
@@ -1025,9 +1026,12 @@ body {
   font-family: var(--navegacao-font);
   padding-top: 2px;
   padding-bottom: 2px;
+  text-decoration: none;
 }
 
-.qs-titulo {
+.qs-titulo, 
+.qd-titulo {
+  font-family: var(--body-font);
   display: flex;
   margin: 0;
   background: var(--darkGreen);
@@ -1051,10 +1055,12 @@ body {
   padding-bottom: 10px;
 }
 
-.qs-h1 {
+.qs-h1, 
+.quero-doar-h1 {
   font-weight: var(--font-semi-bold);
   margin-left: 30px;
   font-size: var(--h1-font-size);
+   
 }
 
 .qs-h2 {
@@ -1063,8 +1069,21 @@ body {
   font-size: var(--h2-font-size);
   padding-right: 0px;
   padding-top: 20px;
+  
 }
 
+.seja-doador {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--h2-font-size);
+  }
+
+.centralizado-h2 {
+  font-family: var(--body-font);
+  line-height: 1.6;
+  padding-top: 20px;
+}
 .missao {
   padding-bottom: 20px;
 }
@@ -1139,3 +1158,24 @@ body {
   top: -10px;
   right: 0;
 }
+
+.container-doar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /*space-between*/
+  align-items: center;
+  padding-top: 50px;
+  gap: 20px;
+  }
+
+  .pic-bb,
+  .pic-cagepa,
+  .pic-energisa,
+  .pic-pix,
+  .pic-caixa {
+    height: 120px;
+    width: 120px;
+    border-radius: 20px;     
+  }
+
+
