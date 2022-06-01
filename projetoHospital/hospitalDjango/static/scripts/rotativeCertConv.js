@@ -16,9 +16,6 @@ for (let index = 0; index < $imagesCert.length; index++) {
   $certAlts.push($imagesCert[index].getAttribute("alt"));
 }
 
-console.log($coopAlts);
-console.log($certAlts);
-
 for (let i = 0; i < $prev.length; i++) {
   let auxImg;
   let auxAlt;

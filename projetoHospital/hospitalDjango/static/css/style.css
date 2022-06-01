@@ -18,6 +18,11 @@
   --pink: #fa037a;
   --darkPink: #f90051;
   --lightPink: #e184f3;
+  --cagepaColor: #e6e7e8;
+  --bancoColor: #fff212;
+  --caixaColor: #c7eafb;
+  --energisaColor: #d3ebf2;
+  --pixColor: #cce7d4;
 
   /*========== Font and typography ==========*/
   --body-font: "Open Sans", sans-serif;
@@ -1065,7 +1070,6 @@ body {
   color: var(--white);
   font-weight: var(--font-semi-bold);
   font-size: var(--h1-font-size);
-   
 }
 
 .pags-images-wrapper {
@@ -1184,25 +1188,85 @@ p.pags-text {
   right: 0;
 }
 
+.donate {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  gap: 20px;
+}
 
-.container-doar{
+.donate-wrapper {
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+}
+
+.donate-image {
+  display: block;
+  height: 120px;
+  width: 120px;
+  border-radius: 20px;
+}
+.donate-image-mini {
+  position: absolute;
+  left: 0;
+  height: 50%;
+  width: auto;
+  border-radius: 25%;
+  margin: 1px;
+}
+
+.container-parceiros {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding-top: 50px;
   gap: 20px;
-  }
+}
 
-  
-  .pic-doar {
-    height: 120px;
-    width: 120px;
-    border-radius: 20px;     
-  }
+.img-parceiros {
+  height: 120px;
+  width: 120px;
+  border-radius: 20px;
+}
 
-  
+.donate-info-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  display: none;
+  width: 400px;
+  height: 120px;
+  border-radius: 20px;
+}
 
-    
+.cagepa {
+  background-color: var(--cagepaColor);
+}
 
+.banco {
+  background-color: var(--bancoColor);
+}
 
+.pix {
+  background-color: var(--pixColor);
+}
+
+.caixa {
+  background-color: var(--caixaColor);
+}
+
+.energisa {
+  background-color: var(--energisaColor);
+}
+
+.donate-info {
+  display: flex;
+  align-self: center;
+  white-space: pre-line;
+  font-weight: var(--font-semi-bold);
+  font-size: 16px;
+}

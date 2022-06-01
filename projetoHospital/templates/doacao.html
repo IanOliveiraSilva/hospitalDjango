@@ -1,5 +1,5 @@
-{% extends 'base.html' %} {% load static %} {% block titulo %}Hospital
-Napoleão Laureano - Doações {%endblock titulo %} {% block body %}
+{% extends 'base.html' %} {% load static %} {% block titulo %}Hospital Napoleão
+Laureano - Doações {%endblock titulo %} {% block body %}
 
 <div class="navegacao">
   <ul>
@@ -21,32 +21,97 @@ Napoleão Laureano - Doações {%endblock titulo %} {% block body %}
     Seja um doador do <br />
     Hospital Napoleão Laureano
   </h2>
-  <div class="container-doar">
-    <img
-      src="{% static '/images/logo-cagepa.png' %}"
-      alt="cagepa"
-      class="pic-doar"
-    />
-    <img
-      src="{% static '/images/logo-bb.png' %}"
-      alt="bb"
-      class="pic-doar pic-bb"
-    />
-    <img
-      src="{% static '/images/logo-pix.png' %}"
-      alt="pix"
-      class="pic-doar pic-pix"
-    />
-    <img
-      src="{% static '/images/logo-caixa.png' %}"
-      alt="caixa"
-      class="pic-doar pic-caixa"
-    />
-    <img
-      src="{% static '/images/logo-energisa.png' %}"
-      alt="energisa"
-      class="pic-doar pic-energisa"
-    />
+  <div class="donate">
+    <div class="donate-wrapper">
+      <img
+        src="{% static '/images/logo-cagepa.png' %}"
+        alt="Cagepa"
+        class="donate-image"
+      />
+      <div class="donate-info-wrapper cagepa">
+        <img
+          src="{% static '/images/logo-cagepa.png' %}"
+          alt="Cagepa"
+          class="donate-image-mini"
+        />
+        <span class="donate-info"
+          >Ligação: 115 
+          WhatsApp: 83 98198.4495 
+          E-mail: doar@cagepa.pb.gov.br</span
+        >
+      </div>
+    </div>
+    <div class="donate-wrapper">
+      <img
+        src="{% static '/images/logo-bb.png' %}"
+        alt="Banco do Brasil"
+        class="donate-image"
+      />
+      <div class="donate-info-wrapper banco">
+        <img
+          src="{% static '/images/logo-bb.png' %}"
+          alt="Banco do Brasil"
+          class="donate-image-mini"
+        />
+        <span class="donate-info"
+          >Agência: 4361-3
+          Conta: 9784-5</span
+        >
+      </div>
+    </div>
+    <div class="donate-wrapper">
+      <img
+        src="{% static '/images/logo-pix.png' %}"
+        alt="Pix"
+        class="donate-image"
+      />
+      <div class="donate-info-wrapper pix">
+        <img
+          src="{% static '/images/logo-pix.png' %}"
+          alt="Pix"
+          class="donate-image-mini"
+        />
+        <span class="donate-info"
+          >caixa@hlaureano.org.br</span
+        >
+      </div>
+    </div>
+    <div class="donate-wrapper">
+      <img
+        src="{% static '/images/logo-caixa.png' %}"
+        alt="Caixa"
+        class="donate-image"
+      />
+      <div class="donate-info-wrapper caixa">
+        <img
+          src="{% static '/images/logo-caixa.png' %}"
+          alt="Caixa"
+          class="donate-image-mini"
+        />
+        <span class="donate-info"
+          >Agência:: 1010
+          Operação: 013
+          Conta: 32028-4</span
+        >
+      </div>
+    </div>
+    <div class="donate-wrapper">
+      <img
+        src="{% static '/images/logo-energisa.png' %}"
+        alt="Energisa"
+        class="donate-image"
+      />
+      <div class="donate-info-wrapper energisa">
+        <img
+          src="{% static '/images/logo-energisa.png' %}"
+          alt="Energisa"
+          class="donate-image-mini"
+        />
+        <span class="donate-info"
+          >0800 083 0196</span
+        >
+      </div>
+    </div>
   </div>
 </section>
 {% endblock body %}
