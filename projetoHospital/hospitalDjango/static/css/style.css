@@ -1259,3 +1259,23 @@ p.pags-text {
   font-weight: var(--font-semi-bold);
   font-size: 16px;
 }
+
+.news-main-title {
+  font-family: "Montserrat";
+  font-size: var(--h1-font-size);
+  color: var(--darkGreen);
+  margin: -30px 0 30px 0;
+}
+
+.news-main-image {
+  width: 80vw;
+  height: 80vh;
+}
+
+.news-text {
+  font-family: "Montserrat";
+  font-weight: 300;
+  color: var(--grey);
+  margin: 30px;
+  white-space: pre-line;
+}
