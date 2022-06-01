@@ -8,28 +8,24 @@ HOSPITAL LAUREANO - PARCEIROS
 
 {% block body %}
 
-<section class="navegacao parceiros-body" > 
-    <div>
-        <ul class="navegacao qd-body" id="quem_somos">
-            <il>
-                <a class="navegacao" href="{% url 'home' %}">
-                    Início
-                    <i class="uil uil-angle-double-right"></i>
-                </a>
-            </il>
-            <il>
-                <a class="navegacao" >
-                    Parceiros
-                </a>
-            </il>
-        </ul>
-    </div>
-    <div class="pags-title">
-        <h1 class="qs-titulo parceiros-h1">Parceiros</h1>
-    </div>
-    <div class="container-parceiros">
+<div class="navegacao">
+    <ul>
+      <il>
+        <a class="navegacao-link" href="{% url 'home' %}">
+          Início
+          <i class="uil uil-angle-double-right"></i>
+        </a>
+      </il>
+      <il>
+        <a class="navegacao-link" href="{% url 'parceiros' %}"> Parceiros </a>
+      </il>
+    </ul>
+  </div>
+  <h1 class="pags-title">Quero Doar</h1>
+    
+  <div class="donate">
         {% for item in parceiro %}  
-            <img class="img-parceiros" src="/image/{{item.FotoParceiro}}">
+            <img class="donate-image" src="/image/{{item.FotoParceiro}}">
         {% endfor %}
     </div>
 </section>
