@@ -1209,7 +1209,6 @@ p.pags-text {
   width: 120px;
   border-radius: 20px;
 }
-
 .donate-image-mini {
   position: absolute;
   left: 0;
@@ -1217,6 +1216,21 @@ p.pags-text {
   width: auto;
   border-radius: 25%;
   margin: 1px;
+}
+
+.container-parceiros {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  gap: 20px;
+}
+
+.img-parceiros {
+  height: 120px;
+  width: 120px;
+  border-radius: 20px;
 }
 
 .donate-info-wrapper {
