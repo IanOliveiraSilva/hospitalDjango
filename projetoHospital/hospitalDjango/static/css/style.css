@@ -1100,6 +1100,7 @@ body {
   align-items: center;
   width: 208px;
   max-height: 208px;
+  background-color: var(--white);
 }
 
 .pags-side-image-wrapper {

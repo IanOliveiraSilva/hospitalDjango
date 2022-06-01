@@ -24,12 +24,12 @@ Hospital Napoleão Laureano - Parceiros
   <h1 class="pags-title">Parceiros</h1>
   <section class="pags-section">
     
-  <div class="donate">
+  {% comment %} <div class="donate">
         {% for item in parceiro %}  
             <img class="donate-image" src="/image/{{item.FotoParceiro}}">
         {% endfor %}
-    </div>
-    {% comment %} <ul class="pags-images-wrapper">
+    </div> {% endcomment %}
+    <ul class="pags-images-wrapper">
         {% for item in parceiro %}
         <li class="pags-image-wrapper">
           <img
@@ -38,6 +38,6 @@ Hospital Napoleão Laureano - Parceiros
           />
         </li>
         {% endfor %}
-      </ul> {% endcomment %}
+      </ul>
 </section>
 {% endblock body %}
