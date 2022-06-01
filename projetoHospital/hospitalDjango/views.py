@@ -14,7 +14,7 @@ def viewGuiaMedico(request):
 # READ - NOTICIAS
 
 def viewNoticia(request):
-    noticia = Noticia.objects.all()
+    noticia = Noticia.objects.order_by('-Data')
     return render(request, "noticias.html", {"noticia": noticia})
 
 def viewDetailNoticia(request, id):
@@ -70,7 +70,7 @@ def viewTransparencia(request):
 def viewHome(request):
     banner = Banner.objects.all()
     premio = Premio.objects.all()
-    noticia = Noticia.objects.all()
+    noticia = Noticia.objects.order_by('-Data')
     convenio = Convenio.objects.all()
     
     return render(request, "home.html", {"banner": banner , "noticia": noticia, "premio": premio, "convenio": convenio})

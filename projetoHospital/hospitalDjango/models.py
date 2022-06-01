@@ -12,7 +12,7 @@ class Medico(models.Model):
 
 class Noticia(models.Model):
     Titulo = models.CharField(max_length=100, )
-    Subtitulo = models.CharField(max_length=100, blank=True, null=True)
+    Subtitulo = models.CharField(max_length=100, blank=True)
     Imagem = models.ImageField(upload_to='Noticia',null=True, blank=True)
     Corpo = models.TextField(null=True, blank=True)
     Detalhes = models.TextField(null=True, blank=True)
