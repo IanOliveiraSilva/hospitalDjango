@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block titulo %}
-HOSPITAL LAUREANO - PARCEIROS
+Hospital Napoleão Laureano - Parceiros
 {% endblock titulo %} 
 
 {% block body %}
@@ -21,12 +21,23 @@ HOSPITAL LAUREANO - PARCEIROS
       </il>
     </ul>
   </div>
-  <h1 class="pags-title">Quero Doar</h1>
+  <h1 class="pags-title">Parceiros</h1>
+  <section class="pags-section">
     
   <div class="donate">
         {% for item in parceiro %}  
             <img class="donate-image" src="/image/{{item.FotoParceiro}}">
         {% endfor %}
     </div>
+    {% comment %} <ul class="pags-images-wrapper">
+        {% for item in parceiro %}
+        <li class="pags-image-wrapper">
+          <img
+            src="/image/{{ item.FotoParceiro }}"
+            class="pags-image"
+          />
+        </li>
+        {% endfor %}
+      </ul> {% endcomment %}
 </section>
 {% endblock body %}
