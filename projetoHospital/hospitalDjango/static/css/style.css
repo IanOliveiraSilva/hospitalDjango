@@ -139,7 +139,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: auto;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -188,7 +188,7 @@ body {
 .wrapper {
   position: relative;
   top: 109px;
-  height: 100%;
+  height: auto;
   width: 100vw;
   scroll-padding-top: 100px;
 }
@@ -964,9 +964,9 @@ body {
 
 /* =====================================FOOTER===================================== */
 .footer {
-  margin-top: 30px;
   background-color: var(--lightGreen);
   color: var(--white);
+  padding: 9px;
 }
 
 .footer__wrapper {
@@ -1019,7 +1019,7 @@ body {
   font-family: var(--navegacao-font);
 }
 
-.navegacao-inicio {
+.navegacao-link {
   color: var(--grey);
   font-size: var(--small-font-size);
   text-decoration: none;
@@ -1035,7 +1035,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .pags-h2 {
@@ -1046,12 +1046,13 @@ body {
   font-size: var(--h2-font-size);
 }
 
-.pags-span {
-  font-weight: var(--font-semi-bold);
+.pags-h2-center {
+  display: flex;
+  align-self: center;
+  text-align: center;
+  font-weight: 700;
   margin: 30px;
   font-size: var(--h2-font-size);
-  display: flex;
-  align-self: flex-start;
 }
 
 .pags-title {
@@ -1137,7 +1138,6 @@ p.pags-text {
   padding-left: 30px;
   display: flex;
   align-items: center;
-  margin-bottom: -30px;
 }
 
 .other-pags-link {
@@ -1193,11 +1193,8 @@ p.pags-text {
   gap: 20px;
   }
 
-  .pic-bb,
-  .pic-cagepa,
-  .pic-energisa,
-  .pic-pix,
-  .pic-caixa {
+
+  .pic-doar {
     height: 120px;
     width: 120px;
     border-radius: 20px;     
