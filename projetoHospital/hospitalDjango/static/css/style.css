@@ -1184,6 +1184,7 @@ p.pags-text {
   right: 0;
 }
 
+
 .container-doar{
   display: flex;
   flex-direction: row;
@@ -1193,26 +1194,15 @@ p.pags-text {
   gap: 20px;
   }
 
-
+  
   .pic-doar {
     height: 120px;
     width: 120px;
     border-radius: 20px;     
   }
 
-  .container-parceiros {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-top: 50px;
-    gap: 20px;
-    }
+  
 
-    .img-parceiros {
-      height: 120px;
-      width: 120px;
-      border-radius: 20px; 
-    }
+    
 
 
