@@ -1,42 +1,52 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %} {% block titulo %}Hospital
+Napoleão Laureano - Doações {%endblock titulo %} {% block body %}
 
+<div class="navegacao">
+  <ul>
+    <il>
+      <a class="navegacao-link" href="{% url 'home' %}">
+        Início
+        <i class="uil uil-angle-double-right"></i>
+      </a>
+    </il>
+    <il>
+      <a class="navegacao-link" href="{% url 'doacao' %}"> Quero Doar </a>
+    </il>
+  </ul>
+</div>
 
-{% block titulo %}
-HOSPITAL LAUREANO - FAÇA SUA DOAÇÃO
-{% endblock titulo %} 
-
-{% block body %}
-
-<section class="navegacao qd-body" > 
-    <div>
-        <ul class="navegacao qd-body" id="quem_somos">
-            </il>
-                <a class="navegacao" href="{% url 'home' %}">
-                    Início
-                    <i class="uil uil-angle-double-right"></i>
-                </a>
-            </il>
-                <a class="navegacao" >
-                    Quero Doar
-                </a>
-            </il>
-        </ul>
-
-        <div class="top-cor qd-titulo">
-            <h1 class="qs-titulo quero-doar-h1">Quero Doar</h1>
-        </div>
-        <div class="seja-doador">
-            <h2 class="centralizado-h2">Seja um doador do 
-                <br> Hospital Napoleão Laureano</h2>
-        </div>
-        <div class="container-doar">
-            <img src="{% static '/images/logo-cagepa.png' %}" alt="cagepa" class="pic-doar pic-cagepa"/>
-            <img src="{% static '/images/logo-bb.png' %}" alt="bb" class="pic-doar pic-bb"/>
-            <img src="{% static '/images/logo-pix.png' %}" alt="pix" class="pic-doar pic-pix"/>
-            <img src="{% static '/images/logo-caixa.png' %}" alt="caixa" class="pic-doar pic-caixa"/>
-            <img src="{% static '/images/logo-energisa.png' %}" alt="energisa" class="pic-doar pic-energisa"/>
-        </div>
-    </div>
+<h1 class="pags-title">Quero Doar</h1>
+<section class="pags-section">
+  <h2 class="pags-h2-center">
+    Seja um doador do <br />
+    Hospital Napoleão Laureano
+  </h2>
+  <div class="container-doar">
+    <img
+      src="{% static '/images/logo-cagepa.png' %}"
+      alt="cagepa"
+      class="pic-doar"
+    />
+    <img
+      src="{% static '/images/logo-bb.png' %}"
+      alt="bb"
+      class="pic-doar pic-bb"
+    />
+    <img
+      src="{% static '/images/logo-pix.png' %}"
+      alt="pix"
+      class="pic-doar pic-pix"
+    />
+    <img
+      src="{% static '/images/logo-caixa.png' %}"
+      alt="caixa"
+      class="pic-doar pic-caixa"
+    />
+    <img
+      src="{% static '/images/logo-energisa.png' %}"
+      alt="energisa"
+      class="pic-doar pic-energisa"
+    />
+  </div>
 </section>
 {% endblock body %}
