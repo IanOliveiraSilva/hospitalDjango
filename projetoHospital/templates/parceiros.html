@@ -1,5 +1,6 @@
-{% extends 'base.html' %}
 
+{% extends 'base.html' %}
+{% load static %}
 
 {% block titulo %}
 HOSPITAL LAUREANO - PARCEIROS
@@ -7,13 +8,29 @@ HOSPITAL LAUREANO - PARCEIROS
 
 {% block body %}
 
-<h1>TESTE - PARCEIROS</h1>
-
-
-
-{% for item in parceiro %}  
-<img src="/image/{{item.FotoParceiro}}">
-{% endfor %}
-
-<a class="mx-auto my-0 text-uppercase text-amarelo mx-auto mt-2 mb-5 style=" href="{% url 'home' %}">Back</a>
+<section class="navegacao parceiros-body" > 
+    <div>
+        <ul class="navegacao qd-body" id="quem_somos">
+            <il>
+                <a class="navegacao" href="{% url 'home' %}">
+                    Início
+                    <i class="uil uil-angle-double-right"></i>
+                </a>
+            </il>
+            <il>
+                <a class="navegacao" >
+                    Parceiros
+                </a>
+            </il>
+        </ul>
+    </div>
+    <div class="pags-title">
+        <h1 class="qs-titulo parceiros-h1">Parceiros</h1>
+    </div>
+    <div class="container-parceiros">
+        {% for item in parceiro %}  
+            <img class="img-parceiros" src="/image/{{item.FotoParceiro}}">
+        {% endfor %}
+    </div>
+</section>
 {% endblock body %}
