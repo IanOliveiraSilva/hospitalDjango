@@ -33,7 +33,7 @@
     <a class="title-section" href="{% url 'noticias' %}">Notícias</a>
     {% for item in noticia|slice:":3" %}
     <div class="news--wrapper">
-      <img src="/image/{{ item.Imagem }}" class="news--image" />
+      <img src="/image/{{ item.Imagem }}" class="news--image" onclick="sendTo('{% url 'detail-noticias' item.id %}')"/>
       <div class="news--content">
         <a href="{% url 'detail-noticias' item.id %}" class="news--content--title"> {{ item.Titulo }} </a>
         <span class="news--content--date">{{ item.Data }}</span>

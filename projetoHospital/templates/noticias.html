@@ -1,32 +1,62 @@
-{% extends "base.html" %}
-{% load static %}
+{% extends "base.html" %} {% load static %} {% block titulo %}Hospital Napoleão
+Laureano - Notícias{% endblock titulo %} {% block body %}
 
-{% block titulo %}HOSPITAL LAUREANO - NOTICIAS{% endblock titulo %}
+<div class="navegacao">
+  <ul>
+    <il>
+      <a class="navegacao-link" href="{% url 'home' %}">
+        Início
+        <i class="uil uil-angle-double-right"></i>
+      </a>
+    </il>
+    <il>
+      <a class="navegacao-link" href="{% url 'noticias' %}"> Notícias </a>
+    </il>
+  </ul>
+</div>
 
+<h1 class="pags-title">Notícias</h1>
 
-{% block body %}
+<section class="pags-section">
+  {% with noticia|first as principal %} {% for value in noticia %} 
+  {% if forloop.counter == 1 %}
+  <div
+    class="news-pag__main"
+    onclick="sendTo('{% url 'detail-noticias' principal.id %}')"
+  >
+    <img
+      src="/image/{{ principal.Imagem }}"
+      alt="{{ principal.Titulo }}"
+      class="news-pag__main-image"
+    />
+    <span class="news-pag__main-title"> {{ principal.Titulo }} </span>
+  </div>
+  {% endif %} {% endfor %}{% endwith %}
 
-<h1>TESTE - NOTICIAS</h1>
-
-
-
-{% for item in noticia %}  
-
-<a href="{% url 'detail-noticias' item.id %}">
-<ul>
-    <li>
-        <img src="/image/{{ item.Imagem }}" width="250"> 
-        <br>      
-        Titulo: {{ item.Titulo }}
-        <br>
-                {{ item.Subtitulo }} 
-        <br>
-        {{ item.Corpo }}
+  <ul class="news-pag__news-images-wrapper">
+    {% for item in noticia %} {% if forloop.counter != 1 %}
+    <li class="news-pag__news-image-wrapper">
+      <img
+        class="news-pag__news-image"
+        src="/image/{{ item.Imagem }}"
+        onclick="sendTo('{% url 'detail-noticias' item.id %}')"
+      />
+      <span
+        class="news-pag__news-title"
+        onclick="sendTo('{% url 'detail-noticias' item.id %}')"
+        >{{ item.Titulo }}</span
+      >
+      <span class="news-pag__news-date">{{ item.Data }}</span>
+      <span class="news-pag__news-preview">{{ item.Corpo }}</span>
+      <button
+        class="news--content--button"
+        onclick="sendTo('{% url 'detail-noticias' item.id %}')"
+      >
+        Leia mais
+      </button>
     </li>
-</ul> 
-    
-{% endfor %} 
+    {% endif %} {% endfor %}
+  </ul>
+</section>
 
-
-<a class="mx-auto my-0 text-uppercase text-amarelo mx-auto mt-2 mb-5 style=" href="{% url 'home' %}">Back</a>
 {% endblock body %}
