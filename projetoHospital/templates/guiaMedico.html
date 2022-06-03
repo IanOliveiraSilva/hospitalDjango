@@ -15,7 +15,9 @@
 </ul>
 
 {% endfor %}
-
+{% for item in especialidade %}
+<p>{{ item.Especialidade }}</p>
+{% endfor %}
 
 
 <a class="mx-auto my-0 text-uppercase text-amarelo mx-auto mt-2 mb-5 style=" href="{% url 'home' %}">Back</a>

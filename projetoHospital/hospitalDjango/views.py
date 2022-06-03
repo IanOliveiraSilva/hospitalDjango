@@ -1,15 +1,18 @@
+from multiprocessing.reduction import duplicate
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import  AuthenticationForm, UserCreationForm, PasswordChangeForm
 from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.http import HttpResponse
 from .models import *
+from django.db.models import Count
 
 # READ - GUIA MÉDICO
 
 def viewGuiaMedico(request):
     medico = Medico.objects.all()
-    return render(request, "guiaMedico.html", {"medico": medico})
+    especialidade = Medico.objects.values('Especialidade').distinct()
+    return render(request, "guiaMedico.html", {"medico": medico, "especialidade":especialidade})
 
 # READ - NOTICIAS
 
