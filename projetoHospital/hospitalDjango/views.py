@@ -6,6 +6,19 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.http import HttpResponse
 from .models import *
 from django.db.models import Count
+from .forms import *
+
+
+# CREATE - PESQUISA DE SATISFAÇÃO
+
+def PesquisaSatisfacao(request):
+    form = FaleConoscoForm(request.POST or None)
+    
+    if form.is_valid():
+        form.save()
+        return ('pesquisadesatisfacao')
+    return render(request, 'pesquisadesatisfacao.html', {'formPesquisa': formPesquisa})  
+
 
 # READ - GUIA MÉDICO
 
@@ -66,8 +79,6 @@ def viewTransparencia(request):
     return render(request, "transparencia.html", {"transparencia": transparencia})
 
 
-
-
 #PATH
 
 def viewHome(request):
@@ -96,8 +107,6 @@ def viewTrabalheConosco(request):
 def viewOuvidoria(request):
     return render(request, "faleConosco/ouvidoria.html")
 
-def viewPesquisadeSatisfacao(request):
-    return render(request, 'faleConosco/pesquisadesatisfacao.html')
 
 def viewSejaumResidente(request):
     return render(request, 'faleConosco/sejaumresidente.html')

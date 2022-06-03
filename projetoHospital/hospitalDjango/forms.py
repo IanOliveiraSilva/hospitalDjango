@@ -26,3 +26,9 @@ class Diretoria(forms.ModelForm):
     class Meta:
         model = Diretoria
         fields = ['NomeDiretoria', 'CargoDiretoria', 'FotoDiretoria']
+
+
+class FaleConoscoForm(forms.ModelForm):
+    class Meta:
+        model = FaleConosco
+        fields = ['Nome', 'Sobrenome', 'Telefone', 'operadora', 'Assunto', 'Mensagem']

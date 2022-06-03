@@ -73,4 +73,25 @@ class BannerAdmin(admin.ModelAdmin):
 class TransparenciaAdmin(admin.ModelAdmin):
     list_display = ('NomeTransparencia', 'PdfTransparencia', 'DataTransparencia')
     search_fields = ('NomeTransparencia',)
-    
+
+@admin.register(DiretoriaExecutiva)
+class DiretoriaExecutivaAdmin(admin.ModelAdmin):
+    def FotoDiretorExecutivo_preview(self, obj):
+         return format_html(
+            f"<img src='{obj.FotoDiretorExecutivo.url}' width='{obj.FotoDiretorExecutivo.width}' height='{obj.FotoDiretorExecutivo.height}' style=''/>")
+    readonly_fields = ['FotoDiretorExecutivo_preview']
+    list_display = ('NomeDiretorExecutivo', 'NomeDiretorExecutivo')
+    search_fields = ('NomeDiretorExecutivo', 'NomeDiretorExecutivo')
+
+@admin.register(ConselhoDeliberativo)
+class ConselhoDeliberativoAdmin(admin.ModelAdmin):
+    def FotoConselho_preview(self, obj):
+         return format_html(
+            f"<img src='{obj.FotoConselho.url}' width='{obj.FotoConselho.width}' height='{obj.FotoConselho.height}' style=''/>")
+    readonly_fields = ['FotoConselho_preview']
+    list_display = ('NomeConselho', 'CargoConselho')
+    search_fields = ('NomeConselho', 'CargoConselho')
+@admin.register(FaleConosco)
+class FaleConoscoAdmin(admin.ModelAdmin):
+    list_display = ('Nome', 'Sobrenome', 'Telefone', 'Operadora', 'Assunto', 'Mensagem')
+    search_fields = ('Nome', 'Sobrenome', 'Telefone', 'Operadora', 'Assunto', 'Mensagem')

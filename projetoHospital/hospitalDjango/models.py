@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.core.validators import RegexValidator
 
 # Create your models here.
 
@@ -57,3 +57,34 @@ class Transparencia(models.Model):
     DataTransparencia = models.DateField(null=True, blank=True)
     def __str__(self):
         return self.NomeTransparencia
+
+class DiretoriaExecutiva(models.Model):
+    NomeDiretorExecutivo = models.CharField(max_length=100)
+    CargoDiretorExecutivo = models.CharField(max_length=50)
+    FotoDiretorExecutivo = models.ImageField(upload_to='DiretoriaExecutiva', null=True, blank=True)
+    def __str__(self):
+        return self.NomeDiretorExecutivo
+
+class ConselhoDeliberativo(models.Model):
+    NomeConselho = models.CharField(max_length=100)
+    CargoConselho = models.CharField(max_length=50)
+    FotoConselho = models.ImageField(upload_to='ConselhoDeliberativo', null=True, blank=True)
+    def __str__(self):
+        return self.NomeConselho
+    
+class FaleConosco(models.Model):
+    Operadora = (
+        ('TIM', 'Tim'),
+        ('VIVO', 'Vivo'),
+        ('CLARO', 'Claro'),
+    )
+    Nome = models.CharField(max_length=50, blank=False,)
+    Sobrenome = models.CharField(max_length=50, blank=False)
+    NumeroRegex = RegexValidator(regex = r"^\+?1?\d{8,15}$")
+    Telefone = models.CharField(validators = [NumeroRegex], max_length = 11, unique = True)
+    operadora = models.CharField(max_length=5, choices=Operadora, blank=False, null=True)
+    Assunto = models.CharField(max_length=50, blank=True, null=True)
+    Mensagem = models.CharField(max_length=350, blank=True, null=True)
+    def __str__(self):
+        return self.Nome
+    

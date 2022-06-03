@@ -8,7 +8,15 @@
 
 <h1>TESTE</h1>
 
-
+</br>
+</br>
+</br>
+</br>
+<form method="POST">
+    {% csrf_token %}
+    {{ formPesquisa }}
+    <button type="submit">Enviar Pesquisa</button>
+</form>
 
 <a href="{% url 'home' %}">Back</a>
 {% endblock body %}
