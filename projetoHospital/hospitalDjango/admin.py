@@ -93,5 +93,5 @@ class ConselhoDeliberativoAdmin(admin.ModelAdmin):
     search_fields = ('NomeConselho', 'CargoConselho')
 @admin.register(FaleConosco)
 class FaleConoscoAdmin(admin.ModelAdmin):
-    list_display = ('Nome', 'Sobrenome', 'Telefone', 'Assunto')
-    search_fields = ('Nome', 'Sobrenome', 'Telefone', 'Assunto')
+    list_display = ('NomeCompleto', 'Email', 'Telefone', 'Assunto')
+    search_fields = ('NomeCompleto', 'Email', 'Telefone', 'Assunto')

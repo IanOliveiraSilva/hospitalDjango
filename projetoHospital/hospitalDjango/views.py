@@ -67,7 +67,9 @@ def viewHistoriaFundacao(request):
     return render(request, "quemSomos/historiaFundacao.html", {})
 
 def viewDiretoriaFundacao(request):
-    return render(request, "quemSomos/diretoriaFundacao.html", {})
+    diretoriaexecutiva = DiretoriaExecutiva.objects.all()
+    conselho = ConselhoDeliberativo.objects.all()
+    return render(request, "quemSomos/diretoriaFundacao.html", {"diretoria-executiva": diretoriaexecutiva, "conselho": conselho})
 
 
 # READ - PREMIOS E CERTIFICAÇÕES

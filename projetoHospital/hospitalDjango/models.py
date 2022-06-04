@@ -73,18 +73,12 @@ class ConselhoDeliberativo(models.Model):
         return self.NomeConselho
     
 class FaleConosco(models.Model):
-    Operadora = (
-        ('TIM', 'Tim'),
-        ('VIVO', 'Vivo'),
-        ('CLARO', 'Claro'),
-    )
-    Nome = models.CharField(max_length=50, blank=False,)
-    Sobrenome = models.CharField(max_length=50, blank=False)
+    NomeCompleto = models.CharField(max_length=100, blank=True, null=True)
+    Email = models.EmailField(max_length=50, blank=True, null=True)
     NumeroRegex = RegexValidator(regex = r"^\+?1?\d{8,15}$")
     Telefone = models.CharField(validators = [NumeroRegex], max_length = 11, unique = True)
-    operadora = models.CharField(max_length=5, choices=Operadora, blank=False, null=True)
-    Assunto = models.CharField(max_length=50, blank=True, null=True)
+    Assunto = models.CharField(max_length=50, blank=False, null=True)
     Mensagem = models.TextField(blank=False, null=False)
     def __str__(self):
-        return self.Nome
+        return self.NomeCompleto
     
