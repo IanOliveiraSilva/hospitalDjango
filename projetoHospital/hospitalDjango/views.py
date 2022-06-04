@@ -12,12 +12,13 @@ from .forms import *
 # CREATE - PESQUISA DE SATISFAÇÃO
 
 def PesquisaSatisfacao(request):
+    context = {}
     form = FaleConoscoForm(request.POST or None)
     
     if form.is_valid():
         form.save()
-        return ('pesquisadesatisfacao')
-    return render(request, 'pesquisadesatisfacao.html', {'formPesquisa': formPesquisa})  
+    context['form']= form
+    return render(request, 'faleConosco/pesquisadesatisfacao.html', context)  
 
 
 # READ - GUIA MÉDICO

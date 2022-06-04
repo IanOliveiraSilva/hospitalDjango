@@ -84,7 +84,7 @@ class FaleConosco(models.Model):
     Telefone = models.CharField(validators = [NumeroRegex], max_length = 11, unique = True)
     operadora = models.CharField(max_length=5, choices=Operadora, blank=False, null=True)
     Assunto = models.CharField(max_length=50, blank=True, null=True)
-    Mensagem = models.CharField(max_length=350, blank=True, null=True)
+    Mensagem = models.TextField(blank=False, null=False)
     def __str__(self):
         return self.Nome
     
