@@ -1403,6 +1403,7 @@ p.pags-text {
   --font-semi-bold: 600;
 }
 
+
 @media Screen and (max-width: 425px) {
   html,
   body,
@@ -1586,7 +1587,7 @@ p.pags-text {
   }
 
   .header__menu--menu-image {
-    width: 50px;
+    width: 20px;
     transition: 0.4s;
   }
 
@@ -1610,12 +1611,12 @@ p.pags-text {
     justify-content: center;
     align-items: center;
     color: var(--darkGreen);
-    font-size: 56px;
+    font-size: 20px; /* */ 
     cursor: pointer;
   }
 
   .header__title--logo {
-    width: 80px;
+    width: 30px; /* */
     transition: 0.4s;
   }
 
