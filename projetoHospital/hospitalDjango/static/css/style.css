@@ -203,7 +203,7 @@ body {
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 4;
   background-color: var(--white);
   box-shadow: 0px 4px 4px var(--shadow);
@@ -1398,7 +1398,7 @@ p.pags-text {
 }
 
 
-@media (min-width:425px){
+@media Screen and (max-width:425px) {
   html,
   body,
   div,
@@ -1581,7 +1581,7 @@ p.pags-text {
   }
 
   .header__menu--menu-image {
-    width: 50px;
+    width: 20px;
     transition: 0.4s;
   }
 
@@ -1605,12 +1605,12 @@ p.pags-text {
     justify-content: center;
     align-items: center;
     color: var(--darkGreen);
-    font-size: 56px;
+    font-size: 20px; /* */ 
     cursor: pointer;
   }
 
   .header__title--logo {
-    width: 80px;
+    width: 30px; /* */
     transition: 0.4s;
   }
 
