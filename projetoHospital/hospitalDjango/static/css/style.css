@@ -248,7 +248,7 @@ body {
   transition: 0.4s;
 }
 
-.header__menu--title {
+.header__menu--title-small-device {
   margin-top: 50px;
   transition: 0.4s;
 }
@@ -1570,7 +1570,7 @@ p.pags-text {
     padding: 2vh 10%;
   }
 
-  .header__menu {
+  .header__menu-small-device {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1581,13 +1581,13 @@ p.pags-text {
     font-size: 20px;
   }
 
-  .header__menu--menu {
+  .header__menu--menu-small-device {
     position: fixed;
     display: block;
   }
 
-  .header__menu--menu-image {
-    width: 20px;
+  .header__menu--menu-image-small-device {
+    width: 50px;
     transition: 0.4s;
   }
 
@@ -1601,7 +1601,7 @@ p.pags-text {
     transition: 0.4s;
   }
 
-  .header__menu--title {
+  .header__menu--title-small-device {
     margin-top: 50px;
     transition: 0.4s;
   }
@@ -1615,17 +1615,17 @@ p.pags-text {
     cursor: pointer;
   }
 
-  .header__title--logo {
-    width: 30px; /* */
+  .header__title--logo-small-device {
+    width: 50px; /* */
     transition: 0.4s;
   }
 
-  .header__title--title {
+  .header__title--title-small-device {
     font-family: "Alatsi";
     transition: 0.4s;
   }
 
-  .menu-options {
+  .menu-options-small-device {
     display: none;
     background-color: var(--white);
     margin-top: -1%;
