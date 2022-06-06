@@ -84,7 +84,7 @@ function scrollFunctionSV() {
     ;
     const fontSizeAltSV = 15 / 16;
 
-    $logoSV.style.width = "10px";
+    $logoSV.style.width = "30px";
 
     $menuAltSV.style.fontSize = `${fontSizeAltSV}rem`;
     $menuAltSV.style.margin = "20px 0 0 0";
