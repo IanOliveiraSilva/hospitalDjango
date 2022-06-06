@@ -1389,99 +1389,39 @@ p.pags-text {
   -webkit-box-orient: vertical;
 }
 
-/* ==================================================== M O B I L E  D E V I C E ====================================================*/
+/* ============================================================================================                                       M O B I L E  D E V I C E ===========================================================================================*/
 
 @media Screen and (max-width: 767px) {
+
   /* =====================================HEADER===================================== */
-  
-  
-
+   
   .header__menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--darkGreen);
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: 0.4s;
     font-size: 20px;
-    
-  }
-
-  .header__menu--menu {
-    position: fixed;
-    display: block;
-    
   }
 
   .header__menu--menu-image-SV {
     width: 40px;
-    transition: 0.4s;
-  }
-
-  .header__menu--close {
-    position: fixed;
-    display: none;
-  }
-
-  .header__menu--close-image {
-    width: 40px;
-    transition: 0.4s;
-  }
-
-  .header__menu--title {
-    margin-top: 50px;
-    transition: 0.4s;
-    display: none;
   }
 
   .header__title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--darkGreen);
-    font-size: 20px; /* */ 
-    cursor: pointer;
+    font-size: 20px;  
   }
 
   .header__title--logo-SV {
-    width: 50px; /* */
-    transition: 0.4s;
-  }
-
-  .header__title--title-SV {
-    font-family: "Alatsi";
-    transition: 0.4s;
-  }
-
-  .menu-options {
-    display: none;
-    background-color: var(--white);
-    margin-top: -1%;
-    margin-left: 9.5%;
-    box-shadow: inset 0 -4px 4px var(--shadow);
-    position: fixed;
-    transition: 0.4s;
-    z-index: 1;
+    width: 50px; 
   }
 
   .menu-options--department {
-    display: block;
-    display: flex;
-    justify-content: start;
-    align-items: center;
     height: 25px;
-    padding: 17px;
   }
-  .menu-options--department:hover
-    > .menu-options--department--icon--next-hover {
+
+  .menu-options--department:hover > .menu-options--department--icon--next-hover {
     display: flex;
   }
 
   .menu-options--department--icon {
     width: 20px;
   }
-
 
   .menu-options--department--icon--hover {
     width: 25px;
@@ -1495,15 +1435,13 @@ p.pags-text {
     height: 25px; 
   }
 
-
   .categories-options--category-link {
     font-size: 14px;
   }
+
   .subcategories-options--subcategory-link {
     font-size: 14px;
   }
-
- 
 
   /* =====================================FOOTER===================================== */
   .footer__wrapper {
@@ -1531,15 +1469,8 @@ p.pags-text {
   .medias--icons__link-icon {
     width: 26px;
   }
+
 }
-
-
-
-
-
-
-
-
 
 
 /* ==================================================== M E D I U M    V I E P O R T S ====================================================*/
