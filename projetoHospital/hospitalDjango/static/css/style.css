@@ -182,7 +182,7 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
+} */
 
 /* ================================================================================ */
 body {
@@ -1386,189 +1386,12 @@ p.pags-text {
   -webkit-box-orient: vertical;
 }
 
-/* ======================= mobile device ==========================*/
+/* ==================================================== M O B I L E  D E V I C E ====================================================*/
 
-:root {
-  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px 3.5rem = 56px */
-
-  --h1-font-size: 35px;
-  --h2-font-size: 28px;
-  --normal-font-size: 20px;
-  --small-font-size: 16px;
-  --smaller-font-size: 0.8rem;
-
-  /*========== Font weight ==========*/
-  --font-regular: 400;
-  --font-medium: 500;
-  --font-semi-bold: 600;
-}
-
-
-@media Screen and (max-width: 425px) {
-  html,
-  body,
-  div,
-  span,
-  applet,
-  object,
-  iframe,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  blockquote,
-  pre,
-  a,
-  abbr,
-  acronym,
-  address,
-  big,
-  cite,
-  code,
-  del,
-  dfn,
-  em,
-  img,
-  ins,
-  kbd,
-  q,
-  s,
-  samp,
-  small,
-  strike,
-  b,
-  sub,
-  sup,
-  tt,
-  var,
-  b,
-  u,
-  i,
-  center,
-  dl,
-  dt,
-  dd,
-  ol,
-  ul,
-  li,
-  fieldset,
-  form,
-  label,
-  legend,
-  table,
-  caption,
-  tbody,
-  tfoot,
-  thead,
-  tr,
-  th,
-  td,
-  article,
-  aside,
-  canvas,
-  details,
-  embed,
-  figure,
-  figcaption,
-  footer,
-  header,
-  hgroup,
-  menu,
-  nav,
-  output,
-  ruby,
-  section,
-  summary,
-  time,
-  mark,
-  audio,
-  video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-  }
-
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-    height: auto;
-  }
-
-  /* HTML5 display-role reset for older browsers */
-  article,
-  aside,
-  details,
-  figcaption,
-  figure,
-  footer,
-  header,
-  hgroup,
-  menu,
-  nav,
-  section {
-    display: auto;
-  }
-  body {
-    line-height: 1;
-  }
-  ol,
-  ul {
-    list-style: none;
-  }
-  blockquote,
-  q {
-    quotes: none;
-  }
-  blockquote:before,
-  blockquote:after,
-  q:before,
-  q:after {
-    content: "";
-    content: none;
-  }
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-
-  /* ================================================================================ */
-  body {
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-
-  .wrapper {
-    position: relative;
-    top: 109px;
-    height: auto;
-    width: 100vw;
-    scroll-padding-top: 100px;
-  }
-
+@media Screen and (max-width: 767px) {
   /* =====================================HEADER===================================== */
-  .header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 4;
-    background-color: var(--white);
-    box-shadow: 0px 4px 4px var(--shadow);
-  }
-
-  .header__wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2vh 10%;
-  }
+  
+  
 
   .header__menu {
     display: flex;
@@ -1579,11 +1402,13 @@ p.pags-text {
     cursor: pointer;
     transition: 0.4s;
     font-size: 20px;
+    
   }
 
   .header__menu--menu {
     position: fixed;
     display: block;
+    
   }
 
   .header__menu--menu-image {
@@ -1604,6 +1429,7 @@ p.pags-text {
   .header__menu--title {
     margin-top: 50px;
     transition: 0.4s;
+    display: none;
   }
 
   .header__title {
@@ -1836,4 +1662,35 @@ p.pags-text {
   .medias--icons__link-icon {
     width: 26px;
   }
+}
+
+
+
+
+
+
+
+
+
+
+/* ==================================================== M E D I U M    V I E P O R T S ====================================================*/
+
+:root {
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px 3.5rem = 56px */
+
+  --h1-font-size: 35px;
+  --h2-font-size: 28px;
+  --normal-font-size: 20px;
+  --small-font-size: 16px;
+  --smaller-font-size: 0.8rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+}
+
+
+@media Screen and (max-width: 1023px) {
+
 }
