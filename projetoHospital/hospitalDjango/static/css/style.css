@@ -1444,12 +1444,12 @@ p.pags-text {
     cursor: pointer;
   }
 
-  .header__title--logo {
+  .header__title--logo-SV {
     width: 50px; /* */
     transition: 0.4s;
   }
 
-  .header__title--title {
+  .header__title--title-SV {
     font-family: "Alatsi";
     transition: 0.4s;
   }
