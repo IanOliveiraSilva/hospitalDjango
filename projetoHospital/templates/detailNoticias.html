@@ -14,12 +14,15 @@ Laureano - {{detailNoticia.Titulo}} {% endblock titulo %} {% block body %}
       <i class="uil uil-angle-double-right"></i>
     </il>
     <il>
-      <a class="navegacao-link">
+      <a class="navegacao-link" href="{% url 'detail-noticias' detailNoticia.id %}">
         {{detailNoticia.Titulo}}
       </a>
     </il>
   </ul>
 </div>
+
+<h1 class="pags-title">Notícias</h1>
+
 <section class="pags-section">
   <h1 class="news-main-title">{{detailNoticia.Titulo}}</h1>
   <img src="/image/{{ detailNoticia.Imagem }}" class="news-main-image" />
