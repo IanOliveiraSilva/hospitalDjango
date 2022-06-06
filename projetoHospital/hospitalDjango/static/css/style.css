@@ -1389,6 +1389,53 @@ p.pags-text {
   -webkit-box-orient: vertical;
 }
 
+/*============================= Guia Medico ==================================*/
+.list-header{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  transform: 1s;
+  padding: 15px;
+}
+.list-title {
+  font-weight: 700;
+  font-size: var(--normal-font-size);
+  text-transform: uppercase;
+  transform: 1s;
+  margin-left: 15px;
+}
+
+.list-img{
+  width: 10px;
+  height: 20px;
+  transform: 1s;
+}
+
+.list-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0 0 10px 70px;
+  display: none;
+}
+
+.dividing-line--list {
+  background-color: var(--lightGrey);
+  border-radius: 10px;
+  width: 100%;
+}
+
+.doctor {
+  text-transform: capitalize;
+  list-style-type: disc;
+  list-style-position: inside;
+  display: list-item;
+  color: var(--grey);
+  font-weight: var(--font-semi-bold);
+}
+
 /* ======================= mobile device ==========================*/
 
 :root {
