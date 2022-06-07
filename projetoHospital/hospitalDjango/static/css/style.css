@@ -1441,56 +1441,7 @@ p.pags-text {
 M O B I L E  D E V I C E ===========================================================================================*/
 
 @media Screen and (max-width: 767px) {
-  /* =====================================HEADER===================================== */
-
-  .header__menu {
-    font-size: 20px;
-  }
-
-  .header__menu--menu-image-SV {
-    width: 40px;
-  }
-
-  .header__title {
-    font-size: 20px;
-  }
-
-  .header__title--logo-SV {
-    width: 50px;
-  }
-
-  .menu-options--department {
-    height: 25px;
-  }
-
-  .menu-options--department:hover
-    > .menu-options--department--icon--next-hover {
-    display: flex;
-  }
-
-  .menu-options--department--icon {
-    width: 20px;
-  }
-
-  .menu-options--department--icon--hover {
-    width: 25px;
-  }
-
-  .menu-options--department--span {
-    font-size: 14px;
-  }
-
-  .categories-options--category {
-    height: 25px;
-  }
-
-  .categories-options--category-link {
-    font-size: 14px;
-  }
-
-  .subcategories-options--subcategory-link {
-    font-size: 14px;
-  }
+  
 
   /* =====================================FOOTER===================================== */
   .footer__wrapper {

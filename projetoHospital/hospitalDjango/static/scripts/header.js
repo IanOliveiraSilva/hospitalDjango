@@ -1,4 +1,4 @@
-const $logo = document.querySelector(".header__title--logo ");
+const $logo = document.querySelector(".header__title--logo");
 const $hospitalName = document.querySelector(".header__title--title");
 const $menu = document.querySelector(".header__menu");
 const $lines = document.querySelector(".header__menu--menu");
@@ -62,7 +62,7 @@ $menuOptions.addEventListener("mouseout", function () {
   $menuOptions.style.display = "none";
 });
 
-/*======================= small viewport ==============================*/
+/*======================= small viewport ==============================
 const $logoSV = document.querySelector(".header__title--logo-SV ");
 
 const $menuSV = document.querySelector(".header__menu-SV");
@@ -107,4 +107,4 @@ function scrollFunctionSV() {
 
     $linesImageSV.style.width = "10px";
   }
-}
+}*/
