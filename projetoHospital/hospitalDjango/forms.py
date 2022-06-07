@@ -32,3 +32,4 @@ class FaleConoscoForm(forms.ModelForm):
     class Meta:
         model = FaleConosco
         fields = ['NomeCompleto', 'Email', 'Telefone', 'Assunto', 'Mensagem']
+        

@@ -82,3 +82,11 @@ class FaleConosco(models.Model):
     def __str__(self):
         return self.NomeCompleto
     
+class Galeria(models.Model):
+    Titulo = models.CharField(max_length=150, blank=False, null=False)
+    Categoria = models.CharField(max_length=100, blank=False, null = False)
+    Foto = models.ImageField(upload_to='Galeria', blank=False, null=True)
+    Descricao = models.CharField(max_length=400, blank=True, null=True)
+    Data = models.DateField(null=False, blank=False)
+    def __str__(self):
+        return super().__str__()

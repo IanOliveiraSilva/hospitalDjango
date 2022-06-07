@@ -24,7 +24,7 @@ def PesquisaSatisfacao(request):
 # READ - GUIA MÉDICO
 
 def viewGuiaMedico(request):
-    medico = Medico.objects.all()
+    medico = Medico.objects.order_by('Especialidade')
     especialidade = Medico.objects.values('Especialidade').distinct()
     return render(request, "guiaMedico.html", {"medico": medico, "especialidade":especialidade})
 
@@ -52,6 +52,8 @@ def viewConvenio(request):
     convenio = Convenio.objects.all()
     return render(request, "convenio.html", {"convenio": convenio})
 
+# QUEM SOMOS
+
 # READ - DIRETORIA E HISTORIA HOSPITAL LAUREANO
 
 def viewDiretoriaHospital(request):
@@ -71,6 +73,12 @@ def viewDiretoriaFundacao(request):
     conselho = ConselhoDeliberativo.objects.all()
     return render(request, "quemSomos/diretoriaFundacao.html", {"diretoria-executiva": diretoriaexecutiva, "conselho": conselho})
 
+# READ - GALERIA
+
+def viewGaleria(request):
+    galeria = Galeria.objects.order_by('Categoria')
+    categoria = Galeria.objects.values('Categoria').distinct()
+    return render(request, "quemSomos/galeria.html", {"galeria": galeria, "categoria": categoria})
 
 # READ - PREMIOS E CERTIFICAÇÕES
 
@@ -80,7 +88,6 @@ def viewDiretoriaFundacao(request):
 def viewTransparencia(request):
     transparencia = Transparencia.objects.all()
     return render(request, "transparencia.html", {"transparencia": transparencia})
-
 
 #PATH
 
