@@ -1508,9 +1508,7 @@ M O B I L E  D E V I C E =======================================================
     display: none;
   }
 
-  .menu-options {
-    display: none;
-  }
+  
   /* =====================================FOOTER===================================== */
   .footer__wrapper {
     flex-direction: column;
