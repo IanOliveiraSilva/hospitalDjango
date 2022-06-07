@@ -273,6 +273,10 @@ body {
   transition: 0.4s;
 }
 
+.header__title-devices {
+  display: none;
+}
+
 .menu-options {
   display: none;
   background-color: var(--white);
@@ -1442,7 +1446,49 @@ M O B I L E  D E V I C E =======================================================
 
 @media Screen and (max-width: 767px) {
   
+  .header__title--logo {
+    display: block;
+    width: 40px;
+    padding: 8px 3% 8px 7% ;
+  }
 
+  .header__title-devices {
+    display: flex;
+    width: 350px;
+  }
+
+  .header__title-small-viewport {
+    font-family: "Alatsi";
+    font-size: 30px;
+    flex-wrap: wrap;
+    align-items: center;  
+  }
+
+  .header__title--title {
+    display: none;
+  }
+
+ 
+
+  .header__menu {
+    display: none;
+  }
+
+  .header__menu--menu {
+    display: none;
+  }
+
+  .header__menu--menu-image {
+    display: none;
+  }
+
+  .header__menu--title {
+    display: none;
+  }
+
+  .menu-options {
+    display: none;
+  }
   /* =====================================FOOTER===================================== */
   .footer__wrapper {
     flex-direction: column;
