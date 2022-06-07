@@ -64,7 +64,7 @@ $menuOptions.addEventListener("mouseout", function () {
 
 /*======================= small viewport ==============================*/
 const $logoSV = document.querySelector(".header__title--logo-SV ");
-const $hospitalNameSV = document.querySelector(".header__title--title-SV");
+
 const $menuSV = document.querySelector(".header__menu-SV");
 const $linesSV = document.querySelector(".header__menu--menu-SV");
 const $linesImageSV = document.querySelector(".header__menu--menu-image-SV");
