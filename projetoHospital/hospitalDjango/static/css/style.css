@@ -182,7 +182,8 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-} */
+}
+*/
 
 /* ================================================================================ */
 body {
@@ -1390,7 +1391,7 @@ p.pags-text {
 }
 
 /*============================= Guia Medico ==================================*/
-.list-header{
+.list-header {
   display: flex;
   align-items: center;
   width: 100%;
@@ -1406,7 +1407,7 @@ p.pags-text {
   margin-left: 15px;
 }
 
-.list-img{
+.list-img {
   width: 10px;
   height: 20px;
   transform: 1s;
@@ -1436,12 +1437,12 @@ p.pags-text {
   font-weight: var(--font-semi-bold);
 }
 
-/* ======================= mobile device ==========================*/
+/* ============================================================================================                                       
+M O B I L E  D E V I C E ===========================================================================================*/
 
 @media Screen and (max-width: 767px) {
-
   /* =====================================HEADER===================================== */
-   
+
   .header__menu {
     font-size: 20px;
   }
@@ -1451,18 +1452,19 @@ p.pags-text {
   }
 
   .header__title {
-    font-size: 20px;  
+    font-size: 20px;
   }
 
   .header__title--logo-SV {
-    width: 50px; 
+    width: 50px;
   }
 
   .menu-options--department {
     height: 25px;
   }
 
-  .menu-options--department:hover > .menu-options--department--icon--next-hover {
+  .menu-options--department:hover
+    > .menu-options--department--icon--next-hover {
     display: flex;
   }
 
@@ -1479,7 +1481,7 @@ p.pags-text {
   }
 
   .categories-options--category {
-    height: 25px; 
+    height: 25px;
   }
 
   .categories-options--category-link {
@@ -1516,9 +1518,7 @@ p.pags-text {
   .medias--icons__link-icon {
     width: 26px;
   }
-
 }
-
 
 /* ==================================================== M E D I U M    V I E P O R T S ====================================================*/
 
@@ -1537,7 +1537,5 @@ p.pags-text {
   --font-semi-bold: 600;
 }
 
-
 @media Screen and (max-width: 1023px) {
-
 }
