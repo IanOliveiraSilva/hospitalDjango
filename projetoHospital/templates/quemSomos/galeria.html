@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% load static %} {% block titulo %} Hospital Napoleão
+Laureano - Galeria {% endblock titulo %} {% block body %}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+{% for categ in categoria %}
+
+    <h1>{{ categ.Categoria }}</h1>
+    {% for gal in galeria %}
+        
+        {% if categ.Categoria == gal.Categoria %}
+            <h2>{{ gal.Titulo }}</h2>
+            <img src="/image/{{ gal.Foto }}"/>
+            <p>{{ gal.Descricao }}</p>
+        {% endif %} 
+    {% endfor %}
+
+{% endfor %}
+
+{% endblock body %}

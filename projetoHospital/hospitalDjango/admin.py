@@ -91,7 +91,17 @@ class ConselhoDeliberativoAdmin(admin.ModelAdmin):
     readonly_fields = ['FotoConselho_preview']
     list_display = ('NomeConselho', 'CargoConselho')
     search_fields = ('NomeConselho', 'CargoConselho')
+
 @admin.register(FaleConosco)
 class FaleConoscoAdmin(admin.ModelAdmin):
     list_display = ('NomeCompleto', 'Email', 'Telefone', 'Assunto')
     search_fields = ('NomeCompleto', 'Email', 'Telefone', 'Assunto')
+
+@admin.register(Galeria)
+class Galeria(admin.ModelAdmin):
+    list_display = ('Titulo', 'Categoria', 'Data')
+    search_fields = ('Titulo', 'Categoria')
+    def FotoGaleria_preview(self, obj):
+         return format_html(
+            f"<img src='{obj.Foto.url}' width='{obj.Foto.width}' height='{obj.Foto.height}' style=''/>")
+    readonly_fields = ['FotoGaleria_preview']

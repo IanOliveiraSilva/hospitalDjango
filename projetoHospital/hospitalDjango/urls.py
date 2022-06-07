@@ -30,6 +30,7 @@ urlpatterns = [
     path('quem-somos/nossa-missao', viewNossaMissao, name='nossaMissao'),    
     path('quem-somos/historia-fundacao', viewHistoriaFundacao, name='historiaFundacao'),    
     path('quem-somos/diretoria-fundacao', viewDiretoriaFundacao, name='diretoriaFundacao'),
+    path('quem-somos/galeria', viewGaleria, name = "galeria"),
 
     # Fale Conosco
     path('fale-conosco/ouvidoria', viewOuvidoria, name='fale-conosco'),
