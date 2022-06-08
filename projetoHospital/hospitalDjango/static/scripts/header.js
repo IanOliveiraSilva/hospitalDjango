@@ -53,10 +53,6 @@ $menu.addEventListener("mouseover", function () {
   $menuOptions.style.display = "block";
 });
 
-$menuDevices.addEventListener("mouseover", function () {
-  $menuOptions.style.display = "block";
-});
-
 $menuOptions.addEventListener("mouseover", function () {
   $menuOptions.style.display = "block";
 });
