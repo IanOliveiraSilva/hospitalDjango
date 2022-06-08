@@ -1556,7 +1556,7 @@ M O B I L E  D E V I C E =======================================================
   }
 
   .menu__smallDevice {
-
+    display: none;
   }
 
 }
