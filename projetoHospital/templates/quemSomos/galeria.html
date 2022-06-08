@@ -1,23 +1,46 @@
-{% extends 'base.html' %} {% load static %} {% block titulo %} Hospital Napoleão
-Laureano - Galeria {% endblock titulo %} {% block body %}
+{% extends "base.html" %} {% load static %} {% block titulo %}Hospital Napoleão
+Laureano - Galeria de Fotos{% endblock titulo %} {% block body %}
 
-<br>
-<br>
-<br>
-<br>
-<br>
-{% for categ in categoria %}
+<div class="navegacao">
+  <ul>
+    <il>
+      <a class="navegacao-link" href="{% url 'home' %}">
+        Início
+        <i class="uil uil-angle-double-right"></i>
+      </a>
+    </il>
+    <il>
+      <a class="navegacao-link" href="{% url 'galeria' %}"> Galeria </a>
+    </il>
+  </ul>
+</div>
 
-    <h1>{{ categ.Categoria }}</h1>
-    {% for gal in galeria %}
-        
-        {% if categ.Categoria == gal.Categoria %}
-            <h2>{{ gal.Titulo }}</h2>
-            <img src="/image/{{ gal.Foto }}"/>
-            <p>{{ gal.Descricao }}</p>
-        {% endif %} 
+<h1 class="pags-title">Galeria de Fotos</h1>
+
+<section class="pags-section">
+  <div class="galery-wrapper">
+    {% for categ in categoria %}
+    <div>
+      {% for gal in galeria %} {% if categ.Categoria == gal.Categoria %}
+      <div class="galery-image-wrapper">
+        <img
+          src="/image/{{ gal.Foto }}"
+          class="galery-image"
+          alt="{{ gal.Titulo }}"
+        />
+      </div>
+      {% endif %} {% endfor %}
+    </div>
     {% endfor %}
+  </div>
+</section>
 
-{% endfor %}
+<div class="modal">
+  <a class="modal-previous">&#10094;</a>
+  <span class="close">&times;</span>
+  <img class="modal-image" />
+  <div class="modal-title"></div>
+  <a class="modal-next">&#10095;</a>
+</div>
 
 {% endblock body %}

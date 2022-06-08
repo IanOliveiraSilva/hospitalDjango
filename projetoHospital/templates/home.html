@@ -16,11 +16,11 @@
       <span class="dot" onclick="currentSlide(3)"></span>
     </div>
     <div class="banner-container--side-menu">
-      <button class="side-menu_arrow dark-green big">Faça sua doação</button>
-      <button class="side-menu_arrow light-green">Guia médico</button>
-      <button class="side-menu_arrow dark-green small">Eventos</button>
-      <button class="side-menu_arrow light-green">Convênios</button>
-      <button class="side-menu_arrow dark-green big">Transparência</button>
+      <button class="side-menu_arrow dark-green big" onclick="sendTo('{% url 'doacao' %}')">Faça sua doação</button>
+      <button class="side-menu_arrow light-green" onclick="sendTo('{% url 'guia-medico' %}')">Guia médico</button>
+      <button class="side-menu_arrow dark-green small" onclick="sendTo('{% url 'eventos' %}')">Eventos</button>
+      <button class="side-menu_arrow light-green" onclick="sendTo('{% url 'convenio' %}')">Convênios</button>
+      <button class="side-menu_arrow dark-green big" onclick="sendTo('{% url 'galeria' %}')">Galeria de fotos</button>
     </div>
   </section>
 

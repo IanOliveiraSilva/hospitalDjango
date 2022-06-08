@@ -10,11 +10,15 @@ Laureano - {{detailNoticia.Titulo}} {% endblock titulo %} {% block body %}
       </a>
     </il>
     <il>
-      <a class="navegacao-link" href="{% url 'noticias' %}"> Notícias </a>
-      <i class="uil uil-angle-double-right"></i>
+      <a class="navegacao-link" href="{% url 'noticias' %}">
+        Notícias <i class="uil uil-angle-double-right"></i
+      ></a>
     </il>
     <il>
-      <a class="navegacao-link" href="{% url 'detail-noticias' detailNoticia.id %}">
+      <a
+        class="navegacao-link"
+        href="{% url 'detail-noticias' detailNoticia.id %}"
+      >
         {{detailNoticia.Titulo}}
       </a>
     </il>

@@ -70,27 +70,3 @@ function slideShowAutomatic() {
 $buttonDonation.addEventListener("click", function () {
   location.href = "doacao";
 });
-
-function selectMenu() {
-  for (let index = 0; index < $sideMenu.length; index++) {
-    $sideMenu[index].addEventListener("click", function () {
-      if (index == 0) {
-        location.href = "doacao";
-      }
-      if (index == 1) {
-        location.href = "guia-medico";
-      }
-      if (index == 2) {
-        location.href = "eventos";
-      }
-      if (index == 3) {
-        location.href = "convenio";
-      }
-      if (index == 4) {
-        location.href = "transparencia";
-      }
-    });
-  }
-}
-
-selectMenu();
