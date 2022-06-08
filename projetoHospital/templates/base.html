@@ -175,6 +175,14 @@
                     >Nossa Missão</span
                   >
                 </li>
+                <li
+                  class="categories-options--category"
+                  onclick="sendTo('{% url 'galeria' %}')"
+                >
+                  <span class="categories-options--category-link"
+                    >Galeria</span
+                  >
+                </li>
               </ul>
             </div>
           </li>
@@ -428,5 +436,9 @@
   <script
     type="text/javascript"
     src='{% static "/scripts/guia.js" %}'
+  ></script>
+  <script
+    type="text/javascript"
+    src='{% static "/scripts/galeria.js" %}'
   ></script>
 </html>
