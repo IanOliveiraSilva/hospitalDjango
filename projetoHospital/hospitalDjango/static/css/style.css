@@ -1537,6 +1537,19 @@ M O B I L E  D E V I C E =======================================================
   .medias--icons__link-icon {
     width: 26px;
   }
+ /*================================ H O M E ======================================*/
+
+  .banner-container--side-menu {
+    display: none;
+  }
+
+  .banner {
+    max-width: 100%;
+  }
+
+  .donation-button {
+    display: none;
+  }
 
   
 }
