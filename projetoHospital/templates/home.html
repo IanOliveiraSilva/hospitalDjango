@@ -29,14 +29,18 @@
   </button>
 
   <section class="menu__smallDevice">
-    <div class="menu__smallDevice--container">
-      <div class= "guia-medico-link">
+    <div class="menu__smallDevice--container flex-container">
+    <li class="icon-link">
+      <a class= "guia-medico-link">
         <img src="{% static '/images/guia-medico-img.png' %}"
         alt="guia-medico"
         class="menu__smallDevice-img"
        onclick="sendTo('{% url 'guia-medico' %}')"> 
+      </a>
        Guia Médico
       </div>
+    </div>
+    <div class="white-ball">
       <div class= "convenio-link">
         <img src="{% static '/images/convênios-img.png' %}"
         alt="convênios"
@@ -44,6 +48,8 @@
        onclick="sendTo('{% url 'convenio' %}')"> 
        Convênios
       </div>
+    </div>
+    <div class="pink-ball">
       <div class= "doacao-link">
         <img src="{% static '/images/doe_icon.png' %}"
         alt="doação"
@@ -51,6 +57,8 @@
        onclick="sendTo('{% url 'doacao' %}')"> 
        Faça sua Doação
       </div>
+    </div>
+    <div class="white-ball">
       <div class= "transparencia-link">
         <img src="{% static '/images/transparencia-img.png' %}"
         alt="transparencia"
@@ -58,6 +66,8 @@
        onclick="sendTo('{% url 'transparencia' %}')"> 
        Transparência
       </div>
+    </div>
+    <div class="white-ball"> 
       <div class= "eventos-link">
         <img src="{% static '/images/guia-medico-img.png' %}"
         alt="eventos"
@@ -65,8 +75,8 @@
        onclick="sendTo('{% url 'eventos' %}')"> 
        Guia Médico
       </div>
-
     </div>
+  </div>
   </section>
 
 
