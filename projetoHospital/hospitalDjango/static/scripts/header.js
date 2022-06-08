@@ -5,7 +5,9 @@ const $lines = document.querySelector(".header__menu--menu");
 const $linesImage = document.querySelector(".header__menu--menu-image");
 const $menuAlt = document.querySelector(".header__menu--title");
 const $menuOptions = document.querySelector(".menu-options");
-
+/* @media small devices*/
+const $menuDevices = document.querySelector(".header__menu--devices");
+const $deviceMenu = document.querySelector(".device-menu");
 
 
 window.onscroll = function () {
@@ -54,10 +56,22 @@ $menu.addEventListener("mouseover", function () {
   $menuOptions.style.display = "block";
 });
 
+$menuDevices.addEventListener("mouseover", function () {
+  $menuOptions.style.display = "block";
+});
+
 $menuOptions.addEventListener("mouseover", function () {
   $menuOptions.style.display = "block";
 });
 
 $menuOptions.addEventListener("mouseout", function () {
   $menuOptions.style.display = "none";
+});
+
+$deviceMenu.addEventListener("mouseover", function () {
+  $deviceMenu.style.display = "block";
+});
+
+$deviceMenu.addEventListener("mouseover", function () {
+  $deviceMenu.style.display = "none";
 });
