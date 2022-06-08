@@ -1455,7 +1455,8 @@ M O B I L E  D E V I C E =======================================================
 @media Screen and (max-width: 767px) {
   
   .header__wrapper {
-    padding: 21px 80px 21px 25px;
+    padding: 21px 80px 21px 30px;
+    margin-left: -50px;
   }
 
   .header__menu--devices {
@@ -1471,7 +1472,7 @@ M O B I L E  D E V I C E =======================================================
   .header__title--logo {
     display: block;
     width: 40px;
-    padding: 8px 3% 8px 3% ;
+    padding: 8px 7% 8px 3% ;
   }
 
   .header__title-devices {
