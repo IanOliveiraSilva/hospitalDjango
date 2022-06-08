@@ -671,6 +671,10 @@ body {
   background-color: var(--backgroundPink);
 }
 
+.menu__smallDevice {
+  display: none;
+}
+
 .dividing-line {
   margin: 0 auto;
   height: 2px;
@@ -1551,7 +1555,10 @@ M O B I L E  D E V I C E =======================================================
     display: none;
   }
 
-  
+  .menu__smallDevice {
+
+  }
+
 }
 
 /* ==================================================== M E D I U M    V I E P O R T S ====================================================*/

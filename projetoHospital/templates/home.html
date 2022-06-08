@@ -29,10 +29,43 @@
   </button>
 
   <section class="menu__smallDevice">
-    <div>
-      <img src="{% static '/images/' %}"
-      alt="aspas"
-      class="quotes-image"
+    <div class="menu__smallDevice--container">
+      <div class= "guia-medico-link">
+        <img src="{% static '/images/guia-medico-img.png' %}"
+        alt="guia-medico"
+        class="menu__smallDevice-img"
+       onclick="sendTo('{% url 'guia-medico' %}')"> 
+       Guia Médico
+      </div>
+      <div class= "convenio-link">
+        <img src="{% static '/images/convênios-img.png' %}"
+        alt="convênios"
+        class="menu__smallDevice-img"
+       onclick="sendTo('{% url 'convenio' %}')"> 
+       Convênios
+      </div>
+      <div class= "doacao-link">
+        <img src="{% static '/images/doe_icon.png' %}"
+        alt="doação"
+        class="menu__smallDevice-img"
+       onclick="sendTo('{% url 'doacao' %}')"> 
+       Faça sua Doação
+      </div>
+      <div class= "transparencia-link">
+        <img src="{% static '/images/transparencia-img.png' %}"
+        alt="transparencia"
+        class="menu__smallDevice-img"
+       onclick="sendTo('{% url 'transparencia' %}')"> 
+       Transparência
+      </div>
+      <div class= "eventos-link">
+        <img src="{% static '/images/guia-medico-img.png' %}"
+        alt="eventos"
+        class="menu__smallDevice-img"
+       onclick="sendTo('{% url 'eventos' %}')"> 
+       Guia Médico
+      </div>
+
     </div>
   </section>
 
