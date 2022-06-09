@@ -1502,8 +1502,8 @@ p.pags-text {
 .modal-image {
   margin: auto;
   display: block;
-  width: 75%;
-  max-height: 75vh;
+  width: 60%;
+  height: 75vh;
   padding-top: 9%;
 }
 
@@ -1581,7 +1581,7 @@ p.pags-text {
   margin: 0 -20px;
   user-select: none;
   top: 50%;
-  left: 9%;
+  left: 17%;
 }
 
 .modal-next {
@@ -1596,7 +1596,7 @@ p.pags-text {
   margin: 0 -20px;
   user-select: none;
   top: 50%;
-  right: 9%;
+  right: 17%;
 }
 
 .modal-next:hover, .modal-previous:hover{

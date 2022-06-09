@@ -20,13 +20,14 @@ Laureano - Galeria de Fotos{% endblock titulo %} {% block body %}
 <section class="pags-section">
   <div class="galery-wrapper">
     {% for categ in categoria %}
-    <div>
+    <div class="images-category" id="{{categ.Categoria}}">
       {% for gal in galeria %} {% if categ.Categoria == gal.Categoria %}
       <div class="galery-image-wrapper">
         <img
           src="/image/{{ gal.Foto }}"
           class="galery-image"
           alt="{{ gal.Titulo }}"
+          categoria="{{ gal.Categoria }}"
         />
       </div>
       {% endif %} {% endfor %}
