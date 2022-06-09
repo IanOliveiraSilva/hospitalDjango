@@ -671,7 +671,7 @@ body {
   background-color: var(--backgroundPink);
 }
 
-.smallDevice-menu { 
+.smallDevice-menu-container { 
   display: none;
 }
 
@@ -1725,7 +1725,7 @@ M O B I L E  D E V I C E =======================================================
     display: none;
   }
 
-  .smallDevice-menu { 
+  .smallDevice-menu-container { 
     display: flex;
   }
   
@@ -1752,6 +1752,34 @@ M O B I L E  D E V I C E =======================================================
     align-items: baseline;
     justify-content: center;
   }
+
+
+  /*==================== C O N V E N I O S =======================================*/
+
+  .pags-section {
+    display: none;
+  }
+
+  .pags-span {
+    display: none;
+  }
+
+  .pags-images-wrapper {
+    display: none;
+  }
+
+  .pags-image-wrapper {
+    display: none;
+  }
+
+  .pags-image {
+    display: none;
+  }
+  
+   /*=========================== D O A Ç Ã O =======================================*/
+
+
+  
 }
 
 /* ==================================================== M E D I U M    V I E P O R T S ====================================================*/
