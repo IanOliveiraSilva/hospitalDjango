@@ -248,10 +248,7 @@
             />
             <span class="menu-options--department--span">Parceiros</span>
           </li>
-          <li
-            class="menu-options--department"
-            onclick="sendTo('{% url 'eventos' %}');"
-          >
+          <li class="menu-options--department option--category">
             <img
               class="menu-options--department--icon"
               src="{% static '/images/eventos_icon.png' %}"
@@ -261,6 +258,34 @@
               src="{% static '/images/hover_eventos_icon.png' %}"
             />
             <span class="menu-options--department--span">Eventos</span>
+            <img
+              class="menu-options--department--icon--next"
+              src="{% static '/images/proximo_icon.png' %}"
+            />
+            <img
+              class="menu-options--department--icon--next-hover"
+              src="{% static '/images/hover_proximo_icon.png' %}"
+            />
+            <div class="categories">
+              <ul class="categories-options">
+                <li
+                  class="categories-options--category"
+                  onclick="sendTo('#');"
+                >
+                  <span class="categories-options--category-link"
+                    >Cemak</span
+                  >
+                </li>
+                <li
+                  class="categories-options--category option--subcategory"
+                  onclick="sendTo('#');"
+                >
+                  <span class="categories-options--category-link"
+                    >Do Hospital</span
+                  >
+                </li>
+              </ul>
+            </div>
           </li>
           <li
             class="menu-options--department"
