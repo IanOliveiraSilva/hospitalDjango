@@ -671,9 +671,27 @@ body {
   background-color: var(--backgroundPink);
 }
 
-.menu__smallDevice {
+.smallDevice-menu-container { 
   display: none;
 }
+
+.smallDevice-menu-icone {
+  display: none;
+}
+
+.smallDevice-menu-icone-img {
+  display: none;
+}
+
+.smallDevice-menu-legenda {
+  display: none;
+}
+
+.smallDevice-menu-legenda-lista {
+  display: none;
+}
+
+
 
 .dividing-line {
   margin: 0 auto;
@@ -1640,6 +1658,7 @@ M O B I L E  D E V I C E =======================================================
     font-size: 30px;
     flex-wrap: wrap;
     align-items: center;  
+    flex-basis: auto;
   }
 
   .header__title--title {
@@ -1706,10 +1725,61 @@ M O B I L E  D E V I C E =======================================================
     display: none;
   }
 
-  .menu__smallDevice {
-
+  .smallDevice-menu-container { 
+    display: flex;
+  }
+  
+  .smallDevice-menu-icone {
+    flex-direction: row;
+  }
+  
+  .smallDevice-menu-icone-img {
+    width: 40%;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    justify-content: center;
+  }
+  
+  .smallDevice-menu-legenda {
+    display: flex;
+  }
+  
+  .smallDevice-menu-legenda-lista {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: center;
   }
 
+
+  /*==================== C O N V E N I O S =======================================*/
+
+  .pags-section {
+    display: none;
+  }
+
+  .pags-span {
+    display: none;
+  }
+
+  .pags-images-wrapper {
+    display: none;
+  }
+
+  .pags-image-wrapper {
+    display: none;
+  }
+
+  .pags-image {
+    display: none;
+  }
+  
+   /*=========================== D O A Ç Ã O =======================================*/
+
+
+  
 }
 
 /* ==================================================== M E D I U M    V I E P O R T S ====================================================*/

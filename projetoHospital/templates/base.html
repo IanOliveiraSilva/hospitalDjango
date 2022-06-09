@@ -55,7 +55,8 @@
       </header>
 
       <div class="menu">
-        <ul class="menu-options device-menu">
+        <ul class="menu-options 
+                   menu-device-options">
           <li
             class="menu-options--department"
             onclick="sendTo('{% url 'home'%}');"
@@ -416,6 +417,10 @@
   <script
     type="text/javascript"
     src='{% static "/scripts/header.js" %}'
+  ></script>
+  <script 
+    type="text/javascript"
+    src='{% static "/script/mobileMenuHeader.js" %}'
   ></script>
   <script
     type="text/javascript"
