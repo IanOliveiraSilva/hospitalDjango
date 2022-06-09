@@ -671,7 +671,15 @@ body {
   background-color: var(--backgroundPink);
 }
 
-.menu__smallDevice--container { 
+.smallDevice-menu { 
+  display: none;
+}
+
+.smallDevice-menu-icone {
+  display: none;
+}
+
+.smallDevice-menu-icone-img {
   display: none;
 }
 
@@ -1706,22 +1714,18 @@ M O B I L E  D E V I C E =======================================================
     display: none;
   }
 
-  .flex-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: baseline;
+  .smallDevice-menu { 
+    display: none;
   }
-
-  .icon-link {
-    background-color: #666666;
-    flex-direction: column;
+  
+  .smallDevice-menu-icone {
+    display: none;
   }
-
-  .menu__smallDevice-img {
-    width: 50%;
-    
+  
+  .smallDevice-menu-icone-img {
+    display: none;
   }
+  
 
 }
 
