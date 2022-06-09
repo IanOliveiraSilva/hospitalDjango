@@ -6,13 +6,16 @@ const $linesImage = document.querySelector(".header__menu--menu-image");
 const $menuAlt = document.querySelector(".header__menu--title");
 const $menuOptions = document.querySelector(".menu-options");
 
-
 window.onscroll = function () {
   scrollFunction();
 };
 
 function sendTo(web) {
   window.location.href = web;
+}
+
+function sendToNewWindow(web) {
+  window.open(web, "_blanck");
 }
 
 function scrollFunction() {
