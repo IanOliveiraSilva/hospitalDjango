@@ -22,7 +22,7 @@ Laureano - Galeria de Fotos{% endblock titulo %} {% block body %}
     {% for categ in categoria %}
     <div class="images-category" id="{{categ.Categoria}}">
       {% for gal in galeria %} {% if categ.Categoria == gal.Categoria %}
-      <div class="galery-image-wrapper">
+      <div class="galery-image-wrapper row-center">
         <img
           src="/image/{{ gal.Foto }}"
           class="galery-image"

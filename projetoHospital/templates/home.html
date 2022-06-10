@@ -1,8 +1,8 @@
 {% extends 'base.html' %} {% load static %} {% block css %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 {% endblock css %} {% block body %}
-<div class="main-content">
-  <section class="banner-container">
+<div class="main-content column-center">
+  <section class="banner-container row-j-start">
     {% for item in banner|slice:3 %}
     <img src="/image/{{ item.FotoBanner }}" class="banner fade" />
     {% endfor %}
@@ -79,7 +79,7 @@
   <section class="news-container">
     <a class="title-section" href="{% url 'noticias' %}">Notícias</a>
     {% for item in noticia|slice:":3" %}
-    <div class="news--wrapper">
+    <div class="news--wrapper row-center">
       <img src="/image/{{ item.Imagem }}" class="news--image" onclick="sendTo('{% url 'detail-noticias' item.id %}')"/>
       <div class="news--content">
         <a href="{% url 'detail-noticias' item.id %}" class="news--content--title"> {{ item.Titulo }} </a>
@@ -96,7 +96,7 @@
   <div class="dividing-line dividing-line--section"></div>
   <section class="cooperative-container">
     <a class="title-section" href="{% url 'convenio' %}">Convênios</a>
-    <div class="cooperative--wrapper">
+    <div class="cooperative--wrapper row-center">
       <a class="previous">&#10094;</a>
       {% for item in convenio %}
       <div class="image-container">
@@ -114,7 +114,7 @@
   <div class="dividing-line dividing-line--section"></div>
   <section class="certificate-container">
     <h3 class="title-section">Prêmios e Certificações</h3>
-    <div class="certificate--wrapper">
+    <div class="certificate--wrapper row-center">
       <a class="previous">&#10094;</a>
       {% for item in premio|slice:6 %}
       <div class="image-container">

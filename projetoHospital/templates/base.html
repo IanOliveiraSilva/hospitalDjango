@@ -25,7 +25,7 @@
     <div class="wrapper">
       <header class="header">
         <div class="header__wrapper">
-          <div class="header__menu">
+          <div class="header__menu column-center">
             <div class="header__menu--menu ">
               <img
                 class="header__menu--menu-image"
@@ -39,7 +39,7 @@
             src="{% static '/images/menu_icon.png' %}"
           />
           </div>
-          <div class="header__title" onclick="sendTo('{% url 'home'%}');">
+          <div class="header__title row-center" onclick="sendTo('{% url 'home'%}');">
             <img
               class="header__title--logo "
               src="{% static '/images/logo_icon.png' %}"
@@ -58,7 +58,7 @@
         <ul class="menu-options 
                    menu-device-options">
           <li
-            class="menu-options--department"
+            class="menu-options--department row-j-start"
             onclick="sendTo('{% url 'home'%}');"
           >
             <img
@@ -71,7 +71,7 @@
             />
             <span class="menu-options--department--span">Home</span>
           </li>
-          <li class="menu-options--department" onclick="sendTo('#');">
+          <li class="menu-options--department row-j-start" onclick="sendTo('#');">
             <img
               class="menu-options--department--icon"
               src="{% static '/images/paciente_icon.png' %}"
@@ -82,7 +82,7 @@
             />
             <span class="menu-options--department--span">Área do Paciente</span>
           </li>
-          <li class="menu-options--department option--category">
+          <li class="menu-options--department option--category row-j-start">
             <img
               class="menu-options--department--icon"
               src="{% static '/images/somos_icon.png' %}"
@@ -102,7 +102,7 @@
             />
             <div class="categories">
               <ul class="categories-options">
-                <li class="categories-options--category option--subcategory">
+                <li class="categories-options--category option--subcategory row-j-start">
                   <span class="categories-options--category-link"
                     >Hospital Laureano</span
                   >
@@ -117,7 +117,7 @@
                   <div class="subcategories">
                     <ul class="subcategories-options">
                       <li
-                        class="subcategories-options--subcategory"
+                        class="subcategories-options--subcategory row-j-start"
                         onclick="sendTo('{% url 'historiaHospital' %}');"
                       >
                         <span class="subcategories-options--subcategory-link"
@@ -187,7 +187,7 @@
               </ul>
             </div>
           </li>
-          <li class="menu-options--department option--category">
+          <li class="menu-options--department option--category row-j-start">
             <img
               class="menu-options--department--icon"
               src="{% static '/images/servicos_icon.png' %}"
@@ -235,7 +235,7 @@
             </div>
           </li>
           <li
-            class="menu-options--department"
+            class="menu-options--department row-j-start"
             onclick="sendTo('{% url 'parceiros' %}');"
           >
             <img
@@ -248,7 +248,7 @@
             />
             <span class="menu-options--department--span">Parceiros</span>
           </li>
-          <li class="menu-options--department option--category">
+          <li class="menu-options--department option--category row-j-start">
             <img
               class="menu-options--department--icon"
               src="{% static '/images/eventos_icon.png' %}"
@@ -289,7 +289,7 @@
             </div>
           </li>
           <li
-            class="menu-options--department"
+            class="menu-options--department row-j-start"
             onclick="sendTo('{% url 'noticias' %}');"
           >
             <img
@@ -303,7 +303,7 @@
             <span class="menu-options--department--span">Notícias</span>
           </li>
           <li
-            class="menu-options--department"
+            class="menu-options--department row-j-start"
             onclick="sendTo('{% url 'transparencia' %}');"
           >
             <img
@@ -316,7 +316,7 @@
             />
             <span class="menu-options--department--span">Transparência</span>
           </li>
-          <li class="menu-options--department option--category">
+          <li class="menu-options--department option--category row-j-start">
             <img
               class="menu-options--department--icon"
               src="{% static '/images/fale_icon.png' %}"
@@ -394,7 +394,6 @@
       </div>
 
       {% block body %}
-      <div class="main-content"></div>
       {% endblock body %}
       <footer class="footer">
         <div class="footer__wrapper">
@@ -409,9 +408,9 @@
             Av. Capitão José Pessoa, 1140 - Jaguaribe
             CEP: 58015-170 - João Pessoa - PB
           </span>
-          <div class="footer__medias medias">
+          <div class="medias column-center">
             <span class="medias--social">Redes sociais</span>
-            <div class="medias--icons">
+            <div class="medias--icons row-center">
               <a
                 href="https://www.facebook.com/HospitalNapoleaoLaureano"
                 class="medias--icons__link"

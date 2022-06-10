@@ -1,7 +1,5 @@
-{% extends 'base.html' %} {% load static %}
-  {% block titulo %}Hospital Napoleão Laureano - Diretoria da Fundação
-  {%endblock titulo %}
-{% block body %}
+{% extends 'base.html' %} {% load static %} {% block titulo %}Hospital Napoleão
+Laureano - Diretoria da Fundação {%endblock titulo %} {% block body %}
 
 <div class="navegacao">
   <ul>
@@ -33,42 +31,50 @@
 
 <h1 class="pags-title">Fundação Laureano</h1>
 
-<section class="pags-section">
-  <h2 class="pags-h2">Diretoria Executiva</h2>
-  <div class="container-card">
-    <img
-      src="{% static '/images/diretor.png' %}"
-      alt="imagem do diretor"
-      class="board-icon"
-    />
-    <div class="background-card">
-      <p class="board-name">Nome do Diretor</p>
-      <p class="board-job">Diretor Presidente da Fundação</p>
-    </div>
-    <img
-      src="{% static '/images/quote-detail.png' %}"
-      alt="aspas"
-      class="quotes-image"
-    />
-  </div>
+<section class="pags-section column-center">
 
-  <h2 class="pags-h2">Conselho Deliberativo</h2>
-  <div class="container-card">
-    <img
-      src="{% static '/images/diretor.png' %}"
-      alt="imagem do diretor"
-      class="board-icon"
-    />
-    <div class="background-card">
-      <p class="board-name">Nome do Diretor</p>
-      <p class="board-job">Diretor Presidente da Fundação</p>
+  <h2 class="pags-h2 row-center">Diretoria Executiva</h2>
+
+  {% for item in diretoriaexecutiva %}
+    <div class="container-card">
+      <img
+        src="/image/{{ item.FotoDiretorExecutivo }}"
+        alt="{{ item.NomeDiretorExecutivo }}"
+        class="board-icon"
+      />
+      <div class="background-card">
+        <p class="board-name">{{ item.NomeDiretorExecutivo }}</p>
+        <p class="board-job">{{ item.CargoDiretorExecutivo }}</p>
+      </div>
+      <img
+        src="{% static '/images/quote-detail.png' %}"
+        alt="aspas"
+        class="quotes-image"
+      />
     </div>
-    <img
-      src="{% static '/images/quote-detail.png' %}"
-      alt="aspas"
-      class="quotes-image"
-    />
-  </div>
+  {% endfor %}
+
+  <h2 class="pags-h2 row-center">Conselho Deliberativo</h2>
+
+  {% for item in conselho %}
+    <div class="container-card">
+      <img
+        src="/image/{{ item.FotoConselho }}"
+        alt="{{ item.NomeConselho }}"
+        class="board-icon"
+      />
+      <div class="background-card">
+        <p class="board-name">{{ item.NomeConselho }}</p>
+        <p class="board-job">{{ item.CargoConselho }}</p>
+      </div>
+      <img
+        src="{% static '/images/quote-detail.png' %}"
+        alt="aspas"
+        class="quotes-image"
+      />
+    </div>
+  {% endfor %}
+
 </section>
 
 <div class="other-pags-links">
@@ -79,7 +85,9 @@
       </a>
     </il>
     <il>
-      <a class="other-pags-link" href="{% url 'nossaMissao' %}"> Nossa Missão </a>
+      <a class="other-pags-link" href="{% url 'nossaMissao' %}">
+        Nossa Missão
+      </a>
     </il>
   </ul>
 </div>

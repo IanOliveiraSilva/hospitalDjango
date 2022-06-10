@@ -21,7 +21,7 @@ Laureano - Notícias{% endblock titulo %} {% block body %}
   {% with noticia|first as principal %} {% for value in noticia %} 
   {% if forloop.counter == 1 %}
   <div
-    class="news-pag__main"
+    class="news-pag__main column-center"
     onclick="sendTo('{% url 'detail-noticias' principal.id %}')"
   >
     <img
@@ -35,7 +35,7 @@ Laureano - Notícias{% endblock titulo %} {% block body %}
 
   <ul class="news-pag__news-images-wrapper">
     {% for item in noticia %} {% if forloop.counter != 1 %}
-    <li class="news-pag__news-image-wrapper">
+    <li class="news-pag__news-image-wrapper column-center">
       <img
         class="news-pag__news-image"
         src="/image/{{ item.Imagem }}"
