@@ -1698,27 +1698,47 @@ M O B I L E  D E V I C E =======================================================
 
   /*==================== C O N V E N I O S =======================================*/
 
-  .pags-section {
+  .cooperative--wrapper {
     display: none;
   }
 
-  .pags-span {
+  .image-container {
     display: none;
   }
 
-  .pags-images-wrapper {
+  .cooperative--image {
     display: none;
   }
 
-  .pags-image-wrapper {
+  .previous {
     display: none;
   }
 
-  .pags-image {
+  .next {
     display: none;
   }
 
-  /*=========================== D O A Ç Ã O =======================================*/
+  /*=============== P R Ê M I O S     &     C E R T I F I C A Ç Õ E S ===============*/
+ 
+  .certificate--wrapper {
+    display: none;
+  }
+
+  .previous {
+    display: none;
+  }
+
+  .image-container {
+    display: none;
+  }
+
+  .certificate--image {
+    display: none;
+  }
+
+  .next {
+    display: none;
+  }
 }
 
 /* ==================================================== M E D I U M    V I E P O R T S ====================================================*/
