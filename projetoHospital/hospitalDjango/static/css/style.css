@@ -1696,7 +1696,29 @@ M O B I L E  D E V I C E =======================================================
     justify-content: center;
   }
 
-  /*==================== C O N V E N I O S =======================================*/
+ /*============================== N O T Í C I A S =================================*/
+
+  .news--wrapper {
+    display: none;
+  }
+
+  .news--image {
+    display: none;
+  }
+
+  .news--content {
+    display: none;
+  } 
+
+  .news--content--title {
+    display: none;
+  }
+
+  .news--content--button {
+    display: none;
+  }
+
+  /*============================ C O N V E N I O S ===================================*/
 
   .cooperative--wrapper {
     display: none;
