@@ -1718,6 +1718,10 @@ M O B I L E  D E V I C E =======================================================
     display: none;
   }
 
+  .dividing-line {
+    display: none;
+  }
+
   /*============================ C O N V E N I O S ===================================*/
 
   .cooperative--wrapper {
@@ -1738,6 +1742,20 @@ M O B I L E  D E V I C E =======================================================
 
   .next {
     display: none;
+  }
+
+  /* ================================= P A G =========================================*/
+
+  .pags-image {
+    width: 140px;
+  }
+
+  .row-cewnter {
+    gap: 10px;
+  }
+
+  .navegacao-link {
+    font-size: 20px;
   }
 
   /*=============== P R Ê M I O S     &     C E R T I F I C A Ç Õ E S ===============*/
