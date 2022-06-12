@@ -1746,8 +1746,9 @@ M O B I L E  D E V I C E =======================================================
 
   /* ================================= P A G =========================================*/
 
-  .pags-image {
+  .pags-image-bg-lightgrey {
     width: 140px;
+    height: 140px;
   }
 
   .row-cewnter {
@@ -1755,7 +1756,7 @@ M O B I L E  D E V I C E =======================================================
   }
 
   .navegacao-link {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   /*=============== P R Ê M I O S     &     C E R T I F I C A Ç Õ E S ===============*/
