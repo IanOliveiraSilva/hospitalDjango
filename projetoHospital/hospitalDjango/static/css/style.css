@@ -1772,7 +1772,7 @@ M O B I L E  D E V I C E =======================================================
     max-height: 140px;
   }
 
-  .row-cewnter {
+  .row-center {
     gap: 10px;
   }
 
@@ -1837,37 +1837,38 @@ M O B I L E  D E V I C E =======================================================
   /* ========================== Q U E M S O M O S ===================================*/
   /* ======================= H O S P I T A L L A U R E A N O=========================*/
   /* =============================  H I S T O R I A  ================================*/
-
-  .pags-side-image-wrapper {
-    width: 200px;
-  }
-
-  .pags-side-image--image {
-    height: none;
-    width: 180px;
-  }
-
   /* ============================= D I R E T O R I A ================================*/
-
   /* =============================  F .  L A U R E A N O  ================================*/
-
   .pags-side-image-wrapper {
-    height: none;
     width: 200px;
   }
 
   .pags-side-image--image {
-    height: none;
+    height:250px;;
     width: 180px;
   }
+
+  
+.other-pags-links { 
+  justify-content: center;
+  padding: 30px;
+}
+
+  
+
+  
 
   /* ================  D I R E T O R I A   E    C O N S E L H O  ===================*/
   .pags-section {
     padding: 30px 0px;
   }
 
+  .container-card {
+    width: 60%;
+  }
+
   .board-icon {
-    left: -85px;
+    left: -55px;
   }
 }
 
