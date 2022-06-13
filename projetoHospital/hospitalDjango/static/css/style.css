@@ -1586,7 +1586,7 @@ p.pags-text {
 M O B I L E  D E V I C E ===========================================================================================*/
 
 @media Screen and (max-width: 767px) {
-  .wrapper{
+  .wrapper {
     top: 95px;
   }
 
