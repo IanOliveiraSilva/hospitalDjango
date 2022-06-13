@@ -184,7 +184,30 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-*/
+
+/* ================================================================================ */
+/* SCROLL */
+/* Works on Firefox */
+* {
+  scroll-margin: 450px 0 0 50px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--green) var(--lightGrey);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--lightGrey);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--green);
+  border-radius: 20px;
+  border: 3px solid var(--lightGrey);
+}
 
 /* ================================================================================ */
 body {
@@ -197,7 +220,6 @@ body {
   top: 109px;
   height: auto;
   width: 100vw;
-  scroll-padding-top: 100px;
 }
 
 /* =====================================HEADER===================================== */
@@ -1300,13 +1322,12 @@ p.pags-text {
 }
 
 .news-pag__news-images-wrapper {
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
   gap: 10px;
   max-width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
 }
 
 .news-pag__news-image-wrapper {
@@ -1415,10 +1436,9 @@ p.pags-text {
 
 /*============================= Galeria ==================================*/
 .galery-wrapper {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: 10px;
   max-width: 100%;
 }
@@ -1692,7 +1712,7 @@ M O B I L E  D E V I C E =======================================================
     justify-content: center;
   }
 
- /*============================== N O T Í C I A S =================================*/
+  /*============================== N O T Í C I A S =================================*/
 
   .news--wrapper {
     display: none;
@@ -1704,7 +1724,7 @@ M O B I L E  D E V I C E =======================================================
 
   .news--content {
     display: none;
-  } 
+  }
 
   .news--content--title {
     display: none;
@@ -1761,7 +1781,7 @@ M O B I L E  D E V I C E =======================================================
   }
 
   /*=============== P R Ê M I O S     &     C E R T I F I C A Ç Õ E S ===============*/
- 
+
   .certificate--wrapper {
     display: none;
   }
@@ -1805,7 +1825,7 @@ M O B I L E  D E V I C E =======================================================
   }
 
   /* =============================  N O T I C I A S =================================*/
-  
+
   .news-pag__news-images-wrapper {
     justify-content: center;
   }
@@ -1817,7 +1837,7 @@ M O B I L E  D E V I C E =======================================================
   /* ========================== Q U E M S O M O S ===================================*/
   /* ======================= H O S P I T A L L A U R E A N O=========================*/
   /* =============================  H I S T O R I A  ================================*/
-  
+
   .pags-side-image-wrapper {
     width: 200px;
   }
@@ -1828,9 +1848,9 @@ M O B I L E  D E V I C E =======================================================
   }
 
   /* ============================= D I R E T O R I A ================================*/
-  
+
   /* =============================  F .  L A U R E A N O  ================================*/
-  
+
   .pags-side-image-wrapper {
     height: none;
     width: 200px;
@@ -1849,10 +1869,7 @@ M O B I L E  D E V I C E =======================================================
   .board-icon {
     left: -85px;
   }
-
-
-} 
-
+}
 
 /* ==================================================== M E D I U M    V I E P O R T S ====================================================*/
 
