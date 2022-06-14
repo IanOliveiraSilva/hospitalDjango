@@ -1978,29 +1978,22 @@ p.pags-text {
   /* ========================== Q U E M S O M O S ===================================*/
   /* ======================= H O S P I T A L L A U R E A N O=========================*/
   /* =============================  H I S T O R I A  ================================*/
-
-  .pags-side-image-wrapper {
-    width: 200px;
-  }
-
-  .pags-side-image--image {
-    height: none;
-    width: 180px;
-  }
-
   /* ============================= D I R E T O R I A ================================*/
-
   /* =============================  F .  L A U R E A N O  ================================*/
-
   .pags-side-image-wrapper {
-    height: none;
     width: 200px;
   }
 
   .pags-side-image--image {
-    height: none;
+    height:250px;;
     width: 180px;
   }
+
+  
+.other-pags-links { 
+  justify-content: center;
+  padding: 30px;
+}
 
   /* ================  D I R E T O R I A   E    C O N S E L H O  ===================*/
   .board-icon {
@@ -2014,6 +2007,27 @@ p.pags-text {
   }
 }
 
+<<<<<<< HEAD
+=======
+/* ================================== M E D I U M    V I E P O R T S ====================================================*/
+
+:root {
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px 3.5rem = 56px */
+
+  --h1-font-size: 35px;
+  --h2-font-size: 28px;
+  --normal-font-size: 20px;
+  --small-font-size: 16px;
+  --smaller-font-size: 0.8rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+}
+
+/* 100% Image Width on Smaller Screens */
+>>>>>>> 6294ec6caf0702ca72bb3437ae81e373b883cbb3
 @media only screen and (max-width: 700px) {
   .modal-content {
     width: 100%;
