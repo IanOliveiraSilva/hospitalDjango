@@ -276,7 +276,6 @@ body {
 
 .header__title {
   color: var(--darkGreen);
-  font-size: 56px;
   cursor: pointer;
 }
 
@@ -295,6 +294,7 @@ body {
 
 .header__title--title {
   font-family: "Alatsi";
+  font-size: 56px;
   transition: 0.4s;
 }
 
@@ -1071,7 +1071,7 @@ body {
 .pags-h2 {
   text-align: center;
   font-weight: 700;
-  margin: 0 30px 30px 0;
+  margin: 30px 0;
   font-size: var(--h2-font-size);
 }
 
@@ -1203,8 +1203,8 @@ p.pags-text {
 
 .donate {
   display: grid;
-  width: 40%;
-  grid-template-columns: auto auto auto;
+  width: 80%;
+  grid-template-columns: auto auto auto auto;
   justify-content: space-between;
 }
 
@@ -1539,13 +1539,6 @@ p.pags-text {
   cursor: pointer;
 }
 
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px) {
-  .modal-content {
-    width: 100%;
-  }
-}
-
 .modal-previous {
   text-decoration: none;
   color: var(--background);
@@ -1584,14 +1577,145 @@ p.pags-text {
 
 /* ============================================================================================                                       
 M O B I L E  D E V I C E ===========================================================================================*/
+@media Screen and (max-width: 1093px) {
+  .header__wrapper {
+    justify-content: space-evenly;
+    padding: 2vh 5%;
+  }
+
+  .header__title--logo {
+    width: 60px;
+    padding: 8px 1%;
+  }
+
+  .header__title {
+    width: 90%;
+  }
+
+  .header__title--title {
+    font-size: 50px;
+  }
+
+  .header__menu--title {
+    display: none;
+  }
+
+  .menu-options {
+    margin-left: 5%;
+  }
+
+  /* =====================================FOOTER===================================== */
+  .footer {
+    padding: 0;
+  }
+
+  .footer__wrapper {
+    padding: 1% 7%;
+  }
+
+  .footer__logo {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .medias--social {
+    font-size: 18px;
+  }
+
+  .medias--icons {
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .medias--icons__link-icon {
+    width: 35px;
+  }
+
+  /* ================================= P A G =========================================*/
+  .pags-image-bg-lightgrey {
+    width: 140px;
+    height: 140px;
+  }
+
+  .pags-image {
+    width: 140px;
+    max-height: 140px;
+  }
+
+  .navegacao {
+    padding: 5px 0 5px 10px;
+  }
+
+  .navegacao-link {
+    font-size: 14px;
+  }
+
+  /*============================ D O N A T E ===================================*/
+
+  .donate {
+    display: grid;
+    width: 80%;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+  }
+}
+
+@media Screen and (max-width: 870px) {
+  .header__wrapper {
+    justify-content: space-evenly;
+    padding: 2vh 5%;
+  }
+
+  .header__title--logo {
+    width: 60px;
+    padding: 8px 1%;
+  }
+
+  .header__title {
+    width: 90%;
+  }
+
+  .header__title--title {
+    font-size: 40px;
+  }
+
+  .header__menu--title {
+    display: none;
+  }
+
+  .menu-options {
+    margin-left: 5%;
+  }
+}
 
 @media Screen and (max-width: 767px) {
   .header__wrapper {
-    padding: 21px 60px 21px 0;
-    justify-content: space-evenly;
+    top: 95px;
   }
 
-  .header__menu--devices {
+  .header__title--logo {
+    width: 60px;
+    padding: 8px 1%;
+  }
+
+  .header__title {
+    width: 90%;
+  }
+
+  .header__title--title {
+    font-size: 35px;
+  }
+
+  .header__menu--title {
+    display: none;
+  }
+
+  .menu-options {
+    margin-left: 5%;
+  }
+
+  /* .header__menu--devices {
     display: flex;
   }
 
@@ -1604,7 +1728,7 @@ M O B I L E  D E V I C E =======================================================
   .header__title--logo {
     display: block;
     width: 40px;
-    padding: 8px 3% 8px 3%;
+    padding: 8px 3%;
   }
 
   .header__title-devices {
@@ -1642,13 +1766,13 @@ M O B I L E  D E V I C E =======================================================
 
   .menu-options {
     margin-left: 5%;
-  }
+  } */
 
   /* =====================================FOOTER===================================== */
   .footer__wrapper {
     flex-direction: column;
-    padding: 4% 2%;
-    gap: 25px;
+    padding: 1% 2%;
+    gap: 15px;
   }
 
   .footer__logo {
@@ -1772,12 +1896,19 @@ M O B I L E  D E V I C E =======================================================
     max-height: 140px;
   }
 
-  .row-center {
-    gap: 10px;
+  .pags-title {
+    padding-left: 10px;
+    padding-top: 15px;
+    height: 110px;
+    font-size: var(--h2-font-size);
+  }
+
+  .navegacao {
+    padding: 5px 0 5px 10px;
   }
 
   .navegacao-link {
-    font-size: 24px;
+    font-size: 14px;
   }
 
   /*=============== P R Ê M I O S     &     C E R T I F I C A Ç Õ E S ===============*/
@@ -1804,8 +1935,8 @@ M O B I L E  D E V I C E =======================================================
   /*============================ D O N A T E ===================================*/
 
   .donate {
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
+    width: 100%;
+    grid-template-columns: auto auto auto;
   }
 
   /*============================ G U I A  M E D I C O ==============================*/
@@ -1855,17 +1986,14 @@ M O B I L E  D E V I C E =======================================================
 }
 
   /* ================  D I R E T O R I A   E    C O N S E L H O  ===================*/
-
-  .pags-section {
-    padding: 30px 0px;
+  .board-icon {
+    left: -45px;
   }
 
   .container-card {
-    width: 60%;
-  }
-
-  .board-icon {
-    left: -55px;
+    position: relative;
+    width: 80%;
+    margin: 30px 0;
   }
 }
 
@@ -1886,5 +2014,176 @@ M O B I L E  D E V I C E =======================================================
   --font-semi-bold: 600;
 }
 
-@media Screen and (max-width: 1023px) {
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+
+  .wrapper {
+    top: 125px;
+  }
+
+  .header__wrapper {
+    justify-content: space-between;
+    padding: 2vh 5%;
+  }
+
+  .header__menu--menu {
+    position: relative;
+    display: block;
+  }
+
+  .header__menu--menu-image {
+    width: 40px;
+  }
+
+  .header__title--logo {
+    width: 60px;
+    padding: 8px 1%;
+  }
+
+  .header__title {
+    width: 50%;
+  }
+
+  .header__title--title {
+    font-size: 30px;
+  }
+
+  .menu-options {
+    margin-left: 5%;
+  }
+
+    /* ================================= P A G =========================================*/
+    .pags-image-bg-lightgrey {
+      width: 140px;
+      height: 140px;
+    }
+  
+    .pags-image {
+      width: 140px;
+      max-height: 140px;
+    }
+  
+    .navegacao {
+      padding: 5px 0 5px 10px;
+    }
+  
+    .navegacao-link {
+      font-size: 14px;
+    }
+}
+
+@media Screen and (max-width: 560px) {
+  .header__title {
+    width: 30%;
+  }
+
+  /* =====================================FOOTER===================================== */
+  .footer {
+    padding: 0;
+  }
+
+  .footer__wrapper {
+    padding: 1% 7%;
+  }
+
+  .footer__logo {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .medias--social {
+    font-size: 18px;
+  }
+
+  .medias--icons {
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .medias--icons__link-icon {
+    width: 35px;
+  }
+
+  /* ================================= P A G =========================================*/
+  .pags-image-bg-lightgrey {
+    width: 140px;
+    height: 140px;
+  }
+
+  .pags-image {
+    width: 140px;
+    max-height: 140px;
+  }
+
+  .navegacao {
+    padding: 5px 0 5px 10px;
+  }
+
+  .navegacao-link {
+    font-size: 14px;
+  }
+
+  /*============================ D O N A T E ===================================*/
+
+  .donate {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+  }
+}
+
+@media Screen and (max-width: 365px) {
+  /* ================================= P A G =========================================*/
+  .pags-image-bg-lightgrey {
+    width: 140px;
+    height: 140px;
+  }
+
+  .pags-image {
+    width: 140px;
+    max-height: 140px;
+  }
+
+  .navegacao {
+    padding: 5px 0 5px 10px;
+  }
+
+  .navegacao-link {
+    font-size: 14px;
+  }
+
+  /*============================ D O N A T E ===================================*/
+
+  .donate {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .donate-wrapper {
+    width: 100%;
+    height: 150px;
+  }
+
+  .donate-image{
+    display: none;
+  }
+  
+  .donate-image-mini {
+    height: 35%;
+  }
+  
+  .donate-info-wrapper {
+    display: flex;
+    width: 100%;
+  }
+
+  .donate-info{
+    text-align: center;
+  }
 }
