@@ -4,7 +4,7 @@
 
 :root {
   --gradientGreen: #0c8c46ab;
-  --darkGreen: #0c8c45;
+  --darkGreen: rgb(12, 140, 69);
   --green: #009559;
   --lightGreen: #15ad6c;
   --background: #fafafa;
@@ -215,6 +215,10 @@ body {
   overflow-y: auto;
 }
 
+footer{
+  break-after: always;
+}
+
 .wrapper {
   position: relative;
   top: 109px;
@@ -282,6 +286,10 @@ body {
 .header__title--logo {
   width: 80px;
   transition: 0.4s;
+}
+
+.header__title--logo-image{
+  display: none;
 }
 
 .header__menu--devices {
@@ -1321,22 +1329,34 @@ p.pags-text {
   border-radius: 0 0 10px 10px;
 }
 
+.news-pag__main-date {
+  display: flex;
+  align-self: flex-end;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--darkGrey);
+  margin-bottom: 10px;
+  display: none;
+}
+
 .news-pag__news-images-wrapper {
   justify-content: space-between;
   align-items: flex-start;
   gap: 10px;
   max-width: 100%;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto;
 }
 
 .news-pag__news-image-wrapper {
-  width: 450px;
+  width: 100%;
   margin-bottom: 15px;
 }
 
 .news-pag__news-image {
   width: 100%;
+  min-width: 460px;
   height: 265px;
   border-radius: 10px;
   cursor: pointer;
@@ -1575,9 +1595,43 @@ p.pags-text {
   cursor: pointer;
 }
 
-/* ============================================================================================                                       
-M O B I L E  D E V I C E ===========================================================================================*/
-@media Screen and (max-width: 1093px) {
+/* =  M E D I U M    V I E P O R T S ====================================================*/
+@media Screen and (max-width: 1453px) {
+  /* =============================  N O T I C I A S =================================*/
+  .news-pag__main {
+    margin-bottom: 45px;
+  }
+
+  .news-pag__main-image {
+    height: 500px;
+  }
+
+  .news-pag__main-title {
+    font-size: var(--normal-font-size);
+  }
+
+  .news-pag__news-images-wrapper {
+    gap: 10px;
+    grid-template-columns: auto auto auto;
+  }
+
+  .news-pag__news-image-wrapper {
+    width: 100%;
+  }
+
+  .news-pag__news-image {
+    width: 100%;
+    height: 200px;
+    min-width: 200px;
+  }
+
+  .news-pag__news-title {
+    width: 100%;
+    font-size: var(--small-font-size);
+  }
+}
+
+@media Screen and (max-width: 1064px) {
   .header__wrapper {
     justify-content: space-evenly;
     padding: 2vh 5%;
@@ -1593,7 +1647,7 @@ M O B I L E  D E V I C E =======================================================
   }
 
   .header__title--title {
-    font-size: 50px;
+    font-size: 45px;
   }
 
   .header__menu--title {
@@ -1604,34 +1658,7 @@ M O B I L E  D E V I C E =======================================================
     margin-left: 5%;
   }
 
-  /* =====================================FOOTER===================================== */
-  .footer {
-    padding: 0;
-  }
-
-  .footer__wrapper {
-    padding: 1% 7%;
-  }
-
-  .footer__logo {
-    width: 150px;
-    height: auto;
-    cursor: pointer;
-  }
-
-  .medias--social {
-    font-size: 18px;
-  }
-
-  .medias--icons {
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .medias--icons__link-icon {
-    width: 35px;
-  }
-
+ 
   /* ================================= P A G =========================================*/
   .pags-image-bg-lightgrey {
     width: 140px;
@@ -1651,14 +1678,7 @@ M O B I L E  D E V I C E =======================================================
     font-size: 14px;
   }
 
-  /*============================ D O N A T E ===================================*/
-
-  .donate {
-    display: grid;
-    width: 80%;
-    grid-template-columns: auto auto auto;
-    justify-content: space-between;
-  }
+  
 }
 
 @media Screen and (max-width: 870px) {
@@ -1687,6 +1707,55 @@ M O B I L E  D E V I C E =======================================================
   .menu-options {
     margin-left: 5%;
   }
+
+  /* =============================  N O T I C I A S =================================*/
+  .news-pag__main {
+    margin-bottom: 35px;
+  }
+
+  .news-pag__main-image {
+    height: 390px;
+  }
+
+  .news-pag__main-title {
+    height: 75px;
+    font-size: var(--small-font-size);
+    line-height: 150%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin-top: -74px;
+  }
+
+  .news-pag__news-images-wrapper {
+    grid-template-columns: auto auto;
+    gap: 20px;
+  }
+
+  .news-pag__news-image {
+    height: 220px;
+    min-width: 150px;
+  }
+
+  .news-pag__news-title {
+    height: 85px;
+    font-size: var(--small-font-size);
+    line-height: 150%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin-top: -85px;
+  }
+
+  .news-pag__news-preview {
+    font-size: 15px;
+  }
 }
 
 @media Screen and (max-width: 767px) {
@@ -1714,59 +1783,6 @@ M O B I L E  D E V I C E =======================================================
   .menu-options {
     margin-left: 5%;
   }
-
-  /* .header__menu--devices {
-    display: flex;
-  }
-
-  .header__small-viewport {
-    display: block;
-    width: 40px;
-    padding: 8px 0;
-  }
-
-  .header__title--logo {
-    display: block;
-    width: 40px;
-    padding: 8px 3%;
-  }
-
-  .header__title-devices {
-    display: flex;
-    width: 300px;
-  }
-
-  .header__title-small-viewport {
-    font-family: "Alatsi";
-    font-size: 30px;
-    flex-wrap: wrap;
-    align-items: center;
-    flex-basis: auto;
-  }
-
-  .header__title--title {
-    display: none;
-  }
-
-  .header__menu {
-    display: none;
-  }
-
-  .header__menu--menu {
-    display: none;
-  }
-
-  .header__menu--menu-image {
-    display: none;
-  }
-
-  .header__menu--title {
-    display: none;
-  }
-
-  .menu-options {
-    margin-left: 5%;
-  } */
 
   /* =====================================FOOTER===================================== */
   .footer__wrapper {
@@ -1955,12 +1971,6 @@ M O B I L E  D E V I C E =======================================================
     font-size: 24px;
   }
 
-  /* =============================  N O T I C I A S =================================*/
-
-  .news-pag__news-images-wrapper {
-    justify-content: center;
-  }
-
   /* =============================  P A R C E I R O S ==============================*/
 
   /* Nothing to change */
@@ -2004,31 +2014,13 @@ M O B I L E  D E V I C E =======================================================
   }
 }
 
-/* ==================================================== M E D I U M    V I E P O R T S ====================================================*/
-
-:root {
-  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px 3.5rem = 56px */
-
-  --h1-font-size: 35px;
-  --h2-font-size: 28px;
-  --normal-font-size: 20px;
-  --small-font-size: 16px;
-  --smaller-font-size: 0.8rem;
-
-  /*========== Font weight ==========*/
-  --font-regular: 400;
-  --font-medium: 500;
-  --font-semi-bold: 600;
-}
-
-/* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px) {
   .modal-content {
     width: 100%;
   }
 
   .wrapper {
-    top: 125px;
+    top: 100px;
   }
 
   .header__wrapper {
@@ -2046,8 +2038,13 @@ M O B I L E  D E V I C E =======================================================
   }
 
   .header__title--logo {
-    width: 60px;
-    padding: 8px 1%;
+    display: none;
+  }
+  
+  .header__title--logo-image{
+    display: flex;
+    width: 150px;
+    height: auto;
   }
 
   .header__title {
@@ -2055,31 +2052,31 @@ M O B I L E  D E V I C E =======================================================
   }
 
   .header__title--title {
-    font-size: 30px;
+    display: none;
   }
 
   .menu-options {
     margin-left: 5%;
   }
 
-    /* ================================= P A G =========================================*/
-    .pags-image-bg-lightgrey {
-      width: 140px;
-      height: 140px;
-    }
-  
-    .pags-image {
-      width: 140px;
-      max-height: 140px;
-    }
-  
-    .navegacao {
-      padding: 5px 0 5px 10px;
-    }
-  
-    .navegacao-link {
-      font-size: 14px;
-    }
+  /* ================================= P A G =========================================*/
+  .pags-image-bg-lightgrey {
+    width: 140px;
+    height: 140px;
+  }
+
+  .pags-image {
+    width: 140px;
+    max-height: 140px;
+  }
+
+  .navegacao {
+    padding: 5px 0 5px 10px;
+  }
+
+  .navegacao-link {
+    font-size: 14px;
+  }
 }
 
 @media Screen and (max-width: 560px) {
@@ -2142,7 +2139,45 @@ M O B I L E  D E V I C E =======================================================
     grid-template-columns: auto auto;
     justify-content: space-between;
   }
+
+  /* =============================  N O T I C I A S =================================*/
+  .news-pag__main {
+    margin-bottom: 25px;
+  }
+
+  .news-pag__main-image {
+    height: 300px;
+  }
+
+  .news-pag__main-title {
+    height: 75px;
+    margin-top: -74px;
+  }
+
+  .news-pag__main-date {
+    display: block;
+  }
+
+  .news-pag__news-images-wrapper {
+    grid-template-columns: auto;
+  }
+
+  .news-pag__news-image {
+    height: 300px;
+  }
+
+  .news-pag__news-title {
+    height: 75px;
+    margin-top: -74px;
+  }
+
+  .news-pag__news-preview {
+    display: none;
+  }
 }
+
+/* = M O B I L E   D E V I C E ==========================================================*/
+/* 100% Image Width on Smaller Screens */
 
 @media Screen and (max-width: 365px) {
   /* ================================= P A G =========================================*/
@@ -2177,20 +2212,41 @@ M O B I L E  D E V I C E =======================================================
     height: 150px;
   }
 
-  .donate-image{
+  .donate-image {
     display: none;
   }
-  
+
   .donate-image-mini {
     height: 35%;
   }
-  
+
   .donate-info-wrapper {
     display: flex;
     width: 100%;
   }
 
-  .donate-info{
+  .donate-info {
     text-align: center;
+  }
+
+  /* =============================  N O T I C I A S =================================*/
+  .news-pag__main-image {
+    height: 170px;
+  }
+
+  .news-pag__main-title {
+    font-size: 13px;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+
+  .news-pag__news-image {
+    height: 170px;
+  }
+
+  .news-pag__news-title {
+    font-size: 13px;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
   }
 }
