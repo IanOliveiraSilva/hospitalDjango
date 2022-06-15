@@ -1024,7 +1024,7 @@ footer {
 }
 
 .medias--icons__link-icon {
-  width: 50px;
+  width: 45px;
 }
 
 /*============================= Págs ==================================*/
@@ -1056,7 +1056,7 @@ footer {
 .navegacao {
   position: absolute;
   top: 0;
-  padding: 15px 0 15px 30px;
+  padding: 10px 0 7px 30px;
   font-family: var(--navegacao-font);
   background-color: var(--white);
   width: 100%;
@@ -1067,7 +1067,7 @@ footer {
   font-size: var(--small-font-size);
   text-decoration: none;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 2px;
 }
 
 .pags-section {
@@ -1088,7 +1088,7 @@ footer {
   align-items: center;
   text-align: left;
   padding-left: 30px;
-  padding-top: 30px;
+  padding-top: 20px;
   background: var(--darkGreen);
   height: 140px;
   color: var(--white);
@@ -1458,16 +1458,19 @@ p.pags-text {
 /*============================= Galeria ==================================*/
 .galery-wrapper {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto;
   justify-content: space-between;
   gap: 10px;
-  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .galery-image-wrapper {
-  width: 450px;
+  width: 100%;
+  min-width: 400px;
   margin-bottom: 15px;
   display: none;
+  height: 250px;
 }
 
 .galery-image-wrapper:nth-child(-n + 1) {
@@ -1475,10 +1478,9 @@ p.pags-text {
 }
 
 .galery-image {
+  height: 100%;
   width: 100%;
-  height: 265px;
   border-radius: 10px;
-  cursor: pointer;
 }
 
 .galery-image:hover {
@@ -1597,7 +1599,25 @@ p.pags-text {
 }
 
 /* =  M E D I U M    V I E P O R T S ====================================================*/
-@media Screen and (max-width: 1453px) {
+@media Screen and (max-width: 1253px) {
+  /* =====================================FOOTER===================================== */
+  .footer__logo {
+    width: 190px;
+    margin-left: -60px;
+  }
+
+  .footer__adress {
+    font-size: 18;
+  }
+
+  .medias--social {
+    font-size: 18px;
+  }
+
+  .medias--icons__link-icon {
+    width: 40px;
+  }
+
   /* =============================  N O T I C I A S =================================*/
   .news-pag__main {
     margin-bottom: 45px;
@@ -1630,6 +1650,32 @@ p.pags-text {
     width: 100%;
     font-size: var(--small-font-size);
   }
+
+  /*============================= Galeria ==================================*/
+  .galery-wrapper {
+    justify-content: center;
+  }
+
+  .galery-image-wrapper {
+    min-width: 0;
+    height: 100%;
+    max-height: 245px;
+  }
+
+  .modal-image {
+    height: 61vh;
+    padding-top: 10%;
+  }
+
+  .modal-previous {
+    top: 38%;
+    left: 16%;
+  }
+
+  .modal-next {
+    top: 38%;
+    right: 16%;
+  }
 }
 
 @media Screen and (max-width: 1064px) {
@@ -1659,7 +1705,31 @@ p.pags-text {
     margin-left: 5%;
   }
 
+  /* =====================================FOOTER===================================== */
+  .footer__logo {
+    width: 150px;
+    margin-left: -60px;
+  }
+
+  .footer__adress {
+    font-size: 15px;
+  }
+
+  .medias--social {
+    font-size: 15px;
+  }
+
+  .medias--icons__link-icon {
+    width: 30px;
+  }
+
   /* ================================= P A G =========================================*/
+  .pags-title {
+    padding-left: 10px;
+    padding-top: 15px;
+    height: 110px;
+  }
+
   .pags-image-bg-lightgrey {
     width: 140px;
     height: 140px;
@@ -1676,6 +1746,16 @@ p.pags-text {
 
   .navegacao-link {
     font-size: 14px;
+  }
+
+  /*============================= Galeria ==================================*/
+  .galery-image-wrapper {
+    max-height: 200px;
+  }
+
+  .modal-image {
+    height: 55vh;
+    padding-top: 12%;
   }
 }
 
@@ -1754,6 +1834,11 @@ p.pags-text {
   .news-pag__news-preview {
     font-size: 15px;
   }
+
+  /*============================= Galeria ==================================*/
+  .galery-image-wrapper {
+    max-height: 155px;
+  }
 }
 
 @media Screen and (max-width: 767px) {
@@ -1789,10 +1874,6 @@ p.pags-text {
     gap: 15px;
   }
 
-  .footer__logo {
-    width: 150px;
-  }
-
   .footer__adress {
     font-size: 16px;
   }
@@ -1805,9 +1886,6 @@ p.pags-text {
     gap: 20px;
   }
 
-  .medias--icons__link-icon {
-    width: 26px;
-  }
   /*================================ H O M E ======================================*/
 
   .banner-container--side-menu {
@@ -2003,7 +2081,14 @@ p.pags-text {
     margin: 30px 0;
   }
 
- 
+  /*============================= Galeria ==================================*/
+  .galery-wrapper {
+    grid-template-columns: auto auto;
+  }
+
+  .galery-image-wrapper {
+    max-height: 255px;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -2012,7 +2097,7 @@ p.pags-text {
   }
 
   .wrapper {
-    top: 100px;
+    top: 93px;
   }
 
   .header__wrapper {
@@ -2051,6 +2136,27 @@ p.pags-text {
     margin-left: 5%;
   }
 
+  /* =====================================FOOTER===================================== */
+  .footer {
+    padding: 0;
+  }
+
+  .footer__wrapper {
+    padding: 1% 7%;
+  }
+
+  .medias--social {
+    font-size: 18px;
+  }
+
+  .medias--icons {
+    margin-top: 10px;
+  }
+
+  .medias--icons__link-icon {
+    width: 35px;
+  }
+
   /* ================================= P A G =========================================*/
   .pags-image-bg-lightgrey {
     width: 140px;
@@ -2070,14 +2176,19 @@ p.pags-text {
     font-size: 14px;
   }
 
-     /*============================= Guia Medico ==================================*/  
-     .list-title {
-      font-size: 17px;
-    }
-  
-    .doctor {
-      font-size: var(--small-font-size);
-    }
+  /*============================= Guia Medico ==================================*/
+  .list-title {
+    font-size: 17px;
+  }
+
+  .doctor {
+    font-size: var(--small-font-size);
+  }
+
+  /*============================= Galeria ==================================*/
+  .galery-image-wrapper {
+    max-height: 220px;
+  }
 }
 
 @media Screen and (max-width: 560px) {
@@ -2086,31 +2197,8 @@ p.pags-text {
   }
 
   /* =====================================FOOTER===================================== */
-  .footer {
-    padding: 0;
-  }
-
-  .footer__wrapper {
-    padding: 1% 7%;
-  }
-
-  .footer__logo {
-    width: 150px;
-    height: auto;
-    cursor: pointer;
-  }
-
-  .medias--social {
-    font-size: 18px;
-  }
-
   .medias--icons {
     gap: 10px;
-    margin-top: 10px;
-  }
-
-  .medias--icons__link-icon {
-    width: 35px;
   }
 
   /* ================================= P A G =========================================*/
@@ -2175,13 +2263,65 @@ p.pags-text {
   .news-pag__news-preview {
     display: none;
   }
+
+  /*============================= Galeria ==================================*/
+  .galery-image-wrapper {
+    max-height: 260px;
+  }
 }
 
 /* = M O B I L E   D E V I C E ==========================================================*/
 /* 100% Image Width on Smaller Screens */
+@media Screen and (max-width: 480px) {
+  /* =====================================FOOTER===================================== */
+  .footer__logo {
+    width: 120px;
+  }
+
+  .footer__adress {
+    font-size: 14px;
+  }
+
+  .medias--social {
+    font-size: 14px;
+  }
+
+  .medias--icons__link-icon {
+    width: 25px;
+  }
+
+  /*============================= Galeria ==================================*/
+  .galery-wrapper {
+    grid-template-columns: auto;
+  }
+
+  .galery-image-wrapper {
+    max-height: 230px;
+  }
+}
 
 @media Screen and (max-width: 365px) {
+  /* =====================================FOOTER===================================== */
+  .footer__logo {
+    width: 100px;
+  }
+
+  .footer__adress {
+    font-size: 12px;
+  }
+
+  .medias--social {
+    font-size: 12px;
+  }
+
   /* ================================= P A G =========================================*/
+  .pags-title {
+    padding-left: 10px;
+    padding-top: 15px;
+    height: 105px;
+    font-size: var(--normal-font-size);
+  }
+
   .pags-image-bg-lightgrey {
     width: 140px;
     height: 140px;
@@ -2197,7 +2337,7 @@ p.pags-text {
   }
 
   .navegacao-link {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   /*============================ D O N A T E ===================================*/
@@ -2251,12 +2391,17 @@ p.pags-text {
     line-clamp: 3;
   }
 
-   /*============================= Guia Medico ==================================*/  
+  /*============================= Guia Medico ==================================*/
   .list-title {
     font-size: var(--small-font-size);
   }
 
   .doctor {
     font-size: 15px;
+  }
+
+  /*============================= Galeria ==================================*/
+  .galery-image-wrapper {
+    max-height: 195px;
   }
 }
