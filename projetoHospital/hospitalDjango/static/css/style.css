@@ -215,7 +215,7 @@ body {
   overflow-y: auto;
 }
 
-footer{
+footer {
   break-after: always;
 }
 
@@ -288,7 +288,7 @@ footer{
   transition: 0.4s;
 }
 
-.header__title--logo-image{
+.header__title--logo-image {
   display: none;
 }
 
@@ -1452,6 +1452,7 @@ p.pags-text {
   display: list-item;
   color: var(--grey);
   font-weight: var(--font-semi-bold);
+  margin-right: 30px;
 }
 
 /*============================= Galeria ==================================*/
@@ -1658,7 +1659,6 @@ p.pags-text {
     margin-left: 5%;
   }
 
- 
   /* ================================= P A G =========================================*/
   .pags-image-bg-lightgrey {
     width: 140px;
@@ -1677,8 +1677,6 @@ p.pags-text {
   .navegacao-link {
     font-size: 14px;
   }
-
-  
 }
 
 @media Screen and (max-width: 870px) {
@@ -1985,15 +1983,14 @@ p.pags-text {
   }
 
   .pags-side-image--image {
-    height:250px;;
+    height: 250px;
     width: 180px;
   }
 
-  
-.other-pags-links { 
-  justify-content: center;
-  padding: 30px;
-}
+  .other-pags-links {
+    justify-content: center;
+    padding: 30px;
+  }
 
   /* ================  D I R E T O R I A   E    C O N S E L H O  ===================*/
   .board-icon {
@@ -2005,29 +2002,10 @@ p.pags-text {
     width: 80%;
     margin: 30px 0;
   }
+
+ 
 }
 
-<<<<<<< HEAD
-=======
-/* ================================== M E D I U M    V I E P O R T S ====================================================*/
-
-:root {
-  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px 3.5rem = 56px */
-
-  --h1-font-size: 35px;
-  --h2-font-size: 28px;
-  --normal-font-size: 20px;
-  --small-font-size: 16px;
-  --smaller-font-size: 0.8rem;
-
-  /*========== Font weight ==========*/
-  --font-regular: 400;
-  --font-medium: 500;
-  --font-semi-bold: 600;
-}
-
-/* 100% Image Width on Smaller Screens */
->>>>>>> 6294ec6caf0702ca72bb3437ae81e373b883cbb3
 @media only screen and (max-width: 700px) {
   .modal-content {
     width: 100%;
@@ -2054,8 +2032,8 @@ p.pags-text {
   .header__title--logo {
     display: none;
   }
-  
-  .header__title--logo-image{
+
+  .header__title--logo-image {
     display: flex;
     width: 150px;
     height: auto;
@@ -2091,6 +2069,15 @@ p.pags-text {
   .navegacao-link {
     font-size: 14px;
   }
+
+     /*============================= Guia Medico ==================================*/  
+     .list-title {
+      font-size: 17px;
+    }
+  
+    .doctor {
+      font-size: var(--small-font-size);
+    }
 }
 
 @media Screen and (max-width: 560px) {
@@ -2262,5 +2249,14 @@ p.pags-text {
     font-size: 13px;
     -webkit-line-clamp: 3;
     line-clamp: 3;
+  }
+
+   /*============================= Guia Medico ==================================*/  
+  .list-title {
+    font-size: var(--small-font-size);
+  }
+
+  .doctor {
+    font-size: 15px;
   }
 }
