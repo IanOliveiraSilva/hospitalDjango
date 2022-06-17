@@ -1651,6 +1651,21 @@ p.pags-text {
     font-size: var(--small-font-size);
   }
 
+  /* =============================  N O T I C I A =================================*/
+  .news-main-image {
+    height: auto;
+    max-height: 60vh;
+  }
+
+  .news-text {
+    width: 90%;
+    font-family: "Montserrat";
+    font-weight: 300;
+    color: var(--grey);
+    margin-top: 30px;
+    white-space: pre-line;
+  }
+
   /*============================= Galeria ==================================*/
   .galery-wrapper {
     justify-content: center;
@@ -1954,6 +1969,15 @@ p.pags-text {
     display: none;
   }
 
+  /* =============================  N O T I C I A =================================*/
+  .news-main-title {
+    font-size: var(--h2-font-size);
+  }
+
+  .news-text {
+    font-size: 16px;
+  }
+
   /*============================ C O N V E N I O S ===================================*/
 
   .cooperative--wrapper {
@@ -2035,16 +2059,6 @@ p.pags-text {
 
   .list-wrapper {
     font-size: 20px;
-  }
-
-  /*====================== D E T A I L    N O T I C I A S ===========================*/
-
-  .news-main-image {
-    height: none;
-  }
-
-  .news-text {
-    font-size: 24px;
   }
 
   /* =============================  P A R C E I R O S ==============================*/
@@ -2170,10 +2184,31 @@ p.pags-text {
 
   .navegacao {
     padding: 5px 0 5px 10px;
+    line-height: 130%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
   }
 
   .navegacao-link {
     font-size: 14px;
+  }
+
+  /* =============================  N O T I C I A =================================*/
+  .news-main-title {
+    font-size: var(--normal-font-size);
+  }
+
+  .news-main-image {
+    width: 100%;
+  }
+
+  .news-text {
+    font-size: 16px;
+    width: 100%;
   }
 
   /*============================= Guia Medico ==================================*/
