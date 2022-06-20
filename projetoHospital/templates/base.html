@@ -19,14 +19,18 @@
     {% endblock css %}
 
     <title>{% block titulo %} {% endblock titulo %}</title>
-    <link rel="icon" type="image/x-icon" href="{% static '/images/favicon.ico' %}" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{% static '/images/favicon.ico' %}"
+    />
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
         <div class="header__wrapper">
           <div class="header__menu column-center">
-            <div class="header__menu--menu ">
+            <div class="header__menu--menu">
               <img
                 class="header__menu--menu-image"
                 src="{% static '/images/menu_icon.png' %}"
@@ -34,20 +38,26 @@
             </div>
             <div class="header__menu--title">Menu</div>
           </div>
-          <div class ="header__menu--devices">
-            <img class = "header__small-viewport"
-            src="{% static '/images/menu_icon.png' %}"
-          />
-          </div>
-          <div class="header__title row-center" onclick="sendTo('{% url 'home'%}');">
+          <div class="header__menu--devices">
             <img
-              class="header__title--logo "
+              class="header__small-viewport"
+              src="{% static '/images/menu_icon.png' %}"
+            />
+          </div>
+          <div
+            class="header__title row-center"
+            onclick="sendTo('{% url 'home'%}');"
+          >
+            <img
+              class="header__title--logo"
               src="{% static '/images/logo_icon.png' %}"
               alt="Logo do Hospital Napoleão Laureano"
             />
-            <h1 class="header__title--title ">Hospital Napoleão Laureano</h1>
+            <h1 class="header__title--title">Hospital Napoleão Laureano</h1>
             <div class="header__title-devices">
-              <h1 class="header__title-small-viewport">Hospital Napoleão Laureano</h1>
+              <h1 class="header__title-small-viewport">
+                Hospital Napoleão Laureano
+              </h1>
             </div>
             <img
               class="header__title--logo-image"
@@ -60,24 +70,23 @@
       </header>
 
       <div class="menu">
-        <ul class="menu-options 
-                   menu-device-options">
-          <li
-            class="menu-options--department row-j-start"
-            onclick="sendTo('{% url 'home'%}');"
-          >
-            <img
-              class="menu-options--department--icon"
-              src="{% static '/images/home_icon.png' %}"
-            />
-            <img
-              class="menu-options--department--icon--hover"
-              src="{% static '/images/hover_home_icon.png' %}"
-            />
-            <span class="menu-options--department--span">Home</span>
+        <ul class="menu-options menu-device-options">
+          <li class="menu-options--department row-j-start" onclick="sendTo('{% url 'home'%}');">
+            <div class="menu-options--department-wrapper row-j-start">
+              <img
+                class="menu-options--department--icon"
+                src="{% static '/images/home_icon.png' %}"
+              />
+              <img
+                class="menu-options--department--icon--hover"
+                src="{% static '/images/hover_home_icon.png' %}"
+              />
+              <span class="menu-options--department--span">Home</span>
+            </div>
           </li>
           <li class="menu-options--department row-j-start" onclick="sendTo('#');">
-            <img
+            <div class="menu-options--department-wrapper row-j-start">
+              <img
               class="menu-options--department--icon"
               src="{% static '/images/paciente_icon.png' %}"
             />
@@ -86,9 +95,11 @@
               src="{% static '/images/hover_paciente_icon.png' %}"
             />
             <span class="menu-options--department--span">Área do Paciente</span>
+            </div>
           </li>
           <li class="menu-options--department option--category row-j-start">
-            <img
+            <div class="menu-options--department-wrapper row-j-start">
+              <img
               class="menu-options--department--icon"
               src="{% static '/images/somos_icon.png' %}"
             />
@@ -105,9 +116,12 @@
               class="menu-options--department--icon--next-hover"
               src="{% static '/images/hover_proximo_icon.png' %}"
             />
+            </div>
             <div class="categories">
               <ul class="categories-options">
-                <li class="categories-options--category option--subcategory row-j-start">
+                <li
+                  class="categories-options--category option--subcategory row-j-start"
+                >
                   <span class="categories-options--category-link"
                     >Hospital Laureano</span
                   >
@@ -140,7 +154,9 @@
                     </ul>
                   </div>
                 </li>
-                <li class="categories-options--category option--subcategory row-j-start">
+                <li
+                  class="categories-options--category option--subcategory row-j-start"
+                >
                   <span class="categories-options--category-link"
                     >Fundação Laureano</span
                   >
@@ -185,15 +201,14 @@
                   class="categories-options--category"
                   onclick="sendTo('{% url 'galeria' %}')"
                 >
-                  <span class="categories-options--category-link"
-                    >Galeria</span
-                  >
+                  <span class="categories-options--category-link">Galeria</span>
                 </li>
               </ul>
             </div>
           </li>
           <li class="menu-options--department option--category row-j-start">
-            <img
+            <div class="menu-options--department-wrapper row-j-start">
+              <img
               class="menu-options--department--icon"
               src="{% static '/images/servicos_icon.png' %}"
             />
@@ -210,12 +225,10 @@
               class="menu-options--department--icon--next-hover"
               src="{% static '/images/hover_proximo_icon.png' %}"
             />
+            </div>
             <div class="categories">
               <ul class="categories-options">
-                <li
-                  class="categories-options--category"
-                  onclick="sendTo('#');"
-                >
+                <li class="categories-options--category" onclick="sendTo('#');">
                   <span class="categories-options--category-link"
                     >Resultado de Exames</span
                   >
@@ -239,48 +252,48 @@
               </ul>
             </div>
           </li>
-          <li
-            class="menu-options--department row-j-start"
-            onclick="sendTo('{% url 'parceiros' %}');"
-          >
-            <img
+          <li class="menu-options--department row-j-start" onclick="sendTo('{% url 'parceiros' %}');">
+            <div class="menu-options--department-wrapper row-j-start">
+              <img
               class="menu-options--department--icon"
               src="{% static '/images/parceiros_icon.png' %}"
-            />
-            <img
-              class="menu-options--department--icon--hover"
-              src="{% static '/images/hover_parceiros_icon.png' %}"
-            />
-            <span class="menu-options--department--span">Parceiros</span>
+              />
+              <img
+                class="menu-options--department--icon--hover"
+                src="{% static '/images/hover_parceiros_icon.png' %}"
+              />
+              <span class="menu-options--department--span">Parceiros</span>
+            </div>
           </li>
           <li class="menu-options--department option--category row-j-start">
-            <img
-              class="menu-options--department--icon"
-              src="{% static '/images/eventos_icon.png' %}"
-            />
-            <img
-              class="menu-options--department--icon--hover"
-              src="{% static '/images/hover_eventos_icon.png' %}"
-            />
-            <span class="menu-options--department--span">Eventos</span>
-            <img
-              class="menu-options--department--icon--next"
-              src="{% static '/images/proximo_icon.png' %}"
-            />
-            <img
-              class="menu-options--department--icon--next-hover"
-              src="{% static '/images/hover_proximo_icon.png' %}"
-            />
+            <div
+              class="menu-options--department-wrapper row-j-start"
+            >
+              <img
+                class="menu-options--department--icon"
+                src="{% static '/images/eventos_icon.png' %}"
+              />
+              <img
+                class="menu-options--department--icon--hover"
+                src="{% static '/images/hover_eventos_icon.png' %}"
+              />
+              <span class="menu-options--department--span">Eventos</span>
+              <img
+                class="menu-options--department--icon--next"
+                src="{% static '/images/proximo_icon.png' %}"
+              />
+              <img
+                class="menu-options--department--icon--next-hover"
+                src="{% static '/images/hover_proximo_icon.png' %}"
+              />
+            </div>
             <div class="categories">
               <ul class="categories-options">
                 <li
                   class="categories-options--category"
                   onclick="sendToNewWindow('https://cemak.org/');"
-                  
                 >
-                  <span class="categories-options--category-link"
-                    >Cemak</span
-                  >
+                  <span class="categories-options--category-link">Cemak</span>
                 </li>
                 <li
                   class="categories-options--category option--subcategory"
@@ -297,78 +310,74 @@
             class="menu-options--department row-j-start"
             onclick="sendTo('{% url 'noticias' %}');"
           >
-            <img
-              class="menu-options--department--icon"
-              src="{% static '/images/noticias_icon.png' %}"
-            />
-            <img
-              class="menu-options--department--icon--hover"
-              src="{% static '/images/hover_noticias_icon.png' %}"
-            />
-            <span class="menu-options--department--span">Notícias</span>
+            <div class="menu-options--department-wrapper row-j-start">
+              <img
+                class="menu-options--department--icon"
+                src="{% static '/images/noticias_icon.png' %}"
+              />
+              <img
+                class="menu-options--department--icon--hover"
+                src="{% static '/images/hover_noticias_icon.png' %}"
+              />
+              <span class="menu-options--department--span">Notícias</span>
+            </div>
           </li>
           <li
             class="menu-options--department row-j-start"
             onclick="sendTo('{% url 'transparencia' %}');"
           >
-            <img
-              class="menu-options--department--icon"
-              src="{% static '/images/transparencia_icon.png' %}"
-            />
-            <img
-              class="menu-options--department--icon--hover"
-              src="{% static '/images/hover_transparencia_icon.png' %}"
-            />
-            <span class="menu-options--department--span">Transparência</span>
+            <div class="menu-options--department-wrapper row-j-start">
+              <img
+                class="menu-options--department--icon"
+                src="{% static '/images/transparencia_icon.png' %}"
+              />
+              <img
+                class="menu-options--department--icon--hover"
+                src="{% static '/images/hover_transparencia_icon.png' %}"
+              />
+              <span class="menu-options--department--span">Transparência</span>
+            </div>
           </li>
           <li class="menu-options--department option--category row-j-start">
-            <img
-              class="menu-options--department--icon"
-              src="{% static '/images/fale_icon.png' %}"
-            />
-            <img
-              class="menu-options--department--icon--hover"
-              src="{% static '/images/hover_fale_icon.png' %}"
-            />
-            <span class="menu-options--department--span">Fale Conosco</span>
-            <img
-              class="menu-options--department--icon--next"
-              src="{% static '/images/proximo_icon.png' %}"
-            />
-            <img
-              class="menu-options--department--icon--next-hover"
-              src="{% static '/images/hover_proximo_icon.png' %}"
-            />
+            <div
+              class="menu-options--department-wrapper row-j-start"
+            >
+              <img
+                class="menu-options--department--icon"
+                src="{% static '/images/fale_icon.png' %}"
+              />
+              <img
+                class="menu-options--department--icon--hover"
+                src="{% static '/images/hover_fale_icon.png' %}"
+              />
+              <span class="menu-options--department--span">Fale Conosco</span>
+              <img
+                class="menu-options--department--icon--next"
+                src="{% static '/images/proximo_icon.png' %}"
+              />
+              <img
+                class="menu-options--department--icon--next-hover"
+                src="{% static '/images/hover_proximo_icon.png' %}"
+              />
+            </div>
             <div class="categories last">
               <ul class="categories-options">
-                <li
-                  class="categories-options--category"
-                  onclick="sendTo('#');"
-                >
+                <li class="categories-options--category" onclick="sendTo('#');">
                   <span class="categories-options--category-link"
                     >Trabalhe Conosco</span
                   >
                 </li>
-                <li
-                  class="categories-options--category"
-                  onclick="sendTo('#');"
-                >
+                <li class="categories-options--category" onclick="sendTo('#');">
                   <span class="categories-options--category-link"
                     >Ouvidoria</span
                   >
                 </li>
-                <li
-                  class="categories-options--category"
-                  onclick="sendTo('#');"
-                >
+                <li class="categories-options--category" onclick="sendTo('#');">
                   <span class="categories-options--category-link"
                     >Pesquisa de Satisfação</span
                   >
                 </li>
-                <li
-                  class="categories-options--category"
-                  onclick="sendTo('#');"
-                >
+                <li class="categories-options--category" onclick="sendTo('#');">
                   <span class="categories-options--category-link"
                     >Seja um Residente Laureano</span
                   >
@@ -379,7 +388,10 @@
         </ul>
       </div>
 
-      <div class="side-small-menu doacao" onclick="sendTo('{% url 'doacao' %}');">
+      <div
+        class="side-small-menu doacao"
+        onclick="sendTo('{% url 'doacao' %}');"
+      >
         <img
           class="side-small-menu--image"
           src="{% static '/images/doe_icon.png' %}"
@@ -398,8 +410,7 @@
         </div>
       </div>
 
-      {% block body %}
-      {% endblock body %}
+      {% block body %} {% endblock body %}
       <footer class="footer">
         <div class="footer__wrapper">
           <img
@@ -409,8 +420,7 @@
             onclick="sendTo('{% url 'home'%}');"
           />
           <span class="footer__adress"
-            >Telefone: (83) 3015-6200 
-            Av. Capitão José Pessoa, 1140 - Jaguaribe
+            >Telefone: (83) 3015-6200 Av. Capitão José Pessoa, 1140 - Jaguaribe
             CEP: 58015-170 - João Pessoa - PB
           </span>
           <div class="medias column-center">
@@ -421,7 +431,7 @@
                 class="medias--icons__link"
                 target="_blank"
                 ><img
-                  src="{% static '/images/facebook_icon.png' %}"
+                  src="{% static '/images/facebook_icon.svg' %}"
                   alt="Ícone do Facebook"
                   class="medias--icons__link-icon"
               /></a>
@@ -430,7 +440,7 @@
                 class="medias--icons__link"
                 target="_blank"
                 ><img
-                  src="{% static '/images/twitter_icon.png' %}"
+                  src="{% static '/images/twitter_icon.svg' %}"
                   alt="Ícone do Twitter"
                   class="medias--icons__link-icon"
               /></a>
@@ -439,7 +449,7 @@
                 class="medias--icons__link"
                 target="_blank"
                 ><img
-                  src="{% static '/images/instagram_icon.png' %}"
+                  src="{% static '/images/instagram_icon.svg' %}"
                   alt="Ícone do Instagram"
                   class="medias--icons__link-icon"
               /></a>
@@ -448,7 +458,7 @@
                 class="medias--icons__link"
                 target="_blank"
                 ><img
-                  src="{% static '/images/youtube_icon.png' %}"
+                  src="{% static '/images/youtube_icon.svg' %}"
                   alt="Ícone do YouTube"
                   class="medias--icons__link-icon"
               /></a>
@@ -462,7 +472,7 @@
     type="text/javascript"
     src='{% static "/scripts/header.js" %}'
   ></script>
-  <script 
+  <script
     type="text/javascript"
     src='{% static "/script/mobileMenuHeader.js" %}'
   ></script>
@@ -482,10 +492,7 @@
     type="text/javascript"
     src='{% static "/scripts/doacao.js" %}'
   ></script>
-  <script
-    type="text/javascript"
-    src='{% static "/scripts/guia.js" %}'
-  ></script>
+  <script type="text/javascript" src='{% static "/scripts/guia.js" %}'></script>
   <script
     type="text/javascript"
     src='{% static "/scripts/galeria.js" %}'
