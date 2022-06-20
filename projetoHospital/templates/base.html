@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Alatsi&family=Anton&family=Atkinson+Hyperlegible:wght@400;700&family=Montserrat&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Alatsi&family=Anton&family=Atkinson+Hyperlegible:wght@400;700&family=Montserrat&display=block"
       rel="stylesheet"
     />
     <link
@@ -26,6 +26,16 @@
     />
   </head>
   <body>
+    <div class="load">
+      <div class="spin-container">
+        <div class="spin" id="first_layer"></div>
+        <div class="spin" id="second_layer"></div>
+        <div class="spin" id="third_layer"></div>
+        <div class="spin" id="fourth_layer"></div>
+        <span id="text">LOADING...</span>
+      </div>
+    </div>
+
     <div class="wrapper">
       <header class="header">
         <div class="header__wrapper">
@@ -71,7 +81,10 @@
 
       <div class="menu">
         <ul class="menu-options menu-device-options">
-          <li class="menu-options--department row-j-start" onclick="sendTo('{% url 'home'%}');">
+          <li
+            class="menu-options--department row-j-start"
+            onclick="sendTo('{% url 'home'%}');"
+          >
             <div class="menu-options--department-wrapper row-j-start">
               <img
                 class="menu-options--department--icon"
@@ -84,38 +97,43 @@
               <span class="menu-options--department--span">Home</span>
             </div>
           </li>
-          <li class="menu-options--department row-j-start" onclick="sendTo('#');">
+          <li
+            class="menu-options--department row-j-start"
+            onclick="sendTo('#');"
+          >
             <div class="menu-options--department-wrapper row-j-start">
               <img
-              class="menu-options--department--icon"
-              src="{% static '/images/paciente_icon.png' %}"
-            />
-            <img
-              class="menu-options--department--icon--hover"
-              src="{% static '/images/hover_paciente_icon.png' %}"
-            />
-            <span class="menu-options--department--span">Área do Paciente</span>
+                class="menu-options--department--icon"
+                src="{% static '/images/paciente_icon.png' %}"
+              />
+              <img
+                class="menu-options--department--icon--hover"
+                src="{% static '/images/hover_paciente_icon.png' %}"
+              />
+              <span class="menu-options--department--span"
+                >Área do Paciente</span
+              >
             </div>
           </li>
           <li class="menu-options--department option--category row-j-start">
             <div class="menu-options--department-wrapper row-j-start">
               <img
-              class="menu-options--department--icon"
-              src="{% static '/images/somos_icon.png' %}"
-            />
-            <img
-              class="menu-options--department--icon--hover"
-              src="{% static '/images/hover_somos_icon.png' %}"
-            />
-            <span class="menu-options--department--span">Quem Somos</span>
-            <img
-              class="menu-options--department--icon--next"
-              src="{% static '/images/proximo_icon.png' %}"
-            />
-            <img
-              class="menu-options--department--icon--next-hover"
-              src="{% static '/images/hover_proximo_icon.png' %}"
-            />
+                class="menu-options--department--icon"
+                src="{% static '/images/somos_icon.png' %}"
+              />
+              <img
+                class="menu-options--department--icon--hover"
+                src="{% static '/images/hover_somos_icon.png' %}"
+              />
+              <span class="menu-options--department--span">Quem Somos</span>
+              <img
+                class="menu-options--department--icon--next"
+                src="{% static '/images/proximo_icon.png' %}"
+              />
+              <img
+                class="menu-options--department--icon--next-hover"
+                src="{% static '/images/hover_proximo_icon.png' %}"
+              />
             </div>
             <div class="categories">
               <ul class="categories-options">
@@ -209,22 +227,22 @@
           <li class="menu-options--department option--category row-j-start">
             <div class="menu-options--department-wrapper row-j-start">
               <img
-              class="menu-options--department--icon"
-              src="{% static '/images/servicos_icon.png' %}"
-            />
-            <img
-              class="menu-options--department--icon--hover"
-              src="{% static '/images/hover_servicos_icon.png' %}"
-            />
-            <span class="menu-options--department--span">Servicos</span>
-            <img
-              class="menu-options--department--icon--next"
-              src="{% static '/images/proximo_icon.png' %}"
-            />
-            <img
-              class="menu-options--department--icon--next-hover"
-              src="{% static '/images/hover_proximo_icon.png' %}"
-            />
+                class="menu-options--department--icon"
+                src="{% static '/images/servicos_icon.png' %}"
+              />
+              <img
+                class="menu-options--department--icon--hover"
+                src="{% static '/images/hover_servicos_icon.png' %}"
+              />
+              <span class="menu-options--department--span">Servicos</span>
+              <img
+                class="menu-options--department--icon--next"
+                src="{% static '/images/proximo_icon.png' %}"
+              />
+              <img
+                class="menu-options--department--icon--next-hover"
+                src="{% static '/images/hover_proximo_icon.png' %}"
+              />
             </div>
             <div class="categories">
               <ul class="categories-options">
@@ -252,11 +270,14 @@
               </ul>
             </div>
           </li>
-          <li class="menu-options--department row-j-start" onclick="sendTo('{% url 'parceiros' %}');">
+          <li
+            class="menu-options--department row-j-start"
+            onclick="sendTo('{% url 'parceiros' %}');"
+          >
             <div class="menu-options--department-wrapper row-j-start">
               <img
-              class="menu-options--department--icon"
-              src="{% static '/images/parceiros_icon.png' %}"
+                class="menu-options--department--icon"
+                src="{% static '/images/parceiros_icon.png' %}"
               />
               <img
                 class="menu-options--department--icon--hover"
@@ -266,9 +287,7 @@
             </div>
           </li>
           <li class="menu-options--department option--category row-j-start">
-            <div
-              class="menu-options--department-wrapper row-j-start"
-            >
+            <div class="menu-options--department-wrapper row-j-start">
               <img
                 class="menu-options--department--icon"
                 src="{% static '/images/eventos_icon.png' %}"
@@ -339,9 +358,7 @@
             </div>
           </li>
           <li class="menu-options--department option--category row-j-start">
-            <div
-              class="menu-options--department-wrapper row-j-start"
-            >
+            <div class="menu-options--department-wrapper row-j-start">
               <img
                 class="menu-options--department--icon"
                 src="{% static '/images/fale_icon.png' %}"
@@ -410,7 +427,17 @@
         </div>
       </div>
 
+      <div class="main-item">
+        <div class="static-background">
+          <div class="background-masker btn-divide-left"></div>
+        </div>
+
+        <div class="animated-background">
+          <div class="background-masker btn-divide-left"></div>
+        </div>
+
       {% block body %} {% endblock body %}
+
       <footer class="footer">
         <div class="footer__wrapper">
           <img
@@ -496,5 +523,9 @@
   <script
     type="text/javascript"
     src='{% static "/scripts/galeria.js" %}'
+  ></script>
+  <script
+    type="text/javascript"
+    src='{% static "/scripts/loading.js" %}'
   ></script>
 </html>
