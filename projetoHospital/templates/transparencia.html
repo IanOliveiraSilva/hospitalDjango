@@ -1,24 +1,658 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% load static %} {% block titulo %}Hospital Napoleão
+Laureano - Tranparência {%endblock titulo %} {% block body %}
+
+<div class="navegacao">
+  <ul>
+    <il>
+      <a class="navegacao-link" href="{% url 'home' %}">
+        Início
+        <i class="uil uil-angle-double-right"></i>
+      </a>
+    </il>
+    <il>
+      <a class="navegacao-link" href="{% url 'transparencia' %}">
+        Transparência
+      </a>
+    </il>
+  </ul>
+</div>
+
+<h1 class="pags-title">Transparência</h1>
+<section class="pags-section column-center">
+    
+    <div class="list-header">
+        <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+        <h3 class="list-title">Licitações</h2>
+    </div>
+    <ul class="list-wrapper">
+        <li>
+            <div class="list-header">
+                <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                <h3 class="list-title sub-list-title">Reforma dos Laboratórios de Histocompatibilidade e Análises Clínicas no Hospital Napoleão Laureano</h2>
+            </div>
+            <ul class="list-wrapper">
+                <li>
+                    <div class="list-header">
+                        <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                        <h3 class="list-title sub-list-title">Edital</h2>
+                    </div>
+                    <ul class="list-wrapper">
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="list-header">
+                        <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                        <h3 class="list-title sub-list-title">Anexos – Projeto Básico</h2>
+                    </div>
+                    <ul class="list-wrapper">
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>  
+        <li>
+            <div class="list-header">
+                <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                <h3 class="list-title sub-list-title">Reforma do Laboratório de Anatomia Patológica no Hospital Napoleão Laureano</h2>
+            </div>
+            <ul class="list-wrapper">
+                <li>
+                    <div class="list-header">
+                        <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                        <h3 class="list-title sub-list-title">Edital</h2>
+                    </div>
+                    <ul class="list-wrapper">
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="list-header">
+                        <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                        <h3 class="list-title sub-list-title">Anexos – Projeto Básico</h2>
+                    </div>
+                    <ul class="list-wrapper">
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="list-header">
+                <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                <h3 class="list-title sub-list-title">Reforma dos Laboratórios de Histocompatibilidade e Análises Clínicas no Hospital Napoleão Laureano</h2>
+            </div>
+            <ul class="list-wrapper">
+                <li>
+                    <div class="list-header">
+                        <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                        <h3 class="list-title sub-list-title">Edital</h2>
+                    </div>
+                    <ul class="list-wrapper">
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="list-header">
+                        <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                        <h3 class="list-title sub-list-title">Anexos – Projeto Básico</h2>
+                    </div>
+                    <ul class="list-wrapper">
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="list-header">
+                <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                <h3 class="list-title sub-list-title">Reforma da Fachada no Hospital Napoleão Laureano</h2>
+            </div>
+            <ul class="list-wrapper">
+                <li>
+                    <div class="list-header">
+                        <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                        <h3 class="list-title sub-list-title">Edital</h2>
+                    </div>
+                    <ul class="list-wrapper">
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="list-header">
+                        <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                        <h3 class="list-title sub-list-title">Anexos – Projeto Básico</h2>
+                    </div>
+                    <ul class="list-wrapper">
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="list-header">
+                <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                <h3 class="list-title sub-list-title">Reforma dos Apartamentos no Hospital Napoleão Laureano</h2>
+            </div>
+            <ul class="list-wrapper">
+                <li>
+                    <a href="" class="edital-link">link</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="dividing-line dividing-line--list"></div>
+    
+    <div class="list-header">
+        <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+        <h3 class="list-title">Dados</h2>
+    </div>
+    <ul class="list-wrapper">
+        <li>
+            <div class="list-header">
+                <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                <h3 class="list-title sub-list-title">Atos Normativos</h2>
+            </div>
+            <ul class="list-wrapper">
+                <li>
+                    <a href="" class="edital-link">link</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="list-header">
+                <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                <h3 class="list-title sub-list-title">Calendário de Reuniões</h2>
+            </div>
+            <ul class="list-wrapper">
+                <li>
+                    <a href="" class="edital-link">link</a>
+                </li>
+            </ul>
+        </li>
+        <li>        
+            <div class="list-header">
+                <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                <h3 class="list-title sub-list-title">Dados Estatísticos</h2>
+            </div>
+            <ul class="list-wrapper">
+                <li>
+                    <a href="" class="edital-link">link</a>
+                </li>
+                <li>
+                    <a href="" class="edital-link">link</a>
+                </li>
+                <li>
+                    <a href="" class="edital-link">link</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="list-header">
+                <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                <h3 class="list-title sub-list-title">Demonstrativos Contábeis</h2>
+            </div>
+            <ul class="list-wrapper">
+                <li>
+                    <div class="list-header">
+                        <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                        <h3 class="list-title sub-list-title">2020</h2>
+                    </div>
+                    <ul class="list-wrapper">
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="list-header">
+                        <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                        <h3 class="list-title sub-list-title">2019</h2>
+                    </div>
+                    <ul class="list-wrapper">
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="list-header">
+                        <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                        <h3 class="list-title sub-list-title">2018</h2>
+                    </div>
+                    <ul class="list-wrapper">
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="list-header">
+                <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                <h3 class="list-title sub-list-title">Doações</h2>
+            </div>
+            <ul class="list-wrapper">
+                <li>
+                    <a href="" class="edital-link">link</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="list-header">
+                <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                <h3 class="list-title sub-list-title">Estrutura Organizacional</h2>
+            </div>
+            <ul class="list-wrapper">
+                <li>
+                    <a href="" class="edital-link">link</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="list-header">
+                <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                <h3 class="list-title sub-list-title">Prestação de Contas</h2>
+            </div>
+            <ul class="list-wrapper">
+                <li>
+                    <a href="" class="edital-link">link</a>
+                </li>
+                <li>
+                    <a href="" class="edital-link">link</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="dividing-line dividing-line--list"></div>
+   
+    <div class="list-header">
+        <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+        <h3 class="list-title">Verbas Covid</h2>
+    </div>
+    <ul class="list-wrapper">
+        <li>
+            <div class="list-header">
+                <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                <h3 class="list-title sub-list-title">Recursos Recebidos</h2>
+            </div>
+            <ul class="list-wrapper">
+                <li>
+                    <a href="" class="edital-link">link</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="list-header">
+                <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                <h3 class="list-title sub-list-title">Edital Publicado</h2>
+            </div>
+            <ul class="list-wrapper">
+                <li>
+                    <a href="" class="edital-link">link</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="dividing-line dividing-line--list"></div>
+
+    <div class="list-header">
+        <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+        <h3 class="list-title">Convênios</h2>
+    </div>
+    <ul class="list-wrapper">
+        <li>
+            <div class="list-header">
+                <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                <h3 class="list-title sub-list-title">Convênios celebrados para repasse de emendas parlamentes</h2>
+            </div>
+            <ul class="list-wrapper">
+                <li>
+                    <div class="list-header">
+                        <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                        <h3 class="list-title sub-list-title">Emendas parlamentares</h2>
+                    </div>
+                    <ul class="list-wrapper">
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="list-header">
+                        <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                        <h3 class="list-title sub-list-title">Emenda de Bancada</h2>
+                    </div>
+                    <ul class="list-wrapper">
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="list-header">
+                        <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                        <h3 class="list-title sub-list-title">Emenda Individuais</h2>
+                    </div>
+                    <ul class="list-wrapper">
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="list-header">
+                <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                <h3 class="list-title sub-list-title">Convênios Celebrados com os Municípios</h2>
+            </div>
+            <ul class="list-wrapper">
+                <li>
+                    <div class="list-header">
+                        <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                        <h3 class="list-title sub-list-title">Cabedelo</h2>
+                    </div>
+                    <ul class="list-wrapper">
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="list-header">
+                        <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                        <h3 class="list-title sub-list-title">Jacaraú</h2>
+                    </div>
+                    <ul class="list-wrapper">
+                        <li>
+                            <a href="" class="edital-link">link</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>        
+            <div class="list-header">
+                <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                <h3 class="list-title sub-list-title">Convênio com o Governo do Estado da Paraíba</h2>
+            </div>
+            <ul class="list-wrapper">
+                <li>
+                    <a href="" class="edital-link">link</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="list-header">
+                <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+                <h3 class="list-title sub-list-title">Convênio de transferências voluntárias - Plataforma Mais Brasil</h2>
+            </div>
+            <ul class="list-wrapper">
+                <li>
+                    <a href="" class="edital-link">link</a>
+                </li>
+                <li>
+                    <a href="" class="edital-link">link</a>
+                </li>
+                <li>
+                    <a href="" class="edital-link">link</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="dividing-line dividing-line--list"></div>
+
+    
+</section>
+{% endblock body %} 
 
 
-{% block titulo %}
-HOSPITAL LAUREANO - TRANSPARÊNCIA
-{% endblock titulo %} 
-
-{% block body %}
-
-<h1>TESTE - TRANSPARÊNCIA</h1>
 
 
-
-{% for item in transparencia %}  
+{% comment %} {% for item in transparencia %}
 <ul>
-    <li>
-        <h1>PDF:<a href="{{item.PdfTransparencia.url}}" download>{{item.NomeTransparencia}}</a></h1>
-    </li>
-</ul> 
+  <li>
+    <h1>
+      PDF:<a href="{{item.PdfTransparencia.url}}" download
+        >{{item.NomeTransparencia}}</a
+      >
+    </h1>
+  </li>
+</ul>
 
-{% endfor %}
-
-<a class="mx-auto my-0 text-uppercase text-amarelo mx-auto mt-2 mb-5 style=" href="{% url 'home' %}">Back</a>
-{% endblock body %}
+{% endfor %}{% endcomment %}
