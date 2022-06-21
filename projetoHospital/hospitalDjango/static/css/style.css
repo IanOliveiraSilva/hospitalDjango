@@ -1173,6 +1173,7 @@ footer {
   display: block;
   font-weight: 400;
   letter-spacing: normal;
+  line-height: 1.5;
 }
 
 p.pags-text {
@@ -2465,6 +2466,7 @@ p.pags-text {
   }
 
   /*============================= Guia Medico ==================================*/
+  
   .list-title {
     font-size: var(--small-font-size);
   }
