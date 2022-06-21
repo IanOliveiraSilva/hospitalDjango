@@ -1176,6 +1176,18 @@ footer {
   line-height: 1.5;
 }
 
+.mission_title {
+  display: flex;
+  align-items: center;
+}
+
+.mission_icon {
+  display: flex;
+  max-width: 40px;
+  height: auto;
+  margin-right: 5px;
+}
+
 p.pags-text {
   margin-bottom: 40px;
 }
@@ -1485,7 +1497,7 @@ p.pags-text {
   font-size: var(--small-font-size);
 }
 
-.edital-link{
+.edital-link {
   color: var(--darkGreen);
 }
 
@@ -2466,7 +2478,7 @@ p.pags-text {
   }
 
   /*============================= Guia Medico ==================================*/
-  
+
   .list-title {
     font-size: var(--small-font-size);
   }
