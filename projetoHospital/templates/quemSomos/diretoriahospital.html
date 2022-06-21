@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% load static %} {% block titulo %} Hospital Napoleão
 Laureano - Diretoria do Hospital {% endblock titulo %} {% block body %}
 
-<div class="navegacao">
+<nav class="navegacao">
   <ul>
     <il>
       <a class="navegacao-link" href="{% url 'home' %}">
@@ -27,14 +27,14 @@ Laureano - Diretoria do Hospital {% endblock titulo %} {% block body %}
       </a>
     </il>
   </ul>
-</div>
+</nav>
 
 <h1 class="pags-title">Hospital Laureano</h1>
 
 <section class="pags-section">
   <h2 class="pags-h2">Diretoria</h2>
   {% for item in diretoria %}
-  <div class="container-card">
+  <main class="container-card">
     <img
       src="/image/{{ item.FotoDiretoria }}"
       alt="imagem do diretor"
@@ -49,7 +49,7 @@ Laureano - Diretoria do Hospital {% endblock titulo %} {% block body %}
       alt="aspas"
       class="quotes-image"
     />
-  </div>
+  </main>
   {% endfor %}
 </section>
 
