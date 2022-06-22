@@ -125,3 +125,28 @@ class NossaMissao(models.Model):
         return self.Titulo
     class Meta:
         verbose_name_plural = "Nossa Missão"
+
+class InformacaoRodape(models.Model):
+    Titulo = models.CharField(max_length=150, blank=False, null=False)
+    Telefone = models.CharField(max_length = 14, unique = True)
+    Rua = models.TextField(blank=False, null=False)
+    Numero = models.CharField(max_length=5 ,blank=False, null=False)
+    Bairro = models.CharField(max_length=80,blank=False, null=False)
+    CEP = models.CharField(max_length = 9, unique = True)
+    Cidade = models.CharField(max_length=50, blank=False, null = False)
+    Estado = models.CharField(max_length=5, blank=False, null=False)
+    def __str__(self):
+        return self.Titulo
+    class Meta:
+        verbose_name_plural = "Informações Rodapé"
+
+class RedesSociais(models.Model):
+    Titulo = models.CharField(max_length=150, blank=False, null=False)
+    Facebook = models.CharField(max_length = 300, blank=False,null=False)
+    Twitter = models.CharField(max_length = 300, blank=False,null=False)
+    Instagram = models.CharField(max_length = 300, blank=False,null=False)
+    Youtube = models.CharField(max_length = 300, blank=False,null=False)
+    def __str__(self):
+        return self.Titulo
+    class Meta:
+        verbose_name_plural = "Redes Sociais"

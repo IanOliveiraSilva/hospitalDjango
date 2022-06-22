@@ -437,7 +437,7 @@
         </div>
 
       {% block body %} {% endblock body %}
-
+      
       <footer class="footer">
         <div class="footer__wrapper">
           <img
@@ -446,15 +446,18 @@
             class="footer__logo"
             onclick="sendTo('{% url 'home'%}');"
           />
+          {% for item in rodape|slice:":1" %}
           <span class="footer__adress"
-            >Telefone: (83) 3015-6200 Av. Capitão José Pessoa, 1140 - Jaguaribe
-            CEP: 58015-170 - João Pessoa - PB
+            >Telefone: {{ item.Telefone }} {{ item.Rua }}, {{ item.Numero }} - {{ item.Bairro }}
+            CEP: {{ item.CEP }} - {{ item.Cidade }} - {{ item.Estado }}
           </span>
+          {% endfor %}
           <div class="medias column-center">
+            {% for item in redes|slice:":1" %}
             <span class="medias--social">Redes sociais</span>
             <div class="medias--icons row-center">
               <a
-                href="https://www.facebook.com/HospitalNapoleaoLaureano"
+                href="{{ item.Facebook }}"
                 class="medias--icons__link"
                 target="_blank"
                 ><img
@@ -463,7 +466,7 @@
                   class="medias--icons__link-icon"
               /></a>
               <a
-                href="https://twitter.com/h_laureano"
+                href="{{ item.Twitter }}"
                 class="medias--icons__link"
                 target="_blank"
                 ><img
@@ -472,7 +475,7 @@
                   class="medias--icons__link-icon"
               /></a>
               <a
-                href="https://www.instagram.com/hnlaureano/"
+                href="{{ item.Instagram }}"
                 class="medias--icons__link"
                 target="_blank"
                 ><img
@@ -481,7 +484,7 @@
                   class="medias--icons__link-icon"
               /></a>
               <a
-                href="https://www.youtube.com/user/HNapoleaoLaureano/feed?view_as=public"
+                href="{{ item.Youtube }}"
                 class="medias--icons__link"
                 target="_blank"
                 ><img
@@ -490,6 +493,7 @@
                   class="medias--icons__link-icon"
               /></a>
             </div>
+            {% endfor %}
           </div>
         </div>
       </footer>

@@ -8,6 +8,8 @@ from .models import *
 from django.db.models import Count
 from .forms import *
 
+rodape = InformacaoRodape.objects.all()
+redes = RedesSociais.objects.all()
 
 # CREATE - PESQUISA DE SATISFAÇÃO
 
@@ -18,7 +20,7 @@ def PesquisaSatisfacao(request):
     if form.is_valid():
         form.save()
     context['form']= form
-    return render(request, 'faleConosco/pesquisadesatisfacao.html', context)  
+    return render(request, 'faleConosco/pesquisadesatisfacao.html', context, {"rodape": rodape, "redes":redes})  
 
 
 # READ - GUIA MÉDICO
@@ -26,31 +28,31 @@ def PesquisaSatisfacao(request):
 def viewGuiaMedico(request):
     medico = Medico.objects.order_by('Especialidade')
     especialidade = Medico.objects.values('Especialidade').distinct()
-    return render(request, "guiaMedico.html", {"medico": medico, "especialidade":especialidade})
+    return render(request, "guiaMedico.html", {"medico": medico, "especialidade":especialidade,"rodape": rodape, "redes":redes})
 
 # READ - NOTICIAS
 
 def viewNoticia(request):
     noticia = Noticia.objects.order_by('-Data')
-    return render(request, "noticias.html", {"noticia": noticia})
+    return render(request, "noticias.html", {"noticia": noticia,"rodape": rodape, "redes":redes})
 
 def viewDetailNoticia(request, id):
     noticia = Noticia.objects.all()
     detailNoticia = get_object_or_404(noticia, pk=id)
-    return render(request, "detailNoticias.html", {"detailNoticia":detailNoticia, "id":id})
+    return render(request, "detailNoticias.html", {"detailNoticia":detailNoticia, "id":id,"rodape": rodape, "redes":redes})
 
 
 # READ - PARCEIROS
 
 def viewParceiros(request):
     parceiro = Parceiros.objects.all()
-    return render(request, "parceiros.html", {"parceiro": parceiro})
+    return render(request, "parceiros.html", {"parceiro": parceiro,"rodape": rodape, "redes":redes})
 
 # READ - CONVENIOS
 
 def viewConvenio(request):
     convenio = Convenio.objects.all()
-    return render(request, "convenio.html", {"convenio": convenio})
+    return render(request, "convenio.html", {"convenio": convenio,"rodape": rodape, "redes":redes})
 
 # QUEM SOMOS
 
@@ -58,27 +60,27 @@ def viewConvenio(request):
 
 def viewDiretoriaHospital(request):
     diretoria = Diretoria.objects.all()
-    return render(request, "quemSomos/diretoriahospital.html", {"diretoria": diretoria})
+    return render(request, "quemSomos/diretoriahospital.html", {"diretoria": diretoria,"rodape": rodape, "redes":redes})
 
 def viewHistoriaHospital(request):
-    return render(request, "quemSomos/historiaHospital.html", {})
+    return render(request, "quemSomos/historiaHospital.html", {"rodape": rodape, "redes":redes})
 
 # READ - DIRETORIA E HISTORIA FUNDAÇÃO Laureano
 
 def viewHistoriaFundacao(request):
-    return render(request, "quemSomos/historiaFundacao.html", {})
+    return render(request, "quemSomos/historiaFundacao.html", {"rodape": rodape, "redes":redes})
 
 def viewDiretoriaFundacao(request):
     diretoriaexecutiva = DiretoriaExecutiva.objects.all()
     conselho = ConselhoDeliberativo.objects.all()
-    return render(request, "quemSomos/diretoriaFundacao.html", {"diretoriaexecutiva": diretoriaexecutiva, "conselho": conselho})
+    return render(request, "quemSomos/diretoriaFundacao.html", {"diretoriaexecutiva": diretoriaexecutiva, "conselho": conselho,"rodape": rodape, "redes":redes})
 
 # READ - GALERIA
 
 def viewGaleria(request):
     galeria = Galeria.objects.order_by('Categoria')
     categoria = Galeria.objects.values('Categoria').distinct()
-    return render(request, "quemSomos/galeria.html", {"galeria": galeria, "categoria": categoria})
+    return render(request, "quemSomos/galeria.html", {"galeria": galeria, "categoria": categoria,"rodape": rodape, "redes":redes})
 
 # READ - PREMIOS E CERTIFICAÇÕES
 
@@ -87,7 +89,7 @@ def viewGaleria(request):
 
 def viewTransparencia(request):
     transparencia = Transparencia.objects.all()
-    return render(request, "transparencia.html", {"transparencia": transparencia})
+    return render(request, "transparencia.html", {"transparencia": transparencia,"rodape": rodape, "redes":redes})
 
 #PATH
 
@@ -96,47 +98,49 @@ def viewHome(request):
     premio = Premio.objects.all()
     noticia = Noticia.objects.order_by('-Data')
     convenio = Convenio.objects.all()
-    
-    return render(request, "home.html", {"banner": banner , "noticia": noticia, "premio": premio, "convenio": convenio})
+    rodape = InformacaoRodape.objects.all()
+    redes = RedesSociais.objects.all()
+    return render(request, "home.html", {"banner": banner , "noticia": noticia, "premio": premio, "convenio": convenio, "rodape": rodape, "redes": redes})
 
 
 def vieweventos(request):
-    return render(request, "eventos.html", {})
+    
+    return render(request, "eventos.html", {"rodape": rodape, "redes":redes})
 
 def viewdoacao(request):
-    return render(request, "doacao.html", {})
+    return render(request, "doacao.html", {"rodape": rodape, "redes":redes})
 
 def viewNossaMissao(request):
     missao = NossaMissao.objects.all()
-    return render(request, "quemSomos/nossaMissao.html", {"missao": missao})
+    return render(request, "quemSomos/nossaMissao.html", {"missao": missao,"rodape": rodape, "redes":redes})
 
 
 # Path FaleConosco
 def viewTrabalheConosco(request):
-    return render(request, 'faleConosco/trabalheconosco.html')
+    return render(request, 'faleConosco/trabalheconosco.html', {"rodape": rodape, "redes":redes})
 
 def viewOuvidoria(request):
-    return render(request, "faleConosco/ouvidoria.html")
+    return render(request, "faleConosco/ouvidoria.html", {"rodape": rodape, "redes":redes})
 
 
 def viewSejaumResidente(request):
-    return render(request, 'faleConosco/sejaumresidente.html')
+    return render(request, 'faleConosco/sejaumresidente.html', {"rodape": rodape, "redes":redes})
 
 
 # Path Serviços
 
 def viewExames(request):
-    return render(request, 'servicos/exames.html')
+    return render(request, 'servicos/exames.html', {"rodape": rodape, "redes":redes})
 
 def viewConsultas(request):
-    return render(request, 'servicos/consultas.html')
+    return render(request, 'servicos/consultas.html', {"rodape": rodape, "redes":redes})
 
 def viewTelemedicina(request):
-    return render(request, 'servicos/telemedicina.html')
+    return render(request, 'servicos/telemedicina.html', {"rodape": rodape, "redes":redes})
 
 @login_required(login_url='/acesso-paciente')
 def viewResultadoExame(request):
-    return render(request, "resultadoexame.html", {})
+    return render(request, "resultadoexame.html", {"rodape": rodape, "redes":redes})
 
 
 #REGISTER AND LOGIN

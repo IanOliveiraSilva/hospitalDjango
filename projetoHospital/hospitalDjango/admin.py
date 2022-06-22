@@ -109,3 +109,11 @@ class Galeria(admin.ModelAdmin):
 @admin.register(NossaMissao)
 class NossaMissao(admin.ModelAdmin):
     list_display = ('Titulo', )
+
+@admin.register(InformacaoRodape)
+class InformacaoRodape(admin.ModelAdmin):
+    list_display = ('Titulo', )
+
+@admin.register(RedesSociais)
+class RedesSociais(admin.ModelAdmin):
+    list_display = ('Titulo', )
