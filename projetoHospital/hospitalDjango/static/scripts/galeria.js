@@ -1,4 +1,4 @@
-const $modal = document.querySelector(".modal");
+$modal = document.querySelector(".modal");
 let images = document.querySelectorAll(".galery-image");
 
 const $modalImg = document.querySelector(".modal-image");

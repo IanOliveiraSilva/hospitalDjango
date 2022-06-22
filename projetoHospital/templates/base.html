@@ -448,8 +448,7 @@
           />
           {% for item in rodape|slice:":1" %}
           <span class="footer__adress"
-            >Telefone: {{ item.Telefone }} {{ item.Rua }}, {{ item.Numero }} - {{ item.Bairro }}
-            CEP: {{ item.CEP }} - {{ item.Cidade }} - {{ item.Estado }}
+            >Telefone: {{ item.Telefone }}<br/> {{ item.Rua }}, {{ item.Numero }} - {{ item.Bairro }}<br/>CEP: {{ item.CEP }} - {{ item.Cidade }} - {{ item.Estado }}
           </span>
           {% endfor %}
           <div class="medias column-center">

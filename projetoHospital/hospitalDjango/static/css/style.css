@@ -885,7 +885,6 @@ footer {
 .next {
   text-decoration: none;
   color: var(--darkGreen);
-  z-index: 3;
   cursor: pointer;
   position: relative;
   font-size: 70px;
