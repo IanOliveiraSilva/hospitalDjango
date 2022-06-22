@@ -24,15 +24,18 @@ Laureano - Nossa Missão {% endblock titulo %} {% block body %}
 </div>
 
 <h1 class="pags-title">Missão, Visão e Valores</h1>
-
+{% for item in missao|slice:":1" %}
 <section class="pags-section">
   <div class="mission_title">
     <img class="mission_icon" src="{% static '/images/mountain_icon.png' %}" />
+    
+  
+
     <h2 class="pags-h2">Missão</h2>
+    
   </div>
   <p class="pags-text">
-    Promover o cuidado aos pacientes, familiares e colaboradores em toda a sua
-    plenitude, através da excelência, inovação e na geração de conhecimento.
+    {{ item.Missao }}
   </p>
 
   <div class="mission_title">
@@ -40,16 +43,14 @@ Laureano - Nossa Missão {% endblock titulo %} {% block body %}
     <h2 class="pags-h2">Política de Qualidade</h2>
   </div>
   <p class="pags-text">
-    Fornecer atendimento oncológico aos nossos clientes com segurança e
-    qualidade, atendendo a todos os requisitos aplicáveis e melhorando
-    continuamente os nossos processos.
+    {{item.PoliticadeQualidade}}
   </p>
 
   <div class="mission_title">
     <img class="mission_icon" src="{% static '/images/goal_icon.png' %}" />
     <h2 class="pags-h2">Propósito</h2>
   </div>
-  <p class="pags-text">Proteger as pessoas, valorizando a vida.</p>
+  <p class="pags-text">{{item.Proposito}}</p>
 
   
   <div class="mission_title">
@@ -57,7 +58,7 @@ Laureano - Nossa Missão {% endblock titulo %} {% block body %}
     <h2 class="pags-h2">Valores</h2>
   </div>
   <p class="pags-text">
-    Altruísmo, compromisso, ética, humanidade e integridade.
+    {{item.Valores}}
   </p>
 
   <div class="mission_title">
@@ -65,10 +66,10 @@ Laureano - Nossa Missão {% endblock titulo %} {% block body %}
     <h2 class="pags-h2">Visão</h2>
   </div>
   <p class="pags-text">
-    Ser o melhor centro filantrópico de atendimento oncológico do Nordeste até
-    2025, com foco na sustentabilidade, qualidade e valor assistencial.
+    {{item.Visao}}
   </p>
 </section>
+{% endfor %}
 
 <div class="other-pags-links">
   <ul>

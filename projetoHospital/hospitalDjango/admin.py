@@ -105,3 +105,7 @@ class Galeria(admin.ModelAdmin):
          return format_html(
             f"<img src='{obj.Foto.url}' width='{obj.Foto.width}' height='{obj.Foto.height}' style=''/>")
     readonly_fields = ['FotoGaleria_preview']
+
+@admin.register(NossaMissao)
+class NossaMissao(admin.ModelAdmin):
+    list_display = ('Titulo', )
