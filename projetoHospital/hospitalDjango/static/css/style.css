@@ -1246,17 +1246,16 @@ p.pags-text {
 }
 
 .donate {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   width: 80%;
-  grid-template-columns: auto auto auto auto;
   justify-content: space-between;
+  align-items: center;
 }
 
-.donate-wrapper {
-  width: 150px;
-  height: 150px;
-  cursor: pointer;
-  margin-bottom: 35px;
+.small-responsive{
+  display: none;
 }
 
 .donate-image {
@@ -1264,22 +1263,27 @@ p.pags-text {
   height: 150px;
   width: 150px;
   border-radius: 20px;
+  cursor: pointer;
 }
 
 .donate-image-mini {
-  position: absolute;
-  left: 0;
   height: 46%;
   width: auto;
   border-radius: 25%;
   margin: 1px;
 }
 
+.mini-image {
+  height: 100%;
+  width: 69px;
+  position: absolute;
+  left: 0;
+}
+
 .donate-info-wrapper {
   position: relative;
   display: flex;
   justify-content: center;
-  display: none;
   width: 400px;
   height: 150px;
   border-radius: 20px;
@@ -1311,6 +1315,7 @@ p.pags-text {
   white-space: pre-line;
   font-weight: var(--font-semi-bold);
   font-size: 16px;
+  margin-left: 15px;
 }
 
 .news-main-title {
@@ -1528,6 +1533,7 @@ p.pags-text {
   height: 100%;
   width: 100%;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .galery-image:hover {
@@ -1535,7 +1541,11 @@ p.pags-text {
 }
 
 .modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   display: none;
+  align-self: center;
   position: fixed;
   z-index: 3;
   left: 0;
@@ -1901,6 +1911,13 @@ p.pags-text {
   .galery-image-wrapper {
     max-height: 155px;
   }
+
+  /*============================ D O N A T E ===================================*/
+  .donate {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+  }
 }
 
 @media Screen and (max-width: 767px) {
@@ -1977,7 +1994,6 @@ p.pags-text {
     width: 80%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-   
   }
 
   .smallDevice-menu-icone-img {
@@ -1986,7 +2002,7 @@ p.pags-text {
     width: 6rem;
     border-radius: 4rem;
   }
-/*
+  /*
   .smallDevice-menu-legenda {
     
   }
@@ -2099,12 +2115,6 @@ p.pags-text {
 
   .next {
     display: none;
-  }
-  /*============================ D O N A T E ===================================*/
-
-  .donate {
-    width: 100%;
-    grid-template-columns: auto auto auto;
   }
 
   /*============================ G U I A  M E D I C O ==============================*/
@@ -2276,6 +2286,11 @@ p.pags-text {
   .galery-image-wrapper {
     max-height: 220px;
   }
+
+  /*============================ D O N A T E ===================================*/
+  .donate {
+    grid-template-columns: auto auto auto;
+  }
 }
 
 @media Screen and (max-width: 560px) {
@@ -2305,15 +2320,6 @@ p.pags-text {
 
   .navegacao-link {
     font-size: 14px;
-  }
-
-  /*============================ D O N A T E ===================================*/
-
-  .donate {
-    display: grid;
-    width: 100%;
-    grid-template-columns: auto auto;
-    justify-content: space-between;
   }
 
   /* =============================  N O T I C I A S =================================*/
@@ -2385,6 +2391,11 @@ p.pags-text {
   .galery-image-wrapper {
     max-height: 230px;
   }
+
+  /*============================ D O N A T E ===================================*/
+  .donate {
+    grid-template-columns: auto auto;
+  }
 }
 
 @media Screen and (max-width: 365px) {
@@ -2430,18 +2441,16 @@ p.pags-text {
   /*============================ D O N A T E ===================================*/
 
   .donate {
+    display: none;
+  }
+
+  .small-responsive{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-  }
-
-  .donate-wrapper {
-    width: 100%;
-    height: 150px;
-  }
-
-  .donate-image {
-    display: none;
+    gap: 20px;
   }
 
   .donate-image-mini {
