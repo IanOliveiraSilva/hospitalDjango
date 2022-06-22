@@ -1176,6 +1176,18 @@ footer {
   line-height: 1.5;
 }
 
+.mission_title {
+  display: flex;
+  align-items: center;
+}
+
+.mission_icon {
+  display: flex;
+  max-width: 40px;
+  height: auto;
+  margin-right: 5px;
+}
+
 p.pags-text {
   margin-bottom: 40px;
 }
@@ -1440,6 +1452,7 @@ p.pags-text {
   transform: 1s;
   padding: 15px;
 }
+
 .list-title {
   font-weight: 700;
   font-size: var(--normal-font-size);
@@ -1477,6 +1490,15 @@ p.pags-text {
   color: var(--grey);
   font-weight: var(--font-semi-bold);
   margin-right: 30px;
+}
+
+/*============================= Transparência ==================================*/
+.sub-list-title {
+  font-size: var(--small-font-size);
+}
+
+.edital-link {
+  color: var(--darkGreen);
 }
 
 /*============================= Galeria ==================================*/
@@ -2457,7 +2479,7 @@ p.pags-text {
   }
 
   /*============================= Guia Medico ==================================*/
-  
+
   .list-title {
     font-size: var(--small-font-size);
   }
@@ -2474,14 +2496,14 @@ p.pags-text {
 
 /*============================= LOAD ==================================*/
 
- :root {
+:root {
   --firstLayer: #b6d474;
   --secondLayer: #7ebd42;
   --thirdLayer: #038b45;
   --fourthLayer: #008f43;
 }
 
-.load{
+.load {
   background-color: var(--shadow);
   overflow: hidden;
   gap: 15px;
@@ -2558,19 +2580,19 @@ p.pags-text {
 
 @keyframes rotate {
   0% {
-    transform: rotateZ(-360deg)
+    transform: rotateZ(-360deg);
   }
   100% {
-    transform: rotateZ(0deg)
+    transform: rotateZ(0deg);
   }
 }
 
 @keyframes rotate2 {
   0% {
-    transform: rotateZ(360deg)
+    transform: rotateZ(360deg);
   }
   100% {
-    transform: rotateZ(0deg)
+    transform: rotateZ(0deg);
   }
 }
 

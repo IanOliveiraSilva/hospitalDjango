@@ -12,6 +12,5 @@ function onReady(callback) {
   }
   
   onReady(function() {
-    // setVisible('.wrapper', true);
     setVisible('.load', false);
   });
