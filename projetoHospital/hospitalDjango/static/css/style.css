@@ -1745,7 +1745,7 @@ p.pags-text {
     margin-left: 5%;
   }
 
-  /* =====================================FOOTER===================================== */
+  /* ===================================FOOTER===================================== */
   .footer__logo {
     width: 150px;
     margin-left: -60px;
@@ -1763,7 +1763,7 @@ p.pags-text {
     width: 30px;
   }
 
-  /* ================================= P A G =========================================*/
+  /* ================================= P A G =======================================*/
   .pags-title {
     padding-left: 10px;
     padding-top: 15px;
@@ -1945,32 +1945,33 @@ p.pags-text {
   }
 
   .smallDevice-menu-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    position: relative;
+    width: 100%;
   }
 
   .smallDevice-menu-icone {
-    flex-direction: row;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+   
   }
 
   .smallDevice-menu-icone-img {
-    width: 40%;
-    border-radius: 50%;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    justify-content: center;
+    display: block;
+    gap: 10px;
+    width: 6rem;
+    border-radius: 4rem;
   }
-
+/*
   .smallDevice-menu-legenda {
-    display: flex;
+    
   }
 
   .smallDevice-menu-legenda-lista {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: baseline;
-    justify-content: center;
-  }
+   
+  }*/
 
   /*============================== N O T Í C I A S =================================*/
 
@@ -2007,7 +2008,7 @@ p.pags-text {
     font-size: 16px;
   }
 
-  /*============================ C O N V E N I O S ===================================*/
+  /*============================ C O N V E N I O S =================================*/
 
   .cooperative--wrapper {
     display: none;
@@ -2029,7 +2030,7 @@ p.pags-text {
     display: none;
   }
 
-  /* ================================= P A G =========================================*/
+  /* ================================= P A G =======================================*/
 
   .pags-image-bg-lightgrey {
     width: 140px;

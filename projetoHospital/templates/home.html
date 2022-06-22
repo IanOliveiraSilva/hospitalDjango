@@ -30,49 +30,47 @@
 
   <section class="smallDevice-menu-container">
     <div class="smallDevice-menu-icone">
-      <img src="{% static '/images/guiamedico-img.png' %}"
-        alt="guia-medico"
+      <div class="smallDevice-menu-div"> 
+        <img src="{% static '/images/guiamedico-img.png' %}"
+         alt="/"
+         class="smallDevice-menu-icone-img"
+         onclick="sendTo('{% url 'guia-medico' %}')"/>
+        <a class="smallDevice-menu-legenda-lista">Guia Médico</a>
+      </div>
+
+      <div class="smallDevice-menu-div">
+        <img src="{% static '/images/convenios-img.png' %}"
+        alt="convênios"
         class="smallDevice-menu-icone-img"
-       onclick="sendTo('{% url 'guia-medico' %}')"/>
+        onclick="sendTo('{% url 'convenio' %}')"/>
+        <a class="smallDevice-menu-legenda-lista">Convênios</a>
+      </div>
 
-      <img src="{% static '/images/convenios-img.png' %}"
-       alt="convênios"
-       class="smallDevice-menu-icone-img"
-      onclick="sendTo('{% url 'convenio' %}')"/>
+      <div class="smallDevice-menu-div">
+        <img src="{% static '/images/doacao-img.png' %}"
+          alt="doação"
+          class="smallDevice-menu-icone-img"
+        onclick="sendTo('{% url 'doacao' %}')"/>
+        <a class="smallDevice-menu-legenda-lista">Doação</a>
+      </div>
 
-      <img src="{% static '/images/doacao-img.png' %}"
-        alt="doação"
+      <div class="smallDevice-menu-div">
+        <img src="{% static '/images/eventos-img.png' %}"
+        alt="transparencia"
         class="smallDevice-menu-icone-img"
-       onclick="sendTo('{% url 'doacao' %}')"/>
+        onclick="sendTo('{% url 'eventos' %}')"/> 
+        <a class="smallDevice-menu-legenda-lista">Eventos</a>
+      </div>
 
-      <img src="{% static '/images/eventos-img.png' %}"
-       alt="transparencia"
-       class="smallDevice-menu-icone-img"
-      onclick="sendTo('{% url 'eventos' %}')"/> 
-
-      <img src="{% static '/images/galerias-img.png' %}"
-        alt="eventos"
-        class="smallDevice-menu-icone-img"
-       onclick="sendTo('{% url 'galeria' %}')"/>
+      <div class="smallDevice-menu-div">
+        <img src="{% static '/images/galerias-img.png' %}"
+          alt="eventos"
+          class="smallDevice-menu-icone-img"
+        onclick="sendTo('{% url 'galeria' %}')"/>
+        <a class="smallDevice-menu-legenda-lista">Galeria de Fotos</a>
+      </div>
     </div>
 
-    <div class="smallDevice-menu-legenda">
-      <li class="smallDevice-menu-legenda-lista">
-        <a>Guia Médico</a>
-      </li>
-      <li class="smallDevice-menu-legenda-lista">
-        <a>Convênios</a>
-      </li>
-      <li class="smallDevice-menu-legenda-lista">
-        <a>Doação</a>
-      </li>
-      <li class="smallDevice-menu-legenda-lista">
-        <a>Eventos</a>
-      </li>
-      <li class="smallDevice-menu-legenda-lista">
-        <a>Galeria</a>
-      </li>
-    </div>
   </section>
     
   <div class="dividing-line dividing-line--section"></div>
