@@ -28,66 +28,62 @@ Laureano - Trabalhe Conosco{% endblock titulo %} {% block body %}
 <section class="pags-section column-center">
   <h2 class="pags-h2 row-center">Faça parte do Laureano</h2>
 
-  
-
-<form id="formulario" method="post" action="">
-    <p>
-      <label for="amount">Enter amount</label>
-      <div class="flex">
-        <span class="currency">$</span>
-        <input id="amount" name="amount" type="text" maxlength="15" />
-      </div>
-    </p>
-  </form>
-  
-  
-  {% comment %} <form id="formulario" action="/action_page.php">
-    <label for="form-nome">Seu nome</label>
+  <form id="formulario" class="column-j-start" action="/action_page.php">
+    <label class="label" for="form-nome">Seu nome*</label>
     <input
       type="text"
       id="form-nome"
       name="firstname"
       placeholder="Nome completo"
+      required
     />
 
-    <label for="form-email">Seu email</label>
-    <input
-      type="email"
-      id="form-email"
-      name="lastname"
-      placeholder="Email"
-    />
+    <div class="row-j-start form-double-wrapper">
+      <div class="column-j-start form-double">
+        <label class="label" for="form-email">Seu email*</label>
+        <input
+          type="email"
+          id="form-email"
+          name="lastname"
+          placeholder="Email"
+          required
+        />
+      </div>
 
-    <label for="form-telefone">Seu telefone</label>
-    <input
-      type="text"
-      id="form-telefone"
-      name="lastname"
-      placeholder="Telefone"
-    />
+      <div class="column-j-start form-double">
+        <label class="label" for="form-telefone">Seu telefone*</label>
+        <input
+          type="text"
+          id="form-telefone"
+          name="lastname"
+          placeholder="Telefone"
+          pattern="\([0-9]{2}\)[\s][0-9]{5}-[0-9]{4}"
+          required
+        />
+      </div>
+    </div>
 
-    <label for="form-area">Área Pretendida</label>
-    <select id="form-area" name="form-area">
+    <label class="label" for="form-area">Área Pretendida*</label>
+    <select id="form-area" name="form-area" required>
+      <option value="">Selecione uma área</option>
       {% for esp in especialidade %}
-          <option value="{{ esp.Especialidade }}">{{ esp.Especialidade }}</option>
+      <option value="{{ esp.Especialidade }}">{{ esp.Especialidade }}</option>
       {% endfor %}
     </select>
 
-    <div class="fileUpload btn btn-primary">
-      <span>Currículo</span>
-      <input type="file" class="upload" />
+    <div class="fileUpload column-j-start">
+      <span class="label">Currículo*</span>
+      <input type="file" class="upload" required/>
     </div>
-    
-    <label for="form-mensagem">Mensagem</label>
-    <input
-      type="text"
-      id="form-mensagem"
-      name="lastname"
-      placeholder="Your last name.."
-    />
 
-    <input type="submit" value="Submit" />
-  </form> {% endcomment %}
+    <label class="label" for="form-mensagem">Mensagem</label>
+    <textarea>
+    </textarea>
+
+    <input type="submit" value="Enviar"/>
+  </form>
 </section>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 {% endblock body %}

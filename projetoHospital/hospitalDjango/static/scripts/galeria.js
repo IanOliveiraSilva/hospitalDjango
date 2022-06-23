@@ -1,4 +1,4 @@
-$modal = document.querySelector(".modal");
+const $modalGaleria = document.querySelector(".modal");
 let images = document.querySelectorAll(".galery-image");
 
 const $modalImg = document.querySelector(".modal-image");
@@ -36,7 +36,7 @@ function displayImage() {
   for (let i = 0; i < images.length; i++) {
     images[i].onclick = function () {
       let list = [];
-      $modal.style.display = "block";
+      $modalGaleria.style.display = "block";
       $modalImg.src = this.src;
       $modalImg.setAttribute("categoria", images[i].getAttribute("categoria"));
       $modalTitle.innerHTML = this.alt;
@@ -58,7 +58,7 @@ function imagesByCategory(list, categoria) {
 }
 
 $closeBtn.onclick = function () {
-  $modal.style.display = "none";
+  $modalGaleria.style.display = "none";
 };
 
 function selectPrevious(list) {
