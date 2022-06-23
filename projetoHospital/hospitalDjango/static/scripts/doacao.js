@@ -11,7 +11,7 @@ function displayInfos() {
     };
   }
 }
-
+  
 function close(i) {
   $closeBtnDontation[i].onclick = function () {
     $modalDoacao[i].style.display = "none";
