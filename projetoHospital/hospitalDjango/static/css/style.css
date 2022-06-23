@@ -2083,8 +2083,12 @@ input[type=submit]:hover {
     display: none;
   }
 
-  .dividing-line {
+  .dividing-line--news {
     display: none;
+  }
+
+  .title-section {
+    margin-bottom: 0px;
   }
 
   /* =============================  N O T I C I A =================================*/
