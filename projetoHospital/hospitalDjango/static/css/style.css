@@ -2127,6 +2127,10 @@ input[type=submit]:hover {
     display: none;
   }
 
+  .dividing-line {
+    display: none;
+  }
+
   .news--content--button {
     display: none;
   }
@@ -2136,7 +2140,14 @@ input[type=submit]:hover {
   }
 
   .title-section {
-    margin-bottom: 0px;
+    margin-bottom: 20px;
+  }
+
+  .mobile-dividing-line {
+    height: 2px;
+    width: 80vh;
+    background-color: rgba(187, 187, 187, 0.448);
+    margin-bottom: 20px;
   }
 
   /* =============================  N O T I C I A =================================*/
