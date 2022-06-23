@@ -2102,6 +2102,10 @@ input[type=submit]:hover {
 
   /*============================ C O N V E N I O S =================================*/
 
+  .cooperative-container {
+    display: none;
+  }
+  
   .cooperative--wrapper {
     display: none;
   }
@@ -2121,6 +2125,9 @@ input[type=submit]:hover {
   .next {
     display: none;
   }
+
+  
+  
 
   /* ================================= P A G =======================================*/
 
@@ -2148,7 +2155,9 @@ input[type=submit]:hover {
   .navegacao-link {
     font-size: 14px;
   }
-
+  
+  
+  }
   /*=============== P R Ê M I O S     &     C E R T I F I C A Ç Õ E S ===============*/
 
   .certificate--wrapper {
@@ -2219,7 +2228,7 @@ input[type=submit]:hover {
   .galery-image-wrapper {
     max-height: 255px;
   }
-}
+
 
 @media only screen and (max-width: 700px) {
   .modal-content {
