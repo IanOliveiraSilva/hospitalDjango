@@ -117,7 +117,8 @@ def viewNossaMissao(request):
 
 # Path FaleConosco
 def viewTrabalheConosco(request):
-    return render(request, 'faleConosco/trabalheconosco.html', {"rodape": rodape, "redes":redes})
+    especialidade = Medico.objects.values('Especialidade').distinct()
+    return render(request, 'faleConosco/trabalheconosco.html', {"especialidade":especialidade, "rodape": rodape, "redes":redes})
 
 def viewOuvidoria(request):
     return render(request, "faleConosco/ouvidoria.html", {"rodape": rodape, "redes":redes})

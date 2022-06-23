@@ -1,14 +1,93 @@
-{% extends "base.html" %}
-{% load static %}
+{% extends "base.html" %} {% load static %} {% block titulo %}Hospital Napoleão
+Laureano - Trabalhe Conosco{% endblock titulo %} {% block body %}
 
-{% block titulo %}HOSPITAL LAUREANO{% endblock titulo %}
+<div class="navegacao">
+  <ul>
+    <il>
+      <a class="navegacao-link" href="{% url 'home' %}">
+        Início
+        <i class="uil uil-angle-double-right"></i>
+      </a>
+    </il>
+    <il>
+      <a class="navegacao-link">
+        Fale Conosco
+        <i class="uil uil-angle-double-right"></i>
+      </a>
+    </il>
+    <il>
+      <a class="navegacao-link" href="{% url 'trabalheConosco' %}">
+        Trabalhe Conosco
+      </a>
+    </il>
+  </ul>
+</div>
 
+<h1 class="pags-title">Trabalhe Conosco</h1>
 
-{% block body %}
+<section class="pags-section column-center">
+  <h2 class="pags-h2 row-center">Faça parte do Laureano</h2>
 
-<h1>TESTE</h1>
+  
 
+<form id="formulario" method="post" action="">
+    <p>
+      <label for="amount">Enter amount</label>
+      <div class="flex">
+        <span class="currency">$</span>
+        <input id="amount" name="amount" type="text" maxlength="15" />
+      </div>
+    </p>
+  </form>
+  
+  
+  {% comment %} <form id="formulario" action="/action_page.php">
+    <label for="form-nome">Seu nome</label>
+    <input
+      type="text"
+      id="form-nome"
+      name="firstname"
+      placeholder="Nome completo"
+    />
 
+    <label for="form-email">Seu email</label>
+    <input
+      type="email"
+      id="form-email"
+      name="lastname"
+      placeholder="Email"
+    />
 
-<a href="{% url 'home' %}">Back</a>
+    <label for="form-telefone">Seu telefone</label>
+    <input
+      type="text"
+      id="form-telefone"
+      name="lastname"
+      placeholder="Telefone"
+    />
+
+    <label for="form-area">Área Pretendida</label>
+    <select id="form-area" name="form-area">
+      {% for esp in especialidade %}
+          <option value="{{ esp.Especialidade }}">{{ esp.Especialidade }}</option>
+      {% endfor %}
+    </select>
+
+    <div class="fileUpload btn btn-primary">
+      <span>Currículo</span>
+      <input type="file" class="upload" />
+    </div>
+    
+    <label for="form-mensagem">Mensagem</label>
+    <input
+      type="text"
+      id="form-mensagem"
+      name="lastname"
+      placeholder="Your last name.."
+    />
+
+    <input type="submit" value="Submit" />
+  </form> {% endcomment %}
+</section>
+
 {% endblock body %}

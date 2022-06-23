@@ -33,10 +33,10 @@ urlpatterns = [
     path('quem-somos/galeria', viewGaleria, name = "galeria"),
 
     # Fale Conosco
-    path('fale-conosco/ouvidoria', viewOuvidoria, name='fale-conosco'),
+    path('fale-conosco/ouvidoria', viewOuvidoria, name='ouvidoria'),
     path('fale-conosco/pesquisa-de-satisfacao', PesquisaSatisfacao, name='pesquisaSatisfacao'),
-    path('fale-conosco/seja-um-residente', viewSejaumResidente, name='fale-conosco'),
-    path('fale-conosco/trabalhe-conosco', viewTrabalheConosco, name='fale-conosco'),
+    path('fale-conosco/seja-um-residente', viewSejaumResidente, name='sejaResidente'),
+    path('fale-conosco/trabalhe-conosco', viewTrabalheConosco, name='trabalheConosco'),
     
     # Login
     path('registrar-paciente', viewRegister, name="register-user"),

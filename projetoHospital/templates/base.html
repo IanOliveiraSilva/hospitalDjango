@@ -379,22 +379,22 @@
             </div>
             <div class="categories last">
               <ul class="categories-options">
-                <li class="categories-options--category" onclick="sendTo('#');">
+                <li class="categories-options--category" onclick="sendTo('{% url 'trabalheConosco' %}')">
                   <span class="categories-options--category-link"
                     >Trabalhe Conosco</span
                   >
                 </li>
-                <li class="categories-options--category" onclick="sendTo('#');">
+                <li class="categories-options--category" onclick="sendTo('{% url 'ouvidoria' %}')">
                   <span class="categories-options--category-link"
                     >Ouvidoria</span
                   >
                 </li>
-                <li class="categories-options--category" onclick="sendTo('#');">
+                <li class="categories-options--category" onclick="sendTo('{% url 'pesquisaSatisfacao' %}')">
                   <span class="categories-options--category-link"
                     >Pesquisa de Satisfação</span
                   >
                 </li>
-                <li class="categories-options--category" onclick="sendTo('#');">
+                <li class="categories-options--category" onclick="sendTo('{% url 'sejaResidente' %}')">
                   <span class="categories-options--category-link"
                     >Seja um Residente Laureano</span
                   >
@@ -531,5 +531,9 @@
   <script
     type="text/javascript"
     src='{% static "/scripts/loading.js" %}'
+  ></script>
+  <script
+    type="text/javascript"
+    src='{% static "/scripts/forms.js" %}'
   ></script>
 </html>

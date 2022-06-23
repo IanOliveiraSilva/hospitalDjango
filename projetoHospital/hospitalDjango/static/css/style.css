@@ -1654,6 +1654,38 @@ p.pags-text {
   cursor: pointer;
 }
 
+/*============================= Trabalhe Conosco ==================================*/
+#formulario{
+  width: 80%;
+}
+
+input[type=text], input[type=email], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid var(--darkGreen);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+
 /* =  M E D I U M    V I E P O R T S ====================================================*/
 @media Screen and (max-width: 1253px) {
   /* =====================================FOOTER===================================== */
@@ -1984,31 +2016,50 @@ p.pags-text {
 
   .smallDevice-menu-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
     position: relative;
-    width: 100%;
+    width: 90%;
   }
 
   .smallDevice-menu-icone {
-    width: 80%;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 20%);
+    margin-bottom: 30px;
+    justify-content: center;
+    justify-items: space-between;
+  }
+
+  .smallDevice-menu-div{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .smallDevice-menu-div--img {
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    border-width: 2px;
+    border-color: #C4C4C4;
+    border-style: solid;
+    height: 70px;
+    width: 70px;
+
   }
 
   .smallDevice-menu-icone-img {
-    display: block;
-    gap: 10px;
-    width: 6rem;
-    border-radius: 4rem;
-  }
-  /*
-  .smallDevice-menu-legenda {
-    
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 16px;
   }
 
-  .smallDevice-menu-legenda-lista {
-   
-  }*/
+  .smallDevice-menu-legenda {
+    display: grid;
+    margin-top: 20px;
+    justify-content: center;
+    text-align: center;
+  }
 
   /*============================== N O T Í C I A S =================================*/
 

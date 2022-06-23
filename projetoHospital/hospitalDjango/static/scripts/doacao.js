@@ -1,10 +1,11 @@
 const $images = document.querySelectorAll(".donate-image");
-let $modal = document.querySelectorAll(".modal");
+const $modal = document.querySelectorAll(".modal");
 let $closeBtnDontation = document.querySelectorAll(".close");
 
 function displayInfos() {
   for (let i = 0; i < $images.length; i++) {
     $images[i].onclick = function () {
+      console.log("a");
       $modal[i].style.display = "flex";
       close(i);
     };

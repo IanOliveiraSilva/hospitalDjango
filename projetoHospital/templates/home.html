@@ -31,43 +31,53 @@
   <section class="smallDevice-menu-container">
     <div class="smallDevice-menu-icone">
       <div class="smallDevice-menu-div"> 
-        <img src="{% static '/images/guiamedico-img.png' %}"
-         alt="/"
+        <div class="smallDevice-menu-div--img">
+        <img src="{% static '/images/guia-medico-png.png' %}"
+         alt="/" 
          class="smallDevice-menu-icone-img"
-         onclick="sendTo('{% url 'guia-medico' %}')"/>
-        <a class="smallDevice-menu-legenda-lista">Guia Médico</a>
+         onclick="sendTo('{% url 'guia-medico' %}')"/> 
+        </div >
+        <a class="smallDevice-menu-legenda">Guia Médico</a>
       </div>
 
       <div class="smallDevice-menu-div">
-        <img src="{% static '/images/convenios-img.png' %}"
+        <div class="smallDevice-menu-div--img">
+        <img src="{% static '/images/convenio-png.png' %}"
         alt="convênios"
         class="smallDevice-menu-icone-img"
         onclick="sendTo('{% url 'convenio' %}')"/>
-        <a class="smallDevice-menu-legenda-lista">Convênios</a>
+        </div>
+        <a class="smallDevice-menu-legenda">Convênios</a>
       </div>
 
       <div class="smallDevice-menu-div">
-        <img src="{% static '/images/doacao-img.png' %}"
+        <div class="smallDevice-menu-div--img">
+        <img src="{% static '/images/doacao-png.png' %}"
           alt="doação"
           class="smallDevice-menu-icone-img"
         onclick="sendTo('{% url 'doacao' %}')"/>
-        <a class="smallDevice-menu-legenda-lista">Doação</a>
+        </div>
+        <a class="smallDevice-menu-legenda">Doação</a>
       </div>
 
       <div class="smallDevice-menu-div">
-        <img src="{% static '/images/eventos-img.png' %}"
+        <div class="smallDevice-menu-div--img">
+        <img src="{% static '/images/eventos-png.png' %}"
         alt="transparencia"
         class="smallDevice-menu-icone-img"
         onclick="sendTo('{% url 'eventos' %}')"/> 
-        <a class="smallDevice-menu-legenda-lista">Eventos</a>
+        </div>
+        <a class="smallDevice-menu-legenda">Eventos</a>
       </div>
 
       <div class="smallDevice-menu-div">
-        <img src="{% static '/images/galerias-img.png' %}"
+        <div class="smallDevice-menu-div--img">
+        <img src="{% static '/images/galeria-png.png' %}"
           alt="eventos"
           class="smallDevice-menu-icone-img"
         onclick="sendTo('{% url 'galeria' %}')"/>
-        <a class="smallDevice-menu-legenda-lista">Galeria de Fotos</a>
+        </div>
+        <a class="smallDevice-menu-legenda">Galeria de Fotos</a>
       </div>
     </div>
 
