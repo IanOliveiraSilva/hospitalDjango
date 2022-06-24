@@ -1,5 +1,5 @@
 {% extends "base.html" %} {% load static %} {% block titulo %}Hospital Napoleão
-Laureano - Trabalhe Conosco{% endblock titulo %} {% block body %}
+Laureano - Seja um Residente Laureano{% endblock titulo %} {% block body %}
 
 <div class="navegacao">
   <ul>
@@ -16,14 +16,14 @@ Laureano - Trabalhe Conosco{% endblock titulo %} {% block body %}
       </a>
     </il>
     <il>
-      <a class="navegacao-link" href="{% url 'trabalheConosco' %}">
-        Trabalhe Conosco
+      <a class="navegacao-link" href="{% url 'sejaResidente' %}">
+        Seja um Residente
       </a>
     </il>
   </ul>
 </div>
 
-<h1 class="pags-title">Trabalhe Conosco</h1>
+<h1 class="pags-title">Seja um Residente Laureano</h1>
 
 <section class="pags-section column-center">
   <h2 class="pags-h2 row-center">Faça parte do Laureano</h2>
@@ -77,8 +77,7 @@ Laureano - Trabalhe Conosco{% endblock titulo %} {% block body %}
     </div>
 
     <label class="label" for="form-mensagem">Mensagem</label>
-    <textarea>
-    </textarea>
+    <textarea placeholder="Informações complementares"></textarea>
 
     <input type="submit" value="Enviar"/>
   </form>
