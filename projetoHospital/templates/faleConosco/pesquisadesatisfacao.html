@@ -1,22 +1,483 @@
-{% extends "base.html" %}
-{% load static %}
+{% extends "base.html" %} {% load static %} {% block titulo %}Hospital Napoleão
+Laureano - Pesquisa de Satisfação{% endblock titulo %} {% block body %}
 
-{% block titulo %}HOSPITAL LAUREANO{% endblock titulo %}
+<div class="navegacao">
+  <ul>
+    <il>
+      <a class="navegacao-link" href="{% url 'home' %}">
+        Início
+        <i class="uil uil-angle-double-right"></i>
+      </a>
+    </il>
+    <il>
+      <a class="navegacao-link">
+        Fale Conosco
+        <i class="uil uil-angle-double-right"></i>
+      </a>
+    </il>
+    <il>
+      <a class="navegacao-link" href="{% url 'pesquisaSatisfacao' %}">
+        Pesquisa de Satisfação
+      </a>
+    </il>
+  </ul>
+</div>
 
+<h1 class="pags-title">Pesquisa de Satisfação</h1>
 
-{% block body %}
+<section class="pags-section column-center">
+  <h3 class="pags-h3 row-center">
+    Queremos saber a sua opinião sobre a qualidade de serviços prestados pela
+    instituição.<br />
+    Responda a enquete abaixo e ajude-nos a melhorar nosso atendimento.
+  </h3>
 
-<h1>TESTE</h1>
+  <form id="formulario" class="column-j-start" action="/action_page.php">
+    <div class="pesquisa">
+      <div class="colunas row-center">
+        <div class="avaliacao">Muito Insatisfeito</div>
+        <div class="avaliacao">Insatisfeito</div>
+        <div class="avaliacao">Regular</div>
+        <div class="avaliacao">Satisfeito</div>
+        <div class="avaliacao">Muito Satisfeito</div>
+        <div class="avaliacao">Não Aplicável</div>
+      </div>
 
-</br>
-</br>
-</br>
-</br>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Enviar Pesquisa</button>
-</form>
+      <div class="fix">
+        <div class="titulo-classe column-center">
+          <h2>Atendimento</h2>
+        </div>
+        <div class="column-center">
+          <div class="item-avaliacao row-center">
+            <div class="item">Clareza nas informações recebidas</div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+          <div class="dividing-line dividing-line--avaliacao"></div>
+          <div class="item-avaliacao row-center">
+            <div class="item">Cordialidade do atendente</div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+          <div class="dividing-line dividing-line--avaliacao"></div>
+          <div class="item-avaliacao row-center">
+            <div class="item">Tempo de espera para o atendimento</div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+          <div class="dividing-line dividing-line--avaliacao"></div>
+          <div class="item-avaliacao row-center">
+            <div class="item">Facilidade de agendar a consulta</div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dividing-line dividing-line--pesquisa"></div>
 
-<a href="{% url 'home' %}">Back</a>
+      <div class="fix">
+        <div class="titulo-classe column-center">
+          <h2>Acesso</h2>
+        </div>
+        <div class="column-center">
+          <div class="item-avaliacao row-center">
+            <div class="item">Facilidade de chegar ao hospital</div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dividing-line dividing-line--pesquisa"></div>
+
+      <div class="fix">
+        <div class="titulo-classe column-center">
+          <h2>Recepção</h2>
+        </div>
+        <div class="column-center">
+          <div class="item-avaliacao row-center">
+            <div class="item">
+              Clareza das informações prestadas pelos profissionais da recepção
+              sobre o seu atendimento
+            </div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+          <div class="dividing-line dividing-line--avaliacao"></div>
+          <div class="item-avaliacao row-center">
+            <div class="item">
+              Cortesia, gentileza e simpatia dos profissionais da recepção
+            </div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+          <div class="dividing-line dividing-line--avaliacao"></div>
+          <div class="item-avaliacao row-center">
+            <div class="item">Tempo de espera para o atendimento</div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+          <div class="dividing-line dividing-line--avaliacao"></div>
+          <div class="item-avaliacao row-center">
+            <div class="item">Agilidade no atendimento</div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+          <div class="dividing-line dividing-line--avaliacao"></div>
+          <div class="item-avaliacao row-center">
+            <div class="item">Disposição de resolver problemas</div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dividing-line dividing-line--pesquisa"></div>
+
+      <div class="fix">
+        <div class="titulo-classe column-center">
+          <h2>Instalações</h2>
+        </div>
+        <div class="column-center">
+          <div class="item-avaliacao row-center">
+            <div class="item">Conforto e limpeza da sala de consulta</div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+          <div class="dividing-line dividing-line--avaliacao"></div>
+          <div class="item-avaliacao row-center">
+            <div class="item">Conforto e limpeza da sala de espera</div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+          <div class="dividing-line dividing-line--avaliacao"></div>
+          <div class="item-avaliacao row-center">
+            <div class="item">Conveniência do estacionamento</div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dividing-line dividing-line--pesquisa"></div>
+
+      <div class="fix">
+        <div class="titulo-classe column-center">
+          <h2>Atendimento Médico</h2>
+        </div>
+        <div class="column-center">
+          <div class="item-avaliacao row-center">
+            <div class="item">Clareza na linguagem utilizada pelo médico</div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+          <div class="dividing-line dividing-line--avaliacao"></div>
+          <div class="item-avaliacao row-center">
+            <div class="item">
+              Orientações fornecidas para os cuidados em casa
+            </div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+          <div class="dividing-line dividing-line--avaliacao"></div>
+          <div class="item-avaliacao row-center">
+            <div class="item">Sua confiança no trabalho do médico</div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+          <div class="dividing-line dividing-line--avaliacao"></div>
+          <div class="item-avaliacao row-center">
+            <div class="item">
+              Probabilidade de recomendar este profissional a outras pessoas
+            </div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dividing-line dividing-line--pesquisa"></div>
+
+      <div class="fix">
+        <div class="titulo-classe column-center">
+          <h2>Equipe de Enfermagem</h2>
+        </div>
+        <div class="column-center">
+          <div class="item-avaliacao row-center">
+            <div class="item">
+              Prontidão da equipe de enfermagem no atendimento
+            </div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+          <div class="dividing-line dividing-line--avaliacao"></div>
+          <div class="item-avaliacao row-center">
+            <div class="item">
+              Sua confiança no trabalho da equipe de enfermagem
+            </div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+          <div class="dividing-line dividing-line--avaliacao"></div>
+          <div class="item-avaliacao row-center">
+            <div class="item">
+              Atenção da equipe de enfermagem em relação ao seu tratamento
+            </div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+          <div class="dividing-line dividing-line--avaliacao"></div>
+          <div class="item-avaliacao row-center">
+            <div class="item">Informações dadas pela equipe de enfermagem</div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dividing-line dividing-line--pesquisa"></div>
+
+      <div class="fix">
+        <div class="titulo-classe column-center">
+          <h2>Exames</h2>
+        </div>
+        <div class="column-center">
+          <div class="item-avaliacao row-center">
+            <div class="item">
+              Atenção do profissional que realizou seu exame
+            </div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+          <div class="dividing-line dividing-line--avaliacao"></div>
+          <div class="item-avaliacao row-center">
+            <div class="item">
+              Facilidade para se conseguir os resultados dos exames
+            </div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+          <div class="dividing-line dividing-line--avaliacao"></div>
+          <div class="item-avaliacao row-center">
+            <div class="item">Qualidade técnica da coleta de exame</div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dividing-line dividing-line--pesquisa"></div>
+
+      <div class="fix">
+        <div class="titulo-classe column-center">
+          <h2>Avaliação Geral</h2>
+        </div>
+        <div class="column-center">
+          <div class="item-avaliacao row-center">
+            <div class="item">
+              Avaliação geral do atendimento recebido durante sua visita
+            </div>
+            <div class="checkbox-wrapper row-center">
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+              <div class="checkbox"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dividing-line dividing-line--pesquisa"></div>
+    </div>
+    <label class="label" for="form-nome">Seu nome*</label>
+    <input
+      type="text"
+      id="form-nome"
+      name="nome"
+      placeholder="Nome completo"
+      required
+    />
+
+    <div class="row-j-start form-double-wrapper">
+      <div class="column-j-start form-double">
+        <label class="label" for="form-email">Seu email*</label>
+        <input
+          type="email"
+          id="form-email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+      </div>
+
+      <div class="column-j-start form-double">
+        <label class="label" for="form-telefone">Seu telefone*</label>
+        <input
+          type="text"
+          id="form-telefone"
+          name="telefone"
+          placeholder="Telefone"
+          pattern="\([0-9]{2}\)[\s][0-9]{5}-[0-9]{4}"
+          required
+        />
+      </div>
+    </div>
+
+    <label class="label" for="form-nome">Assunto*</label>
+    <input
+      type="text"
+      id="form-assunto"
+      name="assunto"
+      placeholder="Assunto"
+      required
+    />
+
+    <label class="label" for="form-mensagem">Mensagem*</label>
+    <textarea placeholder="Dúvidas, elogios ou sugestões" required></textarea>
+
+    <input type="submit" value="Enviar" />
+  </form>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 {% endblock body %}

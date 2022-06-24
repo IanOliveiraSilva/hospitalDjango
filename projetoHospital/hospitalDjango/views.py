@@ -14,13 +14,14 @@ redes = RedesSociais.objects.all()
 # CREATE - PESQUISA DE SATISFAÇÃO
 
 def PesquisaSatisfacao(request):
-    context = {}
-    form = FaleConoscoForm(request.POST or None)
+    # context = {}
+    # form = FaleConoscoForm(request.POST or None)
     
-    if form.is_valid():
-        form.save()
-    context['form']= form
-    return render(request, 'faleConosco/pesquisadesatisfacao.html', context, {"rodape": rodape, "redes":redes})  
+    # if form.is_valid():
+    #     form.save()
+    # context['form']= form
+    # return render(request, 'faleConosco/pesquisadesatisfacao.html', context, {"rodape": rodape, "redes":redes})  
+    return render(request, 'faleConosco/pesquisadesatisfacao.html', {"rodape": rodape, "redes":redes})  
 
 
 # READ - GUIA MÉDICO
