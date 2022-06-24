@@ -2055,7 +2055,32 @@ input[type=submit]:hover {
   }
 
   .banner {
+    position: absolute;
+    height: 70%;
     max-width: 100%;
+    top:-30px;
+  }
+
+  .banner-container {
+    position: relative;
+    top: 0;
+    width: 100vw;
+    height: 65vh;
+    margin-bottom: 20px;
+  }
+  
+  .back,
+  .forward {
+    font-size: 15px;
+    padding: 10px;
+  }
+ 
+  
+  .dot {
+    position: relative;
+    top: -180px;
+    height: 12px;
+    width: 12px;
   }
 
   .donation-button {
@@ -2066,6 +2091,7 @@ input[type=submit]:hover {
     display: grid;
     position: relative;
     width: 90%;
+    top: -160px;
   }
 
   .smallDevice-menu-icone {
@@ -2140,6 +2166,8 @@ input[type=submit]:hover {
   }
 
   .title-section {
+    position: relative;
+    top: -150px;
     margin-bottom: 20px;
   }
 
@@ -2148,6 +2176,8 @@ input[type=submit]:hover {
     width: 80vh;
     background-color: rgba(187, 187, 187, 0.448);
     margin-bottom: 20px;
+    position: relative;
+    top: -150px;
   }
 
   /* =============================  N O T I C I A =================================*/
