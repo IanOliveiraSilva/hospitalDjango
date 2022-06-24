@@ -2090,8 +2090,8 @@ input[type=submit]:hover {
   .smallDevice-menu-container {
     display: grid;
     position: relative;
-    width: 90%;
-    top: -160px;
+    width: 95%;
+    top: -130px;
   }
 
   .smallDevice-menu-icone {
@@ -2167,7 +2167,7 @@ input[type=submit]:hover {
 
   .title-section {
     position: relative;
-    top: -150px;
+    top: -130px;
     margin-bottom: 20px;
   }
 
@@ -2177,7 +2177,7 @@ input[type=submit]:hover {
     background-color: rgba(187, 187, 187, 0.448);
     margin-bottom: 20px;
     position: relative;
-    top: -150px;
+    top: -130px;
   }
 
   /* =============================  N O T I C I A =================================*/
