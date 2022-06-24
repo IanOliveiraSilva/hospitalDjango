@@ -877,6 +877,8 @@ footer {
 }
 
 .certificate--image {
+  position: relative;
+  top: 0px;
   max-width: 140px;
   max-height: 140px;
 }
@@ -2256,19 +2258,18 @@ input[type=submit]:hover {
   }
   /*=============== P R Ê M I O S     &     C E R T I F I C A Ç Õ E S ===============*/
 
-  .certificate--wrapper {
-    display: none;
-  }
-
-  .previous {
-    display: none;
-  }
-
   .image-container {
-    display: none;
+    
   }
 
   .certificate--image {
+    position: relative;
+    top: -130px;
+  }
+
+
+
+  .previous {
     display: none;
   }
 
