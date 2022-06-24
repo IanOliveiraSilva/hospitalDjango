@@ -2113,7 +2113,7 @@ input[type=submit]:hover {
     border-radius: 50%;
     justify-content: center;
     border-width: 2px;
-    border-color: #C4C4C4;
+    border-color: #E5E5E5;;
     border-style: solid;
     height: 70px;
     width: 70px;
@@ -2133,6 +2133,13 @@ input[type=submit]:hover {
     margin-top: 20px;
     justify-content: center;
     text-align: center;
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-size: 1rem;
+    color: #038C43;
+  }
+
+  .text-color-pink {
+    color: #f90051;
   }
 
   /*============================== N O T Í C I A S =================================*/
@@ -2174,7 +2181,7 @@ input[type=submit]:hover {
   .mobile-dividing-line {
     height: 2px;
     width: 80vh;
-    background-color: rgba(187, 187, 187, 0.448);
+    background-color: #E5E5E5;
     margin-bottom: 20px;
     position: relative;
     top: -130px;
