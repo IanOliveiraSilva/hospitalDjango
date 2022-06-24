@@ -878,7 +878,7 @@ footer {
 
 .certificate--image {
   position: relative;
-  top: 0px;
+  top: 0pxx;
   max-width: 140px;
   max-height: 140px;
 }
@@ -2258,13 +2258,13 @@ input[type=submit]:hover {
   }
   /*=============== P R Ê M I O S     &     C E R T I F I C A Ç Õ E S ===============*/
 
-  .image-container {
-    
-  }
+  
 
   .certificate--image {
     position: relative;
-    top: -130px;
+    top: -130pxx;
+    max-width: 140px;
+    max-height: 140px;
   }
 
 
