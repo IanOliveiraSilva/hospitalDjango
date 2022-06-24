@@ -1,14 +1,89 @@
-{% extends "base.html" %}
-{% load static %}
+{% extends "base.html" %} {% load static %} {% block titulo %}Hospital Napoleão
+Laureano - Trabalhe Conosco{% endblock titulo %} {% block body %}
 
-{% block titulo %}HOSPITAL LAUREANO{% endblock titulo %}
+<div class="navegacao">
+  <ul>
+    <il>
+      <a class="navegacao-link" href="{% url 'home' %}">
+        Início
+        <i class="uil uil-angle-double-right"></i>
+      </a>
+    </il>
+    <il>
+      <a class="navegacao-link">
+        Fale Conosco
+        <i class="uil uil-angle-double-right"></i>
+      </a>
+    </il>
+    <il>
+      <a class="navegacao-link" href="{% url 'trabalheConosco' %}">
+        Trabalhe Conosco
+      </a>
+    </il>
+  </ul>
+</div>
 
+<h1 class="pags-title">Trabalhe Conosco</h1>
 
-{% block body %}
+<section class="pags-section column-center">
+  <h2 class="pags-h2 row-center">Faça parte do Laureano</h2>
 
-<h1>TESTE</h1>
+  <form id="formulario" class="column-j-start" action="/action_page.php">
+    <label class="label" for="form-nome">Seu nome*</label>
+    <input
+      type="text"
+      id="form-nome"
+      name="firstname"
+      placeholder="Nome completo"
+      required
+    />
 
+    <div class="row-j-start form-double-wrapper">
+      <div class="column-j-start form-double">
+        <label class="label" for="form-email">Seu email*</label>
+        <input
+          type="email"
+          id="form-email"
+          name="lastname"
+          placeholder="Email"
+          required
+        />
+      </div>
 
+      <div class="column-j-start form-double">
+        <label class="label" for="form-telefone">Seu telefone*</label>
+        <input
+          type="text"
+          id="form-telefone"
+          name="lastname"
+          placeholder="Telefone"
+          pattern="\([0-9]{2}\)[\s][0-9]{5}-[0-9]{4}"
+          required
+        />
+      </div>
+    </div>
 
-<a href="{% url 'home' %}">Back</a>
+    <label class="label" for="form-area">Área Pretendida*</label>
+    <select id="form-area" name="form-area" required>
+      <option value="">Selecione uma área</option>
+      {% for esp in especialidade %}
+      <option value="{{ esp.Especialidade }}">{{ esp.Especialidade }}</option>
+      {% endfor %}
+    </select>
+
+    <div class="fileUpload column-j-start">
+      <span class="label">Currículo*</span>
+      <input type="file" class="upload" required/>
+    </div>
+
+    <label class="label" for="form-mensagem">Mensagem</label>
+    <textarea>
+    </textarea>
+
+    <input type="submit" value="Enviar"/>
+  </form>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 {% endblock body %}

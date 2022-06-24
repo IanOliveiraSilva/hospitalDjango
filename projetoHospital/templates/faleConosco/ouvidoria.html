@@ -1,14 +1,90 @@
-{% extends "base.html" %}
-{% load static %}
+{% extends "base.html" %} {% load static %} {% block titulo %}Hospital Napoleão
+Laureano - Ouvidoria{% endblock titulo %} {% block body %}
 
-{% block titulo %}HOSPITAL LAUREANO{% endblock titulo %}
+<div class="navegacao">
+  <ul>
+    <il>
+      <a class="navegacao-link" href="{% url 'home' %}">
+        Início
+        <i class="uil uil-angle-double-right"></i>
+      </a>
+    </il>
+    <il>
+      <a class="navegacao-link">
+        Fale Conosco
+        <i class="uil uil-angle-double-right"></i>
+      </a>
+    </il>
+    <il>
+      <a class="navegacao-link" href="{% url 'ouvidoria' %}"> Ouvidoria </a>
+    </il>
+  </ul>
+</div>
 
+<h1 class="pags-title">Ouvidoria</h1>
 
-{% block body %}
+<section class="pags-section column-center">
+  <h2 class="pags-h2 row-center">Dúvidas, elogios ou sugestões?</h2>
+  <h3 class="pags-h3 row-center">
+    Entre em contato conosco através do nosso telefone, e-mail ou preenchendo o
+    formulário abaixo.
+  </h3>
 
-<h1>TESTE</h1>
+  <div class="contacts_wrapper row-center">
+    <div class="row-center">
+      <img class="contact_icon" src="{% static '/images/phone_icon.png' %}" />
+      <span id="contato-telefone">(83) 3015-6200</span>
+      <span class="copied">Copiado</span>
+    </div>
+    <div class="row-center">
+        <img class="contact_icon" src="{% static '/images/email_icon.png' %}" />
+        <span id="contato-email">ouvidoria@hlaureano.org.br</span>
+        <span class="copied">Copiado</span>
+    </div>
+  </div>
 
+  <form id="formulario" class="column-j-start" action="/action_page.php">
+    <label class="label" for="form-nome">Seu nome*</label>
+    <input
+      type="text"
+      id="form-nome"
+      name="nome"
+      placeholder="Nome completo"
+      required
+    />
 
+    <div class="row-j-start form-double-wrapper">
+      <div class="column-j-start form-double">
+        <label class="label" for="form-email">Seu email*</label>
+        <input
+          type="email"
+          id="form-email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+      </div>
 
-<a href="{% url 'home' %}">Back</a>
+      <div class="column-j-start form-double">
+        <label class="label" for="form-telefone">Seu telefone*</label>
+        <input
+          type="text"
+          id="form-telefone"
+          name="telefone"
+          placeholder="Telefone"
+          pattern="\([0-9]{2}\)[\s][0-9]{5}-[0-9]{4}"
+          required
+        />
+      </div>
+    </div>
+
+    <label class="label" for="form-mensagem">Mensagem*</label>
+    <textarea placeholder="Dúvidas, elogios ou sugestões" required></textarea>
+
+    <input type="submit" value="Enviar" />
+  </form>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 {% endblock body %}
