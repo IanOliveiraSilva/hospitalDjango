@@ -2224,9 +2224,6 @@ input[type=submit]:hover {
     display: none;
   }
 
-  
-  
-
   /* ================================= P A G =======================================*/
 
   .pags-image-bg-lightgrey {
@@ -2255,19 +2252,34 @@ input[type=submit]:hover {
   }
   
   
-  }
+  
   /*=============== P R Ê M I O S     &     C E R T I F I C A Ç Õ E S ===============*/
 
-  
+  .certificate--wrapper {
+    position: relative;
+  }
+
+  .image-container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 140px;
+    max-height: 140px;
+    top: -130px;
+    background-color: none;
+    box-shadow: none;
+    border-radius: none;
+    padding: none;
+  }
 
   .certificate--image {
     position: relative;
-    top: -130pxx;
-    max-width: 140px;
-    max-height: 140px;
+    top: -130px;
+    padding: 10px;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0px 4px 4px var(--shadow);
   }
-
-
 
   .previous {
     display: none;
@@ -2773,4 +2785,5 @@ input[type=submit]:hover {
   font-size: 15px;
   position: relative;
   top: -700px;
+}
 }
