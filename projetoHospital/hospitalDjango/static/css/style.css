@@ -878,7 +878,7 @@ footer {
 
 .certificate--image {
   position: relative;
-  top: 0px;
+  top: 0pxx;
   max-width: 140px;
   max-height: 140px;
 }
@@ -2424,82 +2424,96 @@ margin-right: 15px;
   .navegacao-link {
     font-size: 14px;
   }
-}
-/*=============== P R Ê M I O S     &     C E R T I F I C A Ç Õ E S ===============*/
+  
+  
+  
+  /*=============== P R Ê M I O S     &     C E R T I F I C A Ç Õ E S ===============*/
 
-.image-container {
-}
+  .certificate--wrapper {
+    position: relative;
+  }
 
-.certificate--image {
-  position: relative;
-  top: -130px;
-}
+  .image-container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 140px;
+    max-height: 140px;
+    top: -130px;
+    background-color: none;
+    box-shadow: none;
+    border-radius: none;
+    padding: none;
+  }
 
-.previous {
-  display: none;
-}
+  .certificate--image {
+    position: relative;
+    top: -130px;
+    padding: 10px;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0px 4px 4px var(--shadow);
+  }
 
-.next {
-  display: none;
-}
+  .previous {
+    display: none;
+  }
 
-/*============================ G U I A  M E D I C O ==============================*/
-
-.list-wrapper {
-  font-size: 20px;
-}
+  .list-wrapper {
+    font-size: 20px;
+  }
 
 /* =============================  P A R C E I R O S ==============================*/
 
 /* Nothing to change */
 
-/* ========================== Q U E M S O M O S ===================================*/
-/* ======================= H O S P I T A L L A U R E A N O=========================*/
-/* =============================  H I S T O R I A  ================================*/
-/* ============================= D I R E T O R I A ================================*/
-/* =============================  F .  L A U R E A N O  ================================*/
-.pags-side-image-wrapper {
-  width: 200px;
-}
-
-.pags-side-image--image {
-  height: 250px;
-  width: 180px;
-}
-
-.other-pags-links {
-  justify-content: center;
-  padding: 30px;
-}
-
-/* ================  D I R E T O R I A   E    C O N S E L H O  ===================*/
-.board-icon {
-  left: -45px;
-}
-
-.container-card {
-  position: relative;
-  width: 80%;
-  margin: 30px 0;
-}
-
-/*============================= Galeria ==================================*/
-.galery-wrapper {
-  grid-template-columns: auto auto;
-}
-
-.galery-image-wrapper {
-  max-height: 255px;
-}
-
-@media only screen and (max-width: 700px) {
-  .modal-content {
-    width: 100%;
+  /* ========================== Q U E M S O M O S ===================================*/
+  /* ======================= H O S P I T A L L A U R E A N O=========================*/
+  /* =============================  H I S T O R I A  ================================*/
+  /* ============================= D I R E T O R I A ================================*/
+  /* =============================  F .  L A U R E A N O  ================================*/
+  .pags-side-image-wrapper {
+    width: 200px;
   }
 
-  .wrapper {
-    top: 93px;
+  .pags-side-image--image {
+    height: 250px;
+    width: 180px;
   }
+
+  .other-pags-links {
+    justify-content: center;
+    padding: 30px;
+  }
+
+  /* ================  D I R E T O R I A   E    C O N S E L H O  ===================*/
+  .board-icon {
+    left: -45px;
+  }
+
+  .container-card {
+    position: relative;
+    width: 80%;
+    margin: 30px 0;
+  }
+
+  /*============================= Galeria ==================================*/
+  .galery-wrapper {
+    grid-template-columns: auto auto;
+  }
+
+  .galery-image-wrapper {
+    max-height: 255px;
+  }
+
+  @media only screen and (max-width: 700px) {
+    .modal-content {
+      width: 100%;
+    }
+
+    .wrapper {
+      top: 93px;
+    }
 
   .header__wrapper {
     justify-content: space-between;
@@ -2537,7 +2551,7 @@ margin-right: 15px;
     margin-left: 5%;
   }
 
-  /* =====================================FOOTER===================================== */
+  /* =================================FOOTER===================================== */
   .footer {
     padding: 0;
   }
@@ -2558,7 +2572,8 @@ margin-right: 15px;
     width: 35px;
   }
 
-  /* ================================= P A G =========================================*/
+  /* ============================== P A G ======================================*/
+
   .pags-image-bg-lightgrey {
     width: 140px;
     height: 140px;
@@ -2826,6 +2841,24 @@ margin-right: 15px;
   .galery-image-wrapper {
     max-height: 195px;
   }
+
+  /*================== T R A B A L H E    C O N O S C O ======================*/
+
+  input[type="submit"] {
+    align-self: center;
+    width: 50%; 
+  }
+
+  /*======================= O U V I D O R I A ==========================*/
+
+  .contacts_wrapper {
+    gap: 20px;
+  }
+
+  .contact_icon {
+   max-width: 20px;
+  }
+
 }
 
 /*============================= LOAD ==================================*/
@@ -2938,4 +2971,5 @@ margin-right: 15px;
   font-size: 15px;
   position: relative;
   top: -700px;
+}
 }
