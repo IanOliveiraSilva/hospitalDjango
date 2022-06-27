@@ -1107,13 +1107,6 @@ footer {
   padding: 30px 30px;
 }
 
-.pags-h2 {
-  text-align: center;
-  font-weight: 700;
-  margin: 30px 0;
-  font-size: var(--h2-font-size);
-}
-
 .pags-title {
   display: flex;
   align-items: center;
@@ -1125,6 +1118,20 @@ footer {
   color: var(--white);
   font-weight: var(--font-semi-bold);
   font-size: var(--h1-font-size);
+}
+
+.pags-h2 {
+  text-align: center;
+  font-weight: 700;
+  margin: 30px 0;
+  font-size: var(--h2-font-size);
+}
+
+.pags-h3 {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 30px;
+  font-size: var(--normal-font-size);
 }
 
 .pags-images-wrapper {
@@ -1262,7 +1269,7 @@ p.pags-text {
   align-items: center;
 }
 
-.small-responsive{
+.small-responsive {
   display: none;
 }
 
@@ -1664,26 +1671,28 @@ p.pags-text {
 }
 
 /*============================= Trabalhe Conosco ==================================*/
-#formulario{
+#formulario {
   width: 60%;
   box-sizing: border-box;
 }
 
-.form-double-wrapper{
+.form-double-wrapper {
   gap: 10px;
   width: 100%;
 }
 
-.form-double{
+.form-double {
   width: 100%;
 }
 
-.label{
+.label {
   color: var(--darkGreen);
   margin-bottom: 3px;
 }
 
-input[type=text], input[type=email], select {
+input[type="text"],
+input[type="email"],
+select {
   width: 100%;
   padding: 12px 20px;
   margin-bottom: 15px;
@@ -1708,16 +1717,17 @@ textarea {
   border: 1px solid var(--darkGreen);
   border-radius: 4px;
   background-color: var(--white);
+  color: var(--grey);
   font-size: 16px;
   resize: none;
 }
 
-input[type=file]{
+input[type="file"] {
   margin-bottom: 15px;
   font-size: 16px;
 }
 
-input[type=submit] {
+input[type="submit"] {
   align-self: flex-end;
   width: 15%;
   background-color: var(--darkGreen);
@@ -1730,11 +1740,128 @@ input[type=submit] {
   cursor: pointer;
 }
 
-input[type=submit]:hover {
+input[type="submit"]:hover {
   background-color: var(--lightGreen);
 }
 
+/*============================= Ouvidoria ==================================*/
+.contacts_wrapper {
+  position: relative;
+  gap: 30px;
+  margin-bottom: 20px;
+}
 
+.contact_icon {
+  max-width: 30px;
+  height: auto;
+  margin-right: 5px;
+}
+
+#contato-telefone,
+#contato-email {
+  color: var(--darkGreen);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.copied {
+  display: none;
+  position: absolute;
+  top: -39px;
+  max-width: auto;
+  background-color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  box-shadow: 0 0.125rem 0.5rem var(--lightGrey),
+    0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
+}
+
+.copied::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 93%;
+  left: 37%;
+  border: 0.75rem solid transparent;
+  border-bottom: none;
+  border-top-color: #fff;
+  filter: drop-shadow(0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.1));
+}
+
+/*============================= Pesquisa de Satisfação ==================================*/
+.pesquisa {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.colunas {
+  justify-content: end;
+  gap: 2px;
+}
+
+.avaliacao {
+  font-size: 12px;
+  text-align: center;
+  width: 80px;
+  color: var(--grey);
+}
+
+.fix {
+  display: flex;
+  flex-direction: row;
+}
+
+.titulo-classe {
+  min-width: 10%;
+  max-width: 10%;
+  padding: 0 37px;
+}
+
+.item-avaliacao {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.item {
+  width: 100%;
+  font-size: 16px;
+  color: var(--grey);
+}
+
+.checkbox-wrapper {
+  gap: 31px;
+  padding: 5px 12px;
+}
+
+.checkbox {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  border: 2px solid var(--darkGreen);
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.dividing-line--avaliacao {
+  background-color: var(--lightGrey);
+  margin: 5px 0;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.dividing-line--pesquisa {
+  background-color: var(--darkGreen);
+  margin: 5px 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 1px;
+}
+
+.dividing-line--pesquisa:last-child{
+  margin-bottom: 30px;
+}
 
 /* =  M E D I U M    V I E P O R T S ====================================================*/
 @media Screen and (max-width: 1253px) {
@@ -2060,7 +2187,7 @@ input[type=submit]:hover {
     position: absolute;
     height: 70%;
     max-width: 100%;
-    top:-30px;
+    top: -30px;
   }
 
   .banner-container {
@@ -2070,14 +2197,13 @@ input[type=submit]:hover {
     height: 65vh;
     margin-bottom: 20px;
   }
-  
+
   .back,
   .forward {
     font-size: 15px;
     padding: 10px;
   }
- 
-  
+
   .dot {
     position: relative;
     top: -180px;
@@ -2104,7 +2230,7 @@ input[type=submit]:hover {
     justify-items: space-between;
   }
 
-  .smallDevice-menu-div{
+  .smallDevice-menu-div {
     display: grid;
     justify-items: center;
     align-items: center;
@@ -2115,11 +2241,10 @@ input[type=submit]:hover {
     border-radius: 50%;
     justify-content: center;
     border-width: 2px;
-    border-color: #E5E5E5;;
+    border-color: #e5e5e5;
     border-style: solid;
     height: 70px;
     width: 70px;
-
   }
 
   .smallDevice-menu-icone-img {
@@ -2137,7 +2262,7 @@ input[type=submit]:hover {
     text-align: center;
     font-family: "Atkinson Hyperlegible", sans-serif;
     font-size: 1rem;
-    color: #038C43;
+    color: #038c43;
   }
 
   .text-color-pink {
@@ -2183,7 +2308,7 @@ input[type=submit]:hover {
   .mobile-dividing-line {
     height: 2px;
     width: 80vh;
-    background-color: #E5E5E5;
+    background-color: #e5e5e5;
     margin-bottom: 20px;
     position: relative;
     top: -130px;
@@ -2203,7 +2328,7 @@ input[type=submit]:hover {
   .cooperative-container {
     display: none;
   }
-  
+
   .cooperative--wrapper {
     display: none;
   }
@@ -2285,59 +2410,52 @@ input[type=submit]:hover {
     display: none;
   }
 
-  .next {
-    display: none;
-  }
+.list-wrapper {
+  font-size: 20px;
+}
 
-  /*============================ G U I A  M E D I C O ==============================*/
+/* =============================  P A R C E I R O S ==============================*/
 
-  .list-wrapper {
-    font-size: 20px;
-  }
+/* Nothing to change */
 
-  /* =============================  P A R C E I R O S ==============================*/
+/* ========================== Q U E M S O M O S ===================================*/
+/* ======================= H O S P I T A L L A U R E A N O=========================*/
+/* =============================  H I S T O R I A  ================================*/
+/* ============================= D I R E T O R I A ================================*/
+/* =============================  F .  L A U R E A N O  ================================*/
+.pags-side-image-wrapper {
+  width: 200px;
+}
 
-  /* Nothing to change */
+.pags-side-image--image {
+  height: 250px;
+  width: 180px;
+}
 
-  /* ========================== Q U E M S O M O S ===================================*/
-  /* ======================= H O S P I T A L L A U R E A N O=========================*/
-  /* =============================  H I S T O R I A  ================================*/
-  /* ============================= D I R E T O R I A ================================*/
-  /* =============================  F .  L A U R E A N O  ================================*/
-  .pags-side-image-wrapper {
-    width: 200px;
-  }
+.other-pags-links {
+  justify-content: center;
+  padding: 30px;
+}
 
-  .pags-side-image--image {
-    height: 250px;
-    width: 180px;
-  }
+/* ================  D I R E T O R I A   E    C O N S E L H O  ===================*/
+.board-icon {
+  left: -45px;
+}
 
-  .other-pags-links {
-    justify-content: center;
-    padding: 30px;
-  }
+.container-card {
+  position: relative;
+  width: 80%;
+  margin: 30px 0;
+}
 
-  /* ================  D I R E T O R I A   E    C O N S E L H O  ===================*/
-  .board-icon {
-    left: -45px;
-  }
+/*============================= Galeria ==================================*/
+.galery-wrapper {
+  grid-template-columns: auto auto;
+}
 
-  .container-card {
-    position: relative;
-    width: 80%;
-    margin: 30px 0;
-  }
-
-  /*============================= Galeria ==================================*/
-  .galery-wrapper {
-    grid-template-columns: auto auto;
-  }
-
-  .galery-image-wrapper {
-    max-height: 255px;
-  }
-
+.galery-image-wrapper {
+  max-height: 255px;
+}
 
 @media only screen and (max-width: 700px) {
   .modal-content {
@@ -2384,7 +2502,7 @@ input[type=submit]:hover {
     margin-left: 5%;
   }
 
-  /* =====================================FOOTER===================================== */
+  /* =================================FOOTER===================================== */
   .footer {
     padding: 0;
   }
@@ -2616,7 +2734,7 @@ input[type=submit]:hover {
     display: none;
   }
 
-  .small-responsive{
+  .small-responsive {
     display: flex;
     flex-direction: column;
     justify-content: center;
