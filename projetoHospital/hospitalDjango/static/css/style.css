@@ -1397,17 +1397,22 @@ p.pags-text {
 }
 
 .news-pag__news-images-wrapper {
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 10px;
-  max-width: 100%;
   display: grid;
   grid-template-columns: auto auto auto;
+  justify-content: flex-start;
+  gap: 10px;
+  max-width: 100%;
 }
 
 .news-pag__news-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 485px;
   width: 100%;
   margin-bottom: 15px;
+  display: none;
 }
 
 .news-pag__news-image {
@@ -1420,6 +1425,7 @@ p.pags-text {
 
 .news-pag__news-title {
   width: 100%;
+  min-height: 62px;
   text-align: start;
   box-sizing: border-box;
   background-color: var(--shadow);
@@ -1461,6 +1467,23 @@ p.pags-text {
   -webkit-line-clamp: 4;
   line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.pagination a.active {
+  background-color: var(--darkGreen);
+  color: var(--white);
+}
+
+.pagination a:hover:not(.active) {
+  background-color: var(--lightGrey);
 }
 
 /*============================= Guia Medico ==================================*/
