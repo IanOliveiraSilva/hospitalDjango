@@ -1830,22 +1830,10 @@ input[type="submit"]:hover {
   color: var(--grey);
 }
 
-.checkbox-wrapper {
+.radio-wrapper {
   gap: 42px;
   padding: 5px 12px;
 }
-
-/* .checkbox {
-  width: 25px;
-  height: 25px;
-  border-radius: 10px;
-  outline: 2px solid var(--darkGreen);
-  background-color: var(--white);
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -o-appearance: none;
-  cursor: pointer;
-} */
 
 input[type="radio"] {
   display: none;
@@ -1857,14 +1845,12 @@ input[type="radio"]:checked + .checked:after {
 }
 
 .checked {
-  color: rgba(255, 255, 255, 0.8);
-  margin: 0;
   position: relative;
   cursor: pointer;
 }
 
 .checked:last-child {
-margin-right: 15px;
+  margin-right: 15px;
 }
 
 .checked:before {
@@ -1875,11 +1861,6 @@ margin-right: 15px;
   outline: 2px solid var(--darkGreen);
   display: block;
   border-radius: 50%;
-  
-  /* border-radius: 10px;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -o-appearance: none; */
 }
 
 .checked:after {
@@ -2424,9 +2405,7 @@ margin-right: 15px;
   .navegacao-link {
     font-size: 14px;
   }
-  
-  
-  
+
   /*=============== P R Ê M I O S     &     C E R T I F I C A Ç Õ E S ===============*/
 
   .certificate--wrapper {
@@ -2463,9 +2442,9 @@ margin-right: 15px;
     font-size: 20px;
   }
 
-/* =============================  P A R C E I R O S ==============================*/
+  /* =============================  P A R C E I R O S ==============================*/
 
-/* Nothing to change */
+  /* Nothing to change */
 
   /* ========================== Q U E M S O M O S ===================================*/
   /* ======================= H O S P I T A L L A U R E A N O=========================*/
@@ -2505,15 +2484,16 @@ margin-right: 15px;
   .galery-image-wrapper {
     max-height: 255px;
   }
+}
 
-  @media only screen and (max-width: 700px) {
-    .modal-content {
-      width: 100%;
-    }
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
 
-    .wrapper {
-      top: 93px;
-    }
+  .wrapper {
+    top: 93px;
+  }
 
   .header__wrapper {
     justify-content: space-between;
@@ -2846,7 +2826,7 @@ margin-right: 15px;
 
   input[type="submit"] {
     align-self: center;
-    width: 50%; 
+    width: 50%;
   }
 
   /*======================= O U V I D O R I A ==========================*/
@@ -2856,9 +2836,8 @@ margin-right: 15px;
   }
 
   .contact_icon {
-   max-width: 20px;
+    max-width: 20px;
   }
-
 }
 
 /*============================= LOAD ==================================*/
@@ -2971,5 +2950,4 @@ margin-right: 15px;
   font-size: 15px;
   position: relative;
   top: -700px;
-}
 }
