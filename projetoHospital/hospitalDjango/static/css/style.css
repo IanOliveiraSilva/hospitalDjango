@@ -1397,8 +1397,8 @@ p.pags-text {
 }
 
 .news-pag__news-images-wrapper {
-  display: grid;
-  grid-template-columns: auto auto auto;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   gap: 10px;
   max-width: 100%;
@@ -1469,7 +1469,7 @@ p.pags-text {
   -webkit-box-orient: vertical;
 }
 
-.pagination a {
+.pagination a, .num-page {
   color: black;
   float: left;
   padding: 8px 16px;
@@ -1477,12 +1477,12 @@ p.pags-text {
   transition: background-color 0.3s;
 }
 
-.pagination a.active {
+.pagination a.active, .num-page.active {
   background-color: var(--darkGreen);
   color: var(--white);
 }
 
-.pagination a:hover:not(.active) {
+.pagination a:hover:not(.active), .num-page:hover:not(.active) {
   background-color: var(--lightGrey);
 }
 

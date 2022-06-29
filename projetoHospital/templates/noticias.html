@@ -18,7 +18,8 @@ Laureano - Notícias{% endblock titulo %} {% block body %}
 <h1 class="pags-title">Notícias</h1>
 
 <section class="pags-section">
-  {% with noticia|first as principal %} {% for value in noticia %} {% if forloop.counter == 1 %}
+  {% with noticia|first as principal %} {% for value in noticia %} 
+  {% if forloop.counter == 1 %}
   <div
     class="news-pag__main column-center"
     onclick="sendTo('{% url 'detail-noticias' principal.id %}')"
@@ -60,8 +61,10 @@ Laureano - Notícias{% endblock titulo %} {% block body %}
 
   <div class="pagination row-center">
     <a href="javascript:prevPage()" id="pag-prev" href="#">&laquo;</a>
+    <span id="num-page-wrapper">
+      {% comment %} <a href="" class="page">1</a> {% endcomment %}
+    </span>
     <a href="javascript:nextPage()" id="pag-next" href="#">&raquo;</a>
-    page: <span id="page"></span>
   </div>
 </section>
 
