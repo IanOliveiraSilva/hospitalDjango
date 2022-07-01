@@ -34,6 +34,15 @@ Laureano - Galeria de Fotos{% endblock titulo %} {% block body %}
     </div>
     {% endfor %}
   </div>
+
+  <div class="pagination row-center">
+    <a href="javascript:firstPage()" id="pag-first" href="#">Início &laquo;</a>
+    <a href="javascript:prevPage()" id="pag-prev" href="#">&laquo;</a>
+    <span id="num-page-wrapper">
+    </span>
+    <a href="javascript:nextPage()" id="pag-next" href="#">&raquo;</a>
+    <a href="javascript:lastPage()" id="pag-last" href="#">Fim &raquo;</a>
+  </div>
 </section>
 
 <div class="modal">
@@ -45,3 +54,8 @@ Laureano - Galeria de Fotos{% endblock titulo %} {% block body %}
 </div>
 
 {% endblock body %}
+
+<script
+    type="text/javascript"
+    src='{% static "/scripts/paginationGalery.js" %}'
+  ></script>

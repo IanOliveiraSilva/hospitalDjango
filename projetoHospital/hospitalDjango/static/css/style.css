@@ -1469,7 +1469,7 @@ p.pags-text {
   -webkit-box-orient: vertical;
 }
 
-.pagination a, .num-page {
+.pagination a, .num-page, .dots {
   color: black;
   float: left;
   padding: 8px 16px;
@@ -1484,6 +1484,10 @@ p.pags-text {
 
 .pagination a:hover:not(.active), .num-page:hover:not(.active) {
   background-color: var(--lightGrey);
+}
+
+.no-show{
+  display: none;
 }
 
 /*============================= Guia Medico ==================================*/

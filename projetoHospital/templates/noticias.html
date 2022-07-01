@@ -60,11 +60,11 @@ Laureano - Notícias{% endblock titulo %} {% block body %}
   </ul>
 
   <div class="pagination row-center">
+    <a href="javascript:firstPage()" id="pag-first" href="#">Início &laquo;</a>
     <a href="javascript:prevPage()" id="pag-prev" href="#">&laquo;</a>
-    <span id="num-page-wrapper">
-      {% comment %} <a href="" class="page">1</a> {% endcomment %}
-    </span>
+    <span id="num-page-wrapper"> </span>
     <a href="javascript:nextPage()" id="pag-next" href="#">&raquo;</a>
+    <a href="javascript:lastPage()" id="pag-last" href="#">Fim &raquo;</a>
   </div>
 </section>
 
