@@ -2194,6 +2194,12 @@ input[type="radio"]:checked + .checked:after {
   }
 }
 
+@media Screen and (max-width: 1200px) {
+  .side-menu_arrow {
+    font-size: 38px;
+  }
+}
+
 @media Screen and (max-width: 992px) {
   .side-menu_arrow {
     font-size: 32px;
@@ -2220,6 +2226,13 @@ input[type="radio"]:checked + .checked:after {
   }
   .news--content--button { 
     margin-right: 100px;
+  }
+
+  .news--content--button:hover {
+    border: 3px solid var(--darkGreen);
+    background-color: var(--white);
+    color: var(--darkGreen);
+    transition: 0.4s;
   }
 
   .cooperative--image {
@@ -2265,6 +2278,13 @@ input[type="radio"]:checked + .checked:after {
   }
   .news--content--button { 
     margin-right: 100px;
+  }
+
+  .news--content--button:hover {
+    border: 3px solid var(--darkGreen);
+    background-color: var(--white);
+    color: var(--darkGreen);
+    transition: 0.4s;
   }
 
   .cooperative--image {
