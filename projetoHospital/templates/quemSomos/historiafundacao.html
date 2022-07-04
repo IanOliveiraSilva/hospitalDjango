@@ -37,25 +37,9 @@ Laureano - História do Fundação{% endblock titulo %} {% block body %}
     </div>
 
     <main class="pags-text">
-      No dia 17 de março de 1951, na sede do jornal “Diário Carioca”, no Rio de
-      Janeiro, realizou-se uma Mesa Redonda solicitada pelo próprio Dr. Napoleão
-      Rodrigues Laureano, que se esforçava para expressar o desejo de ver
-      construído, em João Pessoa, na Paraíba, um centro de combate ao câncer.
-      <br /><br />
-      Naquela ocasião, estavam presentes os jornalista Danton Jobim e Pompeu de
-      Souza, Dr. Simões Filho, Ministro da Educação e da Saúde, os médicos Mário
-      Kroeff, Diretor do Serviço Nacional de Câncer, Alberto Coutinho, Jorge de
-      Marsillac, Osolando Machado, Antonio Pinto Vieira, Adayr Eiras de Araújo,
-      Sérgio de Azevedo, Turíbio Braz e Fernando Gentil, entre outras pessoas.
-      <br /><br />
-      Os trabalhos foram transmitidos pela Rádio Mayrink Veiga e Rádio Nacional,
-      que abriram uma campanha para angariar recursos destinados a luta contra o
-      câncer, conforme desejo do médico paraibano.
-      <br /><br />
-      Napoleão Laureano que retornara dos Estados Unidos desenganado pela
-      medicina, mostrava, com o seu gesto, a grandeza do seu coração, a
-      magnitude de sua solidariedade aos seus semelhantes, especialmente os mais
-      humildes.
+      {% for item in historia|slice:":1" %}
+      {{ item.Conteudo }}
+      {% endfor %}
     </main>
   </div>
 </section>
