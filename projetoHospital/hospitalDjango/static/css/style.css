@@ -2467,7 +2467,7 @@ input[type="radio"]:checked + .checked:after {
 
 @media Screen and (max-width: 800px) {
   .side-menu_arrow {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .donation-button {
@@ -2712,6 +2712,18 @@ input[type="radio"]:checked + .checked:after {
   }
 }
 
+
+@media Screen and (max-width: 762px) {
+  .side-menu_arrow {
+    font-size: 26px;
+  }
+}
+
+@media Screen and (max-width: 700px) {
+  .side-menu_arrow {
+    font-size: 24px;
+  }
+}
 /* 767px */
 @media Screen and (max-width: 640px) {
   .header__wrapper {
