@@ -37,13 +37,37 @@ Laureano - Ouvidoria{% endblock titulo %} {% block body %}
       <span class="copied">Copiado</span>
     </div>
     <div class="row-center">
-        <img class="contact_icon" src="{% static '/images/email_icon.png' %}" />
-        <span id="contato-email">ouvidoria@hlaureano.org.br</span>
-        <span class="copied">Copiado</span>
+      <img class="contact_icon" src="{% static '/images/email_icon.png' %}" />
+      <span id="contato-email">ouvidoria@hlaureano.org.br</span>
+      <span class="copied">Copiado</span>
     </div>
   </div>
 
   <form id="formulario" class="column-j-start" action="/action_page.php">
+
+    <div class="row-j-start radio-wrapper-bottom">
+      <div class="radio-container">
+        <input
+          type="radio"
+          name="ouvidoria"
+          value="anonimo"
+          id="anonimo"
+        />
+        <label class="checked row-center label label-radio" for="anonimo">Permanecer Anônimo</label>
+      </div>
+      <div class="radio-container">
+        <input
+          type="radio"
+          name="ouvidoria"
+          value="informar-nome"
+          id="informar-nome"
+          checked="checked"
+        />
+        <label class="checked row-center label label-radio" for="informar-nome">Informar Meu Nome</label>
+      </div>
+    </div>
+    
+
     <label class="label" for="form-nome">Seu nome*</label>
     <input
       type="text"
@@ -78,7 +102,7 @@ Laureano - Ouvidoria{% endblock titulo %} {% block body %}
       </div>
     </div>
 
-    <label class="label" for="form-nome">Assunto*</label>
+    <label class="label" for="form-assunto">Assunto*</label>
     <input
       type="text"
       id="form-assunto"

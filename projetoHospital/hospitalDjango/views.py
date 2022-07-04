@@ -126,7 +126,8 @@ def viewOuvidoria(request):
 
 
 def viewSejaumResidente(request):
-    return render(request, 'faleConosco/sejaumresidente.html', {"rodape": rodape, "redes":redes})
+    especialidade = Medico.objects.values('Especialidade').distinct()
+    return render(request, 'faleConosco/sejaumresidente.html', {"especialidade":especialidade, "rodape": rodape, "redes":redes})
 
 
 # Path Serviços
