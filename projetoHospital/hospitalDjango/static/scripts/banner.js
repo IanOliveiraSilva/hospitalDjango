@@ -6,15 +6,17 @@ const $dot = document.querySelectorAll(".dot");
 const $back = document.querySelector(".back");
 const $forward = document.querySelector(".forward");
 
-$moveButtons.addEventListener("mouseover", function () {
-  $back.style.fontSize = "50px";
-  $forward.style.fontSize = "50px";
-});
+if (window.screen.width > 800) {
+  $moveButtons.addEventListener("mouseover", function () {
+    $back.style.fontSize = "50px";
+    $forward.style.fontSize = "50px";
+  });
 
-$moveButtons.addEventListener("mouseout", function () {
-  $back.style.fontSize = "15px";
-  $forward.style.fontSize = "15px";
-});
+  $moveButtons.addEventListener("mouseout", function () {
+    $back.style.fontSize = "15px";
+    $forward.style.fontSize = "15px";
+  });
+}
 
 var slidePosition = 1;
 slideShowManual(slidePosition);
