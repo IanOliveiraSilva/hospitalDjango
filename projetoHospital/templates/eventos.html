@@ -1,12 +1,27 @@
-{% extends 'base.html' %}
+{% extends "base.html" %} {% load static %} {% block titulo %}Hospital Napoleão
+Laureano - Eventos do Hospital{% endblock titulo %} {% block body %}
+
+<div class="navegacao">
+  <ul>
+    <il>
+      <a class="navegacao-link" href="{% url 'home' %}">
+        Início
+        <i class="uil uil-angle-double-right"></i>
+      </a>
+    </il>
+    <il>
+      <a class="navegacao-link">
+        Eventos
+        <i class="uil uil-angle-double-right"></i>
+      </a>
+    </il>
+    <il>
+      <a class="navegacao-link" href="{% url 'eventos' %}"> Eventos do Hospital </a>
+    </il>
+  </ul>
+</div>
+
+<h1 class="pags-title">Eventos do Hospital</h1>
 
 
-{% block titulo %}
-HOSPITAL LAUREANO - EVENTOS
-{% endblock titulo %} 
-
-{% block body %}
-
-<h1>TESTE - EVENTOS</h1>
-<a class="mx-auto my-0 text-uppercase text-amarelo mx-auto mt-2 mb-5 style=" href="{% url 'home' %}">Back</a>
 {% endblock body %}
