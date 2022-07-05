@@ -150,3 +150,11 @@ class RedesSociais(models.Model):
         return self.Titulo
     class Meta:
         verbose_name_plural = "Redes Sociais"
+
+class HistoriaHospital(models.Model):
+    Titulo = models.CharField(max_length=150, blank=False, null=False)
+    Conteudo = models.TextField(blank=False, null=False)
+    def __str__(self):
+        return self.Titulo
+    class Meta:
+        verbose_name_plural = "Historia"

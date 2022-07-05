@@ -2413,6 +2413,14 @@ input[type="radio"]:checked + .checked:after {
     display: block;
   }
 }
+@media Screen and (max-width: 1000px) {
+   /* ============ Fale conosco - Seja um residente ====================*/
+  
+   input[type="submit"] {
+    align-self: center;
+    width: 20%;  
+  }
+}
 
 @media Screen and (max-width: 992px) {
   .side-menu_arrow {
@@ -2467,7 +2475,7 @@ input[type="radio"]:checked + .checked:after {
 
 @media Screen and (max-width: 800px) {
   .side-menu_arrow {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .donation-button {
@@ -2712,6 +2720,26 @@ input[type="radio"]:checked + .checked:after {
   }
 }
 
+
+@media Screen and (max-width: 762px) {
+  .side-menu_arrow {
+    font-size: 26px;
+  }
+}
+
+@media Screen and (max-width: 800px) {
+  
+  .side-menu_arrow {
+    font-size: 24px;
+  }
+
+  /* ============ Fale conosco - Seja um residente ====================*/
+
+  input[type="submit"] {
+    align-self: center;
+    width: 25%;  
+  }
+}
 /* 767px */
 @media Screen and (max-width: 640px) {
   .header__wrapper {
@@ -3019,7 +3047,15 @@ input[type="radio"]:checked + .checked:after {
   .galery-image-wrapper {
     max-height: 255px;
   }
-}
+
+  /* ============ Fale conosco - Seja um residente ====================*/
+
+  input[type="submit"] {
+    align-self: center;
+    width: 30%;
+    padding: 14px 8px;   
+  }
+} 
 
 @media only screen and (max-width: 700px) {
   .modal-content {
@@ -3251,6 +3287,15 @@ input[type="radio"]:checked + .checked:after {
   .donate {
     grid-template-columns: auto auto;
   }
+
+  /* ===============Fale Conosco - Seja um Residente Laureano =============== */ 
+
+  /* input[type="submit"] {
+    width: 30%;
+  } */
+   
+    
+
 }
 
 @media Screen and (max-width: 365px) {
@@ -3292,6 +3337,7 @@ input[type="radio"]:checked + .checked:after {
   .navegacao-link {
     font-size: 12px;
   }
+  
 
   /*============================ D O N A T E ===================================*/
 
@@ -3373,6 +3419,15 @@ input[type="radio"]:checked + .checked:after {
   .contact_icon {
     max-width: 20px;
   }
+
+  /* ============ Fale conosco - Seja um residente ====================*/
+
+  /* input[type="submit"] {
+    align-self: center;
+    width: 30%;
+    padding: 14px 8px;   
+    font-size: 13.6px;  
+  } */
 }
 
 /*======================== T A B L E T S    D E V I C E S ========================*/

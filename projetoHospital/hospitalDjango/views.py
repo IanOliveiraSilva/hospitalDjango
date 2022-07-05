@@ -1,4 +1,3 @@
-from multiprocessing.reduction import duplicate
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import  AuthenticationForm, UserCreationForm, PasswordChangeForm
 from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
@@ -64,12 +63,14 @@ def viewDiretoriaHospital(request):
     return render(request, "quemSomos/diretoriahospital.html", {"diretoria": diretoria,"rodape": rodape, "redes":redes})
 
 def viewHistoriaHospital(request):
-    return render(request, "quemSomos/historiaHospital.html", {"rodape": rodape, "redes":redes})
+    historia = HistoriaHospital.objects.order_by('-Titulo')
+    return render(request, "quemSomos/historiaHospital.html", {"rodape": rodape, "redes":redes, "historia":historia})
 
 # READ - DIRETORIA E HISTORIA FUNDAÇÃO Laureano
 
 def viewHistoriaFundacao(request):
-    return render(request, "quemSomos/historiaFundacao.html", {"rodape": rodape, "redes":redes})
+    historia = HistoriaHospital.objects.order_by('Titulo')
+    return render(request, "quemSomos/historiafundacao.html", {"rodape": rodape, "redes":redes,  "historia":historia})
 
 def viewDiretoriaFundacao(request):
     diretoriaexecutiva = DiretoriaExecutiva.objects.all()
