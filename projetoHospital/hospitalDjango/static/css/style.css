@@ -2676,6 +2676,7 @@ input[type="radio"]:checked + .checked:after {
   }
 }
 
+<<<<<<< HEAD
 @media only screen and (max-width: 700px) {
   .modal-content {
     width: 100%;
@@ -2805,6 +2806,8 @@ input[type="radio"]:checked + .checked:after {
   }
 }
 
+=======
+>>>>>>> 17edcecf70006d52bee622db59ae32638971da48
 
 @media Screen and (max-width: 762px) {
   .side-menu_arrow {
@@ -3058,6 +3061,18 @@ input[type="radio"]:checked + .checked:after {
   .galery-image-wrapper {
     max-height: 255px;
   }
+<<<<<<< HEAD
+=======
+
+  /* ============ Fale conosco - Seja um residente ====================*/
+
+  input[type="submit"] {
+    align-self: center;
+    width: 30%;
+    padding: 14px 8px;   
+  }
+} 
+>>>>>>> 17edcecf70006d52bee622db59ae32638971da48
 
   /* ============ Fale conosco - Seja um residente ====================*/
 
