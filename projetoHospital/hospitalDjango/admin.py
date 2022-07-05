@@ -124,5 +124,5 @@ class HistoriaHospital(admin.ModelAdmin):
 
 @admin.register(Eventos)
 class Eventos(admin.ModelAdmin):
-    list_display = ('Titulo', 'DataInício')
+    list_display = ('Titulo', 'DataInicio')
     search_fields = ('Titulo', )

@@ -106,7 +106,7 @@ def viewHome(request):
 
 
 def vieweventos(request):
-    eventos = Eventos.objects.order_by('-DataInício')
+    eventos = Eventos.objects.order_by('-DataInicio')
     return render(request, "eventos.html", {"rodape": rodape, "redes":redes, "eventos": eventos})
 
 def viewdoacao(request):

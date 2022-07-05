@@ -1939,6 +1939,41 @@ input[type="radio"]:checked + .checked:after {
   margin-bottom: 30px;
 }
 
+/*============================= Eventos ==================================*/
+.events-wrapper {
+  width: 90%;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.event-title {
+  font-weight: 700;
+  font-size: var(--normal-font-size);
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.event-period {
+  gap: 6px;
+}
+
+.event-date-start {
+}
+
+.event-date-end::before {
+  content: " até ";
+}
+
+.event-info {
+  font-size: var(--small-font-size);
+  margin: 10px 0;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 /* =  M E D I U M    V I E P O R T S ====================================================*/
 @media Screen and (max-width: 1253px) {
   /* =====================================FOOTER===================================== */
@@ -2048,9 +2083,9 @@ input[type="radio"]:checked + .checked:after {
   /* ============ Fale conosco - Seja um residente ====================*/
 
   input[type="submit"] {
-   align-self: center;
-   width: 20%;  
- }
+    align-self: center;
+    width: 20%;
+  }
 }
 
 @media Screen and (max-width: 1064px) {

@@ -161,11 +161,11 @@ class HistoriaHospital(models.Model):
 
 class Eventos(models.Model):
     Titulo = models.CharField(max_length=100, blank=False, null=False)
-    DataInício = models.DateField('Data de Início', null=False, blank=False)
-    HoraInício = models.TimeField('Hora de Início', null=True, blank=True)
+    DataInicio = models.DateField('Data de Início', null=False, blank=False)
+    HoraInicio = models.TimeField('Hora de Início', null=True, blank=True)
     DataFim = models.DateField('Data final', null=True, blank=True)
     HoraFim = models.TimeField('Hora Final', null=True, blank=True)
-    Informações = models.TextField(blank=False, null=False)
+    Informacoes = models.TextField(blank=False, null=False)
     def __str__(self):
         return self.Titulo
     class Meta:
