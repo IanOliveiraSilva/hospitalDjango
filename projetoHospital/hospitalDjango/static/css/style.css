@@ -301,15 +301,18 @@ footer {
   display: none;
 }
 
-.menu-options {
+.menu-device {
   display: none;
+}
+
+.menu-options {
   background-color: var(--white);
   margin-top: -0.1%;
   margin-left: 9.5%;
   box-shadow: inset 0 -4px 4px var(--shadow);
   position: fixed;
   transition: 0.4s;
-  z-index: 1;
+  z-index: 3;
 }
 
 .menu-options--department {
@@ -398,7 +401,6 @@ footer {
 }
 
 .categories {
-  display: none;
   position: absolute;
   left: 100%;
   top: 0;
@@ -451,7 +453,6 @@ footer {
 }
 
 .subcategories {
-  display: none;
   margin-top: -59px;
 }
 
@@ -489,12 +490,8 @@ footer {
   font-family: "Atkinson Hyperlegible";
 }
 
-.option--category:hover > div {
-  display: flex;
-}
-
-.option--subcategory:hover > div {
-  display: block;
+.noShow {
+  display: none;
 }
 
 /* ======================================BODY====================================== */
@@ -529,7 +526,7 @@ footer {
 .back,
 .forward {
   position: relative;
-  z-index: 3;
+  z-index: 2;
   cursor: pointer;
   font-size: 15px;
   padding: 17px;
@@ -1706,12 +1703,13 @@ p.pags-text {
   width: 100%;
 }
 
-#funcao-informe{
+#funcao-informe {
   margin-bottom: 0;
   margin-left: 5px;
 }
 
-#form-area:disabled, #funcao-informe:disabled{
+#form-area:disabled,
+#funcao-informe:disabled {
   background-color: var(--lightGrey);
 }
 
@@ -2037,8 +2035,12 @@ input[type="radio"]:checked + .checked:after {
 }
 
 @media Screen and (max-width: 1200px) {
-  header__title--title {
+  .header__title--title {
     font-size: 36px;
+  }
+
+  .side-menu_arrow {
+    font-size: 38px;
   }
 }
 
@@ -2066,7 +2068,7 @@ input[type="radio"]:checked + .checked:after {
   }
 
   .menu-options {
-    margin-left: 5%;
+    margin-left: 4%;
   }
 
   /* ===================================FOOTER===================================== */
@@ -2120,6 +2122,57 @@ input[type="radio"]:checked + .checked:after {
   .modal-image {
     height: 55vh;
     padding-top: 12%;
+  }
+}
+
+@media Screen and (max-width: 992px) {
+  .side-menu_arrow {
+    font-size: 32px;
+  }
+
+  .donation-button {
+    font-size: 25px;
+  }
+
+  .news--wrapper {
+    width: 90%;
+  }
+
+  .news--content--title {
+    font-size: 18px;
+  }
+
+  .news--content--preview {
+    font-size: 16px;
+  }
+
+  .news--content--date {
+    margin-bottom: 5px;
+  }
+  .news--content--button {
+    margin-right: 100px;
+  }
+
+  .news--content--button:hover {
+    border: 3px solid var(--darkGreen);
+    background-color: var(--white);
+    color: var(--darkGreen);
+    transition: 0.4s;
+  }
+
+  .cooperative--image {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .image-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .certificate--image {
+    max-width: 100px;
+    max-height: 100px;
   }
 }
 
@@ -2212,267 +2265,6 @@ input[type="radio"]:checked + .checked:after {
   }
 }
 
-@media Screen and (max-width: 1200px) {
-  .side-menu_arrow {
-    font-size: 38px;
-  }
-
-  .menu-options {
-    display: none;
-    background-color: var(--white);
-    margin-top: -1%;
-    margin-left: 3%;
-    box-shadow: inset 0 -4px 4px var(--shadow);
-    position: fixed;
-    transition: 0.4s;
-    z-index: 5;
-  }
-
-  .menu-options--department {
-    display: block;
-    height: 22px;
-    padding: 10px;
-    position: relative;
-  }
-
-  .menu-options--department-wrapper {
-    width: 100%;
-  }
-
-  .menu-options--department--icon {
-    display: block;
-    width: 25px;
-    padding-right: 10px;
-  }
-
-  .menu-options--department--icon--next {
-    width: 10px;
-    padding-left: 10px;
-  }
-
-  .menu-options--department--icon--next-hover {
-    display: none;
-    width: 10px;
-    padding-left: 10px;
-  }
-
-  .menu-options--department--icon--hover {
-    display: none;
-    width: 35px;
-    padding-right: 10px;
-  }
-
-  .menu-options--department--span {
-    font-size: 14px;
-    color: var(--lightGreen);
-    text-decoration: none;
-    font-family: "Atkinson Hyperlegible";
-  }
-
-  .menu-options--department:hover {
-    background-color: var(--lightGreen);
-    cursor: pointer;
-  }
-
-  .menu-options--department:hover:last-child {
-    box-shadow: inset 0 -4px 4px var(--shadow);
-  }
-
-  .menu-options--department:hover
-    > .menu-options--department-wrapper
-    > .menu-options--department--span {
-    color: var(--white);
-    cursor: pointer;
-  }
-
-  .menu-options--department:hover
-    > .menu-options--department-wrapper
-    > .menu-options--department--icon--hover {
-    display: block;
-  }
-
-  .menu-options--department:hover
-    > .menu-options--department-wrapper
-    > .menu-options--department--icon {
-    display: none;
-  }
-
-  .menu-options--department:hover
-    > .menu-options--department-wrapper
-    > .menu-options--department--icon--next {
-    display: none;
-  }
-
-  .menu-options--department:hover
-    > .menu-options--department-wrapper
-    > .menu-options--department--icon--next-hover {
-    display: flex;
-  }
-
-  .categories-options--category:last-child {
-    box-shadow: inset 0 -4px 4px var(--shadow);
-  }
-
-  .categories {
-    display: none;
-    position: absolute;
-    left: 100%;
-    top: 0;
-  }
-
-  .categories-options {
-    position: absolute;
-    background-color: var(--white);
-    width: 160px;
-    left: 100%;
-    box-shadow: inset 0 -4px 4px var(--shadow);
-  }
-
-  .categories-options--category {
-    height: 25px;
-    padding: 17px;
-  }
-
-  .categories-options--category:hover {
-    background-color: var(--lightGreen);
-    cursor: pointer;
-  }
-
-  .categories-options--category:hover > .categories-options--category-link {
-    color: var(--white);
-  }
-
-  .categories-options--category:hover > .menu-options--department--icon--next {
-    display: none;
-  }
-
-  .categories-options--category:hover
-    > .menu-options--department--icon--next-hover {
-    display: flex;
-  }
-
-  .categories-options--category:last-child {
-    box-shadow: inset 0 -4px 4px var(--shadow);
-  }
-
-  .categories-options--category-link {
-    font-size: 14px;
-    color: var(--lightGreen);
-    text-decoration: none;
-    font-family: "Atkinson Hyperlegible";
-  }
-
-  .last {
-    top: -300%;
-  }
-
-  .subcategories {
-    display: none;
-    margin-top: -59px;
-  }
-
-  .subcategories-options {
-    position: absolute;
-    background-color: var(--white);
-    width: 250px;
-    left: 100%;
-    box-shadow: inset 0 -4px 4px var(--shadow);
-  }
-
-  .subcategories-options--subcategory {
-    height: 25px;
-    padding: 17px;
-  }
-
-  .subcategories-options--subcategory:hover {
-    background-color: var(--lightGreen);
-    cursor: pointer;
-  }
-
-  .subcategories-options--subcategory:hover
-    > .subcategories-options--subcategory-link {
-    color: var(--white);
-  }
-
-  .subcategories-options--subcategory:last-child {
-    box-shadow: inset 0 -4px 4px var(--shadow);
-  }
-
-  .subcategories-options--subcategory-link {
-    font-size: 12px;
-    color: var(--lightGreen);
-    text-decoration: none;
-    font-family: "Atkinson Hyperlegible";
-  }
-
-  .option--category:hover > div {
-    display: flex;
-  }
-
-  .option--subcategory:hover > div {
-    display: block;
-  }
-}
-@media Screen and (max-width: 1000px) {
-   /* ============ Fale conosco - Seja um residente ====================*/
-  
-   input[type="submit"] {
-    align-self: center;
-    width: 20%;  
-  }
-}
-
-@media Screen and (max-width: 992px) {
-  .side-menu_arrow {
-    font-size: 32px;
-  }
-
-  .donation-button {
-    font-size: 25px;
-  }
-
-  .news--wrapper {
-    width: 90%;
-  }
-
-  .news--content--title {
-    font-size: 18px;
-  }
-
-  .news--content--preview {
-    font-size: 16px;
-  }
-
-  .news--content--date {
-    margin-bottom: 5px;
-  }
-  .news--content--button {
-    margin-right: 100px;
-  }
-
-  .news--content--button:hover {
-    border: 3px solid var(--darkGreen);
-    background-color: var(--white);
-    color: var(--darkGreen);
-    transition: 0.4s;
-  }
-
-  .cooperative--image {
-    max-width: 100px;
-    max-height: 100px;
-  }
-
-  .image-container {
-    width: 100px;
-    height: 100px;
-  }
-
-  .certificate--image {
-    max-width: 100px;
-    max-height: 100px;
-  }
-}
-
 @media Screen and (max-width: 800px) {
   .side-menu_arrow {
     font-size: 28px;
@@ -2482,66 +2274,83 @@ input[type="radio"]:checked + .checked:after {
     font-size: 25px;
   }
 
-  .news--wrapper {
-    width: 90%;
-  }
-
-  .news--content--title {
-    font-size: 18px;
-  }
-
-  .news--content--preview {
-    font-size: 16px;
-  }
-
-  .news--content--date {
-    margin-bottom: 5px;
-  }
-  .news--content--button {
-    margin-right: 100px;
-  }
-
-  .news--content--button:hover {
-    border: 3px solid var(--darkGreen);
-    background-color: var(--white);
-    color: var(--darkGreen);
-    transition: 0.4s;
-  }
-
-  .cooperative--image {
-    max-width: 70px;
-    max-height: 70px;
-  }
-
-  .image-container {
-    width: 70px;
-    height: 70px;
-  }
-
-  .certificate--image {
-    max-width: 70px;
-    max-height: 70px;
-  }
-
   .menu-options {
     display: none;
+  }
+
+  .menu-device {
+    display: block;
+    transition: all 4s;
+  }
+
+  .modal-device {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    padding-bottom: 45%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .noShow {
+    transition: all 4s;
+    transform: translateX(-100%);
+  }
+
+  .menu-device-options {
+    margin-top: -0.5%;
+    transform: translateX(0%);
+    width: 80vw;
+    height: 100vh;
     background-color: var(--white);
-    margin-top: -1%;
-    margin-left: 3%;
     box-shadow: inset 0 -4px 4px var(--shadow);
     position: fixed;
-    transition: 0.4s;
-    z-index: 5;
+    z-index: 3;
   }
 
-  .menu-options--department {
-    display: block;
-    height: 22px;
-    padding: 10px;
-    position: relative;
+  #fechar-menu-device > .menu-options--department-wrapper > img {
+    width: 25px;
+    padding-left: 6px;
   }
 
-  .menu-options--department-wrapper {
+  .device-department {
+    padding: 23px;
+    box-shadow: 0px 1px 0px 0px var(--lightGrey);
+  }
+
+  .device-categories {
+    left: 0;
+    z-index: 2;
+  }
+
+  .device-categories > .categories-options {
+    width: 80vw;
+    height: 100vh;
+  }
+
+  .device-categories > .categories-options > .categories-options--category {
+    box-shadow: 0px 1px 0px 0px var(--lightGrey);
+  }
+
+  .device-subcategories {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    margin-top: 0;
+  }
+
+  .device-subcategories > .subcategories-options {
+    width: 80vw;
+    height: 100vh;
+  }
+
+  .device-subcategories
+    > .subcategories-options
+    > .subcategories-options--subcategory {
+    box-shadow: 0px 1px 0px 0px var(--lightGrey);
+  }
+  /*.menu-options--department-wrapper {
     width: 100%;
   }
 
@@ -2717,6 +2526,282 @@ input[type="radio"]:checked + .checked:after {
 
   .option--subcategory:hover > div {
     display: block;
+  } */
+
+  /*================================ H O M E ======================================*/
+
+  .banner-container--side-menu {
+    display: none;
+  }
+
+  .banner {
+    position: absolute;
+    height: 70%;
+    max-width: 100%;
+    top: -30px;
+  }
+
+  .move-buttons {
+    top: -3px;
+  }
+
+  .banner-container {
+    position: relative;
+    top: 0;
+    width: 100vw;
+    height: 65vh;
+    margin-bottom: 0;
+  }
+
+  .back,
+  .forward {
+    margin-top: -0.5%;
+    font-size: 30px;
+    padding: 17px;
+    color: var(--grey);
+    font-weight: bold;
+    transition: 0.4s ease;
+    user-select: none;
+  }
+
+  .dots-buttons {
+    display: flex;
+    position: absolute;
+    gap: 20px;
+    left: 45%;
+    bottom: 140px;
+  }
+
+  .dot {
+    position: initial;
+    height: 12px;
+    width: 12px;
+  }
+
+  .donation-button {
+    display: none;
+  }
+
+  .smallDevice-menu-container {
+    position: relative;
+    width: 100%;
+    top: 193px;
+  }
+
+  .smallDevice-menu-icone {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    width: 95%;
+  }
+
+  .smallDevice-menu-div {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .smallDevice-menu-div--img {
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    border-width: 2px;
+    border-color: #e5e5e5;
+    border-style: solid;
+    height: 70px;
+    width: 70px;
+  }
+
+  .smallDevice-menu-icone-img {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 16px;
+  }
+
+  .smallDevice-menu-legenda {
+    display: grid;
+    margin-top: 20px;
+    justify-content: center;
+    text-align: center;
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-size: 1rem;
+    color: #038c43;
+  }
+
+  .text-color-pink {
+    color: #f90051;
+  }
+
+  .news--wrapper {
+    width: 90%;
+  }
+
+  .news--content--title {
+    font-size: 18px;
+  }
+
+  .news--content--preview {
+    font-size: 16px;
+  }
+
+  .news--content--date {
+    margin-bottom: 5px;
+  }
+  .news--content--button {
+    margin-right: 100px;
+  }
+
+  .news--content--button:hover {
+    border: 3px solid var(--darkGreen);
+    background-color: var(--white);
+    color: var(--darkGreen);
+    transition: 0.4s;
+  }
+
+  .cooperative--image {
+    max-width: 70px;
+    max-height: 70px;
+    font-size: 11px;
+  }
+
+  .image-container {
+    width: 70px;
+    height: 70px;
+  }
+
+  .certificate--image {
+    max-width: 70px;
+    max-height: 70px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+
+  .wrapper {
+    top: 93px;
+  }
+
+  .header__wrapper {
+    justify-content: space-between;
+    padding: 2vh 5%;
+  }
+
+  .header__menu--menu {
+    position: relative;
+    display: block;
+  }
+
+  .header__menu--menu-image {
+    width: 40px;
+  }
+
+  .header__title--logo {
+    display: none;
+  }
+
+  .header__title--logo-image {
+    display: flex;
+    width: 150px;
+    height: auto;
+  }
+
+  .header__title {
+    width: 50%;
+  }
+
+  .header__title--title {
+    display: none;
+  }
+
+  /* =================================FOOTER===================================== */
+  .footer {
+    padding: 0;
+  }
+
+  .footer__wrapper {
+    padding: 1% 7%;
+  }
+
+  .medias--social {
+    font-size: 18px;
+  }
+
+  .medias--icons {
+    margin-top: 10px;
+  }
+
+  .medias--icons__link-icon {
+    width: 35px;
+  }
+
+  /*================================ H O M E ======================================*/
+
+  .dots-buttons {
+    left: 44%;
+  }
+
+  /* ============================== P A G ======================================*/
+
+  .pags-image-bg-lightgrey {
+    width: 140px;
+    height: 140px;
+  }
+
+  .pags-image {
+    width: 140px;
+    max-height: 140px;
+  }
+
+  .navegacao {
+    padding: 5px 0 5px 10px;
+    line-height: 130%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+
+  .navegacao-link {
+    font-size: 14px;
+  }
+
+  /* =============================  N O T I C I A =================================*/
+  .news-main-title {
+    font-size: var(--normal-font-size);
+  }
+
+  .news-main-image {
+    width: 100%;
+  }
+
+  .news-text {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  /*============================= Guia Medico ==================================*/
+  .list-title {
+    font-size: 17px;
+  }
+
+  .doctor {
+    font-size: var(--small-font-size);
+  }
+
+  /*============================= Galeria ==================================*/
+  .galery-image-wrapper {
+    max-height: 220px;
+  }
+
+  /*============================ D O N A T E ===================================*/
+  .donate {
+    grid-template-columns: auto auto auto;
   }
 }
 
@@ -2763,10 +2848,6 @@ input[type="radio"]:checked + .checked:after {
     display: none;
   }
 
-  .menu-options {
-    margin-left: 5%;
-  }
-
   /* =====================================FOOTER===================================== */
   .footer__wrapper {
     flex-direction: column;
@@ -2811,75 +2892,8 @@ input[type="radio"]:checked + .checked:after {
     margin-bottom: 20px;
   }
 
-  .back,
-  .forward {
-    font-size: 15px;
-    padding: 10px;
-  }
-
-  .dot {
-    position: relative;
-    top: -140px;
-    height: 12px;
-    width: 12px;
-  }
-
   .donation-button {
     display: none;
-  }
-
-  .smallDevice-menu-container {
-    display: grid;
-    position: relative;
-    width: 95%;
-    top: -130px;
-  }
-
-  .smallDevice-menu-icone {
-    display: grid;
-    grid-template-columns: repeat(5, 20%);
-    margin-bottom: 30px;
-    justify-content: center;
-    justify-items: space-between;
-  }
-
-  .smallDevice-menu-div {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-  }
-
-  .smallDevice-menu-div--img {
-    display: flex;
-    border-radius: 50%;
-    justify-content: center;
-    border-width: 2px;
-    border-color: #e5e5e5;
-    border-style: solid;
-    height: 70px;
-    width: 70px;
-  }
-
-  .smallDevice-menu-icone-img {
-    display: flex;
-    width: 100%;
-    box-sizing: border-box;
-    height: 100%;
-    padding: 16px;
-  }
-
-  .smallDevice-menu-legenda {
-    display: grid;
-    margin-top: 20px;
-    justify-content: center;
-    text-align: center;
-    font-family: "Atkinson Hyperlegible", sans-serif;
-    font-size: 1rem;
-    color: #038c43;
-  }
-
-  .text-color-pink {
-    color: #f90051;
   }
 
   /*============================== N O T Í C I A S =================================*/
@@ -2914,7 +2928,6 @@ input[type="radio"]:checked + .checked:after {
 
   .title-section {
     position: relative;
-    top: -130px;
     margin-bottom: 20px;
   }
 
@@ -2924,7 +2937,6 @@ input[type="radio"]:checked + .checked:after {
     background-color: #e5e5e5;
     margin-bottom: 20px;
     position: relative;
-    top: -130px;
   }
 
   /* =============================  N O T I C I A =================================*/
@@ -2994,7 +3006,6 @@ input[type="radio"]:checked + .checked:after {
 
   .certificate--wrapper {
     position: relative;
-    top: -130px;
   }
 
   .previous {
@@ -3056,133 +3067,6 @@ input[type="radio"]:checked + .checked:after {
     padding: 14px 8px;   
   }
 } 
-
-@media only screen and (max-width: 700px) {
-  .modal-content {
-    width: 100%;
-  }
-
-  .wrapper {
-    top: 93px;
-  }
-
-  .header__wrapper {
-    justify-content: space-between;
-    padding: 2vh 5%;
-  }
-
-  .header__menu--menu {
-    position: relative;
-    display: block;
-  }
-
-  .header__menu--menu-image {
-    width: 40px;
-  }
-
-  .header__title--logo {
-    display: none;
-  }
-
-  .header__title--logo-image {
-    display: flex;
-    width: 150px;
-    height: auto;
-  }
-
-  .header__title {
-    width: 50%;
-  }
-
-  .header__title--title {
-    display: none;
-  }
-
-  .menu-options {
-    margin-left: 5%;
-  }
-
-  /* =================================FOOTER===================================== */
-  .footer {
-    padding: 0;
-  }
-
-  .footer__wrapper {
-    padding: 1% 7%;
-  }
-
-  .medias--social {
-    font-size: 18px;
-  }
-
-  .medias--icons {
-    margin-top: 10px;
-  }
-
-  .medias--icons__link-icon {
-    width: 35px;
-  }
-
-  /* ============================== P A G ======================================*/
-
-  .pags-image-bg-lightgrey {
-    width: 140px;
-    height: 140px;
-  }
-
-  .pags-image {
-    width: 140px;
-    max-height: 140px;
-  }
-
-  .navegacao {
-    padding: 5px 0 5px 10px;
-    line-height: 130%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    line-clamp: 1;
-    -webkit-box-orient: vertical;
-  }
-
-  .navegacao-link {
-    font-size: 14px;
-  }
-
-  /* =============================  N O T I C I A =================================*/
-  .news-main-title {
-    font-size: var(--normal-font-size);
-  }
-
-  .news-main-image {
-    width: 100%;
-  }
-
-  .news-text {
-    font-size: 16px;
-    width: 100%;
-  }
-
-  /*============================= Guia Medico ==================================*/
-  .list-title {
-    font-size: 17px;
-  }
-
-  .doctor {
-    font-size: var(--small-font-size);
-  }
-
-  /*============================= Galeria ==================================*/
-  .galery-image-wrapper {
-    max-height: 220px;
-  }
-
-  /*============================ D O N A T E ===================================*/
-  .donate {
-    grid-template-columns: auto auto auto;
-  }
-}
 
 @media Screen and (max-width: 560px) {
   .header__title {

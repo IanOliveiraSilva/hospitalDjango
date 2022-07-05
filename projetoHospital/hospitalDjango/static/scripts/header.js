@@ -5,6 +5,10 @@ const $lines = document.querySelector(".header__menu--menu");
 const $linesImage = document.querySelector(".header__menu--menu-image");
 const $menuAlt = document.querySelector(".header__menu--title");
 const $menuOptions = document.querySelector(".menu-options");
+const $categories = document.querySelectorAll(".categories");
+const $menuCategory = document.querySelectorAll(".option--category");
+const $subcategories = document.querySelectorAll(".subcategories");
+const $menuSubcategory = document.querySelectorAll(".option--subcategory");
 
 window.onscroll = function () {
   scrollFunction();
@@ -52,14 +56,112 @@ function scrollFunction() {
   }
 }
 
-$menu.addEventListener("mouseover", function () {
-  $menuOptions.style.display = "block";
-});
+/*============================= DEVICE ==================================*/
+const $menuDeviceOptions = document.querySelector(".menu-device-options");
+const $fecharMenuDevice = document.querySelector("#fechar-menu-device");
 
-$menuOptions.addEventListener("mouseover", function () {
-  $menuOptions.style.display = "block";
-});
+const $optionCategoryDevice = document.querySelectorAll(
+  ".option--category-device"
+);
+const $deviceCategories = document.querySelectorAll(".device-categories");
+const $voltarMenuDeviceCategory = document.querySelectorAll(
+  ".voltar-menu-device-category"
+);
 
-$menuOptions.addEventListener("mouseout", function () {
-  $menuOptions.style.display = "none";
-});
+const $optionSubcategoryDevice = document.querySelectorAll(
+  ".option--subcategory-device"
+);
+const $deviceSubcategories = document.querySelectorAll(".device-subcategories");
+const $voltarMenuDeviceSubcategory = document.querySelectorAll(
+  ".voltar-menu-device-subcategory"
+);
+
+const modal = document.querySelector(".modal-device");
+
+if (window.screen.width <= 800) {
+  $menu.addEventListener("click", function () {
+    modal.classList.toggle("noShow");
+    $menuDeviceOptions.classList.toggle("noShow");
+    
+    for (i = 0; i < $optionCategoryDevice.length; i++) {
+      if (!$deviceCategories[i].nodeName.includes("noShow")) {
+        $deviceCategories[i].classList.add("noShow");
+      }
+    }
+    
+    for (i = 0; i < $optionSubcategoryDevice.length; i++) {
+      if (!$deviceSubcategories[i].nodeName.includes("noShow")) {
+        $deviceSubcategories[i].classList.add("noShow");
+      }
+    }
+  });
+  
+  $fecharMenuDevice.addEventListener("click", function () {
+    $menuDeviceOptions.classList.toggle("noShow");
+    modal.classList.toggle("noShow");
+  });
+
+  for (i = 0; i < $optionCategoryDevice.length; i++) {
+    (function (x) {
+      $optionCategoryDevice[x].addEventListener("click", function () {
+        $deviceCategories[x].classList.toggle("noShow");
+      });
+    })(i);
+  }
+
+  for (let i = 0; i < $voltarMenuDeviceCategory.length; i++) {
+    (function (x) {
+      $voltarMenuDeviceCategory[x].addEventListener("click", function () {
+        $deviceCategories[x].classList.toggle("noShow");
+      });
+    })(i);
+  }
+
+  for (i = 0; i < $optionSubcategoryDevice.length; i++) {
+    (function (x) {
+      $optionSubcategoryDevice[x].addEventListener("click", function () {
+        $deviceSubcategories[x].classList.toggle("noShow");
+      });
+    })(i);
+  }
+
+  for (let i = 0; i < $voltarMenuDeviceSubcategory.length; i++) {
+    (function (x) {
+      $voltarMenuDeviceSubcategory[x].addEventListener("click", function () {
+        $deviceSubcategories[x].classList.toggle("noShow");
+      });
+    })(i);
+  }
+} else {
+  $menu.addEventListener("mouseover", function () {
+    $menuOptions.classList.remove("noShow");
+  });
+
+  $menuOptions.addEventListener("mouseover", function () {
+    $menuOptions.classList.remove("noShow");
+  });
+
+  $menuOptions.addEventListener("mouseout", function () {
+    $menuOptions.classList.add("noShow");
+  });
+
+  for (let i = 0; i < $menuCategory.length; i++) {
+    $menuCategory[i].addEventListener("mouseover", function () {
+      $categories[i].classList.remove("noShow");
+    });
+
+    $menuCategory[i].addEventListener("mouseout", function () {
+      $categories[i].classList.add("noShow");
+    });
+  }
+
+  for (let i = 0; i < $menuSubcategory.length; i++) {
+    $menuSubcategory[i].addEventListener("mouseover", function () {
+      $subcategories[i].classList.remove("noShow");
+    });
+
+    $menuSubcategory[i].addEventListener("mouseout", function () {
+      $subcategories[i].classList.add("noShow");
+    });
+  }
+}
