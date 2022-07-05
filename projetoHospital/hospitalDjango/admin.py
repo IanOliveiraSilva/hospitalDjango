@@ -117,6 +117,12 @@ class InformacaoRodape(admin.ModelAdmin):
 @admin.register(RedesSociais)
 class RedesSociais(admin.ModelAdmin):
     list_display = ('Titulo', )
+
 @admin.register(HistoriaHospital)
 class HistoriaHospital(admin.ModelAdmin):
     list_display = ('Titulo', )
+
+@admin.register(Eventos)
+class Eventos(admin.ModelAdmin):
+    list_display = ('Titulo', 'DataInício')
+    search_fields = ('Titulo', )

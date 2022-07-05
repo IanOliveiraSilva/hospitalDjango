@@ -23,5 +23,18 @@ Laureano - Eventos do Hospital{% endblock titulo %} {% block body %}
 
 <h1 class="pags-title">Eventos do Hospital</h1>
 
+{% for item in eventos %}
+  Título:{{item.Titulo}}
+  <br>
+  Data: {{item.DataInício}}
+  <br>
+  Hora Início: {{item.HoraInício}}
+  <br>
+  Fim:{{item.DataFim}}
+  <br>
+  Hora Fim: {{item.HoraFim}}
+  <br>
+  Informações: {{item.Informações}}
+{% endfor %}
 
 {% endblock body %}
