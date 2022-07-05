@@ -1176,6 +1176,7 @@ footer {
   font-weight: 400;
   letter-spacing: normal;
   line-height: 1.5;
+  white-space: pre-line;
 }
 
 .mission_title {
