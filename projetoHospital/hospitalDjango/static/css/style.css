@@ -1957,9 +1957,6 @@ input[type="radio"]:checked + .checked:after {
   gap: 6px;
 }
 
-.event-date-start {
-}
-
 .event-date-end::before {
   content: " até ";
 }
