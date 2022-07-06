@@ -1654,6 +1654,7 @@ p.pags-text {
   cursor: pointer;
   position: relative;
   top: 13%;
+  right: 3%;
   color: var(--background);
   font-size: 80px;
   font-weight: bold;
@@ -2046,18 +2047,17 @@ input[type="radio"]:checked + .checked:after {
     max-height: 245px;
   }
 
+  .modal-wrapper {
+    top: 20%;
+  }
+
   .modal-image {
     height: 61vh;
   }
 
-  .modal-previous {
-    top: 38%;
-    left: 16%;
-  }
-
-  .modal-next {
-    top: 38%;
-    right: 16%;
+  .modal-title {
+    width: 75%;
+    top: 11%;
   }
 }
 
@@ -2208,6 +2208,22 @@ input[type="radio"]:checked + .checked:after {
   .certificate--image {
     max-width: 100px;
     max-height: 100px;
+  }
+
+  /*============================= Galeria ==================================*/
+
+  .modal-wrapper {
+    top: 20%;
+  }
+
+  .modal-image {
+    width: 75%;
+    height: 55vh;
+  }
+
+  .modal-title {
+    width: 75%;
+    top: 11%;
   }
 }
 
@@ -2538,18 +2554,21 @@ input[type="radio"]:checked + .checked:after {
 
   /*================================ G A L E R I A ======================================*/
   .modal-wrapper {
-    top: 13%;
+    top: 21%;
   }
-  
+
   .modal-image {
     width: 80%;
     height: 55vh;
   }
-  
+
+  .close {
+    top: 16%;
+  }
+
   .modal-title {
     width: 80%;
-    height: 74px;
-    padding-top: 24px;
+    top: 12%;
   }
 }
 
@@ -2558,7 +2577,7 @@ input[type="radio"]:checked + .checked:after {
     font-size: 26px;
   }
   /* HOME */
-  
+
   .banner {
     left: 19px;
   }
@@ -2570,8 +2589,6 @@ input[type="radio"]:checked + .checked:after {
 }
 
 @media only screen and (max-width: 700px) {
-
-
   .modal-content {
     width: 100%;
   }
@@ -2634,21 +2651,18 @@ input[type="radio"]:checked + .checked:after {
   }
 
   /*================================ H O M E ======================================*/
-<<<<<<< HEAD
-=======
- 
+
   /* HOME */
-  
+
   .smallDevice-menu-container {
     top: 263px;
     right: 177px;
-  } 
->>>>>>> 32e3137b0d7e6f9b642ccf5e6d8f665567164ae2
+  }
 
   .move-buttons {
     left: -13px;
   }
-  
+
   .dots-buttons {
     left: 38%;
   }
@@ -2725,6 +2739,10 @@ input[type="radio"]:checked + .checked:after {
     height: 47vh;
   }
 
+  .pagination {
+    margin-top: 15px;
+  }
+
   /*============================ D O N A T E ===================================*/
   .donate {
     grid-template-columns: auto auto auto;
@@ -2789,7 +2807,6 @@ input[type="radio"]:checked + .checked:after {
     max-width: 100%;
     left: -206px;
     top: -10px;
-    
   }
 
   .banner-container {
@@ -2803,7 +2820,7 @@ input[type="radio"]:checked + .checked:after {
   .donation-button {
     display: none;
   }
-  
+
   .move-buttons {
     left: -188px;
     top: -6px;
@@ -2812,7 +2829,7 @@ input[type="radio"]:checked + .checked:after {
   .smallDevice-menu-container {
     top: 145px;
     right: 179px;
-  } 
+  }
 
   .dots-buttons {
     left: 28%;
@@ -2991,14 +3008,6 @@ input[type="radio"]:checked + .checked:after {
     height: 46vh;
   }
 
-  .modal-previous {
-    top: 40%;
-  }
-
-  .modal-next {
-    top: 40%;
-  }
-
   /* ============ Fale conosco - Seja um residente ====================*/
 
   input[type="submit"] {
@@ -3009,13 +3018,12 @@ input[type="radio"]:checked + .checked:after {
 }
 
 @media Screen and (max-width: 560px) {
-
   .dots-buttons {
     left: 30%;
     margin-bottom: 162px;
     top: 198px;
   }
-  
+
   .header__title {
     width: 30%;
   }
@@ -3074,7 +3082,6 @@ input[type="radio"]:checked + .checked:after {
 /* = M O B I L E   D E V I C E ==========================================================*/
 /* 100% Image Width on Smaller Screens */
 @media Screen and (max-width: 480px) {
-
   /* HOME */
   .dots-buttons {
     left: 20%;
@@ -3106,6 +3113,24 @@ input[type="radio"]:checked + .checked:after {
 
   .galery-image-wrapper {
     max-height: 230px;
+  }
+
+  .modal-wrapper {
+    top: 27%;
+  }
+
+  .modal-image {
+    width: 75%;
+    height: 36vh;
+  }
+
+  .close {
+    top: 26%;
+  }
+
+  .modal-title {
+    width: 75%;
+    top: 18%;
   }
 
   /*============================ D O N A T E ===================================*/
@@ -3222,6 +3247,29 @@ input[type="radio"]:checked + .checked:after {
   /*============================= Galeria ==================================*/
   .galery-image-wrapper {
     max-height: 195px;
+  }
+
+  .modal-image {
+    width: 95%;
+    height: 36vh;
+  }
+
+  .modal-previous,
+  .modal-next {
+    position: absolute;
+  }
+
+  .modal-previous {
+    left: 3%;
+  }
+
+  .modal-next {
+    right: 3%;
+  }
+
+  .modal-title {
+    width: 95%;
+    top: 18%;
   }
 
   /*================== T R A B A L H E    C O N O S C O ======================*/
