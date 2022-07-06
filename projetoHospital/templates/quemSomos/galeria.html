@@ -45,12 +45,14 @@ Laureano - Galeria de Fotos{% endblock titulo %} {% block body %}
   </div>
 </section>
 
-<div class="modal">
-  <a class="modal-previous">&#10094;</a>
+<div class="modal column-center">
   <span class="close">&times;</span>
-  <img class="modal-image" />
+  <div class="modal-wrapper row-center">
+    <a class="modal-previous">&#10094;</a>
+    <img class="modal-image" />
+    <a class="modal-next">&#10095;</a>
+  </div>
   <div class="modal-title"></div>
-  <a class="modal-next">&#10095;</a>
 </div>
 
 <script type="text/javascript" src='{% static "/scripts/galeria.js" %}'></script>

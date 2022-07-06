@@ -1576,6 +1576,12 @@ p.pags-text {
   opacity: 0.7;
 }
 
+.modal-wrapper {
+  position: relative;
+  top: 10%;
+  gap: 10px;
+}
+
 .modal {
   display: flex;
   align-items: center;
@@ -1593,22 +1599,26 @@ p.pags-text {
 }
 
 .modal-image {
-  margin: auto;
-  display: block;
   width: 60%;
   height: 75vh;
-  padding-top: 9%;
 }
 
 .modal-title {
   margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
+  position: relative;
+  width: 60%;
+  height: 74px;
   text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
+  box-sizing: border-box;
+  background-color: var(--shadow);
+  color: var(--white);
+  font-family: "Montserrat";
+  font-weight: 700;
+  text-shadow: 2px 2px 0 var(--darkGrey), 2px -2px 0 var(--darkGrey),
+    -2px 2px 0 var(--darkGrey), -2px -2px 0 var(--darkGrey),
+    2px 0px 0 var(--darkGrey), 0px 2px 0 var(--darkGrey),
+    -2px 0px 0 var(--darkGrey), 0px -2px 0 var(--darkGrey);
+  padding-top: 24px;
 }
 
 /* Add Animation */
@@ -1639,9 +1649,11 @@ p.pags-text {
 }
 
 .close {
-  position: fixed;
-  top: 15%;
-  right: 35px;
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+  position: relative;
+  top: 13%;
   color: var(--background);
   font-size: 80px;
   font-weight: bold;
@@ -1655,34 +1667,15 @@ p.pags-text {
   cursor: pointer;
 }
 
-.modal-previous {
-  text-decoration: none;
-  color: var(--background);
-  z-index: 3;
-  cursor: pointer;
-  position: fixed;
-  font-size: 80px;
-  padding: 17px;
-  transition: 0.4s ease;
-  margin: 0 -20px;
-  user-select: none;
-  top: 50%;
-  left: 17%;
-}
-
+.modal-previous,
 .modal-next {
   text-decoration: none;
   color: var(--background);
   z-index: 3;
   cursor: pointer;
-  position: fixed;
   font-size: 80px;
-  padding: 17px;
   transition: 0.4s ease;
-  margin: 0 -20px;
   user-select: none;
-  top: 50%;
-  right: 17%;
 }
 
 .modal-next:hover,
@@ -2055,7 +2048,6 @@ input[type="radio"]:checked + .checked:after {
 
   .modal-image {
     height: 61vh;
-    padding-top: 10%;
   }
 
   .modal-previous {
@@ -2165,7 +2157,6 @@ input[type="radio"]:checked + .checked:after {
 
   .modal-image {
     height: 55vh;
-    padding-top: 12%;
   }
 }
 
@@ -2400,7 +2391,7 @@ input[type="radio"]:checked + .checked:after {
   .banner-container--side-menu {
     display: none;
   }
-  
+
   .banner-container {
     position: relative;
     top: 0;
@@ -2409,7 +2400,7 @@ input[type="radio"]:checked + .checked:after {
     margin-bottom: 165px;
     right: -188px;
   }
-  
+
   .banner {
     position: absolute;
     height: 100%;
@@ -2422,7 +2413,6 @@ input[type="radio"]:checked + .checked:after {
     font-size: 15px;
     padding: 10px;
   }
-
 
   .back:hover {
     font-size: 15px;
@@ -2540,6 +2530,22 @@ input[type="radio"]:checked + .checked:after {
     max-width: 70px;
     max-height: 70px;
   }
+
+  /*================================ G A L E R I A ======================================*/
+  .modal-wrapper {
+    top: 13%;
+  }
+  
+  .modal-image {
+    width: 80%;
+    height: 55vh;
+  }
+  
+  .modal-title {
+    width: 80%;
+    height: 74px;
+    padding-top: 24px;
+  }
 }
 
 @media Screen and (max-width: 762px) {
@@ -2611,7 +2617,6 @@ input[type="radio"]:checked + .checked:after {
   }
 
   /*================================ H O M E ======================================*/
- 
 
   .dots-buttons {
     left: 44%;
@@ -2667,9 +2672,14 @@ input[type="radio"]:checked + .checked:after {
     font-size: var(--small-font-size);
   }
 
-  /*============================= Galeria ==================================*/
+  /*================================ G A L E R I A ======================================*/
   .galery-image-wrapper {
     max-height: 220px;
+  }
+
+  .modal-image {
+    width: 80%;
+    height: 47vh;
   }
 
   /*============================ D O N A T E ===================================*/
@@ -2736,7 +2746,7 @@ input[type="radio"]:checked + .checked:after {
     max-width: 100%;
     top: -30px;
   }
-  
+
   .banner-container {
     position: relative;
     top: 0;
@@ -2910,6 +2920,18 @@ input[type="radio"]:checked + .checked:after {
 
   .galery-image-wrapper {
     max-height: 255px;
+  }
+
+  .modal-image {
+    height: 46vh;
+  }
+
+  .modal-previous {
+    top: 40%;
+  }
+
+  .modal-next {
+    top: 40%;
   }
 
   /* ============ Fale conosco - Seja um residente ====================*/
