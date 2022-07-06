@@ -1176,6 +1176,7 @@ footer {
   font-weight: 400;
   letter-spacing: normal;
   line-height: 1.5;
+  white-space: pre-line;
 }
 
 .mission_title {
@@ -2397,49 +2398,44 @@ input[type="radio"]:checked + .checked:after {
   .banner-container--side-menu {
     display: none;
   }
-
-  .banner {
-    position: absolute;
-    height: 70%;
-    max-width: 100%;
-    top: -30px;
-  }
-
-  .move-buttons {
-    top: -3px;
-  }
-
+  
   .banner-container {
     position: relative;
     top: 0;
-    width: 100vw;
-    height: 65vh;
-    margin-bottom: 0;
+    width: 155vw;
+    height: 54vh;
+    margin-bottom: 165px;
+    right: -188px;
+  }
+  
+  .banner {
+    position: absolute;
+    height: 100%;
+    max-width: 80%;
+    object-fit: cover;
   }
 
   .back,
   .forward {
-    margin-top: -0.5%;
-    font-size: 30px;
-    padding: 17px;
-    color: var(--grey);
-    font-weight: bold;
-    transition: 0.4s ease;
-    user-select: none;
+    font-size: 15px;
+    padding: 10px;
   }
 
-  .dots-buttons {
-    display: flex;
-    position: absolute;
-    gap: 20px;
-    left: 45%;
-    bottom: 140px;
+
+  .back:hover {
+    font-size: 15px;
+  }
+
+  .foward:hover {
+    font-size: 15px;
   }
 
   .dot {
-    position: initial;
+    position: relative;
+    top: 43px;
     height: 12px;
     width: 12px;
+    right: 101px;
   }
 
   .donation-button {
@@ -2447,15 +2443,19 @@ input[type="radio"]:checked + .checked:after {
   }
 
   .smallDevice-menu-container {
+    display: grid;
     position: relative;
-    width: 100%;
-    top: 193px;
+    width: 95%;
+    top: 263px;
+    right: 155px;
   }
 
   .smallDevice-menu-icone {
     display: grid;
     grid-template-columns: repeat(5, 20%);
-    width: 95%;
+    margin-bottom: 30px;
+    justify-content: center;
+    justify-items: space-between;
   }
 
   .smallDevice-menu-div {
@@ -2609,6 +2609,7 @@ input[type="radio"]:checked + .checked:after {
   }
 
   /*================================ H O M E ======================================*/
+ 
 
   .dots-buttons {
     left: 44%;
@@ -2733,7 +2734,7 @@ input[type="radio"]:checked + .checked:after {
     max-width: 100%;
     top: -30px;
   }
-
+  
   .banner-container {
     position: relative;
     top: 0;
