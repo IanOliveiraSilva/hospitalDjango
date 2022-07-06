@@ -44,16 +44,12 @@ Laureano - Ouvidoria{% endblock titulo %} {% block body %}
   </div>
 
   <form id="formulario" class="column-j-start" action="/action_page.php">
-
     <div class="row-j-start radio-wrapper-bottom">
       <div class="radio-container">
-        <input
-          type="radio"
-          name="ouvidoria"
-          value="anonimo"
-          id="anonimo"
-        />
-        <label class="checked row-center label label-radio" for="anonimo">Permanecer Anônimo</label>
+        <input type="radio" name="ouvidoria" value="anonimo" id="anonimo" />
+        <label class="checked row-center label label-radio" for="anonimo"
+          >Permanecer Anônimo</label
+        >
       </div>
       <div class="radio-container">
         <input
@@ -63,10 +59,11 @@ Laureano - Ouvidoria{% endblock titulo %} {% block body %}
           id="informar-nome"
           checked="checked"
         />
-        <label class="checked row-center label label-radio" for="informar-nome">Informar Meu Nome</label>
+        <label class="checked row-center label label-radio" for="informar-nome"
+          >Informar Meu Nome</label
+        >
       </div>
     </div>
-    
 
     <label class="label" for="form-nome">Seu nome*</label>
     <input
@@ -120,4 +117,6 @@ Laureano - Ouvidoria{% endblock titulo %} {% block body %}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+<script type="text/javascript" src='{% static "/scripts/ouvidoria.js" %}'></script>
+<script type="text/javascript" src='{% static "/scripts/forms.js" %}'></script>
 {% endblock body %}

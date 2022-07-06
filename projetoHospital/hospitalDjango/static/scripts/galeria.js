@@ -1,29 +1,31 @@
-const $modalGaleria = document.querySelector(".modal");
-let images = document.querySelectorAll(".galery-image");
+/* jshint esversion: 6 */
 
-const $modalImg = document.querySelector(".modal-image");
-let $modalTitle = document.querySelector(".modal-title");
-const $categories = document.querySelectorAll(".images-category");
+var $modalGaleria = document.querySelector(".modal");
+var images = document.querySelectorAll(".galery-image");
 
-const $closeBtn = document.querySelector(".close");
-const prev = document.querySelector(".modal-previous");
-const next = document.querySelector(".modal-next");
+var $modalImg = document.querySelector(".modal-image");
+var $modalTitle = document.querySelector(".modal-title");
+var $categoriesGalery = document.querySelectorAll(".images-category");
 
-let imgs = [];
-let alts = [];
-let categs = [];
+var $closeBtn = document.querySelector(".close");
+var prev = document.querySelector(".modal-previous");
+var next = document.querySelector(".modal-next");
 
-let allCategs = [];
+var imgs = [];
+var alts = [];
+var categs = [];
+
+var allCategs = [];
 
 getContent();
 
-let auxImg;
-let auxAlt;
-let auxCateg;
+var auxImg;
+var auxAlt;
+var auxCateg;
 
 function getContent() {
-  for (let index = 0; index < $categories.length; index++) {
-    allCategs.push($categories[index].getAttribute("id"));
+  for (let index = 0; index < $categoriesGalery.length; index++) {
+    allCategs.push($categoriesGalery[index].getAttribute("id"));
   }
   for (let index = 0; index < images.length; index++) {
     imgs.push(images[index].src);
@@ -35,7 +37,7 @@ function getContent() {
 function displayImage() {
   for (let i = 0; i < images.length; i++) {
     images[i].onclick = function () {
-      let list = [];
+      var list = [];
       $modalGaleria.style.display = "block";
       $modalImg.src = this.src;
       $modalImg.setAttribute("categoria", images[i].getAttribute("categoria"));
@@ -62,9 +64,9 @@ $closeBtn.onclick = function () {
 };
 
 function selectPrevious(list) {
-  let imgsCateg = [];
-  let altsCateg = [];
-  let categsCateg = [];
+  var imgsCateg = [];
+  var altsCateg = [];
+  var categsCateg = [];
   for (let i = 0; i < list.length; i++) {
     imgsCateg.push(list[i][0]);
     altsCateg.push(list[i][1]);
@@ -88,9 +90,9 @@ function selectPrevious(list) {
 }
 
 function selectNext(list) {
-  let imgsCateg = [];
-  let altsCateg = [];
-  let categsCateg = [];
+  var imgsCateg = [];
+  var altsCateg = [];
+  var categsCateg = [];
   for (let i = 0; i < list.length; i++) {
     imgsCateg.push(list[i][0]);
     altsCateg.push(list[i][1]);
@@ -114,7 +116,7 @@ function selectNext(list) {
 }
 
 function changePosition(imgsCateg, altsCateg, categsCateg) {
-  for (let j = 0; j < imgsCateg.length; j++) {
+  for (var j = 0; j < imgsCateg.length; j++) {
     $modalImg.src = imgsCateg[j];
     $modalImg.alt = altsCateg[j];
     $modalImg.setAttribute("categoria", categsCateg[j]);

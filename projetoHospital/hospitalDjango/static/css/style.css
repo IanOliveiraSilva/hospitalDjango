@@ -329,6 +329,7 @@ footer {
 .menu-options--department--icon {
   display: block;
   width: 35px;
+  max-height: 41px;
   padding-right: 10px;
 }
 
@@ -346,6 +347,7 @@ footer {
 .menu-options--department--icon--hover {
   display: none;
   width: 35px;
+  max-height: 41px;
   padding-right: 10px;
 }
 

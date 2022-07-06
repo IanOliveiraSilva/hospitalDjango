@@ -1,10 +1,10 @@
-const medico = document.querySelector("#funcao-medico");
-const area = document.querySelector("#form-area");
-const enfermeiro = document.querySelector("#funcao-enfermeiro");
-const atendente = document.querySelector("#funcao-atendente");
-const voluntario = document.querySelector("#funcao-voluntario");
-const outros = document.querySelector("#funcao-outros");
-const funcao = document.querySelector("#funcao-informe");
+var medico = document.querySelector("#funcao-medico");
+var area = document.querySelector("#form-area");
+var enfermeiro = document.querySelector("#funcao-enfermeiro");
+var atendente = document.querySelector("#funcao-atendente");
+var voluntario = document.querySelector("#funcao-voluntario");
+var outros = document.querySelector("#funcao-outros");
+var funcao = document.querySelector("#funcao-informe");
 
 medico.addEventListener("click", function () {
   if (medico.checked) {
