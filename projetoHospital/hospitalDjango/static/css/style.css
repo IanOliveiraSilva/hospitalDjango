@@ -1841,14 +1841,19 @@ input[type="submit"]:hover {
 
 .colunas {
   justify-content: end;
-  gap: 2px;
+  width: 100%;
 }
 
 .avaliacao {
   font-size: 12px;
   text-align: center;
-  width: 80px;
   color: var(--grey);
+  width: 100%;
+}
+
+.avaliacao-wrapper {
+  justify-content: space-between;
+  width: 56%;
 }
 
 .fix {
@@ -2059,6 +2064,25 @@ input[type="radio"]:checked + .checked:after {
     width: 75%;
     top: 11%;
   }
+
+  /*============================= Pesquisa de Satisfação ==================================*/
+  .titulo-classe {
+    min-width: 10%;
+    max-width: 10%;
+  }
+
+  .avaliacao-wrapper {
+    width: 63%;
+    margin-right: -11px;
+  }
+
+  .item {
+    min-width: 139px;
+  }
+
+  .radio-wrapper {
+    gap: 37px;
+  }
 }
 
 @media Screen and (max-width: 1200px) {
@@ -2069,14 +2093,16 @@ input[type="radio"]:checked + .checked:after {
   .side-menu_arrow {
     font-size: 38px;
   }
-}
 
-@media Screen and (max-width: 1000px) {
-  /* ============ Fale conosco - Seja um residente ====================*/
+  /*============================= Trabalhe Conosco ==================================*/
+  #formulario {
+    width: 70%;
+  }
 
-  input[type="submit"] {
-    align-self: center;
-    width: 20%;
+  /*============================= Pesquisa de Satisfação ==================================*/
+  .avaliacao-wrapper {
+    width: 57%;
+    margin-right: 5px;
   }
 }
 
@@ -2157,6 +2183,49 @@ input[type="radio"]:checked + .checked:after {
 
   .modal-image {
     height: 55vh;
+  }
+
+  /*============================= Pesquisa de Satisfação ==================================*/
+  .avaliacao-wrapper {
+    width: 62%;
+  }
+
+  .titulo-classe {
+    padding: 0 31px;
+  }
+
+  .radio-wrapper {
+    gap: 34px;
+  }
+}
+
+@media Screen and (max-width: 1000px) {
+  /* ============ Fale conosco - Seja um residente ====================*/
+
+  input[type="submit"] {
+    width: 20%;
+  }
+
+  /*============================= Pesquisa de Satisfação ==================================*/
+  .avaliacao-wrapper {
+    width: 62%;
+    margin-right: -9px;
+  }
+
+  .avaliacao {
+    font-size: 11px;
+  }
+
+  .titulo-classe {
+    padding: 0 30px;
+  }
+
+  .item {
+    font-size: 14px;
+  }
+
+  .radio-wrapper {
+    gap: 29px;
   }
 }
 
@@ -2313,6 +2382,20 @@ input[type="radio"]:checked + .checked:after {
     display: grid;
     grid-template-columns: auto auto auto auto;
     justify-content: center;
+  }
+
+  /*============================= Trabalhe Conosco ==================================*/
+  #formulario {
+    width: 80%;
+  }
+
+  /*============================= Pesquisa de Satisfação ==================================*/
+  .item {
+    font-size: 14px;
+  }
+
+  .radio-wrapper {
+    gap: 27px;
   }
 }
 
@@ -2570,6 +2653,17 @@ input[type="radio"]:checked + .checked:after {
     width: 80%;
     top: 12%;
   }
+
+  /*============================= Trabalhe Conosco ==================================*/
+  #formulario {
+    width: 100%;
+  }
+
+  /*============================= Pesquisa de Satisfação ==================================*/
+  .avaliacao-wrapper {
+    width: 55%;
+    margin-right: 4px;
+  }
 }
 
 @media Screen and (max-width: 762px) {
@@ -2585,6 +2679,12 @@ input[type="radio"]:checked + .checked:after {
   .smallDevice-menu-container {
     top: 263px;
     right: 155px;
+  }
+
+  /*============================= Pesquisa de Satisfação ==================================*/
+  .avaliacao-wrapper {
+    width: 56%;
+    margin-right: 9px;
   }
 }
 
@@ -2746,6 +2846,12 @@ input[type="radio"]:checked + .checked:after {
   /*============================ D O N A T E ===================================*/
   .donate {
     grid-template-columns: auto auto auto;
+  }
+
+  /*============================= Pesquisa de Satisfação ==================================*/
+  .avaliacao-wrapper {
+    width: 63%;
+    margin-right: -16px;
   }
 }
 
@@ -3011,9 +3117,57 @@ input[type="radio"]:checked + .checked:after {
   /* ============ Fale conosco - Seja um residente ====================*/
 
   input[type="submit"] {
-    align-self: center;
     width: 30%;
     padding: 14px 8px;
+  }
+
+  /*============================= Pesquisa de Satisfação ==================================*/
+  .avaliacao-wrapper {
+    margin-right: -3px;
+    width: 55%;
+  }
+
+  .avaliacao {
+    width: 52px;
+    font-size: 10px;
+  }
+
+  .titulo-classe {
+    padding: 0 10px 0 0;
+    max-width: 120px;
+    min-width: 120px;
+    align-items: self-start;
+    font-size: 14px;
+  }
+
+  .item {
+    font-size: 12px;
+  }
+
+  .radio-wrapper {
+    gap: 15px;
+  }
+
+  .checked:before {
+    width: 23px;
+    height: 23px;
+  }
+
+  .checked:after {
+    width: 18px;
+    height: 18px;
+  }
+
+  .dividing-line--avaliacao {
+    display: block;
+  }
+
+  .dividing-line--pesquisa {
+    display: block;
+  }
+
+  .dividing-line--pesquisa:last-child {
+    display: block;
   }
 }
 
@@ -3076,6 +3230,52 @@ input[type="radio"]:checked + .checked:after {
   /*============================= Galeria ==================================*/
   .galery-image-wrapper {
     max-height: 260px;
+  }
+
+  /*============================= Pesquisa de Satisfação ==================================*/
+  .colunas{
+    margin-bottom: 10px;
+  }
+
+  .avaliacao-wrapper {
+    width: 100%;
+    margin-right: 14px;
+  }
+
+  .titulo-classe {
+    padding-left: 0;
+    font-size: 16px;
+  }
+
+  .item {
+    font-size: 14px;
+  }
+
+  .item-avaliacao {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .fix {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .radio-wrapper {
+    gap: 0;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .checked:before {
+    width: 25px;
+    height: 25px;
+  }
+
+  .checked:after {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -3275,7 +3475,6 @@ input[type="radio"]:checked + .checked:after {
   /*================== T R A B A L H E    C O N O S C O ======================*/
 
   input[type="submit"] {
-    align-self: center;
     width: 50%;
   }
 
@@ -3297,6 +3496,11 @@ input[type="radio"]:checked + .checked:after {
     padding: 14px 8px;   
     font-size: 13.6px;  
   } */
+
+  /*============================= Trabalhe Conosco ==================================*/
+  #formulario {
+    width: 110%;
+  }
 }
 
 /*======================== T A B L E T S    D E V I C E S ========================*/
