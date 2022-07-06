@@ -2388,6 +2388,10 @@ input[type="radio"]:checked + .checked:after {
 
   /*================================ H O M E ======================================*/
 
+  .move-buttons {
+    left: 35px;
+  }
+
   .banner-container--side-menu {
     display: none;
   }
@@ -2406,6 +2410,7 @@ input[type="radio"]:checked + .checked:after {
     height: 100%;
     max-width: 80%;
     object-fit: cover;
+    left: 27px;
   }
 
   .back,
@@ -2552,9 +2557,21 @@ input[type="radio"]:checked + .checked:after {
   .side-menu_arrow {
     font-size: 26px;
   }
+  /* HOME */
+  
+  .banner {
+    left: 19px;
+  }
+
+  .smallDevice-menu-container {
+    top: 263px;
+    right: 155px;
+  }
 }
 
 @media only screen and (max-width: 700px) {
+
+
   .modal-content {
     width: 100%;
   }
@@ -2617,9 +2634,35 @@ input[type="radio"]:checked + .checked:after {
   }
 
   /*================================ H O M E ======================================*/
+<<<<<<< HEAD
+=======
+ 
+  /* HOME */
+  
+  .smallDevice-menu-container {
+    top: 263px;
+    right: 177px;
+  } 
+>>>>>>> 32e3137b0d7e6f9b642ccf5e6d8f665567164ae2
 
+  .move-buttons {
+    left: -13px;
+  }
+  
   .dots-buttons {
-    left: 44%;
+    left: 38%;
+  }
+
+  .banner-container {
+    right: -206px;
+  }
+
+  .banner {
+    left: -24px;
+  }
+
+  .move-buttons {
+    left: 19px;
   }
 
   /* ============================== P A G ======================================*/
@@ -2744,7 +2787,9 @@ input[type="radio"]:checked + .checked:after {
     position: absolute;
     height: 70%;
     max-width: 100%;
-    top: -30px;
+    left: -206px;
+    top: -10px;
+    
   }
 
   .banner-container {
@@ -2757,6 +2802,26 @@ input[type="radio"]:checked + .checked:after {
 
   .donation-button {
     display: none;
+  }
+  
+  .move-buttons {
+    left: -188px;
+    top: -6px;
+  }
+
+  .smallDevice-menu-container {
+    top: 145px;
+    right: 179px;
+  } 
+
+  .dots-buttons {
+    left: 28%;
+    margin-bottom: 162px;
+    top: 198px;
+  }
+
+  .smallDevice-menu-legenda {
+    margin-top: 7px;
   }
 
   /*============================== N O T Í C I A S =================================*/
@@ -2944,6 +3009,13 @@ input[type="radio"]:checked + .checked:after {
 }
 
 @media Screen and (max-width: 560px) {
+
+  .dots-buttons {
+    left: 30%;
+    margin-bottom: 162px;
+    top: 198px;
+  }
+  
   .header__title {
     width: 30%;
   }
@@ -3002,6 +3074,14 @@ input[type="radio"]:checked + .checked:after {
 /* = M O B I L E   D E V I C E ==========================================================*/
 /* 100% Image Width on Smaller Screens */
 @media Screen and (max-width: 480px) {
+
+  /* HOME */
+  .dots-buttons {
+    left: 20%;
+    margin-bottom: 162px;
+    top: 198px;
+  }
+
   /* =====================================FOOTER===================================== */
   .footer__logo {
     width: 120px;
