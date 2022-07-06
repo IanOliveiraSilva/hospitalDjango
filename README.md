@@ -12,6 +12,7 @@ $ To install and activate VENV:
 
 $ command "pip install django"
 $ command "pip install Pillow"
+$ command "pip install django-colorfield"
 $ command "pip install mysqlclient"
 $ command "py manage.py runserver"
 ```
