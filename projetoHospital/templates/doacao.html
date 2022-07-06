@@ -24,6 +24,11 @@ Laureano - Doações {%endblock titulo %} {% block body %}
   <h3 class="pags-h3 row-center">
     Sua doação é muito importante para podermos continuar a salvar vidas
   </h3>
+
+  {% for item in doacao %}
+  <img src="/image/{{ item.Imagem }}"/>
+  {{item.Informacoes}}
+  {% endfor %}
   <div class="donate">
     <img
       src="{% static '/images/logo-cagepa.png' %}"
