@@ -126,3 +126,12 @@ class HistoriaHospital(admin.ModelAdmin):
 class Eventos(admin.ModelAdmin):
     list_display = ('Titulo', 'DataInicio')
     search_fields = ('Titulo', )
+
+@admin.register(Doacao)
+class Doacao(admin.ModelAdmin):
+    list_display = ('Meio', )
+    search_fields = ('Meio', )
+    def ImagemDoacao_preview(self, obj):
+         return format_html(
+            f"<img src='{obj.Imagem.url}' width='{obj.Imagem.width}' height='{obj.Imagem.height}' style=''/>")
+    readonly_fields = ['ImagemDoacao_preview']

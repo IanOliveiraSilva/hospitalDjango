@@ -1,7 +1,7 @@
 from tabnanny import verbose
 from django.db import models
 from django.core.validators import RegexValidator
-
+from colorfield.fields import ColorField
 # Create your models here.
 
 
@@ -170,3 +170,12 @@ class Eventos(models.Model):
         return self.Titulo
     class Meta:
         verbose_name_plural = "Eventos"
+
+class Doacao(models.Model):
+    Meio = models.CharField(max_length=100, blank=False, null=False)
+    Imagem = models.ImageField(upload_to='Doacoes',null=False, blank=False)
+    Informacoes = models.TextField('Informações', null=False,blank=False)
+    def __str__(self):
+        return self.Meio
+    class Meta:
+        verbose_name_plural = "Doações"

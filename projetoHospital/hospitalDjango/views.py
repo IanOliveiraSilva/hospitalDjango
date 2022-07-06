@@ -75,7 +75,7 @@ def viewHistoriaFundacao(request):
 def viewDiretoriaFundacao(request):
     diretoriaexecutiva = DiretoriaExecutiva.objects.all()
     conselho = ConselhoDeliberativo.objects.all()
-    return render(request, "quemSomos/diretoriaFundacao.html", {"diretoriaexecutiva": diretoriaexecutiva, "conselho": conselho,"rodape": rodape, "redes":redes})
+    return render(request, "quemSomos/diretoriafundacao.html", {"diretoriaexecutiva": diretoriaexecutiva, "conselho": conselho,"rodape": rodape, "redes":redes})
 
 # READ - GALERIA
 
@@ -110,7 +110,8 @@ def vieweventos(request):
     return render(request, "eventos.html", {"rodape": rodape, "redes":redes, "eventos": eventos})
 
 def viewdoacao(request):
-    return render(request, "doacao.html", {"rodape": rodape, "redes":redes})
+    doacao = Doacao.objects.all()
+    return render(request, "doacao.html", {"rodape": rodape, "redes":redes, "doacao":doacao})
 
 def viewNossaMissao(request):
     missao = NossaMissao.objects.all()
