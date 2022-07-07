@@ -1089,6 +1089,10 @@ footer {
   text-decoration: none;
   padding-top: 10px;
   padding-bottom: 2px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+  overflow: hidden;
 }
 
 .pags-section {
@@ -1172,19 +1176,18 @@ footer {
 }
 
 .pags-text {
-  /* padding: 0 1.875rem; */
   font-size: var(--normal-font-size);
   color: var(--grey);
   display: block;
   font-weight: 400;
   letter-spacing: normal;
   line-height: 1.5;
-  white-space: pre-line;
 }
 
 .mission_title {
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 .mission_icon {
@@ -2053,6 +2056,16 @@ input[type="radio"]:checked + .checked:after {
     top: 11%;
   }
 
+  /*============================= Trabalhe Conosco ==================================*/
+  option {
+    padding-top: 10px;
+  }
+
+  .radio-wrapper-bottom {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   /*============================= Pesquisa de Satisfação ==================================*/
   .titulo-classe {
     min-width: 10%;
@@ -2571,7 +2584,7 @@ input[type="radio"]:checked + .checked:after {
     margin: 0px 0px 130px 167px;
   }
 
-  .back, 
+  .back,
   .forward {
     font-size: 30px;
     padding: 15px;
@@ -2654,7 +2667,7 @@ input[type="radio"]:checked + .checked:after {
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .modal-content {
     width: 100%;
   }
@@ -2760,9 +2773,15 @@ input[type="radio"]:checked + .checked:after {
   /*============================= Guia Medico ==================================*/
   .list-title {
     font-size: 17px;
+    width: 90%;
   }
 
   .doctor {
+    font-size: var(--small-font-size);
+  }
+
+  /*============================= Transparência ==================================*/
+  .sub-list-title {
     font-size: var(--small-font-size);
   }
 
@@ -2853,6 +2872,10 @@ input[type="radio"]:checked + .checked:after {
   .image-container:nth-child(-n + 4) {
     display: flex;
   }
+
+  .link-titulo {
+    width: 95%;
+  }
 }
 
 /* 767px */
@@ -2923,7 +2946,7 @@ input[type="radio"]:checked + .checked:after {
     display: flex;
   }
 
-  .dividing-line:nth-of-type(2) {
+  .dividing-line--section:nth-of-type(2) {
     display: none;
   }
 
@@ -3057,6 +3080,11 @@ input[type="radio"]:checked + .checked:after {
     margin: 30px 0;
   }
 
+  /*============================= Transparência ==================================*/
+  .edital-link {
+    font-size: var(--small-font-size);
+  }
+
   /*============================= Galeria ==================================*/
   .galery-wrapper {
     grid-template-columns: auto auto;
@@ -3146,42 +3174,82 @@ input[type="radio"]:checked + .checked:after {
     width: 140px;
     height: 140px;
   }
+
   .pags-image {
     width: 140px;
     max-height: 140px;
   }
+
   .navegacao {
-    padding: 5px 0 5px 10px;
+    padding: 0 0 0 10px;
   }
+
   .navegacao-link {
     font-size: 14px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
+
+  .link-titulo {
+    width: 80%;
+  }
+
   /* =============================  N O T I C I A S =================================*/
   .news-pag__main {
     margin-bottom: 25px;
   }
+
   .news-pag__main-image {
     height: 300px;
   }
+
   .news-pag__main-title {
     height: 75px;
     margin-top: -74px;
   }
+
   .news-pag__main-date {
     display: block;
   }
+
   .news-pag__news-images-wrapper {
     grid-template-columns: auto;
   }
+
   .news-pag__news-image {
     height: 300px;
   }
+
   .news-pag__news-title {
     height: 75px;
     margin-top: -74px;
   }
+
   .news-pag__news-preview {
     display: none;
+  }
+
+  .pagination {
+    justify-content: start;
+  }
+
+  /* =============================  N O T I C I A =================================*/
+  .news-main-title {
+    font-size: var(--normal-font-size);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .news-main-image {
+    width: 100%;
+  }
+
+  .news-text {
+    font-size: 16px;
+    width: 100%;
   }
 
   /*============================= D O N A T E ==================================*/
@@ -3192,6 +3260,11 @@ input[type="radio"]:checked + .checked:after {
   /*============================= Galeria ==================================*/
   .galery-image-wrapper {
     max-height: 260px;
+  }
+
+  /*============================= Trabalhe Conosco ==================================*/
+  .radio-wrapper-bottom {
+    gap: 10px;
   }
 
   /*============================= Pesquisa de Satisfação ==================================*/
@@ -3239,6 +3312,12 @@ input[type="radio"]:checked + .checked:after {
     width: 20px;
     height: 20px;
   }
+
+  /*============================= Eventos ==================================*/
+  .event-period {
+    flex-direction: column;
+    align-items: self-start;
+  }
 }
 
 @media Screen and (max-width: 499px) {
@@ -3252,6 +3331,15 @@ input[type="radio"]:checked + .checked:after {
 
   .image-container:nth-child(-n + 3) {
     display: flex;
+  }
+
+  .link-titulo {
+    width: 70%;
+  }
+
+  /* =====================================OUVIDORIA===================================== */
+  .contacts_wrapper{
+    flex-direction: column;
   }
 }
 
@@ -3273,6 +3361,52 @@ input[type="radio"]:checked + .checked:after {
 
   .medias--icons__link-icon {
     width: 25px;
+  }
+
+  /*============================= P A G S ==================================*/
+  .pags-h2 {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+
+  .pags-h3 {
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+
+  .pags-title {
+    font-size: var(--normal-font-size);
+  }
+
+  .mission_title > h2 {
+    margin-bottom: 0;
+  }
+
+  .navegacao-link {
+    font-size: 12px;
+  }
+
+  .container-card {
+    width: 100%;
+  }
+
+  .board-icon {
+    left: -18px;
+    top: -54px;
+  }
+
+  .other-pags-link {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mission_icon {
+    max-width: 30px;
+  }
+
+  p.pags-text {
+    font-size: 16px;
   }
 
   /*============================= Galeria ==================================*/
@@ -3302,6 +3436,22 @@ input[type="radio"]:checked + .checked:after {
     top: 18%;
   }
 
+  .pagination {
+    font-size: 14px;
+    justify-content: center;
+  }
+
+  .pagination a,
+  .num-page,
+  .dots {
+    padding: 7px 12px;
+  }
+
+  #pag-first,
+  #pag-last {
+    padding: 0;
+  }
+
   /*============================= D O N A T E ==================================*/
   .donate-wrapper {
     width: 100%;
@@ -3318,7 +3468,6 @@ input[type="radio"]:checked + .checked:after {
     height: 150px;
   }
 
-  
   .mini-image {
     position: relative;
   }
@@ -3334,11 +3483,20 @@ input[type="radio"]:checked + .checked:after {
     box-sizing: border-box;
   }
 
-  /* ===============Fale Conosco - Seja um Residente Laureano =============== */
+  /*============================= Eventos ==================================*/
+  .event-title {
+    font-size: 18px;
+  }
 
-  /* input[type="submit"] {
-    width: 30%;
-  } */
+  .event-period {
+    flex-direction: column;
+    align-items: self-start;
+    font-size: 14px;
+  }
+
+  .event-info {
+    font-size: 14px;
+  }
 }
 
 @media Screen and (max-width: 365px) {
@@ -3357,10 +3515,8 @@ input[type="radio"]:checked + .checked:after {
 
   /* ================================= P A G =========================================*/
   .pags-title {
-    padding-left: 10px;
-    padding-top: 15px;
-    height: 105px;
-    font-size: var(--normal-font-size);
+    padding-top: 0;
+    height: 75px;
   }
 
   .pags-image-bg-lightgrey {
@@ -3374,11 +3530,44 @@ input[type="radio"]:checked + .checked:after {
   }
 
   .navegacao {
-    padding: 5px 0 5px 10px;
+    display: none;
   }
 
-  .navegacao-link {
+  .container-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .board-icon {
+    height: 75px;
+    width: 75px;
+    top: 0;
+  }
+
+  .background-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .board-name,
+  .board-job {
     font-size: 12px;
+    width: 55%;
+  }
+
+  .other-pags-links {
+    height: 50px;
+    padding: 20px;
+  }
+
+  .mission_title {
+    justify-content: center;
+  }
+
+  p.pags-text {
+    margin-bottom: 20px;
+    font-size: 14px;
   }
 
   /*============================ D O N A T E ===================================*/
@@ -3418,13 +3607,27 @@ input[type="radio"]:checked + .checked:after {
   }
 
   /*============================= Guia Medico ==================================*/
+  .list-wrapper {
+    margin: 0 0 10px 37px;
+  }
 
   .list-title {
     font-size: var(--small-font-size);
+    width: 90%;
   }
 
   .doctor {
     font-size: 15px;
+  }
+
+  /*============================= Transparência ==================================*/
+  .sub-list-title {
+    width: 85%;
+    font-size: 15px;
+  }
+
+  .edital-link {
+    font-size: 14px;
   }
 
   /*============================= Galeria ==================================*/
@@ -3486,23 +3689,92 @@ input[type="radio"]:checked + .checked:after {
   }
 }
 
-@media Screen and (max-width: 300px) {
-  /*============================ D O N A T E ===================================*/
-  .small-responsive {
-    display: flex;
-    width: 100%;
-    height: 150px;
+@media Screen and (max-width: 320px) {
+  /* =====================================FOOTER===================================== */
+  .footer__logo {
+    width: 100px;
   }
 
-  .donate-image-mini {
-    height: 35%;
-  }
-
-  .donate-info {
+  .footer__adress {
     font-size: 12px;
   }
-}
 
+  .medias--social {
+    font-size: 12px;
+  }
+
+  /* =============================  N O T I C I A S =================================*/
+  .news-pag__main-image {
+    height: 170px;
+  }
+
+  .news-pag__main-title {
+    font-size: 13px;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+
+  .news-pag__news-image {
+    height: 170px;
+  }
+
+  .news-pag__news-title {
+    font-size: 13px;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+
+  /*============================= Guia Medico ==================================*/
+  .list-wrapper {
+    margin: 0 0 10px 30px;
+  }
+
+  /*============================= Transparência ==================================*/
+  .sub-list-title {
+    width: 85%;
+    font-size: 15px;
+  }
+
+  .edital-link {
+    font-size: 14px;
+  }
+
+  /*============================= Galeria ==================================*/
+  .modal-image {
+    width: 95%;
+    height: 28vh;
+  }
+
+  /*================== T R A B A L H E    C O N O S C O ======================*/
+
+  input[type="submit"] {
+    width: 50%;
+  }
+
+  /*======================= O U V I D O R I A ==========================*/
+
+  .contacts_wrapper {
+    gap: 20px;
+  }
+
+  .contact_icon {
+    max-width: 20px;
+  }
+
+  /* ============ Fale conosco - Seja um residente ====================*/
+
+  /* input[type="submit"] {
+    align-self: center;
+    width: 30%;
+    padding: 14px 8px;   
+    font-size: 13.6px;  
+  } */
+
+  /*============================= Trabalhe Conosco ==================================*/
+  #formulario {
+    width: 110%;
+  }
+}
 /*======================== T A B L E T S    D E V I C E S ========================*/
 
 /*============================= LOAD ==================================*/
