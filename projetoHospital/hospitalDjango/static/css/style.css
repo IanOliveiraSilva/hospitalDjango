@@ -1376,11 +1376,9 @@ p.pags-text {
 }
 
 .news-pag__news-images-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 10px;
-  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .news-pag__news-image-wrapper {
@@ -1396,8 +1394,9 @@ p.pags-text {
 
 .news-pag__news-image {
   width: 100%;
-  min-width: 460px;
-  height: 265px;
+  width: 100%;
+  height: 200px;
+  min-width: 200px;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -1965,6 +1964,21 @@ input[type="radio"]:checked + .checked:after {
   white-space: nowrap;
 }
 
+/* =  B I G    V I E P O R T S ====================================================*/
+@media Screen and (min-width: 1920px) {
+  /* =============================  N O T I C I A S =================================*/
+  .news-pag__news-images-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media Screen and (min-width: 1536px) {
+  /* =============================  N O T I C I A S =================================*/
+  .news-pag__news-image {
+    height: 230px;
+  }
+}
+
 /* =  M E D I U M    V I E P O R T S ====================================================*/
 @media Screen and (max-width: 1253px) {
   /* =====================================FOOTER===================================== */
@@ -1988,34 +2002,6 @@ input[type="radio"]:checked + .checked:after {
   /* =============================  N O T I C I A S =================================*/
   .news-pag__main {
     margin-bottom: 45px;
-  }
-
-  .news-pag__main-image {
-    height: 500px;
-  }
-
-  .news-pag__main-title {
-    font-size: var(--normal-font-size);
-  }
-
-  .news-pag__news-images-wrapper {
-    gap: 10px;
-    grid-template-columns: auto auto auto;
-  }
-
-  .news-pag__news-image-wrapper {
-    width: 100%;
-  }
-
-  .news-pag__news-image {
-    width: 100%;
-    height: 200px;
-    min-width: 200px;
-  }
-
-  .news-pag__news-title {
-    width: 100%;
-    font-size: var(--small-font-size);
   }
 
   /* =============================  N O T I C I A =================================*/
@@ -3341,7 +3327,7 @@ input[type="radio"]:checked + .checked:after {
   }
 
   /* =====================================OUVIDORIA===================================== */
-  .contacts_wrapper{
+  .contacts_wrapper {
     flex-direction: column;
   }
 }
@@ -3518,15 +3504,8 @@ input[type="radio"]:checked + .checked:after {
 
   /* ================================= P A G =========================================*/
   .pags-title {
-<<<<<<< HEAD
     padding-top: 0;
     height: 75px;
-=======
-    padding-left: 10px;
-    padding-top: 15px;
-    height: 105px;
-    font-size: var(--h2-font-size);
->>>>>>> 31adc038dffee2820fb56442af78cd24ff45f9c4
   }
 
   .pags-image-bg-lightgrey {
@@ -3683,15 +3662,6 @@ input[type="radio"]:checked + .checked:after {
   .contact_icon {
     max-width: 20px;
   }
-
-  /* ============ Fale conosco - Seja um residente ====================*/
-
-  /* input[type="submit"] {
-    align-self: center;
-    width: 30%;
-    padding: 14px 8px;   
-    font-size: 13.6px;  
-  } */
 
   /*============================= Trabalhe Conosco ==================================*/
   #formulario {
