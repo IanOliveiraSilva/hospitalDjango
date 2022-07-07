@@ -11,11 +11,13 @@ function displayInfos() {
     };
   }
 }
-  
+
 function close(i) {
   $closeBtnDontation[i].onclick = function () {
     $modalDoacao[i].style.display = "none";
   };
 }
 
-displayInfos();
+if (window.screen.width > 480) {
+  displayInfos();
+}

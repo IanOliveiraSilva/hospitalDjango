@@ -2,16 +2,16 @@
 Laureano - Galeria de Fotos{% endblock titulo %} {% block body %}
 
 <div class="navegacao">
-  <ul>
-    <il>
+  <ul class="row-j-start">
+    <li>
       <a class="navegacao-link" href="{% url 'home' %}">
         Início
         <i class="uil uil-angle-double-right"></i>
       </a>
-    </il>
-    <il>
+    </li>
+    <li>
       <a class="navegacao-link" href="{% url 'galeria' %}"> Galeria </a>
-    </il>
+    </li>
   </ul>
 </div>
 
@@ -46,7 +46,7 @@ Laureano - Galeria de Fotos{% endblock titulo %} {% block body %}
 </section>
 
 <div class="modal column-center">
-  <span class="close">&times;</span>
+  <span class="close close-galery">&times;</span>
   <div class="modal-wrapper row-center">
     <a class="modal-previous">&#10094;</a>
     <img class="modal-image" />

@@ -2,16 +2,16 @@
 Laureano - Doações {%endblock titulo %} {% block body %}
 
 <div class="navegacao">
-  <ul>
-    <il>
+  <ul class="row-j-start">
+    <li>
       <a class="navegacao-link" href="{% url 'home' %}">
         Início
         <i class="uil uil-angle-double-right"></i>
       </a>
-    </il>
-    <il>
+    </li>
+    <li>
       <a class="navegacao-link" href="{% url 'doacao' %}"> Quero Doar </a>
-    </il>
+    </li>
   </ul>
 </div>
 
@@ -25,187 +25,47 @@ Laureano - Doações {%endblock titulo %} {% block body %}
     Sua doação é muito importante para podermos continuar a salvar vidas
   </h3>
 
-  {% for item in doacao %}
-  <img src="/image/{{ item.Imagem }}"/>
-  {{item.Informacoes}}
-  {% endfor %}
-  <div class="donate">
-    <img
-      src="{% static '/images/logo-cagepa.png' %}"
-      alt="Cagepa"
-      class="donate-image"
-    />
-    <img
-      src="{% static '/images/logo-bb.png' %}"
-      alt="Banco do Brasil"
-      class="donate-image"
-    />
-    <img
-      src="{% static '/images/logo-pix.png' %}"
-      alt="Pix"
-      class="donate-image"
-    />
-    <img
-      src="{% static '/images/logo-caixa.png' %}"
-      alt="Caixa"
-      class="donate-image"
-    />
-    <img
-      src="{% static '/images/logo-energisa.png' %}"
-      alt="Energisa"
-      class="donate-image"
-    />
-  </div>
-
-  <div class="small-responsive">
-    <div class="donate-info-wrapper cagepa">
-      <div class="mini-image">
-        <img
-          src="{% static '/images/logo-cagepa.png' %}"
-          alt="Cagepa"
-          class="donate-image-mini"
-        />
-      </div>
-      <span class="donate-info">
-        Ligação: 115<br />
-        WhatsApp: 83 98198.4495<br />
-        E-mail: doar@cagepa.pb.gov.br
-      </span>
+  <div class="donate-wrapper row-center">
+    {% for item in doacao %}
+    <div class="donate">
+      <img
+        src="/image/{{ item.Imagem }}"
+        alt="{{ item.Meio }}"
+        class="donate-image"
+      />
     </div>
 
-    <div class="donate-info-wrapper banco">
-      <div class="mini-image">
-        <img
-          src="{% static '/images/logo-bb.png' %}"
-          alt="Banco do Brasil"
-          class="donate-image-mini"
-        />
+    <div class="small-responsive column-center">
+      <div class="donate-info-wrapper">
+        <div class="mini-image">
+          <img
+            src="/image/{{ item.Imagem }}"
+            alt="{{ item.Meio }}"
+            class="donate-image-mini"
+          />
+        </div>
+        <span class="donate-info"> {{item.Informacoes}} </span>
       </div>
-      <span class="donate-info">
-        Agência: 4361-3<br />
-        Conta: 9784-5
-      </span>
     </div>
-
-    <div class="donate-info-wrapper pix">
-      <div class="mini-image">
-        <img
-          src="{% static '/images/logo-pix.png' %}"
-          alt="Pix"
-          class="donate-image-mini"
-        />
-      </div>
-      <span class="donate-info">caixa@hlaureano.org.br</span>
-    </div>
-
-    <div class="donate-info-wrapper caixa">
-      <div class="mini-image">
-        <img
-          src="{% static '/images/logo-caixa.png' %}"
-          alt="Caixa"
-          class="donate-image-mini"
-        />
-      </div>
-      <span class="donate-info">
-        Agência: 1010<br />
-        Operação: 013<br />
-        Conta: 32028-4</span
-      >
-    </div>
-
-    <div class="donate-info-wrapper energisa">
-      <div class="mini-image">
-        <img
-          src="{% static '/images/logo-energisa.png' %}"
-          alt="Energisa"
-          class="donate-image-mini"
-        />
-      </div>
-      <span class="donate-info">0800 083 0196</span>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
+{% for item in doacao %}
 <div class="modal">
-  <span class="close">&times;</span>
-  <div class="donate-info-wrapper cagepa">
+  <div class="donate-info-wrapper">
     <div class="mini-image">
       <img
-        src="{% static '/images/logo-cagepa.png' %}"
-        alt="Cagepa"
+        src="/image/{{ item.Imagem }}"
+        alt="{{ item.Meio }}"
         class="donate-image-mini"
       />
     </div>
-    <span class="donate-info">
-      Ligação: 115<br />
-      WhatsApp: 83 98198.4495<br />
-      E-mail: doar@cagepa.pb.gov.br
-    </span>
+    <span class="donate-info"> {{item.Informacoes}} </span>
   </div>
+  <span class="close close-donate">&times;</span>
 </div>
-
-<div class="modal">
-  <span class="close">&times;</span>
-  <div class="donate-info-wrapper banco">
-    <div class="mini-image">
-      <img
-        src="{% static '/images/logo-bb.png' %}"
-        alt="Banco do Brasil"
-        class="donate-image-mini"
-      />
-    </div>
-    <span class="donate-info">
-      Agência: 4361-3<br />
-      Conta: 9784-5
-    </span>
-  </div>
-</div>
-
-<div class="modal">
-  <span class="close">&times;</span>
-  <div class="donate-info-wrapper pix">
-    <div class="mini-image">
-      <img
-        src="{% static '/images/logo-pix.png' %}"
-        alt="Pix"
-        class="donate-image-mini"
-      />
-    </div>
-    <span class="donate-info">caixa@hlaureano.org.br</span>
-  </div>
-</div>
-
-<div class="modal">
-  <span class="close">&times;</span>
-  <div class="donate-info-wrapper caixa">
-    <div class="mini-image">
-      <img
-        src="{% static '/images/logo-caixa.png' %}"
-        alt="Caixa"
-        class="donate-image-mini"
-      />
-    </div>
-    <span class="donate-info">
-      Agência: 1010<br />
-      Operação: 013<br />
-      Conta: 32028-4</span
-    >
-  </div>
-</div>
-
-<div class="modal">
-  <span class="close">&times;</span>
-  <div class="donate-info-wrapper energisa">
-    <div class="mini-image">
-      <img
-        src="{% static '/images/logo-energisa.png' %}"
-        alt="Energisa"
-        class="donate-image-mini"
-      />
-    </div>
-    <span class="donate-info">0800 083 0196</span>
-  </div>
-</div>
+{% endfor %}
 
 <script type="text/javascript" src='{% static "/scripts/doacao.js" %}'></script>
 

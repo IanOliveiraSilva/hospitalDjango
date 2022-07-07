@@ -523,6 +523,7 @@ footer {
   background-color: var(--lightGrey);
   left: 0;
   top: 0;
+  opacity: 0.8;
 }
 
 .back,
@@ -1250,13 +1251,11 @@ p.pags-text {
   right: 0;
 }
 
-.donate {
+.donate-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  width: 80%;
   justify-content: space-between;
-  align-items: center;
+  width: 80%;
 }
 
 .small-responsive {
@@ -1285,6 +1284,10 @@ p.pags-text {
   left: 0;
 }
 
+.close-donate {
+  top: -15%;
+}
+
 .donate-info-wrapper {
   position: relative;
   display: flex;
@@ -1292,26 +1295,8 @@ p.pags-text {
   width: 400px;
   height: 150px;
   border-radius: 20px;
-}
-
-.cagepa {
-  background-color: var(--cagepaColor);
-}
-
-.banco {
-  background-color: var(--bancoColor);
-}
-
-.pix {
-  background-color: var(--pixColor);
-}
-
-.caixa {
-  background-color: var(--caixaColor);
-}
-
-.energisa {
-  background-color: var(--energisaColor);
+  background-color: var(--white);
+  border: 4px solid var(--darkGreen);
 }
 
 .donate-info {
@@ -1653,12 +1638,15 @@ p.pags-text {
   justify-content: end;
   cursor: pointer;
   position: relative;
-  top: 13%;
-  right: 3%;
   color: var(--background);
   font-size: 80px;
   font-weight: bold;
   transition: 0.3s;
+}
+
+.close-galery {
+  top: 13%;
+  right: 3%;
 }
 
 .close:hover,
@@ -2176,6 +2164,11 @@ input[type="radio"]:checked + .checked:after {
     font-size: 14px;
   }
 
+  /*============================= Doações ==================================*/
+  .donate-wrapper {
+    width: 100%;
+  }
+
   /*============================= Galeria ==================================*/
   .galery-image-wrapper {
     max-height: 200px;
@@ -2230,6 +2223,18 @@ input[type="radio"]:checked + .checked:after {
 }
 
 @media Screen and (max-width: 992px) {
+  .side-menu_arrow {
+    font-size: 32px;
+  }
+
+  .image-container:nth-child(-n + 7) {
+    display: none;
+  }
+
+  .image-container:nth-child(-n + 5) {
+    display: flex;
+  }
+
   .side-menu_arrow {
     font-size: 32px;
   }
@@ -2377,13 +2382,6 @@ input[type="radio"]:checked + .checked:after {
     max-height: 155px;
   }
 
-  /*============================ D O N A T E ===================================*/
-  .donate {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    justify-content: center;
-  }
-
   /*============================= Trabalhe Conosco ==================================*/
   #formulario {
     width: 80%;
@@ -2486,113 +2484,6 @@ input[type="radio"]:checked + .checked:after {
   }
 
   /*================================ H O M E ======================================*/
-
-  .move-buttons {
-    left: 35px;
-  }
-
-  .banner-container--side-menu {
-    display: none;
-  }
-
-  .banner-container {
-    position: relative;
-    top: 0;
-    width: 155vw;
-    height: 54vh;
-    margin-bottom: 165px;
-    right: -188px;
-  }
-
-  .banner {
-    position: absolute;
-    height: 100%;
-    max-width: 80%;
-    object-fit: cover;
-    left: 27px;
-  }
-
-  .back,
-  .forward {
-    font-size: 15px;
-    padding: 10px;
-  }
-
-  .back:hover {
-    font-size: 15px;
-  }
-
-  .foward:hover {
-    font-size: 15px;
-  }
-
-  .dot {
-    position: relative;
-    top: 43px;
-    height: 12px;
-    width: 12px;
-    right: 101px;
-  }
-
-  .donation-button {
-    display: none;
-  }
-
-  .smallDevice-menu-container {
-    display: grid;
-    position: relative;
-    width: 95%;
-    top: 263px;
-    right: 155px;
-  }
-
-  .smallDevice-menu-icone {
-    display: grid;
-    grid-template-columns: repeat(5, 20%);
-    margin-bottom: 30px;
-    justify-content: center;
-    justify-items: space-between;
-  }
-
-  .smallDevice-menu-div {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-  }
-
-  .smallDevice-menu-div--img {
-    display: flex;
-    border-radius: 50%;
-    justify-content: center;
-    border-width: 2px;
-    border-color: #e5e5e5;
-    border-style: solid;
-    height: 70px;
-    width: 70px;
-  }
-
-  .smallDevice-menu-icone-img {
-    display: flex;
-    width: 100%;
-    box-sizing: border-box;
-    height: 100%;
-    padding: 16px;
-  }
-
-  .smallDevice-menu-legenda {
-    display: grid;
-    margin-top: 20px;
-    justify-content: center;
-    text-align: center;
-    font-family: "Atkinson Hyperlegible", sans-serif;
-    font-size: 1rem;
-    color: #038c43;
-  }
-
-  .text-color-pink {
-    color: #f90051;
-  }
-
   .news--wrapper {
     width: 90%;
   }
@@ -2645,7 +2536,7 @@ input[type="radio"]:checked + .checked:after {
     height: 55vh;
   }
 
-  .close {
+  .close-galery {
     top: 16%;
   }
 
@@ -2666,21 +2557,96 @@ input[type="radio"]:checked + .checked:after {
   }
 }
 
-@media Screen and (max-width: 762px) {
-  .side-menu_arrow {
-    font-size: 26px;
-  }
-  /* HOME */
+@media Screen and (max-width: 799px) {
+  /* ================================== HOME ==========================================*/
 
-  .banner {
-    left: 19px;
+  .banner-container--side-menu {
+    display: none;
   }
+
+  .banner-container {
+    display: flex;
+    width: 120vw;
+    height: 65vh;
+    margin: 0px 0px 130px 167px;
+  }
+
+  .back, 
+  .forward {
+    font-size: 30px;
+    padding: 15px;
+  }
+
+  .back:hover,
+  .foward:hover {
+    font-size: 30px;
+    padding: 15px;
+  }
+
+  .donation-button {
+    display: none;
+  }
+
+  /*=========================== MENU MOBILE =========================================*/
 
   .smallDevice-menu-container {
-    top: 263px;
-    right: 155px;
+    display: grid;
+    display: -moz-grid;
+    width: 100%;
+    margin: 550px 190px 0px 40px;
+    justify-content: space-around;
   }
 
+  .smallDevice-menu-icone {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    margin-bottom: 30px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .smallDevice-menu-div {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .smallDevice-menu-div--img {
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    border-width: 2px;
+    border-color: #e5e5e5;
+    border-style: solid;
+    height: 70px;
+    width: 70px;
+  }
+
+  .smallDevice-menu-icone-img {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 16px;
+  }
+
+  .smallDevice-menu-legenda {
+    display: grid;
+    margin-top: 20px;
+    justify-content: center;
+    text-align: center;
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-size: 1rem;
+    color: #038c43;
+  }
+
+  .text-color-pink {
+    color: #f90051;
+  }
+}
+
+@media Screen and (max-width: 762px) {
   /*============================= Pesquisa de Satisfação ==================================*/
   .avaliacao-wrapper {
     width: 56%;
@@ -2750,35 +2716,6 @@ input[type="radio"]:checked + .checked:after {
     width: 35px;
   }
 
-  /*================================ H O M E ======================================*/
-
-  /* HOME */
-
-  .smallDevice-menu-container {
-    top: 263px;
-    right: 177px;
-  }
-
-  .move-buttons {
-    left: -13px;
-  }
-
-  .dots-buttons {
-    left: 38%;
-  }
-
-  .banner-container {
-    right: -206px;
-  }
-
-  .banner {
-    left: -24px;
-  }
-
-  .move-buttons {
-    left: 19px;
-  }
-
   /* ============================== P A G ======================================*/
 
   .pags-image-bg-lightgrey {
@@ -2844,14 +2781,77 @@ input[type="radio"]:checked + .checked:after {
   }
 
   /*============================ D O N A T E ===================================*/
-  .donate {
-    grid-template-columns: auto auto auto;
+  .donate-wrapper {
+    gap: 10px;
   }
 
   /*============================= Pesquisa de Satisfação ==================================*/
   .avaliacao-wrapper {
     width: 63%;
     margin-right: -16px;
+  }
+}
+
+@media Screen and (max-width: 649px) {
+  .banner-container--side-menu {
+    display: none;
+  }
+
+  .banner-container {
+    width: 100vw;
+    height: 65vh;
+    margin: -58px 0px 100px 6px;
+  }
+
+  .banner {
+    position: absolute;
+    height: 70%;
+    max-width: 100%;
+  }
+
+  .move-buttons {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--lightGrey);
+    top: 0;
+    margin: 55px 0px 0px 3px;
+  }
+
+  .back,
+  .forward {
+    padding: 10px;
+    font-size: 25px;
+  }
+
+  .back:hover,
+  .forward:hover {
+    font-size: 25px;
+    padding: 10px;
+  }
+
+  .donation-button {
+    display: none;
+  }
+
+  .dots-buttons {
+    margin-bottom: 34px;
+  }
+
+  .smallDevice-menu-icone {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin: -110px -200px 30px -80px;
+  }
+
+  .image-container:nth-child(-n + 7) {
+    display: none;
+  }
+
+  .image-container:nth-child(-n + 4) {
+    display: flex;
   }
 }
 
@@ -2901,52 +2901,6 @@ input[type="radio"]:checked + .checked:after {
     gap: 20px;
   }
 
-  /*================================ H O M E ======================================*/
-
-  .banner-container--side-menu {
-    display: none;
-  }
-
-  .banner {
-    position: absolute;
-    height: 70%;
-    max-width: 100%;
-    left: -206px;
-    top: -10px;
-  }
-
-  .banner-container {
-    position: relative;
-    top: 0;
-    width: 100vw;
-    height: 65vh;
-    margin-bottom: 20px;
-  }
-
-  .donation-button {
-    display: none;
-  }
-
-  .move-buttons {
-    left: -188px;
-    top: -6px;
-  }
-
-  .smallDevice-menu-container {
-    top: 145px;
-    right: 179px;
-  }
-
-  .dots-buttons {
-    left: 28%;
-    margin-bottom: 162px;
-    top: 198px;
-  }
-
-  .smallDevice-menu-legenda {
-    margin-top: 7px;
-  }
-
   /*============================== N O T Í C I A S =================================*/
 
   .news--wrapper {
@@ -2966,6 +2920,10 @@ input[type="radio"]:checked + .checked:after {
   }
 
   .dividing-line {
+    display: flex;
+  }
+
+  .dividing-line:nth-of-type(2) {
     display: none;
   }
 
@@ -2980,14 +2938,6 @@ input[type="radio"]:checked + .checked:after {
   .title-section {
     position: relative;
     margin-bottom: 20px;
-  }
-
-  .mobile-dividing-line {
-    height: 2px;
-    width: 80vh;
-    background-color: #e5e5e5;
-    margin-bottom: 20px;
-    position: relative;
   }
 
   /* =============================  N O T I C I A =================================*/
@@ -3051,6 +3001,12 @@ input[type="radio"]:checked + .checked:after {
 
   .navegacao-link {
     font-size: 14px;
+  }
+
+  /*============================= D O N A T E ==================================*/
+  .donate-wrapper {
+    justify-content: center;
+    width: 100%;
   }
 
   /*=============== P R Ê M I O S     &     C E R T I F I C A Ç Õ E S ===============*/
@@ -3227,13 +3183,19 @@ input[type="radio"]:checked + .checked:after {
   .news-pag__news-preview {
     display: none;
   }
+
+  /*============================= D O N A T E ==================================*/
+  .donate-wrapper {
+    width: 94%;
+  }
+
   /*============================= Galeria ==================================*/
   .galery-image-wrapper {
     max-height: 260px;
   }
 
   /*============================= Pesquisa de Satisfação ==================================*/
-  .colunas{
+  .colunas {
     margin-bottom: 10px;
   }
 
@@ -3279,16 +3241,23 @@ input[type="radio"]:checked + .checked:after {
   }
 }
 
+@media Screen and (max-width: 499px) {
+  .smallDevice-menu-icone {
+    margin: -101px -168px 27px -32px;
+  }
+
+  .image-container:nth-child(-n + 7) {
+    display: none;
+  }
+
+  .image-container:nth-child(-n + 3) {
+    display: flex;
+  }
+}
+
 /* = M O B I L E   D E V I C E ==========================================================*/
 /* 100% Image Width on Smaller Screens */
 @media Screen and (max-width: 480px) {
-  /* HOME */
-  .dots-buttons {
-    left: 20%;
-    margin-bottom: 162px;
-    top: 198px;
-  }
-
   /* =====================================FOOTER===================================== */
   .footer__logo {
     width: 120px;
@@ -3333,9 +3302,36 @@ input[type="radio"]:checked + .checked:after {
     top: 18%;
   }
 
-  /*============================ D O N A T E ===================================*/
+  /*============================= D O N A T E ==================================*/
+  .donate-wrapper {
+    width: 100%;
+    gap: 20px;
+  }
+
   .donate {
-    grid-template-columns: auto auto;
+    display: none;
+  }
+
+  .small-responsive {
+    display: flex;
+    width: 100%;
+    height: 150px;
+  }
+
+  
+  .mini-image {
+    position: relative;
+  }
+
+  .donate-info-wrapper {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .donate-info {
+    width: 100%;
+    flex-wrap: wrap;
+    box-sizing: border-box;
   }
 
   /* ===============Fale Conosco - Seja um Residente Laureano =============== */
@@ -3386,31 +3382,18 @@ input[type="radio"]:checked + .checked:after {
   }
 
   /*============================ D O N A T E ===================================*/
-
-  .donate {
-    display: none;
-  }
-
   .small-responsive {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-    gap: 20px;
+    height: 150px;
   }
 
   .donate-image-mini {
     height: 35%;
   }
 
-  .donate-info-wrapper {
-    display: flex;
-    width: 100%;
-  }
-
   .donate-info {
-    text-align: center;
+    font-size: 14px;
   }
 
   /* =============================  N O T I C I A S =================================*/
@@ -3500,6 +3483,23 @@ input[type="radio"]:checked + .checked:after {
   /*============================= Trabalhe Conosco ==================================*/
   #formulario {
     width: 110%;
+  }
+}
+
+@media Screen and (max-width: 300px) {
+  /*============================ D O N A T E ===================================*/
+  .small-responsive {
+    display: flex;
+    width: 100%;
+    height: 150px;
+  }
+
+  .donate-image-mini {
+    height: 35%;
+  }
+
+  .donate-info {
+    font-size: 12px;
   }
 }
 
