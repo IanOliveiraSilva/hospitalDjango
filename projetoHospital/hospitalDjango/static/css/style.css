@@ -2299,6 +2299,13 @@ input[type="radio"]:checked + .checked:after {
     width: 75%;
     top: 11%;
   }
+
+  /*========================== FOOTER ===============================*/
+  
+  .footer__logo {
+    width: 171px;
+    margin-left: -73px;
+  }
 }
 
 @media Screen and (max-width: 870px) {
@@ -2601,6 +2608,7 @@ input[type="radio"]:checked + .checked:after {
     display: flex;
     width: 100%;
     position: relative;
+    top: 10px;
   }
 
   .smallDevice-menu-icone {
@@ -2639,6 +2647,11 @@ input[type="radio"]:checked + .checked:after {
 
   .text-color-pink {
     color: #f90051;
+  }
+
+  .footer__logo {
+    width: 150px;
+    margin-left: -45px;
   }
 }
 
@@ -2822,6 +2835,12 @@ input[type="radio"]:checked + .checked:after {
   .link-titulo {
     width: 95%;
   }
+
+  .footer__logo {
+    width: 115px;
+    margin-left: -38px;
+  }
+
 }
 
 /* 767px */
@@ -3275,6 +3294,28 @@ input[type="radio"]:checked + .checked:after {
     width: 70%;
   }
 
+  .smallDevice-menu-container {
+    width: 80%;
+    flex-shrink: 1;
+  }
+
+  .smallDevice-menu-div {
+    width: 70%;
+  }
+
+  .smallDevice-menu-div {
+    flex: 1;
+  }
+
+  .smallDevice-menu-icone-img {
+    height: 65px;
+    width: 65px;
+  }
+
+  .smallDevice-menu-legenda {
+    font-size: 0.75rem;
+  }
+
   /* =====================================OUVIDORIA===================================== */
   .contacts_wrapper {
     flex-direction: column;
@@ -3434,6 +3475,12 @@ input[type="radio"]:checked + .checked:after {
 
   .event-info {
     font-size: 14px;
+  }
+}
+
+@media Screen and (mix-width: 420px) {
+  .smallDevice-menu-div {
+    margin-right: 10px;
   }
 }
 
@@ -3619,6 +3666,11 @@ input[type="radio"]:checked + .checked:after {
 }
 
 @media Screen and (max-width: 320px) {
+  /* =====================================HOME===================================== */
+  .smallDevice-menu-icone {
+    width: 75%;
+  }
+  
   /* =====================================FOOTER===================================== */
   .footer__logo {
     width: 100px;
