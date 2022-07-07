@@ -503,16 +503,18 @@ footer {
 
 .banner-container {
   position: relative;
-  top: 0;
-  width: 100vw;
   height: 65vh;
   margin-bottom: 20px;
 }
 
 .banner {
-  position: absolute;
   height: 100%;
-  max-width: 80%;
+  object-fit: cover;
+}
+
+.banner-images-wrapper {
+  height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -625,8 +627,6 @@ footer {
 
 .side-menu_arrow:hover {
   transition: 0.4s;
-  /* text-align: start; */
-  /* padding-left: 10%; */
   width: 100%;
 }
 
@@ -662,6 +662,8 @@ footer {
 }
 
 .donation-button {
+  display: flex;
+  margin: auto;
   font-size: 35px;
   font-weight: 700;
   font-family: "Atkinson Hyperlegible";
@@ -1376,11 +1378,9 @@ p.pags-text {
 }
 
 .news-pag__news-images-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 10px;
-  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .news-pag__news-image-wrapper {
@@ -1396,8 +1396,9 @@ p.pags-text {
 
 .news-pag__news-image {
   width: 100%;
-  min-width: 460px;
-  height: 265px;
+  width: 100%;
+  height: 200px;
+  min-width: 200px;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -1523,12 +1524,9 @@ p.pags-text {
 }
 
 /*============================= Transparência ==================================*/
-.sub-list-title {
-  font-size: var(--small-font-size);
-}
-
 .edital-link {
   color: var(--darkGreen);
+  font-style: italic;
 }
 
 /*============================= Galeria ==================================*/
@@ -1965,6 +1963,21 @@ input[type="radio"]:checked + .checked:after {
   white-space: nowrap;
 }
 
+/* =  B I G    V I E P O R T S ====================================================*/
+@media Screen and (min-width: 1920px) {
+  /* =============================  N O T I C I A S =================================*/
+  .news-pag__news-images-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media Screen and (min-width: 1536px) {
+  /* =============================  N O T I C I A S =================================*/
+  .news-pag__news-image {
+    height: 230px;
+  }
+}
+
 /* =  M E D I U M    V I E P O R T S ====================================================*/
 @media Screen and (max-width: 1253px) {
   /* =====================================FOOTER===================================== */
@@ -1988,34 +2001,6 @@ input[type="radio"]:checked + .checked:after {
   /* =============================  N O T I C I A S =================================*/
   .news-pag__main {
     margin-bottom: 45px;
-  }
-
-  .news-pag__main-image {
-    height: 500px;
-  }
-
-  .news-pag__main-title {
-    font-size: var(--normal-font-size);
-  }
-
-  .news-pag__news-images-wrapper {
-    gap: 10px;
-    grid-template-columns: auto auto auto;
-  }
-
-  .news-pag__news-image-wrapper {
-    width: 100%;
-  }
-
-  .news-pag__news-image {
-    width: 100%;
-    height: 200px;
-    min-width: 200px;
-  }
-
-  .news-pag__news-title {
-    width: 100%;
-    font-size: var(--small-font-size);
   }
 
   /* =============================  N O T I C I A =================================*/
@@ -2574,17 +2559,20 @@ input[type="radio"]:checked + .checked:after {
 }
 
 @media Screen and (max-width: 799px) {
+  
   /* ================================== HOME ==========================================*/
-
   .banner-container--side-menu {
     display: none;
   }
 
   .banner-container {
-    display: flex;
     width: 120vw;
-    height: 65vh;
-    margin: 0px 0px 130px 167px;
+    height: 100%;
+    margin: 0;
+  }
+
+  .banner {
+    max-width: 100%;
   }
 
   .back,
@@ -2599,6 +2587,10 @@ input[type="radio"]:checked + .checked:after {
     padding: 15px;
   }
 
+  .dots-buttons {
+    bottom: 100px;
+  }
+
   .donation-button {
     display: none;
   }
@@ -2606,26 +2598,14 @@ input[type="radio"]:checked + .checked:after {
   /*=========================== MENU MOBILE =========================================*/
 
   .smallDevice-menu-container {
-    display: grid;
-    display: -moz-grid;
+    display: flex;
     width: 100%;
-    margin: 550px 190px 0px 40px;
-    justify-content: space-around;
+    position: relative;
   }
 
   .smallDevice-menu-icone {
-    display: grid;
-    grid-template-columns: repeat(5, 20%);
-    margin-bottom: 30px;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-  }
-
-  .smallDevice-menu-div {
-    display: grid;
-    justify-items: center;
-    align-items: center;
+    justify-content: space-around;
+    width: 80%;
   }
 
   .smallDevice-menu-div--img {
@@ -2819,36 +2799,8 @@ input[type="radio"]:checked + .checked:after {
     display: none;
   }
 
-  .banner-container {
-    width: 100vw;
-    height: 65vh;
-    margin: -58px 0px 100px 6px;
-  }
-
   .banner {
-    position: absolute;
     height: 70%;
-    max-width: 100%;
-  }
-
-  .move-buttons {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--lightGrey);
-    top: 0;
-    margin: 55px 0px 0px 3px;
-  }
-
-  .back,
-  .forward {
-    padding: 10px;
-    font-size: 25px;
-  }
-
-  .back:hover,
-  .forward:hover {
-    font-size: 25px;
-    padding: 10px;
   }
 
   .donation-button {
@@ -2857,15 +2809,6 @@ input[type="radio"]:checked + .checked:after {
 
   .dots-buttons {
     margin-bottom: 34px;
-  }
-
-  .smallDevice-menu-icone {
-    display: grid;
-    grid-template-columns: repeat(5, 20%);
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    margin: -110px -200px 30px -80px;
   }
 
   .image-container:nth-child(-n + 7) {
@@ -3159,11 +3102,6 @@ input[type="radio"]:checked + .checked:after {
 }
 
 @media Screen and (max-width: 560px) {
-  .dots-buttons {
-    left: 30%;
-    margin-bottom: 162px;
-    top: 198px;
-  }
 
   .header__title {
     width: 30%;
@@ -3324,9 +3262,6 @@ input[type="radio"]:checked + .checked:after {
 }
 
 @media Screen and (max-width: 499px) {
-  .smallDevice-menu-icone {
-    margin: -101px -168px 27px -32px;
-  }
 
   .image-container:nth-child(-n + 7) {
     display: none;
@@ -3341,7 +3276,7 @@ input[type="radio"]:checked + .checked:after {
   }
 
   /* =====================================OUVIDORIA===================================== */
-  .contacts_wrapper{
+  .contacts_wrapper {
     flex-direction: column;
   }
 }
@@ -3676,15 +3611,6 @@ input[type="radio"]:checked + .checked:after {
   .contact_icon {
     max-width: 20px;
   }
-
-  /* ============ Fale conosco - Seja um residente ====================*/
-
-  /* input[type="submit"] {
-    align-self: center;
-    width: 30%;
-    padding: 14px 8px;   
-    font-size: 13.6px;  
-  } */
 
   /*============================= Trabalhe Conosco ==================================*/
   #formulario {
