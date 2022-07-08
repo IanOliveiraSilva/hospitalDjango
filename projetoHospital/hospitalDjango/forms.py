@@ -22,11 +22,6 @@ class Covenio(forms.ModelForm):
         model = Convenio
         fields = ['NomeConvenio', 'FotoCovenio']
 
-class Diretoria(forms.ModelForm):
-    class Meta:
-        model = Diretoria
-        fields = ['NomeDiretoria', 'CargoDiretoria', 'FotoDiretoria']
-
 
 class FaleConoscoForm(forms.ModelForm):
     class Meta:

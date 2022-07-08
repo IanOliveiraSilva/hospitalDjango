@@ -97,7 +97,7 @@ def viewTransparencia(request):
 #PATH
 
 def viewHome(request):
-    banner = Banner.objects.all()
+    banner = Banner.objects.order_by('-Posicao')
     premio = Premio.objects.all()
     noticia = Noticia.objects.order_by('-Data')
     convenio = Convenio.objects.all()

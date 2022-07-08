@@ -3911,13 +3911,23 @@ input[type="radio"]:checked + .checked:after {
   }
 }
 
-@media Screen and (max-width: 320px) {
-  /*=== HOSPITAL LAUREANO - HISTÓRIA ===*/
+@media Screen and (min-width: 320px) and (max-width: 420px) {
 
+  /* ========================= HISTORIA HOSPITAL =========================== */
   .pags-side-image-wrapper {
-    display: none;
+    width: 180px;
+    margin: 0px 40px 15px 35px;
   }
 
+  .pags-side-image--image {
+    height: 200px;
+    width: 150px;
+  }
+}
+
+
+@media Screen and (max-width: 320px) {
+  
   /* =====================================HOME===================================== */
 
   .dots-buttons {
