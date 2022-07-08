@@ -2078,13 +2078,6 @@ input[type="radio"]:checked + .checked:after {
 }
 
 /* =  B I G    V I E P O R T S ====================================================*/
-@media Screen and (min-width: 1920px) {
-  /* =============================  N O T I C I A S =================================*/
-  .news-pag__news-images-wrapper {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
 @media Screen and (min-width: 1536px) {
   /* =============================  HOME =================================*/
   .banner {
@@ -2094,6 +2087,41 @@ input[type="radio"]:checked + .checked:after {
   /* =============================  N O T I C I A S =================================*/
   .news-pag__news-image {
     height: 230px;
+  }
+
+  /* =============================  PESQUISA DE SATISFACAO =================================*/
+  .colunas {
+    width: 100%;
+  }
+
+  .avaliacao-wrapper {
+    width: 49%;
+  }
+
+  .item {
+    max-width: 100%;
+  }
+
+  .radio-wrapper {
+    gap: 55px;
+    padding: 5px 12px;
+  }
+}
+
+@media Screen and (min-width: 1920px) {
+  /* =============================  N O T I C I A S =================================*/
+  .news-pag__news-images-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* =============================  PESQUISA DE SATISFACAO =================================*/
+  .avaliacao-wrapper {
+    width: 49%;
+  }
+
+  .item {
+    max-width: 100%;
+    min-width: 400px;
   }
 }
 
@@ -3466,6 +3494,10 @@ input[type="radio"]:checked + .checked:after {
   .contacts_wrapper {
     flex-direction: column;
   }
+
+  .label-radio.checked::after {
+    left: 1.8px;
+  }
 }
 
 /* = M O B I L E   D E V I C E ==========================================================*/
@@ -3654,7 +3686,7 @@ input[type="radio"]:checked + .checked:after {
   .smallDevice-menu-div {
     margin-right: 0;
   }
-  
+
   .smallDevice-menu-icone-img {
     padding: 10px;
   }
@@ -3826,6 +3858,9 @@ input[type="radio"]:checked + .checked:after {
   }
 
   /*================== T R A B A L H E    C O N O S C O ======================*/
+  #formulario {
+    width: 110%;
+  }
 
   input[type="submit"] {
     width: 50%;
@@ -3841,9 +3876,8 @@ input[type="radio"]:checked + .checked:after {
     max-width: 20px;
   }
 
-  /*============================= Trabalhe Conosco ==================================*/
-  #formulario {
-    width: 110%;
+  .label-radio.checked::after {
+    left: 1.8px;
   }
 
   /*============================= LOAD ==================================*/
@@ -3886,7 +3920,7 @@ input[type="radio"]:checked + .checked:after {
 
   /* =====================================HOME===================================== */
 
-   .dots-buttons {
+  .dots-buttons {
     bottom: 22%;
     left: 37%;
   }
@@ -3951,6 +3985,9 @@ input[type="radio"]:checked + .checked:after {
   }
 
   /*================== T R A B A L H E    C O N O S C O ======================*/
+  #formulario {
+    width: 110%;
+  }
 
   input[type="submit"] {
     width: 50%;
@@ -3966,17 +4003,7 @@ input[type="radio"]:checked + .checked:after {
     max-width: 20px;
   }
 
-  /* ============ Fale conosco - Seja um residente ====================*/
-
-  /* input[type="submit"] {
-    align-self: center;
-    width: 30%;
-    padding: 14px 8px;   
-    font-size: 13.6px;  
-  } */
-
-  /*============================= Trabalhe Conosco ==================================*/
-  #formulario {
-    width: 110%;
+  .label-radio.checked::after {
+    left: 1.5px;
   }
 }
