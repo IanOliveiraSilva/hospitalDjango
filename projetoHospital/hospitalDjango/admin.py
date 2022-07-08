@@ -20,7 +20,7 @@ class MedicoAdmin(admin.ModelAdmin):
 class DiretoriaAdmin(admin.ModelAdmin):
     def FotoDiretoria_preview(self, obj):
          return format_html(
-            f"<img src='{obj.FotoDiretoria.url}' width='{obj.FotoDiretoria.width}' height='{obj.FotoDiretoria.height}' style=''/>")
+            f"<img src='{obj.FotoDiretoria.url}' width='300' style=''/>")
     readonly_fields = ['FotoDiretoria_preview']
     list_display = ('NomeDiretoria', 'CargoDiretoria')
     search_fields = ('NomeDiretoria', 'CargoDiretoria')
@@ -29,7 +29,7 @@ class DiretoriaAdmin(admin.ModelAdmin):
 class ConvenvioAdmin(admin.ModelAdmin):
     def FotoCovenio_preview(self, obj):
          return format_html(
-            f"<img src='{obj.FotoCovenio.url}' width='{obj.FotoCovenio.width}' height='{obj.FotoCovenio.height}' style=''/>")
+            f"<img src='{obj.FotoCovenio.url}' width='300' style=''/>")
     readonly_fields = ['FotoCovenio_preview']
     search_fields = ('NomeConvenio',)
 
@@ -46,7 +46,7 @@ class ParceirosAdmin(admin.ModelAdmin):
 class NoticiaAdmin(admin.ModelAdmin):
     def Imagem_preview(self, obj):
          return format_html(
-            f"<img src='{obj.Imagem.url}' width='{obj.Imagem.width}' height='{obj.Imagem.height}' style=''/>")
+            f"<img src='{obj.Imagem.url}' width='500' style=''/>")
     readonly_fields = ['Imagem_preview']
     list_display = ('Titulo', 'Subtitulo', 'Data')
     search_fields = ('Titulo',)
@@ -55,7 +55,7 @@ class NoticiaAdmin(admin.ModelAdmin):
 class PremioAdmin(admin.ModelAdmin):
     def Imagem_preview(self, obj):
          return format_html(
-            f"<img src='{obj.FotoPremio.url}' width='{obj.FotoPremio.width}' height='{obj.FotoPremio.height}' style=''/>")
+            f"<img src='{obj.FotoPremio.url}' width='300' style=''/>")
     readonly_fields = ['Imagem_preview']
     list_display = ('NomePremio', 'FotoPremio')
     search_fields = ('NomePremio',)
@@ -64,9 +64,9 @@ class PremioAdmin(admin.ModelAdmin):
 class BannerAdmin(admin.ModelAdmin):
     def Imagem_preview(self, obj):
          return format_html(
-            f"<img src='{obj.FotoBanner.url}' width='{obj.FotoBanner.width}' height='{obj.FotoBanner.height}' style=''/>")
-    readonly_fields = ['Imagem_preview']
-    list_display = ('NomeBanner', 'FotoBanner')
+            f"<img src='{obj.FotoBanner.url}' width='500' style=''/>")
+    readonly_fields = [('Imagem_preview')]
+    list_display = ('NomeBanner', 'Posicao')
     search_fields = ('NomeBanner',)
 
 @admin.register(Transparencia)
@@ -78,10 +78,10 @@ class TransparenciaAdmin(admin.ModelAdmin):
 class DiretoriaExecutivaAdmin(admin.ModelAdmin):
     def FotoDiretorExecutivo_preview(self, obj):
          return format_html(
-            f"<img src='{obj.FotoDiretorExecutivo.url}' width='{obj.FotoDiretorExecutivo.width}' height='{obj.FotoDiretorExecutivo.height}' style=''/>")
+            f"<img src='{obj.FotoDiretorExecutivo.url}' width='300' style=''/>")
     readonly_fields = ['FotoDiretorExecutivo_preview']
-    list_display = ('NomeDiretorExecutivo', 'NomeDiretorExecutivo')
-    search_fields = ('NomeDiretorExecutivo', 'NomeDiretorExecutivo')
+    list_display = ('NomeDiretorExecutivo', 'CargoDiretorExecutivo')
+    search_fields = ('NomeDiretorExecutivo', 'CargoDiretorExecutivo')
 
 @admin.register(ConselhoDeliberativo)
 class ConselhoDeliberativoAdmin(admin.ModelAdmin):
@@ -133,5 +133,5 @@ class Doacao(admin.ModelAdmin):
     search_fields = ('Meio', )
     def ImagemDoacao_preview(self, obj):
          return format_html(
-            f"<img src='{obj.Imagem.url}' width='{obj.Imagem.width}' height='{obj.Imagem.height}' style=''/>")
+            f"<img src='{obj.Imagem.url}' width='300' style=''/>")
     readonly_fields = ['ImagemDoacao_preview']

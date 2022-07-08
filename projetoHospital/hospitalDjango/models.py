@@ -32,8 +32,8 @@ class Parceiros(models.Model):
         verbose_name_plural = "Parceiros"
 
 class Convenio(models.Model):
-    NomeConvenio = models.CharField(max_length=100, blank=True,null=True)
-    FotoCovenio = models.ImageField(upload_to='Convenio', null=True, blank=True)
+    NomeConvenio = models.CharField('Nome',max_length=100, blank=False,null=False)
+    FotoCovenio = models.ImageField('Foto',upload_to='Convenio', null=True, blank=True)
     def __str__(self):
         return self.NomeConvenio
     class Meta:
@@ -49,16 +49,24 @@ class Diretoria(models.Model):
         verbose_name_plural = "Diretoria"
 
 class Premio(models.Model):
-    NomePremio = models.CharField(max_length=100)
-    FotoPremio = models.ImageField(upload_to='Premio', null=True, blank=True)
+    NomePremio = models.CharField('Nome',null=False,blank=False,max_length=100)
+    FotoPremio = models.ImageField('Foto',upload_to='Premio', null=True, blank=True)
     def __str__(self):
         return self.NomePremio
     class Meta:
         verbose_name_plural = "Premios"
 
 class Banner(models.Model):
-    NomeBanner = models.CharField(max_length=100)
-    FotoBanner = models.ImageField(upload_to='Banner', null=True, blank=True)
+
+    NomeBanner = models.CharField('Nome do Banner',max_length=100, null=False, blank=False)
+
+    CHOICES = (
+    ("3", "1"),
+    ("2", "2"),
+    ("1", "3"),
+    )
+    Posicao = models.CharField('Posição (Deixe vazio para não exibir)',max_length=10 ,choices = CHOICES,null=True,blank=True, unique=True)
+    FotoBanner = models.ImageField('Banner',upload_to='Banner', null=True, blank=True)
     def __str__(self):
         return self.NomeBanner
     class Meta:
@@ -75,18 +83,18 @@ class Transparencia(models.Model):
         verbose_name_plural = "Transparência"
 
 class DiretoriaExecutiva(models.Model):
-    NomeDiretorExecutivo = models.CharField(max_length=100)
-    CargoDiretorExecutivo = models.CharField(max_length=50)
-    FotoDiretorExecutivo = models.ImageField(upload_to='DiretoriaExecutiva', null=True, blank=True)
+    NomeDiretorExecutivo = models.CharField('Nome',blank=False,null=False,max_length=100)
+    CargoDiretorExecutivo = models.CharField('Cargo',blank=False,null=False,max_length=50)
+    FotoDiretorExecutivo = models.ImageField('Foto',upload_to='DiretoriaExecutiva', null=True, blank=True)
     def __str__(self):
         return self.NomeDiretorExecutivo
     class Meta:
         verbose_name_plural = "Diretoria Executiva"
 
 class ConselhoDeliberativo(models.Model):
-    NomeConselho = models.CharField(max_length=100)
-    CargoConselho = models.CharField(max_length=50)
-    FotoConselho = models.ImageField(upload_to='ConselhoDeliberativo', null=True, blank=True)
+    NomeConselho = models.CharField('Nome',blank=False,null=False ,max_length=100)
+    CargoConselho = models.CharField('Cargo',blank=False,null=False ,max_length=50)
+    FotoConselho = models.ImageField('Foto',upload_to='ConselhoDeliberativo', null=True, blank=True)
     def __str__(self):
         return self.NomeConselho
     class Meta:
