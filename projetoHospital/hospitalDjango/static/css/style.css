@@ -716,7 +716,7 @@ footer {
 
 .dividing-line--section {
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23E5E5E5FF' stroke-width='4' stroke-dasharray='6%2c 9' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
-  margin: 20px 0;
+  margin: 20px auto;
   width: 95%;
 }
 
@@ -2691,13 +2691,16 @@ input[type="radio"]:checked + .checked:after {
   }
 
   .banner-container {
-    width: 120vw;
+    width: 100%;
     height: 100%;
     margin: 0;
   }
 
   .banner {
-    max-width: 100%;
+    width: 100%;
+    max-height: 270px;
+    min-height: 270px;
+    object-fit: fill;
   }
 
   .back,
@@ -2713,7 +2716,8 @@ input[type="radio"]:checked + .checked:after {
   }
 
   .dots-buttons {
-    bottom: 100px;
+    bottom: 120px;
+    left: 42%;
   }
 
   .donation-button {
@@ -2723,15 +2727,13 @@ input[type="radio"]:checked + .checked:after {
   /*=========================== MENU MOBILE =========================================*/
 
   .smallDevice-menu-container {
-    display: flex;
     width: 100%;
-    position: relative;
-    top: 10px;
+    margin-top: 20px;
   }
 
   .smallDevice-menu-icone {
     justify-content: space-around;
-    width: 80%;
+    width: 100%;
   }
 
   .smallDevice-menu-div--img {
@@ -2938,10 +2940,6 @@ input[type="radio"]:checked + .checked:after {
     display: none;
   }
 
-  .dots-buttons {
-    margin-bottom: 34px;
-  }
-
   .image-container:nth-child(-n + 7) {
     display: none;
   }
@@ -2960,7 +2958,6 @@ input[type="radio"]:checked + .checked:after {
   }
 }
 
-/* 767px */
 @media Screen and (max-width: 640px) {
   .header__wrapper {
     top: 95px;
@@ -2981,6 +2978,25 @@ input[type="radio"]:checked + .checked:after {
 
   .header__menu--title {
     display: none;
+  }
+
+  /* =====================================HOME===================================== */
+  .dots-buttons {
+    bottom: 100px;
+  }
+
+  .dot {
+    height: 14px;
+    width: 14px;
+  }
+
+  .smallDevice-menu-div--img {
+    height: 60px;
+    width: 60px;
+  }
+
+  .smallDevice-menu-legenda {
+    margin-top: 7px;
   }
 
   /* =====================================FOOTER===================================== */
@@ -3043,7 +3059,7 @@ input[type="radio"]:checked + .checked:after {
   .title-section {
     position: relative;
     margin-bottom: 20px;
-    font-size: 1.25rem;
+    font-size: 28px;
   }
 
   /* =============================  N O T I C I A =================================*/
@@ -3083,7 +3099,6 @@ input[type="radio"]:checked + .checked:after {
   }
 
   /* ================================= P A G =======================================*/
-
   .pags-image-bg-lightgrey {
     width: 140px;
     height: 140px;
@@ -3116,7 +3131,6 @@ input[type="radio"]:checked + .checked:after {
   }
 
   /*=============== P R Ê M I O S     &     C E R T I F I C A Ç Õ E S ===============*/
-
   .certificate--wrapper {
     position: relative;
   }
@@ -3129,14 +3143,6 @@ input[type="radio"]:checked + .checked:after {
     font-size: 20px;
   }
 
-  /* =============================  P A R C E I R O S ==============================*/
-
-  /* Nothing to change */
-
-  /* ========================== Q U E M S O M O S ===================================*/
-  /* ======================= H O S P I T A L L A U R E A N O=========================*/
-  /* =============================  H I S T O R I A  ================================*/
-  /* ============================= D I R E T O R I A ================================*/
   /* =============================  F .  L A U R E A N O  ================================*/
   .pags-side-image-wrapper {
     width: 200px;
@@ -3241,6 +3247,10 @@ input[type="radio"]:checked + .checked:after {
 @media Screen and (max-width: 560px) {
   .header__title {
     width: 30%;
+  }
+
+  .banner {
+    object-fit: cover;
   }
   /* =====================================FOOTER===================================== */
   .medias--icons {
@@ -3410,26 +3420,25 @@ input[type="radio"]:checked + .checked:after {
     width: 70%;
   }
 
-  .smallDevice-menu-container {
-    width: 80%;
-    flex-shrink: 1;
+  .dots-buttons {
+    bottom: 113px;
+  }
+
+  .dot {
+    height: 12px;
+    width: 12px;
+  }
+
+  .smallDevice-menu-icone {
+    align-items: flex-start;
   }
 
   .smallDevice-menu-div {
     width: 70%;
   }
 
-  .smallDevice-menu-div {
-    flex: 1;
-  }
-
-  .smallDevice-menu-icone-img {
-    height: 65px;
-    width: 65px;
-  }
-
   .smallDevice-menu-legenda {
-    font-size: 0.75rem;
+    font-size: 14px;
   }
 
   /* =====================================OUVIDORIA===================================== */
@@ -3439,7 +3448,6 @@ input[type="radio"]:checked + .checked:after {
 }
 
 /* = M O B I L E   D E V I C E ==========================================================*/
-/* 100% Image Width on Smaller Screens */
 @media Screen and (max-width: 480px) {
   /* =====================================FOOTER===================================== */
   .footer__logo {
@@ -3594,13 +3602,33 @@ input[type="radio"]:checked + .checked:after {
   }
 }
 
-@media Screen and (mix-width: 420px) {
+@media Screen and (max-width: 420px) {
   .smallDevice-menu-div {
     margin-right: 10px;
   }
 }
 
 @media Screen and (max-width: 365px) {
+  /* =====================================HOME===================================== */
+  .dots-buttons {
+    bottom: 191px;
+    left: 37%;
+  }
+
+  .smallDevice-menu-icone {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .smallDevice-menu-div {
+    width: auto;
+  }
+
+  .title-section {
+    font-size: 26px;
+  }
+
   /* =====================================FOOTER===================================== */
   .footer__logo {
     width: 100px;
@@ -3813,8 +3841,8 @@ input[type="radio"]:checked + .checked:after {
 
 @media Screen and (max-width: 320px) {
   /* =====================================HOME===================================== */
-  .smallDevice-menu-icone {
-    width: 75%;
+  .title-section {
+    font-size: 24px;
   }
 
   /* =====================================FOOTER===================================== */
@@ -3902,4 +3930,3 @@ input[type="radio"]:checked + .checked:after {
     width: 110%;
   }
 }
-/*======================== T A B L E T S    D E V I C E S ========================*/
