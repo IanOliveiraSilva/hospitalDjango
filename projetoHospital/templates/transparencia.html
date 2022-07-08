@@ -29,7 +29,7 @@ Laureano - Tranparência {%endblock titulo %} {% block body %}
       {%if cat.CategoriaTransparencia == item.CategoriaTransparencia%}
         <li class="list-item row-j-start">
           {%if item.DataTransparencia %} {{ item.DataTransparencia}} - {% endif %} 
-          <a href="{{item.PdfTransparencia.url}}" class="edital-link">{{item.NomeTransparencia}}</a>
+          <a href="{{item.PdfTransparencia.url}}" class="edital-link" target=”_blank”>{{item.NomeTransparencia}}</a>
         </li>
        {% endif %} 
     {% endfor %} 
