@@ -1513,7 +1513,7 @@ p.pags-text {
   width: 100%;
 }
 
-.doctor {
+.list-item {
   text-transform: capitalize;
   list-style-type: disc;
   list-style-position: inside;
@@ -2885,7 +2885,7 @@ input[type="radio"]:checked + .checked:after {
     width: 90%;
   }
 
-  .doctor {
+  .list-item {
     font-size: var(--small-font-size);
   }
 
@@ -3712,8 +3712,8 @@ input[type="radio"]:checked + .checked:after {
     width: 90%;
   }
 
-  .doctor {
-    font-size: 15px;
+  .list-item {
+    font-size: 14px;
   }
 
   /*============================= Transparência ==================================*/

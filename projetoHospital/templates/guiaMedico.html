@@ -25,7 +25,7 @@ Laureano - Guia Médico{% endblock titulo %} {% block body %}
   </div>
   <ul class="list-wrapper">
     {% for med in medico %} {%if esp.Especialidade == med.Especialidade%}
-    <li class="doctor">{{ med.Nome}}</li>
+    <li class="list-item">{{ med.Nome}}</li>
     {% endif %} {% endfor %}
   </ul>
   <div class="dividing-line dividing-line--list"></div>

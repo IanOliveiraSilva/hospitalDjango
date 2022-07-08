@@ -19,17 +19,20 @@ Laureano - Tranparência {%endblock titulo %} {% block body %}
 
 <h1 class="pags-title">Transparência</h1>
 <section class="pags-section column-center">
-    {% for item in transparencia %}
+  {% for cat in categoria %}
   <div class="list-header">
     <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
-    <h3 class="list-title">Licitações</h3>
+    <h3 class="list-title">{{cat.CategoriaTransparencia}}</h3>
   </div>
   <ul class="list-wrapper">
-    {% comment %} {% for med in medico %} {% endcomment %}
-     {% comment %} {%if esp.Especialidade == med.Especialidade%} {% endcomment %}
-    <a href="{{item.PdfTransparencia.url}}" class="edital-link">{{item.NomeTransparencia}}</a>
-    {% comment %} {% endif %}  {% endcomment %}
-    {% comment %} {% endfor %} {% endcomment %}
+     {% for item in transparencia %} 
+      {%if cat.CategoriaTransparencia == item.CategoriaTransparencia%}
+        <li class="list-item row-j-start">
+          {%if item.DataTransparencia %} {{ item.DataTransparencia}} - {% endif %} 
+          <a href="{{item.PdfTransparencia.url}}" class="edital-link">{{item.NomeTransparencia}}</a>
+        </li>
+       {% endif %} 
+    {% endfor %} 
   </ul>
   <div class="dividing-line dividing-line--list"></div>
   {% endfor %}
