@@ -42,7 +42,7 @@ class Convenio(models.Model):
 class Diretoria(models.Model):
     NomeDiretoria = models.CharField('Nome',max_length=100,blank=True,null=True)
     CargoDiretoria = models.CharField('Cargo', max_length=100,blank=True,null=True)
-    FotoDiretoria = models.ImageField(upload_to='Diretoria', null=True, blank=True)
+    FotoDiretoria = models.ImageField('Foto', upload_to='Diretoria', null=True, blank=True)
     def __str__(self):
         return self.NomeDiretoria
     class Meta:
