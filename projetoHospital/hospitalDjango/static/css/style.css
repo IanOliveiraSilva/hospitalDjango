@@ -3043,6 +3043,7 @@ input[type="radio"]:checked + .checked:after {
   .title-section {
     position: relative;
     margin-bottom: 20px;
+    font-size: 1.25rem;
   }
 
   /* =============================  N O T I C I A =================================*/
