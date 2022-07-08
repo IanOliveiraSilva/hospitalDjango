@@ -3408,6 +3408,23 @@ input[type="radio"]:checked + .checked:after {
 }
 
 @media Screen and (max-width: 499px) {
+
+  /*=== HOSPITAL LAUREANO - HISTÓRIA ===*/
+
+  .pags-side-image-wrapper {
+    width: 145px;
+  }
+
+  .pags-side-image--image {
+    height: 177px;
+    width: 129px;
+  }
+
+  .pags-side-image--subtext {
+    font-size: 12px;
+  }
+    /*================ == =================*/
+
   .image-container:nth-child(-n + 7) {
     display: none;
   }
@@ -3840,6 +3857,13 @@ input[type="radio"]:checked + .checked:after {
 }
 
 @media Screen and (max-width: 320px) {
+
+  /*=== HOSPITAL LAUREANO - HISTÓRIA ===*/
+
+  .pags-side-image-wrapper {
+    display: none;
+  }
+
   /* =====================================HOME===================================== */
   .title-section {
     font-size: 24px;
