@@ -32,7 +32,7 @@ class Parceiros(models.Model):
         verbose_name_plural = "Parceiros"
 
 class Convenio(models.Model):
-    NomeConvenio = models.CharField(max_length=100)
+    NomeConvenio = models.CharField(max_length=100, blank=True,null=True)
     FotoCovenio = models.ImageField(upload_to='Convenio', null=True, blank=True)
     def __str__(self):
         return self.NomeConvenio
@@ -40,8 +40,8 @@ class Convenio(models.Model):
         verbose_name_plural = "Convenio"
 
 class Diretoria(models.Model):
-    NomeDiretoria = models.CharField(max_length=100)
-    CargoDiretoria = models.CharField(max_length=50)
+    NomeDiretoria = models.CharField('Nome',max_length=100,blank=True,null=True)
+    CargoDiretoria = models.CharField('Cargo', max_length=100,blank=True,null=True)
     FotoDiretoria = models.ImageField(upload_to='Diretoria', null=True, blank=True)
     def __str__(self):
         return self.NomeDiretoria
