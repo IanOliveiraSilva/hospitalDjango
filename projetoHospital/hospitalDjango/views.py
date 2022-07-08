@@ -90,8 +90,9 @@ def viewGaleria(request):
 # READ - TRANSPARÊNCIA
 
 def viewTransparencia(request):
+    categoria = Transparencia.objects.values('CategoriaTransparencia').distinct()
     transparencia = Transparencia.objects.all()
-    return render(request, "transparencia.html", {"transparencia": transparencia,"rodape": rodape, "redes":redes})
+    return render(request, "transparencia.html", {"transparencia": transparencia,"rodape": rodape, "redes":redes, "categoria":categoria})
 
 #PATH
 

@@ -65,9 +65,10 @@ class Banner(models.Model):
         verbose_name_plural = "Banners"
 
 class Transparencia(models.Model):
-    NomeTransparencia = models.CharField(max_length=100)
-    PdfTransparencia = models.FileField(upload_to='pdf/', null=True, blank=True)
-    DataTransparencia = models.DateField(null=True, blank=True)
+    NomeTransparencia = models.CharField('Títutlo',max_length=150, null = False, blank=False)
+    CategoriaTransparencia = models.CharField('Categoria', max_length = 150)
+    PdfTransparencia = models.FileField('Pdf',upload_to='pdf/', null=True, blank=True)
+    DataTransparencia = models.DateField('Data',null=True, blank=True)
     def __str__(self):
         return self.NomeTransparencia
     class Meta:
