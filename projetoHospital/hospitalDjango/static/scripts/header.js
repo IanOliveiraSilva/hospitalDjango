@@ -95,6 +95,23 @@ if (window.screen.width <= 800) {
       }
     }
   });
+
+  modal.addEventListener("click", function () {
+    modal.classList.toggle("noShow");
+    $menuDeviceOptions.classList.toggle("noShow");
+    
+    for (i = 0; i < $optionCategoryDevice.length; i++) {
+      if (!$deviceCategories[i].nodeName.includes("noShow")) {
+        $deviceCategories[i].classList.add("noShow");
+      }
+    }
+    
+    for (i = 0; i < $optionSubcategoryDevice.length; i++) {
+      if (!$deviceSubcategories[i].nodeName.includes("noShow")) {
+        $deviceSubcategories[i].classList.add("noShow");
+      }
+    }
+  });
   
   $fecharMenuDevice.addEventListener("click", function () {
     $menuDeviceOptions.classList.toggle("noShow");
