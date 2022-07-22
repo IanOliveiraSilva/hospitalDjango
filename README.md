@@ -14,9 +14,10 @@ $ command "pip install django"
 $ command "pip install Pillow"
 $ command "pip install django-colorfield"
 $ command "pip install mysqlclient"
-$ command "py manage.py runserver"
 $ command "pip install  tzdata"
 $ command "pip install sqlparse"
+$ command "py manage.py runserver"
+
 ```
 ## Entering the site through the browser
 ```bash
