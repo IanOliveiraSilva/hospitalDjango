@@ -3,19 +3,14 @@
 
 ## Quickstart
 ```bash
-$ To install and activate VENV:
+$ To install and activate VENV(ON CMD):
   $ command pip install virtualenv
   $ virtualenv venv
   $ command "cd venv/Scripts"
   $ command "activate"
   $ command "cd ../.."
 
-$ command "pip install django"
-$ command "pip install Pillow"
-$ command "pip install django-colorfield"
-$ command "pip install mysqlclient"
-$ command "pip install  tzdata"
-$ command "pip install sqlparse"
+$ command "pip install -r requirements.txt"
 $ command "py manage.py runserver"
 
 ```
