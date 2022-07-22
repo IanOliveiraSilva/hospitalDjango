@@ -1,19 +1,37 @@
-{% extends 'base.html' %}{% load static %}
-{% block titulo %} HOSPITAL LAUREANO - GUIA MÉDICO{%endblock titulo %} 
+{% extends "base.html" %} {% load static %} {% block titulo %}Hospital Napoleão
+Laureano - Guia Médico{% endblock titulo %} {% block body %}
 
-{% block body %}
-
-<h1>TESTE - GUIA MÉDICO</h1>
-
-{% for item in medico %}
-
-<ul>
-    <li>Nome: {{ item.Nome }}.
-    Especialização: {{ item.Especialidade }}
+<div class="navegacao">
+  <ul class="row-j-start">
+    <li>
+      <a class="navegacao-link" href="{% url 'home' %}">
+        Início
+        <i class="uil uil-angle-double-right"></i>
+      </a>
     </li>
-</ul>
+    <li>
+      <a class="navegacao-link" href="{% url 'guia-medico' %}"> Guia Médico </a>
+    </li>
+  </ul>
+</div>
 
-{% endfor %}
+<h1 class="pags-title">Guia Médico</h1>
 
-<a class="mx-auto my-0 text-uppercase text-amarelo mx-auto mt-2 mb-5 style=" href="{% url 'home' %}">Back</a>
+<section class="pags-section column-center">
+  {% for esp in especialidade %}
+  <div class="list-header">
+    <img src="{% static '/images/lista_icon.png' %}" class="list-img" />
+    <h3 class="list-title">{{ esp.Especialidade }}</h3>
+  </div>
+  <ul class="list-wrapper">
+    {% for med in medico %} {%if esp.Especialidade == med.Especialidade%}
+    <li class="list-item">{{ med.Nome}}</li>
+    {% endif %} {% endfor %}
+  </ul>
+  <div class="dividing-line dividing-line--list"></div>
+  {% endfor %}
+</section>
+
+<script type="text/javascript" src='{% static "/scripts/guia.js" %}'></script>
+
 {% endblock body %}
